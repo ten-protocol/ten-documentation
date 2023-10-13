@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkobscuro_docs=self.webpackChunkobscuro_docs||[]).push([[7963],{4172:o=>{o.exports=JSON.parse('{"permalink":"/obscuro-documentation/blog/tags/hola","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);

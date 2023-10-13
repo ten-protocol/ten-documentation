@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkobscuro_docs=self.webpackChunkobscuro_docs||[]).push([[9225],{4098:o=>{o.exports=JSON.parse('{"permalink":"/obscuro-documentation/blog","page":1,"postsPerPage":10,"totalPages":1,"totalCount":4,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);

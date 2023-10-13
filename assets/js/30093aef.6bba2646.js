@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkobscuro_docs=self.webpackChunkobscuro_docs||[]).push([[6946],{8438:o=>{o.exports=JSON.parse('{"permalink":"/obscuro-documentation/blog/tags/docusaurus","page":1,"postsPerPage":10,"totalPages":1,"totalCount":4,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);
