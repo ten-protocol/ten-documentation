@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkobscuro_docs=self.webpackChunkobscuro_docs||[]).push([[5721],{8411:o=>{o.exports=JSON.parse('{"label":"hello","permalink":"/obscuro-documentation/blog/tags/hello","allTagsPath":"/obscuro-documentation/blog/tags","count":2}')}}]);
