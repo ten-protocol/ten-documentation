@@ -1,6 +1,7 @@
 name: Build and Deploy Docusaurus to GitHub Pages
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - main # or the branch you want to trigger the build from
