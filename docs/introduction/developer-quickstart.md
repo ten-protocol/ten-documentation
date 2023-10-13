@@ -158,3 +158,5 @@ All you have to do is emit events as usual, and the platform applies common sens
 ---
 
 Migrate your dApp to Obscuro today and experience enhanced encryption and privacy without compromising on the Ethereum experience.
+
+Please check the [setup page](/docs/getting-started/for-developers/setup-dev-env#1-wallet-setup--configuration).
