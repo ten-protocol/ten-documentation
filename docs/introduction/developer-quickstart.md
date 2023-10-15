@@ -4,7 +4,7 @@ sidebar_position: 4
 
 # Developer Quickstart
 
-Obscuro is 100% EVM & uses Solidity, no different than Ethereum or any other L2 on Ethereum. What makes developers achieve this encryption is simple tweaks in the code that we'll show you using a simple data storage example. In Obscuro, the internal node database is encrypted, and the contract execution is also encrypted inside the TEE. Nobody (which includes node operators and the sequencer) can access the internal state of a contract.
+Obscuro is 100% EVM and uses Solidity, no different than Ethereum or any other L2 on Ethereum. What makes developers achieve this encryption is simple tweaks in the code that we'll show you using a simple data storage example. In Obscuro, the internal node database is encrypted, and the contract execution is also encrypted inside the TEE. Nobody (which includes node operators and the sequencer) can access the internal state of a contract.
 
 :::info
 Public state variables in Solidity automatically get a getter function, making them easily accessible.
@@ -103,7 +103,7 @@ function setData(uint256 _data) public {
 
 ### Explanation:
 
-Events in Ethereum are crucial for DApps to react to smart contract state changes. Here, we've added an event `DataChanged` that gets emitted every time the `setData` function is called.
+Events in Ethereum are crucial for dApps to react to smart contract state changes. Here, we've added an event `DataChanged` that gets emitted every time the `setData` function is called.
 
 :::caution
 On Ethereum, once an event is emitted, it's logged on the blockchain. Anyone can access these logs and filter out events based on their signatures. This means that if someone knows about the `DataChanged` event, they can easily track when and what data was set, leading to potential privacy concerns.
