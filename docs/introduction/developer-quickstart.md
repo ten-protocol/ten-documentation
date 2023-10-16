@@ -20,6 +20,9 @@ Public variables are accessible to everyone because Solidity automatically gener
 We'll illustrate how it works by creating a simple data storage example.
 In this dApp, users can store a number and retrieve it later.
 
+## Pre-requisite
+Please setup your wallet by following the instructions [here](/docs/getting-started/for-developers/setup-dev-env#1-wallet-setup--configuration).
+
 ## Step 1: Declaring a Public Variable
 ### Code:
 ```solidity
@@ -40,7 +43,7 @@ In this step, we've declared a public variable `storedValues`.
 Solidity automatically generates a public getter view function for it, so on both Ethereum and Obscuro, you can call 
 this view function without any restrictions.
 
-We also created the function that allows users to store a value against their address.
+We also created a function that allows users to store a value against their address.
 
 ## Step 2: Transitioning to a Private Variable with a Getter Function
 ### Code:
@@ -120,7 +123,7 @@ contract StorageExample {
 
     function storeValue(uint256 value) public {
         _storedValues[tx.origin] = value;
-        emit DataChanged(tx.origin, _data);
+        emit DataChanged(tx.origin, value);
         totalCalls++;
         if (totalCalls % 1000 == 0) {
             emit MilestoneReached(totalCalls);
@@ -158,5 +161,3 @@ All you have to do is emit events as usual, and the platform applies common sens
 ---
 
 Migrate your dApp to Obscuro today and experience enhanced encryption and privacy without compromising on the Ethereum experience.
-
-Please check the [setup page](/docs/getting-started/for-developers/setup-dev-env#1-wallet-setup--configuration).
