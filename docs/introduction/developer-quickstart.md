@@ -14,7 +14,7 @@ In Obscuro, the internal node database is encrypted, and the execution itself is
 
 The calls to [getStorageAt](https://docs.alchemy.com/reference/eth-getstorageat) are disabled, so all data access will be performed through view functions which are under the control of the smart contract developer. Public variables are accessible to everyone because Solidity automatically generates a getter function for them.
 
-We'll illustrate how it works by creating a simple data storage example. In this dApp, users can store a number and retrieve it later.
+We'll illustrate how this works by creating a simple data storage example. In this dApp, users can store a number and retrieve it later.
 
 ## Pre-requisite
 
