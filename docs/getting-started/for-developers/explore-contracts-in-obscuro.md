@@ -3,7 +3,7 @@ sidebar_position: 1
 ---
 # Explore Contracts in Obscuro
 
-Obscuro offers a distinct environment for smart contract development, differing slightly from traditional Solidity. This guide elucidates these nuances:
+Obscuro offers a distinct environment for smart contract development so you'll need to consider how to design your dApps slightly differently from how you would a transparent dApp. This guide explains these differences:
 
 ## 1. Accessing Storage Values
 
@@ -21,7 +21,7 @@ uint256 value = eth.getStorageAt(contractAddress, position);
 
 ### Obscuro's Privacy Solution
 
-To address Ethereum's privacy shortcomings, Obscuro has disabled the `getStorageAt` function. This ensures that private variables can only be accessed via their associated functions, providing genuine programmable privacy.
+To provide privacy on Ethereum, Obscuro has disabled the `getStorageAt` function. This ensures that private variables can only be accessed via their associated functions, providing genuine programmable privacy.
 
 **Example**:
 Accessing a private variable in Obscuro:
