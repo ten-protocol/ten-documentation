@@ -15,8 +15,8 @@ To engage with Obscuro:
 
 No matter your activity on Obscuro, you'll probably need tokens to make transactions. See our following section: [Getting tokens.](/docs/getting-started/for-users/get-tokens)
 
-## Facing a problem with configuring Metamask?
-When using a dApp on Obscuro, start by checking its documentation and resources. If that doesn't help, consult the Obscuro docs' [troubleshooting](/docs/category/troubleshooting) section or seek assistance on the Obscuro [Discord](http://discord.gg/hbbfThQHT3). If the issue appears to be with MetaMask, head to MetaMask's [Help Center](https://support.metamask.io/hc/en-us) to browse their forums or engage with their Support team.
+## Facing a problem with configuring MetaMask?
+When using a dApp on Obscuro, start by checking its documentation and resources. If that doesn't help, consult the Obscuro docs' [troubleshooting](/docs/category/troubleshooting) section or seek assistance on the Obscuro [Discord](http://discord.gg/yQfmKeNzNd). If the issue appears to be with MetaMask, head to MetaMask's [Help Center](https://support.metamask.io/hc/en-us) to browse their forums or engage with their Support team.
 
 ## Other wallets
 

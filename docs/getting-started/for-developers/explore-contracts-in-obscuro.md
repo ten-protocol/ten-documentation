@@ -3,7 +3,7 @@ sidebar_position: 1
 ---
 # Explore Contracts in Obscuro
 
-Obscuro offers a distinct environment for smart contract development, differing slightly from traditional Solidity. This guide explains these differences:
+Obscuro offers a distinct environment for smart contract development so you'll need to consider how to design your dApps slightly differently from how you would a transparent dApp. This guide explains these differences:
 
 ## 1. Accessing Storage Values
 
