@@ -4,9 +4,9 @@ sidebar_position: 4
 
 # Developer Quickstart
 
-Obscuro executes bytecode in the EVM no different than Ethereum (or Arbitrum), so as a developer you can use all your existing code and tooling.
+Obscuro performs bytecode execution in the EVM identically to Ethereum, allowing developers to leverage their existing codebase and tools.
 
-The difference from Ethereum (and virtually all chains) is that private variables and the internal state of the contract while executing are hidden from everyone (which includes node operators and the sequencer).
+The main difference and advantage of Obscuro is that on Obscuro, during execution, private variables and the internal state of the contract are hidden from everyone, including node operators and the sequencer.
 
 :::info
 In Obscuro, the internal node database is encrypted, and the execution itself is also encrypted inside the TEE.
@@ -100,7 +100,7 @@ In Obscuro, the platform ensures that calls to view functions are authenticated.
 
 ## Step 4: Emitting Events
 
-Events in Ethereum are crucial for UIs to react to smart contract state changes. In this step, we'll emit an event when a user stores a value, and also, to show how popular our contract is, we'll emit an event when certain milestones are reached.
+Events in Ethereum are crucial for UIs to react to smart contract state changes. In this step, we'll emit an event when a user stores a value. We'll also gauge the popularity of our contract by emitting an event when certain milestones are reached.
 
 ### Code:
 
