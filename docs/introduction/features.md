@@ -22,4 +22,4 @@ Obscuro prioritizes privacy while maintaining a seamless user experience, allowi
 Obscuro fills the gap between L2 rollups like Optimistic and ZK rollups. Leveraging confidential computing and economic incentives, it mirrors the efficiency and simplicity of Optimistic rollups. Developers can build on Obscuro using just Solidity, without needing new SDKs, frameworks or languages.
 
 ### 7. **High Performance: Fast Bridge**
-Obscuro's design allows faster bridging of assets between Ethereum and Obscuro when compared to optimistic rollups.
+Obscuro's design allows faster bridging of assets between Ethereum and Obscuro when compared to Optimistic rollups.
