@@ -1,1 +1,4 @@
 {"rule":"COMMA_COMPOUND_SENTENCE","sentence":"^\\QObscuro offers a distinct environment for smart contract development so you'll need to consider how to design your dApps slightly differently from how you would a transparent dApp.\\E$"}
+{"rule":"OUTSIDE_OF","sentence":"^\\QThis means that there's no way to directly access the values of a private variable outside of its contract.\\E$"}
+{"rule":"DIFFERENT_THAN","sentence":"^\\QObscuro is 100% EVM and uses Solidity, no different than Ethereum or any other L2 on Ethereum.\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QDeveloper Quickstart\\E$"}
