@@ -5,7 +5,7 @@ import styles from './styles.module.css';
 const FeatureList = [
   {
     title: 'Encrypted',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    png: require('@site/static/img/encrypted.png').default,
     description: (
       <>
    Obscuro leverages hardware-based Trusted Execution Environments (TEE) to achieve data confidentiality and computational privacy.
@@ -15,7 +15,7 @@ const FeatureList = [
   },
   {
     title: 'Scale',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    png: require('@site/static/img/scale.png').default,
     description: (
       <>
         Designed as a decentralized Ethereum L2 Rollup protocol, Obscuro enhances the scalability of the Ethereum network.
@@ -24,7 +24,7 @@ const FeatureList = [
   },
   {
     title: 'Great UX & DX',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    png: require('@site/static/img/great-ux-dx.png').default,
     description: (
       <>
         Obscuro prioritizes privacy while maintaining a seamless user experience, allowing users to access their preferred dApps and services without additional applications or extensions.
@@ -33,11 +33,12 @@ const FeatureList = [
   },
 ];
 
-function Feature({Svg, title, description}) {
+function Feature({ png, title, description }) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
+        {/* Use the PNG image */}
+        <img src={png} alt={title} className={styles.featureSvg} />
       </div>
       <div className="text--center padding-horiz--md">
         <h3>{title}</h3>
@@ -46,6 +47,20 @@ function Feature({Svg, title, description}) {
     </div>
   );
 }
+
+//function Feature({Svg, title, description}) {
+//  return (
+//    <div className={clsx('col col--4')}>
+//      <div className="text--center">
+//        <Svg className={styles.featureSvg} role="img" />
+//      </div>
+//      <div className="text--center padding-horiz--md">
+//        <h3>{title}</h3>
+//        <p>{description}</p>
+//      </div>
+//    </div>
+//  );
+//}
 
 export default function HomepageFeatures() {
   return (
