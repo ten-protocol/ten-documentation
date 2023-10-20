@@ -5,7 +5,7 @@ import styles from './styles.module.css';
 const FeatureList = [
   {
     title: 'Encrypted',
-    png: require('@site/static/img/encrypted-trans.png').default,
+    png: require('@site/static/img/encrypted.png').default,
     description: (
       <>
    Obscuro leverages hardware-based Trusted Execution Environments (TEE) to achieve data confidentiality and computational privacy.
@@ -15,7 +15,7 @@ const FeatureList = [
   },
   {
     title: 'Scale',
-    png: require('@site/static/img/scale-trans.png').default,
+    png: require('@site/static/img/scale.png').default,
     description: (
       <>
         Designed as a decentralized Ethereum L2 Rollup protocol, Obscuro enhances the scalability of the Ethereum network.
@@ -24,7 +24,7 @@ const FeatureList = [
   },
   {
     title: 'Great UX & DX',
-    png: require('@site/static/img/great-ux-dx-trans.png').default,
+    png: require('@site/static/img/great-ux-dx.png').default,
     description: (
       <>
         Obscuro prioritizes privacy while maintaining a seamless user experience, allowing users to access their preferred dApps and services without additional applications or extensions.
