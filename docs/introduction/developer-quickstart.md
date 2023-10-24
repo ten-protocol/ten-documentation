@@ -2,7 +2,114 @@
 sidebar_position: 4
 ---
 
-# Developer Quickstart
+# Migrate your dApp to Obscuro
+
+## 1. Setting Up the Project
+
+This section will walk you through setting up a Hardhat project for Obscuro, installing plugin, and configuring network.
+
+### Prerequisites
+
+- Node.js (v12 or later)
+- npm (v7 or later)
+
+### 1. Initial Set Up
+
+First, create a new directory for your project and navigate into it:
+
+```bash
+mkdir my-obscuro-project
+cd my-obscuro-project
+```
+
+Initialize a new npm project:
+
+```bash
+npm init -y
+```
+
+Or if you are using Yarn:
+
+```bash
+yarn init -y
+```
+
+### 2. Installing Hardhat
+
+Install Hardhat using npm or Yarn:
+
+```bash
+npm install --save-dev hardhat
+```
+
+Or:
+
+```bash
+yarn add --dev hardhat
+```
+
+### 3. Creating a Hardhat Project
+
+Run the following command to create a Hardhat project:
+
+```bash
+npx hardhat
+```
+
+Follow the prompts to create a sample project, or choose to create an empty hardhat.config.js.
+
+### 4. Installing the Obscuro Hardhat Plugin
+
+To integrate the Obscuro Network into your Hardhat project, install the hh-obscuro-network plugin:
+
+```bash
+npm install --save-dev @obscurolabs/hh-obscuro-plugin
+```
+
+You can extend the functionality of Hardhat by installing plugins. Install them using npm or Yarn & configure it in the next step.
+
+### 5. Configuring `hardhat.config.js`
+
+Open `hardhat.config.js` in your project's root directory and configure it in the following way:
+
+```javascript
+import {HardhatUserConfig} from "hardhat/config";
+import "@nomiclabs/hardhat-waffle";
+import "hh-obscuro-plugin"
+
+module.exports = {
+  solidity: "0.8.10",
+  networks: {
+    hardhat: {
+      // Configuration for the Hardhat Network
+    },
+    obscuro: {
+      url: "https://testnet.obscu.ro/V1/",
+      accounts: ["your-private-key"],
+    },
+  },
+};
+
+export default config;
+```
+
+### 6. Running Your Project
+
+Now that everything is set up, you can run Hardhat tasks:
+
+```bash
+npx hardhat compile
+npx hardhat test
+npx hardhat run scripts/deploy.js --network obscuro
+```
+
+or
+
+```bash
+npx hardhat deploy --network obscuro
+```
+
+# 2. Writing Smart Contracts
 
 Obscuro performs bytecode execution in the EVM identically to Ethereum, allowing developers to leverage their existing codebase and tools.
 
@@ -142,6 +249,62 @@ How it works:
 - `MilestoneReached` - has no address topic, so it is visible to everyone.
 
 All you have to do is emit events as usual, and the platform applies common-sense visibility rules.
+
+
+# 3. Building the Frontend
+
+Creating a user-friendly frontend is crucial for interacting with your smart contracts on Obscuro. This section will guide you through setting up a frontend application, installing necessary packages, and integrating the Obscuro network.
+
+## 3.1. Setting Up Your Project
+
+Start by creating a new directory for your frontend application and initialize a Node.js project:
+
+```bash
+mkdir my-obscuro-dapp
+cd my-obscuro-dapp
+npm init -y
+```
+
+## 3.2. Setting Up Your Application
+
+Create your components and set up the application structure. Ensure that you have a component to interact with your smart contract.
+
+## 3.3. Integrating Obscuro Network
+
+### 3.3.1. Using Obscuro Gateway Widget Package
+
+Install the Obscuro Gateway Widget package to easily integrate the Obscuro network into your dApp:
+
+```bash
+npm install @obscuro/obscuro-gateway-widget
+```
+
+Import and use the package in your components to interact with the Obscuro network.
+
+### 3.3.2. Using CDN as a Fallback
+
+In case you are unable to install the Obscuro Gateway Widget package, you can use the Obscuro Gateway Library through CDN. Add the following script tag to your HTML file:
+
+```html
+<script src="https://cdn.obscuro.network/gateway-library.js"></script>
+```
+
+Then, use the `join` and `authorizeAccount` functions provided by the library to integrate the Obscuro network into your dApp:
+
+```javascript
+obscuroGateway.join();
+obscuroGateway.authorizeAccount();
+```
+
+## 3.5. Running Your Application
+
+Finally, run your application:
+
+```bash
+npm start
+```
+
+Your application should now be running on `http://localhost`, and you should be able to interact with your smart contracts on the Obscuro network through the frontend.
 
 ---
 
