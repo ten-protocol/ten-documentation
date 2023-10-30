@@ -3,62 +3,13 @@ sidebar_position: 4
 ---
 
 # Migrate your dApp to Obscuro
+This guide covers setting up Hardhat with its plugin, writing encryption-enabled smart contracts, and creating a user-friendly UI for Obscuro.
 
 ## 1. Setting Up the Project
 
-This section will walk you through setting up a Hardhat project for Obscuro, installing plugin, and configuring network.
+To begin building on Obscuro, start by setting up a Hardhat project as usual.
 
-### Prerequisites
-
-- Node.js (v12 or later)
-- npm (v7 or later)
-
-### 1. Initial Set Up
-
-First, create a new directory for your project and navigate into it:
-
-```bash
-mkdir my-obscuro-project
-cd my-obscuro-project
-```
-
-Initialize a new npm project:
-
-```bash
-npm init -y
-```
-
-Or if you are using Yarn:
-
-```bash
-yarn init -y
-```
-
-### 2. Installing Hardhat
-
-Install Hardhat using npm or Yarn:
-
-```bash
-npm install --save-dev hardhat
-```
-
-Or:
-
-```bash
-yarn add --dev hardhat
-```
-
-### 3. Creating a Hardhat Project
-
-Run the following command to create a Hardhat project:
-
-```bash
-npx hardhat
-```
-
-Follow the prompts to create a sample project, or choose to create an empty hardhat.config.js.
-
-### 4. Installing the Obscuro Hardhat Plugin
+### 1.1 Installing the Obscuro Hardhat Plugin
 
 To integrate the Obscuro Network into your Hardhat project, install the hh-obscuro-network plugin:
 
@@ -68,7 +19,7 @@ npm install --save-dev @obscurolabs/hh-obscuro-plugin
 
 You can extend the functionality of Hardhat by installing plugins. Install them using npm or Yarn & configure it in the next step.
 
-### 5. Configuring `hardhat.config.js`
+### 1.2 Configuring `hardhat.config.js`
 
 Open `hardhat.config.js` in your project's root directory and configure it in the following way:
 
@@ -92,22 +43,7 @@ module.exports = {
 
 export default config;
 ```
-
-### 6. Running Your Project
-
-Now that everything is set up, you can run Hardhat tasks:
-
-```bash
-npx hardhat compile
-npx hardhat test
-npx hardhat run scripts/deploy.js --network obscuro
-```
-
-or
-
-```bash
-npx hardhat deploy --network obscuro
-```
+Now, start writing the smart contracts for your project.
 
 # 2. Writing Smart Contracts
 
@@ -122,10 +58,6 @@ In Obscuro, the internal node database is encrypted, and the execution itself is
 The calls to [getStorageAt](https://docs.alchemy.com/reference/eth-getstorageat) are disabled, so all data access will be performed through view functions which are under the control of the smart contract developer. Public variables are accessible to everyone because Solidity automatically generates a getter function for them.
 
 We'll illustrate how this works by creating a simple data storage example. In this dApp, users can store a number and retrieve it later.
-
-## Pre-requisite
-
-Please set up your wallet by following the instructions [here](/docs/getting-started/for-developers/setup-dev-env#1-wallet-setup--configuration).
 
 ## Step 1: Declaring a Public Variable
 
@@ -251,60 +183,15 @@ How it works:
 All you have to do is emit events as usual, and the platform applies common-sense visibility rules.
 
 
-# 3. Building the Frontend
+# 3. Integrating Obscuro Network in the Frontend
 
-Creating a user-friendly frontend is crucial for interacting with your smart contracts on Obscuro. This section will guide you through setting up a frontend application, installing necessary packages, and integrating the Obscuro network.
-
-## 3.1. Setting Up Your Project
-
-Start by creating a new directory for your frontend application and initialize a Node.js project:
-
-```bash
-mkdir my-obscuro-dapp
-cd my-obscuro-dapp
-npm init -y
-```
-
-## 3.2. Setting Up Your Application
-
-Create your components and set up the application structure. Ensure that you have a component to interact with your smart contract.
-
-## 3.3. Integrating Obscuro Network
-
-### 3.3.1. Using Obscuro Gateway Widget Package
-
-Install the Obscuro Gateway Widget package to easily integrate the Obscuro network into your dApp:
+Creating a user-friendly frontend is crucial for interacting with your smart contracts on Obscuro. This section will guide you through installing necessary packages and integrating the Obscuro network.
 
 ```bash
 npm install @obscuro/obscuro-gateway-widget
 ```
 
 Import and use the package in your components to interact with the Obscuro network.
-
-### 3.3.2. Using CDN as a Fallback
-
-In case you are unable to install the Obscuro Gateway Widget package, you can use the Obscuro Gateway Library through CDN. Add the following script tag to your HTML file:
-
-```html
-<script src="https://cdn.obscuro.network/gateway-library.js"></script>
-```
-
-Then, use the `join` and `authorizeAccount` functions provided by the library to integrate the Obscuro network into your dApp:
-
-```javascript
-obscuroGateway.join();
-obscuroGateway.authorizeAccount();
-```
-
-## 3.5. Running Your Application
-
-Finally, run your application:
-
-```bash
-npm start
-```
-
-Your application should now be running on `http://localhost`, and you should be able to interact with your smart contracts on the Obscuro network through the frontend.
 
 ---
 
