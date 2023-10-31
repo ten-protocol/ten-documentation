@@ -27,7 +27,7 @@ const FeatureList = [
     description: (
       <>
         Obscuro has a seamless developer and user experience. DApps written for Ethereum will just work on Obscuro.
-        You don't have to learn any new language and can use all your favorite Ethereum tools.
+        You don't have to learn any new languages and can use all your favorite Ethereum tools.
       </>
     ),
   },
