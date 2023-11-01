@@ -197,7 +197,7 @@ Creating a user-friendly frontend is crucial for interacting with your smart con
 npm install @obscuro/obscuro-gateway-widget
 ```
 
-Import and use the package in your components to interact with the Obscuro network. Example: If you want the Obscuro Gateway Widget to appear on the homepage then you can call the component <obscuro-gateway-widget> there.
+Import and use the package in your components to interact with the Obscuro network. Example: If you want the Obscuro Gateway Widget to appear on the homepage then you can call the component \<obscuro-gateway-widget> there.
 
 ---
 
