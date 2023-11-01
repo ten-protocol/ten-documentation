@@ -2,7 +2,56 @@
 sidebar_position: 4
 ---
 
-# Developer Quickstart
+# Migrate your dApp to Obscuro
+Migrating to Obscuro is a straight-forward process that immediately unlocks private state.
+There are three main types of changes you need to make:
+
+1. Change your hardhat deployment script so that you can use --network obscuro
+2. Add logic to your view functions to protect data (if needed).
+3. Add a widget to your javascript UI to onboard Obscuro users.
+
+
+## 1. Configuring Hardhat
+
+To begin building on Obscuro, start by setting up a Hardhat project as usual.
+
+### 1.1 Installing the Obscuro Hardhat Plugin
+
+To integrate the Obscuro Network into your Hardhat project, install the hh-obscuro-network plugin:
+
+```bash
+npm install --save-dev @obscurolabs/hh-obscuro-plugin
+```
+
+You can extend the functionality of Hardhat by installing plugins. Install them using npm or Yarn & configure it in the next step.
+
+### 1.2 Configuring `hardhat.config.js`
+
+Open `hardhat.config.js` in your project's root directory and configure it in the following way:
+
+```javascript
+import {HardhatUserConfig} from "hardhat/config";
+import "@nomiclabs/hardhat-waffle";
+import "hh-obscuro-plugin"
+
+module.exports = {
+  solidity: "0.8.10",
+  networks: {
+    hardhat: {
+      // Configuration for the Hardhat Network
+    },
+    obscuro: {
+      url: "https://testnet.obscu.ro/V1/",
+      accounts: ["your-private-key"],
+    },
+  },
+};
+
+export default config;
+```
+Now, start writing the smart contracts for your project.
+
+# 2. Writing Smart Contracts
 
 Obscuro performs bytecode execution in the EVM identically to Ethereum, allowing developers to leverage their existing codebase and tools.
 
@@ -15,10 +64,6 @@ In Obscuro, the internal node database is encrypted, and the execution itself is
 The calls to [getStorageAt](https://docs.alchemy.com/reference/eth-getstorageat) are disabled, so all data access will be performed through view functions which are under the control of the smart contract developer. Public variables are accessible to everyone because Solidity automatically generates a getter function for them.
 
 We'll illustrate how this works by creating a simple data storage example. In this dApp, users can store a number and retrieve it later.
-
-## Pre-requisite
-
-Please set up your wallet by following the instructions [here](/docs/getting-started/for-developers/setup-dev-env#1-wallet-setup--configuration).
 
 ## Step 1: Declaring a Public Variable
 
@@ -142,6 +187,17 @@ How it works:
 - `MilestoneReached` - has no address topic, so it is visible to everyone.
 
 All you have to do is emit events as usual, and the platform applies common-sense visibility rules.
+
+
+# 3. Integrating Obscuro Network in the Frontend
+
+Creating a user-friendly frontend is crucial for interacting with your smart contracts on Obscuro. This section will guide you through installing necessary packages and integrating the Obscuro network.
+
+```bash
+npm install @obscuro/obscuro-gateway-widget
+```
+
+Import and use the package in your components to interact with the Obscuro network. Example: If you want the Obscuro Gateway Widget to appear on the homepage then you can call the component \<obscuro-gateway-widget> there.
 
 ---
 
