@@ -3,12 +3,17 @@ sidebar_position: 1
 ---
 # Overview
 
-![Obscuro in Web3](../assets/overview-banner.png)
+<p align="center">
+<img src="../assets/overview-banner.png" alt="obscuro" width="80%"/>
+ </p>
 
-_The full Litepaper is available to view [here](https://obscu.ro/litepaper)._
- 
-Obscuro is revolutionizing Ethereum with encrypted layer 2 solution. Just as HTTPS transformed Web 2.0, ushering in a new era of secure applications and enhanced user trust, Obscuro is set to redefine the Ethereum ecosystem. By introducing an encrypted Ethereum Layer 2, Obscuro not only amplifies transaction speed and efficiency but also fortifies it with the robust security and consensus mechanisms inherent to Ethereum.
+<br>
 
-Serving as a cutting-edge Layer 2 blockchain solution, Obscuro significantly reduces transaction costs while seamlessly inheriting Ethereum's unparalleled security features. What sets Obscuro apart is its commitment to privacy and encryption. Every transaction input, the intricate state of smart contracts, and the entire execution process remain encrypted, ensuring utmost confidentiality. This encryption in blockchain ensures users and developers enjoy a familiar Web2 experience without compromising on privacy or functionality.
 
-With Obscuro, the possibilities for Web3 applications are boundless. From next-gen gaming platforms and advanced DeFi 2.0 systems to dark pool trading, sealed-bid auctions, confidential agreements, secure identity management, and beyond, Obscuro is at the forefront of a private and efficient decentralized future.
+Obscuro revolutionizes Ethereum by adding the missing piece in Web3 - encryption. Just as HTTPS (TLS) transformed Web 2.0, ushering in a new era of secure applications and enhanced user trust that enabled Facebook, Amazon, Google, etc, Obscuro redefines the Ethereum ecosystem. By introducing an encrypted Layer 2 on Ethereum, Obscuro not only encrypts, amplifies transaction speed, reduces transaction cost but also inherits Ethereum's security and consensus.
+
+Every input, output, transaction and shared state of each smart contracts is encrypted, ensuring utmost confidentiality. This opens the doors for the selective privacy available in Web2 to finally be available on Ethereum. Obscuro does this without changing the user or developer experience.
+
+With Obscuro, the possibilities for Web3 applications are boundless. From next-gen gaming platforms and advanced DeFi systems to dark pool trading, sealed-bid auctions, confidential agreements, secure identity management, and beyond, Obscuro is at the forefront of a private and efficient decentralized future.
+
+_The full Litepaper is available [here](https://obscu.ro/litepaper)._

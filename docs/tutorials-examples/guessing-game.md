@@ -3,14 +3,16 @@ sidebar_position: 1
 ---
 # Guessing Game
 
-![Guessing Game](../assets/guessing-game.png)
+<p align="center">
+<img src="../assets/guessing-game.png" alt="guessing" width="80%"/>
+ </p>
 
-The Obscuro Guessing Game is a simple yet powerful demonstration of Obscuro's unique encryption capabilities. Players attempt to guess a secret number, with each guess requiring a token fee. The game showcases the challenges of maintaining secrecy in transparent ecosystems like Ethereum and how Obscuro addresses these challenges.
+The Obscuro Guessing Game is a simple yet powerful demonstration of Obscuro's unique encryption capabilities. Players attempt to guess a pre-determined secret number, with each guess requiring a token fee. The game showcases the challenges of maintaining secrecy in transparent ecosystems like Ethereum and how Obscuro addresses these challenges.
 
 ## **Game Mechanics**
 
 - The game's objective is to guess a secret number.
-- Each guess requires an entrance fee of 1 unit of the token (1x10^18 units make a single token).
+- Each guess requires an entrance fee.
 - Correct guesses result in the player receiving all accumulated entrance fees.
 - The game then resets with a new random secret number.
 
@@ -26,4 +28,4 @@ The Obscuro Guessing Game is a simple yet powerful demonstration of Obscuro's un
 
 ## **Contribute**
 
-Enhance the guessing game! Fork the game code from [this GitHub repository](#).
+Enhance the guessing game! Fork the game code from [this GitHub repository](https://github.com/obscuronet/sample-applications).

@@ -4,7 +4,11 @@ sidebar_position: 1
 
 # ObscuroScan
 
-![Obscuro Block Explorer](../assets/obscuroscan.png)
+<p align="center">
+<img src="../assets/obscuroscan.png" alt="faucet" width="80%"/>
+ </p>
+
+<br>
 
 [ObscuroScan](https://testnet.obscuroscan.io) is a blockchain explorer for the Obscuro Testnet - Obscuro’s equivalent of Etherscan. ObscuroScan allows you to view the latest rollups and transactions on the Testnet, as well as search for historical rollups and transactions. Its functionality will be expanded over time.
 
@@ -23,5 +27,5 @@ ObscuroScan is still in its testnet phase. Expect more features in the future as
 Notice the **Decrypted transaction blob** section for each rollup. This allows you to see the normally-encrypted transactions in unencrypted plain text.
 
 :::warning
-On the Testnet, transactions are decrypted because it uses a rollup encryption key that is long-lived and well-known. It's designed to help users understand how Obscuro works. However, on the Mainnet, rollups will be encrypted with rotating keys that are not known to anyone, or anything, other than the Obscuro enclaves.
+On the Testnet, transactions can be decrypted because it uses a rollup encryption key that is long-lived and well-known. It's designed to help developers debug and users understand how Obscuro works. On the Mainnet, rollups will be encrypted with keys that are not known to anyone, or anything, other than the Obscuro enclaves.
 :::

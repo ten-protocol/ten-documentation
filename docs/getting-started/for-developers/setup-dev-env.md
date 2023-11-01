@@ -12,7 +12,7 @@ To start building on Obscuro, you first need to set up and configure your wallet
    - Visit the [Obscuro hosted gateway](https://testnet.obscu.ro/) for wallet setup.
    - Click on 'Join' and follow the on-screen instructions.
    - Learn more about the [Obscuro Gateway](/docs/tools-infrastructure/hosted-gateway).
-3. **Acquire Testnet ETH Tokens**: To perform transactions, you'll need testnet ETH tokens. Refer to our [Getting tokens](/docs/getting-started/for-users/get-tokens).
+3. **Acquire Testnet ETH Tokens**: To perform transactions, you'll need testnet ETH tokens. Refer to [Getting tokens](/docs/getting-started/for-users/get-tokens).
 
 ## 2. Setting Up the Environment
 

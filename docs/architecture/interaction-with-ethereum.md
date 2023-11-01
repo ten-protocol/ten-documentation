@@ -7,7 +7,7 @@ Obscuro serves as a confidential extension to Ethereum, enabling assets to move 
 
 ## Deposits
 
-- **Process**: Users deposit supported ERC tokens into the Bridge contract's address. Once the transaction is confirmed on Ethereum L1, the Obscuro-enabled wallet automatically creates an L2 transaction, crediting the user's Obscuro account with wrapped tokens.
+- **Process**: Users deposit supported ERC tokens into the Bridge contract address. Once the transaction is confirmed on Ethereum, the Obscuro-enabled wallet automatically creates an L2 transaction, crediting the user's Obscuro account with wrapped tokens.
   
 - **Finality Consideration**: Due to Ethereum's probabilistic finality, Obscuro introduces a dependency mechanism between L2 rollups and L1 blocks to ensure accurate crediting of L2 accounts.
 

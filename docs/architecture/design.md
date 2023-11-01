@@ -3,7 +3,7 @@ sidebar_position: 1
 ---
 # Design
 
-Obscuro is architected as an L2 protocol, leveraging the rollup pattern to store transaction data on the L1 chain. While most rollup implementations aim for scalability, Obscuro's primary objective is confidentiality. The rollups encapsulate the entire encrypted transaction data.
+Obscuro is architected as an L2 protocol, leveraging the rollup pattern to store transaction data on the L1 chain. While most rollup implementations aim only for scalability, Obscuro's objectives are both scalability and confidentiality. The rollups encapsulate the entire encrypted transaction data.
 
 ![L1-L2 Interaction](../assets/l1-l2-interaction.png)
 
@@ -11,7 +11,7 @@ Obscuro is architected as an L2 protocol, leveraging the rollup pattern to store
 
 - **Management Contracts**: On the L1 network, there are several standard Ethereum contracts, often referred to as Management Contracts. These contracts play a pivotal role in the functioning and management of the Obscuro network.
 
-  - **Network Management**: This contract acts as the gatekeeper for the protocol. It manages the Secure Enclave / TEE attestation requirements, verifies attestation reports, and oversees the stake of the Aggregators.
+  - **Network Management**: This contract acts as the gatekeeper for the protocol. It manages the Secure Enclave attestation requirements, verifies attestation reports, and oversees the stake of the Aggregators.
 
   - **Rollup Management**: This module accepts rollups submitted by L2 nodes and collaborates with the bridge to process user withdrawal requests.
 
@@ -19,13 +19,13 @@ Obscuro is architected as an L2 protocol, leveraging the rollup pattern to store
 
 ## L2 Network
 
-The L2 design aims to establish a decentralized network of nodes with valid Secure Enclave / TEEs, ensuring transaction confidentiality even amidst potential Secure Enclave / TEE breaches.
+The L2 design aims to establish a decentralized network of nodes with valid Secure Enclaves, ensuring transaction confidentiality even amidst potential Secure Enclave breaches.
 
 - **L2 Nodes**: There are two primary categories of nodes within the Obscuro network:
 
-  - **Aggregator Nodes**: These nodes, equipped with Secure Enclave / TEEs and the shared secret, can submit rollups to the L1. They process user transactions, roll them up, and submit them for inclusion in Ethereum blocks.
+  - **Aggregator Nodes**: These nodes, equipped with a Secure Enclave and the shared secret, can submit rollups to the L1. They process user transactions, roll them up, and submit them for inclusion in Ethereum blocks.
 
-  - **Verifier Nodes**: These nodes, also equipped with Secure Enclave / TEEs and the shared secret, play a significant role in consensus security. They monitor the L1 network, calculating the state based on the submitted rollups.
+  - **Verifier Nodes**: These nodes, also equipped with a Secure Enclave and the shared secret, play a significant role in consensus security. They monitor the L1 network, calculating the state based on the submitted rollups.
 
 ## Rollup Data Structure
 

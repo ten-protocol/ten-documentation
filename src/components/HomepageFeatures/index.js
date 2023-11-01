@@ -18,7 +18,7 @@ const FeatureList = [
     png: require('@site/static/img/scale.png').default,
     description: (
       <>
-        Designed as a decentralized Ethereum L2 Rollup protocol, Obscuro enhances the scalability of the Ethereum network.
+        Designed as a decentralized Ethereum Layer 2 Rollup protocol, Obscuro enhances the scalability of the Ethereum network.
       </>
     ),
   },
@@ -27,7 +27,7 @@ const FeatureList = [
     png: require('@site/static/img/great-ux-dx.png').default,
     description: (
       <>
-        Obscuro prioritizes privacy while maintaining a seamless user experience, allowing users to access their preferred dApps and services without additional applications or extensions.
+        Obscuro prioritizes privacy while maintaining a seamless user and developer experience. Obscuro is 100% EVM, 100% Solidity.
       </>
     ),
   },

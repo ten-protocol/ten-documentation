@@ -11,7 +11,7 @@ Obscuro's governance is explicit, transparent, and draws inspiration from the ex
 
 ## Obscuro Controls
 
-### 1. TEE Attestation Constraints
+### 1. Secure Enclave Attestation Constraints
 
 The Attestation Constraints control which software can run inside the Secure Enclave, processing user transactions and creating rollups. Independent security auditors analyze and approve the code. The constraints contain the keys of these auditors, determining which software is permitted.
 

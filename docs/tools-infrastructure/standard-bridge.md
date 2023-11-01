@@ -23,7 +23,7 @@ For `sendNative`, simply add value to the transaction. The bridge contract's rec
 - **Layer 1 (L1)**: Managed by `ObscuroBridge.sol` - the bridge to Obscuro.
 - **Layer 2 (L2)**: Managed by `EthereumBridge.sol` - the bridge to Ethereum.
 
-Tokens must be whitelisted to bridge over. Initially, only admin role accounts can whitelist tokens. As the protocol matures, this will change. To whitelist your token, contact us on our Discord.
+Tokens must be whitelisted to bridge over. Initially, only admin role accounts can whitelist tokens. As the protocol matures, this will change. To whitelist your token, request it on [Discord](https://discord.com/invite/yQfmKeNzNd).
 
 ## Security
 
@@ -31,7 +31,7 @@ The bridge uses the `CrossChainEnabledObscuro` contract, offering a `onlyCrossCh
 
 ## Building Bridges
 
-The standard bridge operates without needing private platform capabilities, meaning anyone can build a bridge using the cross-chain messaging API. No permissions are required. We encourage innovative bridge construction and are here to assist. Join our Discord for discussions, questions, or support.
+The standard bridge operates without needing private platform capabilities, meaning anyone can build a bridge using the cross-chain messaging API. No permissions are required. Innovative bridge construction is encouraged and support is available. Join [Discord](https://discord.com/invite/yQfmKeNzNd) for discussions, questions, and support.
 
 ## Interface 
 
@@ -49,4 +49,4 @@ interface IBridge {
 }
 ```
 
-For more details, discussions, or support, join our [Discord](https://t.co/UJC0FUAY2T).
+For more details, discussions, or support, join our [Discord](https://discord.com/invite/yQfmKeNzNd).
