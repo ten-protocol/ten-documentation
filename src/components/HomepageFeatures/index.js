@@ -4,30 +4,30 @@ import styles from './styles.module.css';
 
 const FeatureList = [
   {
-    title: 'Encrypted',
-    png: require('@site/static/img/encrypted-trans.png').default,
+    title: 'Encryption',
+    png: require('@site/static/img/encrypted.png').default,
     description: (
       <>
-   Obscuro leverages hardware-based Trusted Execution Environments (TEE) to achieve data confidentiality and computational privacy.
-
+        The first Ethereum L2 to bring confidential EVM smart contracts (with shared state). You can now build an AMM without MEV.
       </>
     ),
   },
   {
-    title: 'Scale',
-    png: require('@site/static/img/scale-trans.png').default,
+    title: 'Scalability',
+    png: require('@site/static/img/scale.png').default,
     description: (
       <>
-        Designed as a decentralized Ethereum L2 Rollup protocol, Obscuro enhances the scalability of the Ethereum network.
+        Obscuro enhances the scalability of the Ethereum network by moving computation off-chain to secure enclaves and rolling up encrypted transactions.
       </>
     ),
   },
   {
     title: 'Great UX & DX',
-    png: require('@site/static/img/great-ux-dx-trans.png').default,
+    png: require('@site/static/img/great-ux-dx.png').default,
     description: (
       <>
-        Obscuro prioritizes privacy while maintaining a seamless user experience, allowing users to access their preferred dApps and services without additional applications or extensions.
+        Obscuro has a seamless developer and user experience. DApps written for Ethereum will just work on Obscuro.
+        You don't have to learn any new languages and can use all your favorite Ethereum tools.
       </>
     ),
   },
