@@ -3,9 +3,15 @@ sidebar_position: 4
 ---
 
 # Migrate your dApp to Obscuro
-This guide covers setting up Hardhat with its plugin, writing encryption-enabled smart contracts, and creating a user-friendly UI for Obscuro.
+Migrating to Obscuro is a straight-forward process that immediately unlocks private state.
+There are three main types of changes you need to make:
 
-## 1. Setting Up the Project
+1. Change your hardhat deployment script so that you can use --network obscuro
+2. Add logic to your view functions to protect data (if needed).
+3. Add a widget to your javascript UI to onboard Obscuro users.
+
+
+## 1. Configuring Hardhat
 
 To begin building on Obscuro, start by setting up a Hardhat project as usual.
 
@@ -191,7 +197,7 @@ Creating a user-friendly frontend is crucial for interacting with your smart con
 npm install @obscuro/obscuro-gateway-widget
 ```
 
-Import and use the package in your components to interact with the Obscuro network.
+Import and use the package in your components to interact with the Obscuro network. Example: If you want the Obscuro Gateway Widget to appear on the homepage then you can call the component <obscuro-gateway-widget> there.
 
 ---
 
