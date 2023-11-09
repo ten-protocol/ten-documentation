@@ -25,6 +25,14 @@ You need to follow the following steps:
 ### Do I have to add an account through Obscuro Gateway each time to use the network?
 No, you just need to [add your account](https://docs.obscu.ro/docs/getting-started/for-users/setup-you-wallet) once and the RPC will be available until you revoke access. 
 
+### How do I connect to Obscuro from multiple devices?
+Choose your preferred and most convenient method from those listed below:
+
+1. Use one RPC link you once received on all your devices.
+2. Use a different link for each individual device, reconnecting as described above.
+
+Obscuro supports using multiple VKs for each individual wallet, which means reconnecting from a different device won't make your previous connection obsolete, as long as you do not use the revoke function in Obscuro Gateway.
+
 ### Obscuro is only available in Metamask? 
 No, Obscuro is available in any non-custodial EVM wallet that supports custom RPCs and networks, and allows you to sign transactions using the `eth_sign` function
 
