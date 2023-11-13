@@ -22,7 +22,7 @@ The Obscuro Guessing Game is a simple yet powerful demonstration of Obscuro's un
 4. **Guess**: Enter your number guess and submit.
 5. **Transaction Status**: Monitor the progress of your guess transaction in MetaMask.
 6. **Results**: The game will notify you of the outcome of your guess.
-7. **ObscuroScan**: You can inspect the encrypted transaction details on [ObscuroScan](https://testnet.obscuroscan.io/)
+7. **ObscuroScan**: You can inspect the encrypted transaction details on [ObscuroScan](http://testnet.obscuroscan.io/)
 
 ## **Contribute**
 
