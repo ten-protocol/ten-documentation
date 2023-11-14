@@ -4,14 +4,14 @@ sidebar_position: 1
 
 # Fungible Tokens
 
-## ERC-20 on Obscuro
-The ERC-20 standard, while originally proposed for Ethereum, is also applicable to Obscuro's Layer 2. It provides an API for tokens within Smart Contracts and offers functionalities to:
-- Transfer tokens between accounts on Obscuro
-- Retrieve the current token balance of an account on Obscuro
-- Determine the total supply of the token on the Obscuro network
-- Approve third-party accounts to spend a specific amount of tokens on Obscuro
+## ERC-20 on Ten
+The ERC-20 standard, while originally proposed for Ethereum, is also applicable to Ten's Layer 2. It provides an API for tokens within Smart Contracts and offers functionalities to:
+- Transfer tokens between accounts on Ten
+- Retrieve the current token balance of an account on Ten
+- Determine the total supply of the token on the Ten network
+- Approve third-party accounts to spend a specific amount of tokens on Ten
 
-A Smart Contract on Obscuro that implements the following methods and events adheres to the ERC-20 standard:
+A Smart Contract on Ten that implements the following methods and events adheres to the ERC-20 standard:
 
 ### Methods:
 - `name()`: Returns the name of the token.
@@ -246,4 +246,4 @@ contract ERC20 is IERC20 {
 
 ---
 
-This documentation provides an overview of the ERC-20 standard adapted for Obscuro's Layer 2 solution. For a more detailed understanding and technical specifications, you can refer to the official [EIP-20 documentation](https://eips.ethereum.org/EIPS/eip-20) and Obscuro's official documentation.
+This documentation provides an overview of the ERC-20 standard adapted for Ten's Layer 2 solution. For a more detailed understanding and technical specifications, you can refer to the official [EIP-20 documentation](https://eips.ethereum.org/EIPS/eip-20) and Ten's official documentation.

@@ -3,11 +3,11 @@ sidebar_position: 3
 ---
 # Consensus Mechanism
 
-Obscuro combines Ethereum's L1 security, rollup efficiency, Secure Enclave privacy, and the POBI mechanism for a unique consensus approach.
+Ten combines Ethereum's L1 security, rollup efficiency, Secure Enclave privacy, and the POBI mechanism for a unique consensus approach.
 
 ## POBI (Proof Of Block Inclusion)
 
-- **Unique to Obscuro**: Ensures a single version of truth by validating rollups only if they're included in a block.
+- **Unique to Ten**: Ensures a single version of truth by validating rollups only if they're included in a block.
 - **Chain Selection**: The chain with the latest block inclusion is deemed the canonical chain.
 
 ## Rollup-Based Consensus
@@ -34,4 +34,4 @@ Obscuro combines Ethereum's L1 security, rollup efficiency, Secure Enclave priva
 
 ## Sybil Attack Prevention
 
-Obscuro's consensus mechanism is designed to resist Sybil attacks. The combination of Secure Enclave attestation and economic incentives ensures that creating multiple fake nodes is not only challenging but also economically unviable.
+Ten's consensus mechanism is designed to resist Sybil attacks. The combination of Secure Enclave attestation and economic incentives ensures that creating multiple fake nodes is not only challenging but also economically unviable.

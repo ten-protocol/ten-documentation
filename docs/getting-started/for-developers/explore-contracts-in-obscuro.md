@@ -1,13 +1,13 @@
 ---
 sidebar_position: 1
 ---
-# Explore Contracts in Obscuro
+# Explore Contracts in Ten
 
-Obscuro offers a distinct environment for smart contract development so you'll need to consider how to design your dApps slightly differently from how you would a transparent dApp. This guide explains these differences:
+Ten offers a distinct environment for smart contract development so you'll need to consider how to design your dApps slightly differently from how you would a transparent dApp. This guide explains these differences:
 
 ## 1. Accessing Storage Values
 
-While both Ethereum and Obscuro allow easy access to public variables, their handling of private variables differs significantly, highlighting Ethereum's transparency challenges and Obscuro's privacy solutions.
+While both Ethereum and Ten allow easy access to public variables, their handling of private variables differs significantly, highlighting Ethereum's transparency challenges and Ten's privacy solutions.
 
 ### Ethereum's Transparency Challenge
 
@@ -19,12 +19,12 @@ Accessing a private variable in Ethereum:
 uint256 value = eth.getStorageAt(contractAddress, position);
 ```
 
-### Obscuro's Privacy Solution
+### Ten's Privacy Solution
 
-To provide privacy on Ethereum, Obscuro has disabled the `getStorageAt` function. This ensures that private variables can only be accessed via their associated functions, providing genuine programmable privacy.
+To provide privacy on Ethereum, Ten has disabled the `getStorageAt` function. This ensures that private variables can only be accessed via their associated functions, providing genuine programmable privacy.
 
 **Example**:
-Accessing a private variable in Obscuro:
+Accessing a private variable in Ten:
 ```solidity
 private uint256 privateVariable;
 
@@ -33,7 +33,7 @@ function getPrivateVariable() public view returns (uint256) {
 }
 ```
 
-In summary, while Ethereum's transparency poses challenges for true data privacy, Obscuro offers a robust solution by ensuring that private data remains genuinely private.
+In summary, while Ethereum's transparency poses challenges for true data privacy, Ten offers a robust solution by ensuring that private data remains genuinely private.
 
 ## 2. Access Control for Functions
 
@@ -57,23 +57,23 @@ This example ensures that only the contract's owner can call the `restrictedFunc
 
 ## 3. Event Visibility
 
-Obscuro has specific event visibility rules:
+Ten has specific event visibility rules:
 
 - Lifecycle events without an address parameter are public.
 - Events with an address parameter related to an account are private.
 
 **Example**:
 ```solidity
-// Public event on Obscuro
+// Public event on Ten
 event LifecycleEvent(uint256 indexed value);
 
-// Private event on Obscuro
+// Private event on Ten
 event AccountEvent(address indexed account, uint256 value);
 ```
 
-## 4. Secure Random Number Generation in Obscuro
+## 4. Secure Random Number Generation in Ten
 
-Random number generation on blockchains is challenging due to timing, delay, complexity, and fees. Obscuro offers a unique, immediate, and secure solution.
+Random number generation on blockchains is challenging due to timing, delay, complexity, and fees. Ten offers a unique, immediate, and secure solution.
 
 ### Challenges with On-Chain Randomness
 
@@ -81,9 +81,9 @@ Random number generation on blockchains is challenging due to timing, delay, com
 2. **Delay**: Many solutions introduce a delay, affecting user experience.
 3. **Complexity & Fees**: Solutions like oracles add overhead and costs.
 
-### Obscuro's Solution  
+### Ten's Solution  
 
-Obscuro nodes run on secure enclave's, ensuring:
+Ten nodes run on secure enclave's, ensuring:
 
 - **Immediate Randomness**: No delays.
 - **Unpredictability**: Random numbers are based on an inaccessible private seed.
@@ -96,8 +96,8 @@ function getRandomNumber() public view returns (uint256) {
 }
 ```
 
-Obscuro's approach ensures secure and straightforward random number generation.
+Ten's approach ensures secure and straightforward random number generation.
 
 ## 5. Gas Consumption
 
-Gas consumption is a vital consideration in smart contract development. On Obscuro, it's essential to optimize your contract functions to ensure efficient gas usage. Always test your contracts in a simulated environment before deploying to gauge gas consumption.
+Gas consumption is a vital consideration in smart contract development. On Ten, it's essential to optimize your contract functions to ensure efficient gas usage. Always test your contracts in a simulated environment before deploying to gauge gas consumption.

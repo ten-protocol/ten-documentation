@@ -3,7 +3,7 @@ sidebar_position: 1
 ---
 # How to submit a bug reports
 
-If you have encountered any bugs in Obscuro, we invite you to tell us about it, thereby making a contribution to help us evolve!
+If you have encountered any bugs in Ten, we invite you to tell us about it, thereby making a contribution to help us evolve!
 
 The process is incredibly simple, follow the steps listed below so that we can fix the errors you find as soon as possible:
 
