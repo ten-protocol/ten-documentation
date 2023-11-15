@@ -6,7 +6,7 @@ sidebar_position: 1
 
 ![Obscuro Block Explorer](../assets/obscuroscan.png)
 
-[ObscuroScan](http://testnet.obscuroscan.io) is a blockchain explorer for the Obscuro Testnet - Obscuro’s equivalent of Etherscan. ObscuroScan allows you to view the latest rollups and transactions on the Testnet, as well as search for historical rollups and transactions. Its functionality will be expanded over time.
+[ObscuroScan](https://testnet.obscuroscan.io) is a blockchain explorer for the Obscuro Testnet - Obscuro’s equivalent of Etherscan. ObscuroScan allows you to view the latest rollups and transactions on the Testnet, as well as search for historical rollups and transactions. Its functionality will be expanded over time.
 
 :::info
 ObscuroScan is still in its testnet phase. Expect more features in the future as its functionality expands.
