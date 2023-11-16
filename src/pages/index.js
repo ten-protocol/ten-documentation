@@ -18,7 +18,7 @@ function HomepageHeader() {
           <Link
             className="button button--secondary button--lg"
             to="/docs/tutorials-examples/guessing-game">
-            Try Obscuro 🔐
+            Try Ten 🔐
           </Link>
           <Link
             className="button button--secondary button--lg"

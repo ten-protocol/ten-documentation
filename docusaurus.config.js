@@ -7,7 +7,7 @@ const darkTheme = themes.dracula;
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Obscuro Documentation',
+  title: 'Ten Documentation',
   tagline: 'Encrypting Ethereum',
   favicon: 'img/favicon.ico',
 
@@ -19,8 +19,8 @@ const config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'Obscuro', // Usually your GitHub org/user name.
-  projectName: 'obscuro-documentation', // Usually your repo name.
+  organizationName: 'ten-protocol', // Usually your GitHub org/user name.
+  projectName: 'ten-documentation', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -43,14 +43,14 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/obscuronet/obscuro-documentation/blob/main',
+            'https://github.com/ten-protocol/ten-documentation/blob/main',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/obscuronet/obscuro-documentation/blob/main'
+            'https://github.com/ten-protocol/ten-documentation/blob/main'
           //editUrl:
             //'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
@@ -67,9 +67,9 @@ const config = {
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'Obscuro',
+        title: 'Ten',
         logo: {
-          alt: 'Obscuro Logo',
+          alt: 'Ten Logo',
           src: 'img/logo.svg',
         },
         items: [
@@ -81,7 +81,7 @@ const config = {
           },
           {to: 'https://medium.com/obscuro-labs', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/obscuronet/obscuro-documentation',
+            href: 'https://github.com/ten-protocol/ten-documentation',
             label: 'GitHub',
             position: 'right',
           },
@@ -112,7 +112,7 @@ const config = {
               },
               {
                 label: 'Twitter',
-                href: 'https://twitter.com/obscuronet',
+                href: 'https://twitter.com/tenprotocol',
               },
             ],
           },
@@ -125,12 +125,12 @@ const config = {
               },
               {
                 label: 'GitHub',
-                href: 'https://github.com/obscuronet/obscuro-documentation',
+                href: 'https://github.com/ten-protocol/ten-documentation',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Obscuro Docs, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Ten Docs, Inc. Built with Docusaurus.`,
       },
       prism: {
         theme: lightTheme,

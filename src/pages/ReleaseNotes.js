@@ -4,7 +4,7 @@ function ReleaseNotes() {
     const [releases, setReleases] = useState([]);
 
     useEffect(() => {
-        fetch('https://api.github.com/repos/obscuronet/go-obscuro/releases')
+        fetch('https://api.github.com/repos/ten-protocol/go-ten/releases')
             .then(response => response.json())
             .then(data => setReleases(data));
     }, []);
