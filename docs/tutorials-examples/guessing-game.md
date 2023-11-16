@@ -5,7 +5,7 @@ sidebar_position: 1
 
 ![Guessing Game](../assets/guessing-game.png)
 
-The Obscuro Guessing Game is a simple yet powerful demonstration of Obscuro's unique encryption capabilities. Players attempt to guess a secret number, with each guess requiring a token fee. The game showcases the challenges of maintaining secrecy in transparent ecosystems like Ethereum and how Obscuro addresses these challenges.
+The Ten Guessing Game is a simple yet powerful demonstration of Ten's unique encryption capabilities. Players attempt to guess a secret number, with each guess requiring a token fee. The game showcases the challenges of maintaining secrecy in transparent ecosystems like Ethereum and how Ten addresses these challenges.
 
 ## **Game Mechanics**
 
@@ -17,12 +17,12 @@ The Obscuro Guessing Game is a simple yet powerful demonstration of Obscuro's un
 ## **Playing the Game**
 
 1. **Visit**: Visit the Guessing Game [website](https://guessing-game-with-widget.vercel.app/)
-2. **Set Up**: Click on the Obscuro widget in the bottom-right corner, click 'join' & follow further instructions.
+2. **Set Up**: Click on the Ten widget in the bottom-right corner, click 'join' & follow further instructions.
 3. **Start Playing**: Input the number of guesses you wish to make & approve the game fee for participation.
 4. **Guess**: Enter your number guess and submit.
 5. **Transaction Status**: Monitor the progress of your guess transaction in MetaMask.
 6. **Results**: The game will notify you of the outcome of your guess.
-7. **ObscuroScan**: You can inspect the encrypted transaction details on [ObscuroScan](https://testnet.obscuroscan.io/)
+7. **TenScan**: You can inspect the encrypted transaction details on [TenScan](https://testnet.obscuroscan.io/)
 
 ## **Contribute**
 

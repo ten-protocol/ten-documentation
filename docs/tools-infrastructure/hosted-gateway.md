@@ -4,18 +4,18 @@ sidebar_position: 3
 
 # Hosted Gateway
 
-The Obscuro Gateway is a critical application that facilitates communication between an Obscuro node and various tools that require a connection to it, such as MetaMask. Due to the encryption of data within an Obscuro node, direct communication is not feasible.
+The Ten Gateway is a critical application that facilitates communication between an Ten node and various tools that require a connection to it, such as MetaMask. Due to the encryption of data within an Ten node, direct communication is not feasible.
 
 The program conforms to the Ethereum JSON-RPC specification ([Ethereum JSON-RPC Specification](https://playground.open-rpc.org/?schemaUrl=https://raw.githubusercontent.com/ethereum/eth1.0-apis/assembled-spec/openrpc.json)) and also supports additional APIs to ensure compatibility with popular tools like MetaMask.
 
-You have the flexibility to host the Obscuro Gateway yourself or use one of the hosted gateways if you choose to join Obscuro. You also have the option to run and use the program independently. The diagram below illustrates different usage scenarios, with Bob and Charlie using the hosted version and Alice managing it independently.
+You have the flexibility to host the Ten Gateway yourself or use one of the hosted gateways if you choose to join Ten. You also have the option to run and use the program independently. The diagram below illustrates different usage scenarios, with Bob and Charlie using the hosted version and Alice managing it independently.
 
 ## Workflow
 
 The onboarding process is straightforward and requires only a few clicks:
 
-1. The user navigates to a website where a hosted Obscuro Gateway is running and clicks on "Join Obscuro." This action will add a network to their wallet.
-2. The user then connects their wallet and switches to the Obscuro network, if they have not done so already.
+1. The user navigates to a website where a hosted Ten Gateway is running and clicks on "Join Ten." This action will add a network to their wallet.
+2. The user then connects their wallet and switches to the Ten network, if they have not done so already.
 3. In the wallet popup, the user is prompted to sign over a message: "Register $UserId for $ACCT."
 
 ## Endpoints
