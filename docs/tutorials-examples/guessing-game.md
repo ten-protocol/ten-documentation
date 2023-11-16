@@ -22,7 +22,7 @@ The Ten Guessing Game is a simple yet powerful demonstration of Ten's unique enc
 4. **Guess**: Enter your number guess and submit.
 5. **Transaction Status**: Monitor the progress of your guess transaction in MetaMask.
 6. **Results**: The game will notify you of the outcome of your guess.
-7. **TenScan**: You can inspect the encrypted transaction details on [TenScan](http://testnet.obscuroscan.io/)
+7. **TenScan**: You can inspect the encrypted transaction details on [TenScan](https://testnet.obscuroscan.io/)
 
 ## **Contribute**
 
