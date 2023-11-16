@@ -17,7 +17,7 @@ const FeatureList = [
     png: require('@site/static/img/scale.png').default,
     description: (
       <>
-        Obscuro enhances the scalability of the Ethereum network by moving computation off-chain to secure enclaves and rolling up encrypted transactions.
+        Ten enhances the scalability of the Ethereum network by moving computation off-chain to secure enclaves and rolling up encrypted transactions.
       </>
     ),
   },
@@ -26,7 +26,7 @@ const FeatureList = [
     png: require('@site/static/img/great-ux-dx.png').default,
     description: (
       <>
-        Obscuro has a seamless developer and user experience. DApps written for Ethereum will just work on Obscuro.
+        Ten has a seamless developer and user experience. DApps written for Ethereum will just work on Ten.
         You don't have to learn any new languages and can use all your favorite Ethereum tools.
       </>
     ),
