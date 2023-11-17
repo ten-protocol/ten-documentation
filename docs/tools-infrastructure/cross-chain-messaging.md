@@ -32,7 +32,7 @@ The protocol securely manages the keys for the L2 contract within SGX. Extractin
 
 ## Interface
 
-Below are the interfaces for interacting with `MessageBus`. For queries or issues, join our [Discord](#).
+Below are the interfaces for interacting with `MessageBus`. For queries or issues, join our [Discord](https://discord.gg/tVnNrQ35Ke).
 
 ```solidity
 interface Structs {
