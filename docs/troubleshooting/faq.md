@@ -45,5 +45,5 @@ You should refrain from publishing your link because if you do, it will be compr
 :::warning
 Compromising your userID obtained from Ten Gateway will result in a breach of your data privacy. 
 
-In case your userID has been compromised, you need to revoke it using either the OG Widget or Ten Hosted Gateway.
+In case your userID has been compromised, you need to revoke it using either the Gateway Widget or Ten Hosted Gateway.
 :::
