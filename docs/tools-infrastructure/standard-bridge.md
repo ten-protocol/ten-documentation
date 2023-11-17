@@ -23,7 +23,7 @@ For `sendNative`, simply add value to the transaction. The bridge contract's rec
 - **Layer 1 (L1)**: Managed by `ObscuroBridge.sol` - the bridge to Ten.
 - **Layer 2 (L2)**: Managed by `EthereumBridge.sol` - the bridge to Ethereum.
 
-Tokens must be whitelisted to bridge over. Initially, only admin role accounts can whitelist tokens. As the protocol matures, this will change. To whitelist your token, contact us on our Discord.
+Tokens must be whitelisted to bridge over. Initially, only admin role accounts can whitelist tokens. As the protocol matures, this will change. To whitelist your token, contact us on our [Discord](https://discord.gg/tVnNrQ35Ke).
 
 ## Security
 
