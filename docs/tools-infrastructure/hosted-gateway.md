@@ -4,7 +4,7 @@ sidebar_position: 3
 
 # Hosted Gateway
 
-The Ten Gateway is a critical application that facilitates communication between an Ten node and various tools that require a connection to it, such as MetaMask. Due to the encryption of data within an Ten node, direct communication is not feasible.
+The Ten Gateway is a critical application that facilitates communication between a Ten node and various tools that require a connection to it, such as MetaMask. Due to the encryption of data within a Ten node, direct communication is not feasible.
 
 The program conforms to the Ethereum JSON-RPC specification ([Ethereum JSON-RPC Specification](https://playground.open-rpc.org/?schemaUrl=https://raw.githubusercontent.com/ethereum/eth1.0-apis/assembled-spec/openrpc.json)) and also supports additional APIs to ensure compatibility with popular tools like MetaMask.
 
