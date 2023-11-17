@@ -8,12 +8,8 @@ These are the list of compatible tools & libraries. We are constantly working to
 
 | Tool / Library     | Status | Note             |
 |---------------|--------|------------------|
-| ethers.js     | ✅     | Work in progress |
-| Alchemy Web3  | ❗     | Work in progress |
-| Drizzle       | ❌     | Work in progress |
-| ethjs         | ✅     | Work in progress |
-| Embark        | ❗     | Work in progress |
-| Remix IDE     | ❌     | Work in progress |
-| Truffle Suite | ✅     | Work in progress |
-| Hardhat       | ❗     | Work in progress |
-
+| ethers.js     | ⚠️      | Works, but with few bugs |
+| Remix IDE     | ⚠️      | Works, but with few bugs |
+| Hardhat       | ⚠️      | Works, but with few bugs |
+| web3.py       | ✅     | Works without any issues |
+| web3.js       | ✅     | Works without any issues |
