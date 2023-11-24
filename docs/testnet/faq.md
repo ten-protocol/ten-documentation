@@ -21,7 +21,7 @@ To encourage participation at sufficiently high levels, the testnet is incentivi
 ## Who is eligible? 
 There are no limits to the number of users. However, developers and node operators will have to go through an application process to ensure suitability. Application decision responses will be sent via email. 
 
-You can apply to be a developer <here> and in phase 2, you'll be able to apply to be a node operator.
+You can apply to be a developer [here](https://ten-testnet.deform.cc/developers) and in phase 2, you'll be able to apply to be a node operator.
 
 Eligibility for the Ten testnet is detailed in the “Who May Use the Services” section of the Terms and Conditions. Participation is restricted to jurisdictions where it is permitted by applicable law. To be eligible for rewards, participants must undergo KYC, KYB, and AML checks. 
 
