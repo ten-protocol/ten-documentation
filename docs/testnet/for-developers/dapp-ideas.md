@@ -17,9 +17,6 @@ Problems to solve:
 ### Minesweeper
 Another simple game that requires privacy. Idea here is to play the game, tournament style. Players are given random ordering and make a move in the game. If they hit a mine, they’re out of the game. Last player(s) get a prize.
 
-### Exploding Kittens (and other card games)
-My favourite card game and one of the biggest selling games. You can’t find this being played for money anywhere as the publisher won’t allow it. But with blockchain and censorship resistance it could happen. 
-
 ### Reverse auction (lowest unique number wins)
 Simple game where the lowest unique bid of a particular round, wins the round. Requires privacy to keep bids hidden until the round ends.
 
