@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import './ReleaseNotes.css';
 
 function ReleaseNotes() {
     const [releases, setReleases] = useState([]);
@@ -10,14 +11,18 @@ function ReleaseNotes() {
     }, []);
 
     return (
-        <div>
+        <section className="release-notes">
             {releases.map(release => (
-                <div key={release.id}>
+                <article key={release.id} className="release">
                     <h3>{release.name}</h3>
-                    <p dangerouslySetInnerHTML={{ __html: release.body }} />
-                </div>
+                    <ul>
+                        {release.body.split('\n').map((item, index) => (
+                            <li key={index}>{item}</li>
+                        ))}
+                    </ul>
+                </article>
             ))}
-        </div>
+        </section>
     );
 }
 
