@@ -16,34 +16,58 @@ The onboarding process is straightforward and requires only a few clicks:
 
 1. The user navigates to a website where a hosted Ten Gateway is running and clicks on "Join Ten." This action will add a network to their wallet.
 2. The user then connects their wallet and switches to the Ten network, if they have not done so already.
-3. In the wallet popup, the user is prompted to sign over a message: "Register $UserId for $ACCT."
+3. In the wallet popup, the user is prompted to sign over an EIP-712 formatted message including encryption token.
 
 ## Endpoints
 
 ### GET /join
 
-This endpoint generates a key-pair, saves it in the database, derives a UserId from the keys, and returns the UserId.
+This endpoint generates a key-pair, saves it in the database, derives an encryption token from the keys, and returns the encryption token.
 
-### POST /authenticate?u=$UserId
+### POST /authenticate?u=$EncryptionToken
 
-This endpoint enables the addition of multiple addresses for each UserId. Prior to saving, it performs several checks on the message, signature, and UserId.
+This endpoint enables the addition of multiple addresses for each encryption token. Prior to saving, it performs several checks on the signature and encryption token.
 
 Here's an example of the POST request body for the /authenticate endpoint:
 
 ```json
 {
     "address": "0xEF1C76228AeaDE07B74eA4a749d02f539cCff16a",
-    "message": "Register 0x5038511c45b22e59ec9487c97923c5b4088d1d9a00dd7cbe081dd18c86ae6b2c for 0xef1c76228aeade07b74ea4a749d02f539ccff16a",
     "signature": "0x781699d25d62ebaa3cc0901ac1fd9fda4e7e3b143bee854b262434e3e22021d1607b5680924ac439dec9838344d6785100c7043312cec07b7fd1e9d26983f69f1b"
 }
 ```
 
 Typically, a JavaScript function initiates this call.
+Signed message must be in following format:
 
-### GET /query/address?u=$UserId&a=$Address
+```
+{
+    types: {
+      EIP712Domain: [
+        { name: "name", type: "string" },
+        { name: "version", type: "string" },
+        { name: "chainId", type: "uint256" },
+      ],
+      Authentication: [
+        { name: "Encryption Token", type: "address" },
+      ],
+    },
+    primaryType: "Authentication",
+    domain: {
+      name: "Ten",
+      version: "1.0",
+      chainId: <TenChainID>,
+    },
+    message: {
+      "Encryption Token": <encryptionToken>
+    },
+}
+```
 
-This endpoint returns a boolean value (true or false) based on whether the given address is registered with the provided UserId.
+### GET /query/address?u=$EncryptionToken&a=$Address
 
-### GET /revoke?u=$UserId
+This endpoint returns a boolean value (true or false) based on whether the given address is registered with the provided encryption token.
 
-This endpoint facilitates the removal of a certain UserId's access by deleting the key-pair from the database. This is particularly useful when a user wishes to revoke access for a specific UserId.
+### GET /revoke?u=$EncryptionToken
+
+This endpoint facilitates the removal of a certain encryption token's access by deleting the key-pair from the database. This is particularly useful when a user wishes to revoke access for a specific encryption token.

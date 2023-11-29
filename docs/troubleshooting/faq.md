@@ -8,7 +8,7 @@ sidebar_position: 1
 ### How do I access the Ten RPC Endpoint?
 You will need to obtain an account-specific, unique RPC link using [Ten Hosted Gateway](https://docs.obscu.ro/docs/tools-infrastructure/hosted-gateway) and authenticate your account to access the Viewing Key and be able to use the RPC endpoints listed in the [API References](https://docs.obscu.ro/docs/api-reference/json-rpc-apis).
 
-Keep in mind that you will not be able to query data on accounts that have not been authenticated to a specific userID.
+Keep in mind that you will not be able to query data on accounts that have not been authenticated to a specific Encryption token.
 
 ### How can I port my dApp from other networks to Ten? 
 You need to follow the following steps:
@@ -43,7 +43,7 @@ The only way to get test tokens in Ten — through the faucet on our [Discord se
 You should refrain from publishing your link because if you do, it will be compromised and anyone using it will be able to access your decrypted transaction data. 
 
 :::warning
-Compromising your userID obtained from Ten Gateway will result in a breach of your data privacy. 
+Compromising your Encryption token obtained from Ten Gateway will result in a breach of your data privacy. 
 
-In case your userID has been compromised, you need to revoke it using either the Gateway Widget or Ten Hosted Gateway.
+In case your Encryption token has been compromised, you need to revoke it using either the Gateway Widget or Ten Hosted Gateway.
 :::
