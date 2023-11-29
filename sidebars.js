@@ -19,7 +19,7 @@ const sidebars = {
   {
     type: 'link',
     label: 'Release Notes', // The label that will be shown in the sidebar
-    href: 'ReleaseNotes' // The URL path to your React page (assuming the file is named ReleaseNotes.js)
+    href: '/ReleaseNotes' // The URL path to your React page (assuming the file is named ReleaseNotes.js)
   },
 ],
 
