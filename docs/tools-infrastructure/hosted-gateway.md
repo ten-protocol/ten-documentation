@@ -24,7 +24,7 @@ The onboarding process is straightforward and requires only a few clicks:
 
 This endpoint generates a key-pair, saves it in the database, derives an encryption token from the keys, and returns the encryption token.
 
-### POST /authenticate?u=$EncryptionToken
+### POST /authenticate?token=$EncryptionToken
 
 This endpoint enables the addition of multiple addresses for each encryption token. Prior to saving, it performs several checks on the signature and encryption token.
 
@@ -64,10 +64,10 @@ Signed message must be in following format:
 }
 ```
 
-### GET /query/address?u=$EncryptionToken&a=$Address
+### GET /query/address?token=$EncryptionToken&a=$Address
 
 This endpoint returns a boolean value (true or false) based on whether the given address is registered with the provided encryption token.
 
-### GET /revoke?u=$EncryptionToken
+### GET /revoke?token=$EncryptionToken
 
 This endpoint facilitates the removal of a certain encryption token's access by deleting the key-pair from the database. This is particularly useful when a user wishes to revoke access for a specific encryption token.
