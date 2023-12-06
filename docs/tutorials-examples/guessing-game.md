@@ -16,7 +16,7 @@ The Ten Guessing Game is a simple yet powerful demonstration of Ten's unique enc
 
 ## **Playing the Game**
 
-1. **Visit**: Visit the Guessing Game [website](https://guessing-game-with-widget.vercel.app/)
+1. **Visit**: Visit the Guessing Game [website](https://ten-protocol.github.io/sample-applications/guessing-game-v2/)
 2. **Set Up**: Click on the Ten widget in the bottom-right corner, click 'join' & follow further instructions.
 3. **Start Playing**: Input the number of guesses you wish to make & approve the game fee for participation.
 4. **Guess**: Enter your number guess and submit.
