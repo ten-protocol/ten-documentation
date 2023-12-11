@@ -92,11 +92,12 @@ Ten nodes run on secure enclave's, ensuring:
 **Example**:
 ```solidity
 function getRandomNumber() public view returns (uint256) {
-    return uint256(blockhash(block.number - 1));
+    // Ten network injects a secure and unique seed to the prevrandao property, note: on other EVM chains this code would be exploitable by MEV bots
+    return uint256(block.prevrandao);
 }
 ```
 
-Ten's approach ensures secure and straightforward random number generation.
+Ten's approach ensures secure and straightforward random number generation. For more information on using randomness in Ten, take a look at the [Random Numbers page](/docs/standards-primitives/random-numbers.md).
 
 ## 5. Gas Consumption
 
