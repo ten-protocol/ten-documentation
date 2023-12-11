@@ -4,7 +4,7 @@ sidebar_position: 3
 # Develop & Deploy dApp
 
 ## 1. Develop Smart Contracts
-Smart contracts are the backbone of your dApp, defining its rules and operations. Begin your development in Solidity based on the instructions [here](/docs/getting-started/for-developers/explore-contracts-in-obscuro).
+Smart contracts are the backbone of your dApp, defining its rules and operations. Begin your development in Solidity based on the instructions [here](/docs/getting-started/for-developers/explore-contracts-in-ten).
 
 ## 2. Develop the Frontend
 Use common web tools like HTML, CSS, and JavaScript. You can consider ReactJs, VueJs to enhance development. To connect your frontend to Ethereum, choose a library such as Web3.js or Ether.js. See supported libraries [here](#).
