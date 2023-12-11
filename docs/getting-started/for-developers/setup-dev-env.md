@@ -9,8 +9,8 @@ To start building on Ten, you first need to set up and configure your wallet wit
 
 1. **Install MetaMask**: [Install](https://metamask.io/download/) MetaMask either as a browser extension or mobile app.
 2. **Configure MetaMask for Ten**:
-   - Visit the [Ten hosted gateway](https://testnet.obscu.ro/) for wallet setup.
-   - Click on 'Join' and follow the on-screen instructions.
+   - Visit the [Ten Gateway](https://testnet.obscu.ro/) for wallet setup.
+   - Click on 'CONNECT TO OBSCURO TESTNET' and follow the on-screen instructions.
    - Learn more about the [Ten Gateway](/docs/tools-infrastructure/hosted-gateway).
 3. **Acquire Testnet ETH Tokens**: To perform transactions, you'll need testnet ETH tokens. Refer to our [Getting tokens](/docs/getting-started/for-users/get-tokens).
 
