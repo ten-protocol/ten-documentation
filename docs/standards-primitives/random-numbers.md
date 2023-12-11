@@ -13,7 +13,7 @@ A random string of bytes can be accessed in solidity contracts on Ten using `blo
 
 ## Benefits of Ten Randomness
 On Ethereum mainnet, `block.prevrandao` must be used with care. It has some important caveats:
-- The same random value is provided to every transaction executing in the ssame block.
+- The same random value is provided to every transaction executing in the same block.
 - The value is known at the time the transactions are being ordered into the block, meaning MEV bots can manipulate outcomes.
 
 The same code on Ten does not expose those attack vectors. It should be noted that:
@@ -23,7 +23,7 @@ The same code on Ten does not expose those attack vectors. It should be noted th
 
 The upshot of all this is that developers have much less to think about and secure contract code can stay simple and clean.
 
-Users also benefit, dapps using randomness on Ten can provide a much better UX because Oracles and commit-reveal schemes (which add artificial delays and extra transactions) are no longer necessary.
+Users also benefit, dApps using randomness on Ten can provide a much better UX because oracles and commit-reveal schemes (which add artificial delays and extra transactions) are no longer necessary.
 
 ## Example
 
