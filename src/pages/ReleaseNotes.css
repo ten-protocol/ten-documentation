@@ -1,0 +1,18 @@
+.release-notes {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+.release {
+    border-bottom: 1px solid #000000;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.release h3 {
+    color: #ffffff;
+}
+
+.release p {
+    color: #dadada;
+}
