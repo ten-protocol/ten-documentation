@@ -16,13 +16,13 @@ The Ten Guessing Game is a simple yet powerful demonstration of Ten's unique enc
 
 ## **Playing the Game**
 
-1. **Visit**: Visit the Guessing Game [website](https://guessing-game-with-widget.vercel.app/)
+1. **Visit**: Visit the Guessing Game [website](https://ten-protocol.github.io/sample-applications/guessing-game-v2/)
 2. **Set Up**: Click on the Ten widget in the bottom-right corner, click 'join' & follow further instructions.
 3. **Start Playing**: Input the number of guesses you wish to make & approve the game fee for participation.
 4. **Guess**: Enter your number guess and submit.
 5. **Transaction Status**: Monitor the progress of your guess transaction in MetaMask.
 6. **Results**: The game will notify you of the outcome of your guess.
-7. **TenScan**: You can inspect the encrypted transaction details on [TenScan](https://testnet.obscuroscan.io/)
+7. **TenScan**: You can inspect the encrypted transaction details on [TenScan](https://tenscan.io/)
 
 ## **Contribute**
 
