@@ -23,6 +23,10 @@ This guide assumes you have a Metamask wallet installed and configured with the 
 
 2. **Verify Gateway Authentication:** Ensure your connected account is properly authenticated through the [Ten Gateway](https://testnet.obscu.ro/).
 
+:::tip
+You can get free testnet tokens from the [Ten Faucet](https://docs.obscu.ro/docs/getting-started/for-users/get-tokens).
+:::
+
 3. **Make Your Guess:** Enter your guess for the secret number within the designated field. This number should be within the specified range (e.g., 1-1000).
 
 4. **Sign the Transaction:** Click on the "Submit" or similar button. A Metamask window will pop up asking you to sign a transaction authorizing your guess on the blockchain. Carefully review the transaction details and gas fees before confirming.
