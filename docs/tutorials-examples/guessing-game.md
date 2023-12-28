@@ -19,12 +19,12 @@ The Ten Guessing Game is a simple yet powerful demonstration of Ten's unique enc
 How to Play the Guessing Game: A Step-by-Step Guide
 This guide assumes you have a Metamask wallet installed and configured with the Obscuro testnet.
 
-1. **Visit the Game Website:** Navigate to the official [website](https://ten-protocol.github.io/sample-applications/guessing-game-v2/) of the guessing game.
+1. **Visit the Game Website:** Navigate to the official [website](http://guessing.fun) of the guessing game.
 
-2. **Verify Gateway Authentication:** Ensure your connected account is properly authenticated through the [Ten Gateway](https://testnet.obscu.ro/).
+2. **Verify Gateway Authentication:** Ensure your connected account is properly authenticated through the [Ten Gateway](https://testnet.ten.xyz/).
 
 :::tip
-You can get free testnet tokens from the [Ten Faucet](https://docs.obscu.ro/docs/getting-started/for-users/get-tokens).
+You can get free testnet tokens from the [Ten Faucet](/docs/getting-started/for-users/get-tokens).
 :::
 
 3. **Make Your Guess:** Enter your guess for the secret number within the designated field. This number should be within the specified range (e.g., 1-1000).
@@ -33,7 +33,7 @@ You can get free testnet tokens from the [Ten Faucet](https://docs.obscu.ro/docs
 
 5. **Wait for the Result:** The transaction will be processed on the blockchain, and it may take a few seconds to minutes for the result to be confirmed. You can see the status/result of your guess on the message log below the guessing field.
 
-6. **Inspect the Transaction (Optional):** You can explore the details of your guess transaction on the block explorer - [Tenscan](https://testnet.tenscan.io/).This will allow you to see the status, gas usage, and other details associated with your guess.
+6. **Inspect the Transaction (Optional):** You can explore the details of your guess transaction on the block explorer - [Tenscan](https://tenscan.io/).This will allow you to see the status, gas usage, and other details associated with your guess.
 
 ## **Contribute**
 

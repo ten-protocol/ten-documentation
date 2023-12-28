@@ -4,7 +4,7 @@ sidebar_position: 2
 # Features
 
 ### 1. **Encryption: Data Confidentiality and Computational Privacy**
-Ten leverages hardware-based [Trusted Execution Environments (TEE)](https://whitepaper.obscu.ro/obscuro-whitepaper/technical-background.html#trusted-execution-environment) to achieve data confidentiality and computational privacy.
+Ten leverages hardware-based [Trusted Execution Environments (TEE)](https://whitepaper.ten.xyz/obscuro-whitepaper/technical-background.html#trusted-execution-environment) to achieve data confidentiality and computational privacy.
   
 ### 2. **Scaling: Ethereum Layer 2 Rollup**
 Designed as a decentralized Ethereum L2 Rollup protocol, Ten enhances the scalability of the Ethereum network.
