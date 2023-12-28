@@ -16,13 +16,24 @@ The Ten Guessing Game is a simple yet powerful demonstration of Ten's unique enc
 
 ## **Playing the Game**
 
-1. **Visit**: Visit the Guessing Game [website](https://ten-protocol.github.io/sample-applications/guessing-game-v2/)
-2. **Set Up**: Click on the Ten widget in the bottom-right corner, click 'join' & follow further instructions.
-3. **Start Playing**: Input the number of guesses you wish to make & approve the game fee for participation.
-4. **Guess**: Enter your number guess and submit.
-5. **Transaction Status**: Monitor the progress of your guess transaction in MetaMask.
-6. **Results**: The game will notify you of the outcome of your guess.
-7. **TenScan**: You can inspect the encrypted transaction details on [TenScan](https://tenscan.io/)
+How to Play the Guessing Game: A Step-by-Step Guide
+This guide assumes you have a Metamask wallet installed and configured with the Obscuro testnet.
+
+1. **Visit the Game Website:** Navigate to the official [website](https://ten-protocol.github.io/sample-applications/guessing-game-v2/) of the guessing game.
+
+2. **Verify Gateway Authentication:** Ensure your connected account is properly authenticated through the [Ten Gateway](https://testnet.obscu.ro/).
+
+:::tip
+You can get free testnet tokens from the [Ten Faucet](https://docs.obscu.ro/docs/getting-started/for-users/get-tokens).
+:::
+
+3. **Make Your Guess:** Enter your guess for the secret number within the designated field. This number should be within the specified range (e.g., 1-1000).
+
+4. **Sign the Transaction:** Click on the "Submit" or similar button. A Metamask window will pop up asking you to sign a transaction authorizing your guess on the blockchain. Carefully review the transaction details and gas fees before confirming.
+
+5. **Wait for the Result:** The transaction will be processed on the blockchain, and it may take a few seconds to minutes for the result to be confirmed. You can see the status/result of your guess on the message log below the guessing field.
+
+6. **Inspect the Transaction (Optional):** You can explore the details of your guess transaction on the block explorer - [Tenscan](https://testnet.tenscan.io/).This will allow you to see the status, gas usage, and other details associated with your guess.
 
 ## **Contribute**
 
