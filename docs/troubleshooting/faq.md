@@ -13,7 +13,7 @@ Keep in mind that you will not be able to query data on accounts that have not b
 ### How can I port my dApp from other networks to Ten? 
 You need to follow the following steps:
 
-1. Change the functions of your smart contracts according to the instructions given [here](/docs/getting-started/for-developers/explore-contracts-in-obscuro).
+1. Change the functions of your smart contracts according to the instructions given [here](/docs/getting-started/for-developers/explore-contracts-in-ten).
 2. Integrate Ten Gateway into your dApp using the instructions provided [here](/docs/tools-infrastructure/gateway-widget).
 3. Deploy your SCs into Ten using [compatible tools](/docs/tools-infrastructure/compatible-tools) (e.g. Truffle Suite).
 4. Invite your users to learn more about encryption!
