@@ -1,0 +1,26 @@
+name: Test page build
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 18 # or the version you prefer
+
+      - name: Install dependencies
+        run: |
+          npm ci
+
+      - name: Build Docusaurus site
+        run: npm run build
