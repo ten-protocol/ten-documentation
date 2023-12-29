@@ -21,7 +21,7 @@ This guide assumes you have a Metamask wallet installed and configured with the 
 
 1. **Visit the Game Website:** Navigate to the official [website](http://guessing.fun) of the guessing game.
 
-2. **Verify Gateway Authentication:** Ensure your connected account is properly authenticated through the [Ten Gateway](https://testnet.ten.xyz/).
+2. **Verify Gateway Authentication:** Ensure your connected account is properly authenticated through the [Ten Gateway](https://testnet.obscu.ro/).
 
 :::tip
 You can get free testnet tokens from the [Ten Faucet](/docs/getting-started/for-users/get-tokens).

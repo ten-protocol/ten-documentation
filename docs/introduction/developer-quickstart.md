@@ -41,7 +41,7 @@ module.exports = {
       // Configuration for the Hardhat Network
     },
     obscuro: {
-      url: "https://testnet.ten.xyz/V1/",
+      url: "https://testnet.obscu.ro/V1/",
       accounts: ["your-private-key"],
     },
   },
