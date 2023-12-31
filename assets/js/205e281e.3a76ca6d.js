@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkten_docs=self.webpackChunkten_docs||[]).push([[4474],{6185:t=>{t.exports=JSON.parse('{"title":"Introduction","slug":"/category/introduction","permalink":"/docs/category/introduction","navigation":{"next":{"title":"Overview","permalink":"/docs/introduction/overview"}}}')}}]);
