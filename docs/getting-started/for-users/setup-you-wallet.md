@@ -9,7 +9,7 @@ Ten is fully compatible with Ethereum and seamlessly integrates with MetaMask. I
 To engage with Ten:
 
 1. [Install](https://metamask.io/download/) MetaMask as a browser extension or mobile app.
-2. To use Ten network, you have to configure the wallet using the Ten Gateway. Go to the [Ten Gateway](https://testnet.obscu.ro/) for wallet setup, click 'Connect to Ten Testnet', and follow the setup steps. Know more about the Ten Gateway [here](/docs/tools-infrastructure/hosted-gateway).
+2. To use Ten network, you have to configure the wallet using the Ten Gateway. Go to the [Ten Gateway](https://testnet.ten.xyz/) for wallet setup, click 'Connect to Ten Testnet', and follow the setup steps. Know more about the Ten Gateway [here](/docs/tools-infrastructure/hosted-gateway).
 
 No matter your activity on Ten, you'll probably need tokens to make transactions. See our following section: [Getting tokens.](/docs/getting-started/for-users/get-tokens)
 

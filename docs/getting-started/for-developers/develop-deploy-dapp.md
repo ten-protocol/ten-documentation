@@ -11,7 +11,7 @@ Use common web tools like HTML, CSS, and JavaScript. You can consider ReactJs, V
 
 ## 3. Integrating Ten Gateway
 Users need to configure their wallets to connect with Ten the first time they access your dApp.
-  - **Gateway**: During the initial user onboarding, prompt users to visit the [Ten Gateway](https://testnet.obscu.ro). By clicking "Connect to Ten Testnet" and following the on-screen instructions, they can easily configure their wallets. Learn more about the Hosted Ten Gateway [here](/docs/tools-infrastructure/hosted-gateway).
+  - **Gateway**: During the initial user onboarding, prompt users to visit the [Ten Gateway](https://testnet.ten.xyz/). By clicking "Connect to Ten Testnet" and following the on-screen instructions, they can easily configure their wallets. Learn more about the Hosted Ten Gateway [here](/docs/tools-infrastructure/hosted-gateway).
 
 ## 4. Test & Deploy the Dapp
 Before the final deployment, test your dApp in a controlled environment. This ensures that it interacts correctly with the blockchain and provides the desired user experience. Once satisfied with your dApp's functionality and performance, deploy it for public access.
