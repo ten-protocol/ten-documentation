@@ -45,7 +45,7 @@ Now the game is immediately available to play again, with a fair random seed tha
 :::warning
 Be aware that the random seed is the same for the entire transaction. That means if your contract was called from another contract, then both contracts would see the same random seed during that transaction. 
 
-In many cases this does not matter, the result of the dice roll or the lottery winner is immediately made public anyway, so there is no information to leak. But in some cases you may want to put a check in place to ensure that a longer-lived random secret cannot be leaked. For example, you may choose to require your contract can only be called directly, not from other contracts.
+In many cases this does not matter, the result of the dice roll or the lottery winner is immediately made public anyway, so there is no information to leak. But in some cases you may want to put a check in place to ensure that a longer-lived random secret cannot be leaked. For example, you may choose to require your contract only be called directly, not from other contracts.
 
 This is important for situations (like the guessing game above) where the random seed must not revealed even **after** the transaction is completed.
 :::
