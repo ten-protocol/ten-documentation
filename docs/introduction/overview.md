@@ -5,7 +5,7 @@ sidebar_position: 1
 
 ![Ten in Web3](../assets/overview-banner.png)
 
-_The full Litepaper is available to view [here](https://obscu.ro/litepaper)._
+_The full Litepaper is available to view [here](https://ten.xyz/litepaper)._
  
 Ten is revolutionizing Ethereum with encrypted layer 2 solution. Just as HTTPS transformed Web 2.0, ushering in a new era of secure applications and enhanced user trust, Ten is set to redefine the Ethereum ecosystem. By introducing an encrypted Ethereum Layer 2, Ten not only amplifies transaction speed and efficiency but also fortifies it with the robust security and consensus mechanisms inherent to Ethereum.
 

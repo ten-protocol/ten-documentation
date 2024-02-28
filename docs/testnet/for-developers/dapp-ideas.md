@@ -24,8 +24,10 @@ Simple game where the lowest unique bid of a particular round, wins the round. R
 Round based guessing game where the number ends up being the average of all the guesses in the previous round.
 
 ## DeFi
+### Dark Pool Trading
+A dark pool is a privately organised exchange for trading securities where exposure is hidden until after execution and reporting. This allows investors to trade without publicly revealing their intentions during the search for a buyer or seller and hiding any pricing data, which could result in investors receiving poorer prices.
 ### MEV resistant fork of Uniswap or any other DEX with private limit orders (intents) implemented
-With Obscuro, a fork of any EVM dApp will just work and will be MEV resistant straight out of the box. But can you also add private limit orders (intents)?
+With Ten, a fork of any EVM dApp will just work and will be MEV resistant straight out of the box. But can you also add private limit orders (intents)?
 ### Fork of Aave or any other lending pool with hidden liquidation levels
 Having liquidation levels out in the open encourages traders to chase and sometimes move the market to force liquidate others. Keeping these private until they're actually hit would be a huge step forward.
 
@@ -39,7 +41,7 @@ Create a treasure hunt of NFTs with all the treasures kept hidden until found
 
 ## Web3 & AI:
 ### Convince AI to give up the prize game
-Can you build a game at the intersection of Web3 and AI. Perhaps, one where you have to convince an AI bot to give you the key to unlock a smart contract holding funds. Obscuro lends itself well to this as you can provide after the game that the AI was setup in an entirely fair way with nobody, not even the developers at an advantage.
+Can you build a game at the intersection of Web3 and AI. Perhaps, one where you have to convince an AI bot to give you the key to unlock a smart contract holding funds. Obscuro lends itself well to this as you can provide that the AI was set up in an entirely fair way with nobody, not even the developers, at an advantage after the game.
 ### Generative adventure game
 A Web3 remake of the old adventure games, using AI to make them generative. Combining with Web3 to add real assets of value from tokens to NFTs.
 

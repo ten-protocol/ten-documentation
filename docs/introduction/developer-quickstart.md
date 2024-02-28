@@ -6,10 +6,9 @@ sidebar_position: 4
 Migrating to Ten is a straight-forward process that immediately unlocks private state.
 There are three main types of changes you need to make:
 
-1. Change your hardhat deployment script so that you can use --network obscuro
+1. Change your hardhat deployment script so that you can use --network ten
 2. Add logic to your view functions to protect data (if needed).
 3. Add a widget to your javascript UI to onboard Ten users.
-
 
 ## 1. Configuring Hardhat
 
@@ -17,10 +16,10 @@ To begin building on Ten, start by setting up a Hardhat project as usual.
 
 ### 1.1 Installing the Ten Hardhat Plugin
 
-To integrate the Ten Network into your Hardhat project, install the hh-obscuro-network plugin:
+To integrate the Ten Network into your Hardhat project, install the ten-hardhat-plugin:
 
 ```bash
-npm install --save-dev @obscurolabs/hh-obscuro-plugin
+npm install ten-hardhat-plugin
 ```
 
 You can extend the functionality of Hardhat by installing plugins. Install them using npm or Yarn & configure it in the next step.
@@ -32,17 +31,18 @@ Open `hardhat.config.js` in your project's root directory and configure it in th
 ```javascript
 import {HardhatUserConfig} from "hardhat/config";
 import "@nomiclabs/hardhat-waffle";
-import "hh-obscuro-plugin"
+import 'ten-hardhat-plugin'
 
 module.exports = {
   solidity: "0.8.10",
   networks: {
     hardhat: {
-      // Configuration for the Hardhat Network
+        // Configuration for the Hardhat Network
     },
-    obscuro: {
-      url: "https://testnet.obscu.ro/V1/",
-      accounts: ["your-private-key"],
+    ten: {
+        url: "https://testnet.ten.xyz/v1/", 
+        chainId: 443, 
+        accounts: ["your-private-key"],
     },
   },
 };
@@ -187,18 +187,3 @@ How it works:
 - `MilestoneReached` - has no address topic, so it is visible to everyone.
 
 All you have to do is emit events as usual, and the platform applies common-sense visibility rules.
-
-
-# 3. Integrating Ten Network in the Frontend
-
-Creating a user-friendly frontend is crucial for interacting with your smart contracts on Ten. This section will guide you through installing necessary packages and integrating the Ten network.
-
-```bash
-npm install @obscuro/obscuro-gateway-widget
-```
-
-Import and use the package in your components to interact with the Ten network. Example: If you want the Ten Gateway Widget to appear on the homepage then you can call the component \<obscuro-gateway-widget> there.
-
----
-
-Migrate your dApp to Ten today and experience enhanced encryption and privacy without compromising on the Ethereum experience.

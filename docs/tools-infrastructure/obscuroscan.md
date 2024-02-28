@@ -9,19 +9,26 @@ sidebar_position: 1
 [TenScan](https://tenscan.io) is a blockchain explorer for the Ten Testnet - Ten’s equivalent of Etherscan. TenScan allows you to view the latest rollups and transactions on the Testnet, as well as search for historical rollups and transactions. Its functionality will be expanded over time.
 
 :::info
-TenScan is still in its testnet phase. Expect more features in the future as its functionality expands.
+TenScan is still in its testnet phase. Expect to be able to view individual transactions and accounts encrypted in the future.
 :::
 
-## Usage
+## How does Testnet handle encryption?
 
-1. Go to the TenScan landing page.
-2. Observe the feed of latest rollups and transactions. Click on any rollup number or transaction hash to see the details of the corresponding rollup and the L1 block where it was published.
-3. From the search bar in the top right, search for any rollup (using its number, e.g. `2453`) or transaction (using its hash, which will start with `0x`, e.g. `0x5476edbf2c6cc1279d2334b2c80e26333d0eaca6c1807c7d8a2945b1a9d58f07`).
+:::warning
+On the Testnet, transactions are encrypted but can be decrypted because it uses a rollup encryption key that is long-lived and well-known. It's designed to help users understand how Ten works. However, on the Mainnet, rollups will be encrypted with rotating keys, unknown to anyone or anything apart from the Ten enclaves.
+:::
+
+Transactions in Ten are encrypted by default and their contents cannot be viewed by anyone, but how do we know it's really encrypted? Because we can decrypt the transaction batches. 
 
 ## Decryption of Transaction Blobs
 
-Notice the **Decrypted transaction blob** section for each rollup. This allows you to see the normally-encrypted transactions in unencrypted plain text.
+1. Head over to [TenScan Batches](https://tenscan.io/batches) page. Batches can contain 0, 1 or more transactions.
+2. Scroll down the page and make sure that the choosen batch contain at least 1 transaction (see *"No. of Transactions"*)
+3. Copy Encrypted Tx Blob, just click on it!
+4. Find the *"Resources"* dropdown menu in the top right corner of TenScan and select 
+[*"Decrypt."*](https://tenscan.io/resources/decrypt)
+5. Paste the copied Tx Blob and hit **decrypt** button. Awesome! The result is presented as raw decrypted text.
 
-:::warning
-On the Testnet, transactions are decrypted because it uses a rollup encryption key that is long-lived and well-known. It's designed to help users understand how Ten works. However, on the Mainnet, rollups will be encrypted with rotating keys that are not known to anyone, or anything, other than the Ten enclaves.
+:::tip
+To decode numeric values, such as 'value', you need to use [hex to decimal converters](https://www.binaryhexconverter.com/hex-to-decimal-converter). In the case of Value, the result will be represented in wei. 
 :::

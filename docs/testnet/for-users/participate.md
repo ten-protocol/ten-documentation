@@ -5,7 +5,7 @@ sidebar_position: 2
 # Getting started with testnet for users
 
 ## Galxe
-The main source of activities to participate as a user in testnet are on [Galxe](https://galxe.com/obscuro)
+The main source of activities to participate as a user in testnet are on [Galxe](https://galxe.com/ten)
 
 To fully engage with the Ten testnet, you'll need:
 - MetaMask installed
@@ -28,4 +28,4 @@ To obtain Obscuro ETH directly on the Obscuro testnet, utilize the Discord fauce
 
 If your wallet balance remains unchanged, double-check your wallet configuration or refer to the [set up your wallet](/docs/getting-started/for-users/setup-you-wallet) page.
 
-You're now fully setup to participate. Begin on [Galxe](https://galxe.com/obscuro)
+You're now fully setup to participate. Begin on [Galxe](https://galxe.com/ten)
