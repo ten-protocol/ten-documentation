@@ -26,7 +26,7 @@ const FeatureList = [
     png: require('@site/static/img/great-ux-dx.png').default,
     description: (
       <>
-        Ten has a seamless developer and user experience. DApps written for Ethereum will just work on Ten.
+        DApps written for Ethereum will just work on Ten.
         You don't have to learn any new languages and can use all your favorite Ethereum tools.
       </>
     ),
