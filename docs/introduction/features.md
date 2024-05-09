@@ -13,7 +13,7 @@ Designed as a decentralized Ethereum L2 Rollup protocol, Ten enhances the scalab
 Ten is designed to prevent [Maximal Extractable Value (MEV)](https://ethereum.org/en/developers/docs/mev/), ensuring fairness in transaction ordering.
 
 ### 4. **RNG: Generate Random Number Securely**
-Ten can generate secure random numbers without using any additional libraries or external applications. Generated random numbers are completely secure and no validator or user can peek into the generated numbers.
+Ten can generate secure random numbers without using any additional libraries or external applications. Generated random numbers are completely secure and no validator or user can access the generated numbers, ensuring confidentiality and integrity.
 
 ### 5. **Great UX: Privacy Preservation**
 Ten prioritizes privacy while maintaining a seamless user experience, allowing users to access their preferred dApps and services without additional applications or extensions.

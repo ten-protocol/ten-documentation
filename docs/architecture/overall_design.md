@@ -9,19 +9,19 @@ This is an advanced document that describes the technical architecture of a Ten 
 While Ten has similarities with other Ethereum L2s, the setup is more complex, as shown in the following diagram 
 that depicts the main components and their responsibilities.
 
-![architecture diagram](../assets/node_arch.png)
+![architecture diagram](../assets/ten_node_arch.png)
 
 *Note: The Ethereum node components are developed and maintained by third-parties. E.g.: Infura* 
 
 ## Trusted Computing Base (TCB)
 
 Ten makes use of Intel SGX to protect the execution of transactions and the state from node operators.
-For development, we use the EGo SDK from Edgless, and EdglessDB.
+For development, we use the EGo SDK from Edgeless, and EdgelessDB.
 
 The Ten TCB has two components: the Ten Enclave, and the encrypted database. 
 
 ### The Ten Enclave
-From a high level, the Ten Enclave(TE) is a process that exposes an RPC server (currently GRPC).
+From a high level, the Ten Enclave (TE) is a process that exposes an RPC server (currently gRPC).
 
 The TE is a process that loads the SGX enclave built from the source code. The EGo SDK handles the low level I/O interactions 
 and communication.
@@ -35,35 +35,35 @@ The next section will cover the main logical components of the TE.
 ### 1. The RPC server
 
 The Ten Enclave reacts to information like: 
- - relevant Ethereum transactions to the Management Contract or the Message Bus.
- - encrypted Ten transactions submitted by users
- - Ten Batches submitted by the sequencer
- - data requests from users: tx receipts, "eth_call", etc 
+ - Ethereum Transactions: Those submitted to the management contracts and the message bus. 
+ - User Transactions: Encrypted Ten transactions submitted by users either via the Gateway or directly to the RPC server.
+ - Sequencer Batches and Rollups: Ten batches and rollups submitted by the sequencer.
+ - Data Requests: Users can query for transaction receipts or and of the `eth_` requests
 
-There are RPC endpoints for each of these operations, and also a few more.
-
-[//]: # ( produce challenges. The sequencer can produce batches and rollups.)
+There are RPC endpoints for each of these operations, along with a few additional functionalities.
 
 ### 2. Transaction Execution Engine
 
-The current version of Ten reuses the EVM execution engine from ``go-ethereum``.
-We built a wrapper around it where we do some pre and post processing, but the execution itself is un-changed. 
+The latest iteration of Ten utilizes the EVM execution engine sourced from go-ethereum. A wrapper has been developed to 
+facilitate necessary pre and post-processing operations while maintaining the core execution intact. 
 
-We also replaced the k/v storage used by the ``go-ethereum`` EVM engine. 
+Additionally, the key/value storage system originally employed by the go-ethereum EVM engine has been substituted.
 
 ### 3. The Storage
 The TE is a stateful component that needs access to both the EVM state and the Ten chain information.
 
-The TE establishes a mutually authenticated TLS connection to another enclave running a SQL engine.
-The SQL read or write statements are submitted over this encrypted, secure connection.
+The TE initiates a mutually authenticated TLS connection to another enclave housing a SQL engine. Over this encrypted channel, 
+SQL read and write statements are transmitted securely.
 
 ### Error Handling
-The enclave can return:
-1. System Errors - These are unexpected errors caused by various malfunctions. E.g. The disk is full 
-2. User Errors - they happen as a result of a user request that can't be handled because of the request itself.
 
-The TE will encrypt the User Errors such that only that user can understand them.
-And it will return the system errors in plain text such as they can be handled. 
+The enclave has the capability to return two types of errors:
+
+1. System Errors: These errors stem from unexpected malfunctions, like disk space exhaustion.
+2. User Errors: These errors arise due to unprocessable user requests.
+
+For User Errors, the TE encrypts the error message to ensure that only the corresponding user can decipher it. System Errors 
+are returned in plain text to facilitate straightforward handling.
 
 
 ### EdglessDB
