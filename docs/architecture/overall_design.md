@@ -62,61 +62,70 @@ The enclave has the capability to return two types of errors:
 1. System Errors: These errors stem from unexpected malfunctions, like disk space exhaustion.
 2. User Errors: These errors arise due to unprocessable user requests.
 
-For User Errors, the TE encrypts the error message to ensure that only the corresponding user can decipher it. System Errors 
-are returned in plain text to facilitate straightforward handling.
+For User Errors, the TE encrypts the error message with the user's viewing key to ensure that only the corresponding 
+user can decipher it. System Errors are returned in plain text to facilitate straightforward handling.
 
 
 ### EdglessDB
 
+EdgelessDB is an open-source database designed for confidential computing environments, offering security features and 
+high performance. Running entirely within Intel SGX enclaves, EdgelessDB ensures that all data, both in memory and on 
+disk, remains encrypted at all times. Leveraging a manifest system akin to smart contracts, EdgelessDB provides a 
+framework for defining database states and access controls.
 
-## The "Host" Component
+- Always Encrypted: Data is encrypted both on disk and in memory.
+- Manifest: A JSON-based contract system defining the initial database state and access controls.
+- Remote Attestation: Proves the secure execution of EdgelessDB within an enclave, enforcing the manifest's parameters.
 
-## The Ten Gateway
+EdglessDB is architecturally based on MariaDB and utilises an enhanced version of RocksDB as its storage engine.
+
+## The Host
+
+The Host component is the external layer of our architecture, operating outside the Trusted Computing Base (TCB). It 
+offers extensive functionality while providing two crucial advantages:
+
+- Minimizing TCB Complexity: By moving certain functionalities outside the TCB, the Host component reduces the size and 
+complexity of the Trusted Computing Base.
+- Reducing TCB Churn: By handling non-essential operations, the Host component decreases the frequency of 
+re-attestations required for the TCB.
+
+The Host and the enclave function as separate OS processes, rather than threads within a single process. This 
+architectural decision aligns with our initial target Trusted Execution Environment (TEE), Intel SGX, which mandates 
+separate process execution.
+
+Communication between the Host and the enclave occurs via Remote Procedure Call (RPC), facilitated by the gRPC library. 
+
+gRPC was chosen for its open-source nature (Apache 2.0 license) and widespread adoption.
+
+For simplicity, the transport layer lacks authentication (e.g., TLS or credentials). However, to mitigate potential 
+security risks, the enclave maintains full control over rollup rewards allocation. This design prevents unauthorized 
+access and misuse by parasitic aggregators seeking to economize on operational costs.
+
+To enhance system modularity and resilience, the enclave process is supervised and managed independently of the Host process.
 
 
-
-
-* **The enclave:** The trusted part of the Ten node that runs inside a trusted execution environment (TEE)
-* **The host:** The remainder of the Ten node that runs outside the TEE
-* **The Ten management contract:** The Ethereum mainnet contracts required by the Ten protocol, described 
-  [here](https://whitepaper.obscu.ro/Ten-whitepaper/l1-contracts)
-* **Client apps:** Applications that interact with the Ten node (e.g. Ten wallets)
-
-## Host/enclave split
-
-The node is divided into two components, the host and the enclave. Wherever reasonable, node logic should be part of 
-the host rather than the enclave. This has two benefits:
-
-* It minimises the amount of code in the 
-  [trusted computing base (TCB)](https://en.wikipedia.org/wiki/Trusted_computing_base)
-* It reduces churn in the TCB, reducing the frequency of re-attestations
-
-The host and the enclave are two separate OS processes, rather than separate threads in a single process. This is 
-because our initial target TEE, [Intel SGX](https://en.wikipedia.org/wiki/Software_Guard_Extensions), requires the 
-TEE to execute as a separate process.
-
-The host and the enclave communicate via RPC, using the [gRPC](https://grpc.io/) library. gRPC was selected as it is 
-open-source (Apache 2.0) and has broad adoption.
-
-For simplicity, this transport is not authenticated (e.g. using TLS or credentials). One possible attack vector is for 
-a _parasite_ aggregator to only run the host software, and connect to another aggregator's enclave to submit 
-transactions, in order to economise on operating costs. To avoid this scenario, the enclave is designed to have full 
-control over which account receives the rollup rewards, meaning that a would-be parasite aggregator does not receive 
-any rewards for acting in this manner.
-
-To reduce coupling, the enclave process will be monitored and managed by a supervisor, and not by the host process.
 
 ## Host design
 
-The host has a lot of responsibilities, including:
-- serving requests for data and transaction submissions
-- feeding data to the enclave to keep it up-to-date with the L1 and L2 networks
-- publishing secret request/responses and (for the sequencer) rollups to the L1 network
-- receiving and publishing Ten data (e.g. batches and mempool transactions) with peer nodes
-- managing failover and recovery for the enclave for high-availability (HA) nodes
+The Host component carries out a multitude of responsibilities, including:
 
-The host will be organised with a variety of services to manage these responsibilities.
+- Serving requests for data and transaction submissions.
+- Supplying data to the enclave to ensure synchronization with the L1 and L2 networks.
+- Publishing secret requests/responses and rollups (for the sequencer) to the L1 network.
+- Exchanging Ten data (e.g., batches and mempool transactions) with peer nodes.
+- Handling failover and recovery procedures for the enclave to maintain high availability (HA) nodes.
+
+The Host architecture is structured around a diverse set of services, each tasked with managing specific responsibilities within the system.
 
 The following diagram shows a high-level view of the main services involved:
 
 ![host services diagram](../assets/host_arch.png)
+
+## The Ten Gateway
+
+The Ten Gateway serves as a bridge between a Ten node and external tools like MetaMask, facilitating secure 
+communication due to data encryption within the Ten node. Adhering to the Ethereum JSON-RPC specification the Ten 
+Gateway ensures seamless integration. 
+
+The onboarding process is streamlined, requiring just a few clicks on a website hosting the Ten Gateway to add the 
+network to their wallet, connect, and sign over an EIP-712 formatted message, including an encryption token.
