@@ -3,6 +3,7 @@ sidebar_position: 4
 ---
 
 # Migrate your dApp to Ten
+
 Migrating to Ten is a straight-forward process that immediately unlocks private state.
 There are three main types of changes you need to make:
 
@@ -22,7 +23,8 @@ To integrate the Ten Network into your Hardhat project, install the ten-hardhat-
 npm install ten-hardhat-plugin
 ```
 
-You can extend the functionality of Hardhat by installing plugins. Install them using npm or Yarn & configure it in the next step.
+You can extend the functionality of Hardhat by installing plugins. Install them using npm or Yarn & configure it in the
+next step.
 
 ### 1.2 Configuring `hardhat.config.js`
 
@@ -34,36 +36,42 @@ import "@nomiclabs/hardhat-waffle";
 import 'ten-hardhat-plugin'
 
 module.exports = {
-  solidity: "0.8.10",
-  networks: {
-    hardhat: {
-        // Configuration for the Hardhat Network
+    solidity: "0.8.10",
+    networks: {
+        hardhat: {
+            // Configuration for the Hardhat Network
+        },
+        ten: {
+            url: "https://testnet.ten.xyz/v1/",
+            chainId: 443,
+            accounts: ["your-private-key"],
+        },
     },
-    ten: {
-        url: "https://testnet.ten.xyz/v1/", 
-        chainId: 443, 
-        accounts: ["your-private-key"],
-    },
-  },
 };
 
 export default config;
 ```
+
 Now, start writing the smart contracts for your project.
 
 # 2. Writing Smart Contracts
 
-Ten performs bytecode execution in the EVM identically to Ethereum, allowing developers to leverage their existing codebase and tools.
+Ten performs bytecode execution in the EVM identically to Ethereum, allowing developers to leverage their existing
+codebase and tools.
 
-The main difference and advantage of Ten is that on Ten, during execution, private variables and the internal state of the contract are hidden from everyone, including node operators and the sequencer.
+The main difference and advantage of Ten is that on Ten, during execution, private variables and the internal state of
+the contract are hidden from everyone, including node operators and the sequencer.
 
 :::info
 In Ten, the internal node database is encrypted, and the execution itself is also encrypted inside the TEE.
 :::
 
-The calls to [getStorageAt](https://docs.alchemy.com/reference/eth-getstorageat) are disabled, so all data access will be performed through view functions which are under the control of the smart contract developer. Public variables are accessible to everyone because Solidity automatically generates a getter function for them.
+The calls to [getStorageAt](https://docs.alchemy.com/reference/eth-getstorageat) are disabled, so all data access will
+be performed through view functions which are under the control of the smart contract developer. Public variables are
+accessible to everyone because Solidity automatically generates a getter function for them.
 
-We'll illustrate how this works by creating a simple data storage example. In this dApp, users can store a number and retrieve it later.
+We'll illustrate how this works by creating a simple data storage example. In this dApp, users can store a number and
+retrieve it later.
 
 ## Step 1: Declaring a Public Variable
 
@@ -84,7 +92,9 @@ contract StorageExample {
 
 ### Explanation:
 
-In this step, we've declared a public variable `storedValues`. Solidity automatically generates a public getter view function for it, so on both Ethereum and Ten, you can call this view function without any restrictions. We also created a function that allows users to store a value against their address.
+In this step, we've declared a public variable `storedValues`. Solidity automatically generates a public getter view
+function for it, so on both Ethereum and Ten, you can call this view function without any restrictions. We also created
+a function that allows users to store a value against their address.
 
 ## Step 2: Transitioning to a Private Variable with a Getter Function
 
@@ -97,7 +107,7 @@ contract StorageExample {
     function storeValue(uint256 value) public {
         _storedValues[tx.origin] = value;
     }
-    
+
     function getValue(address account) public view returns (uint256) {
         return _storedValues[account];
     }
@@ -106,15 +116,18 @@ contract StorageExample {
 
 ### Explanation:
 
-We've now made our data variable private, meaning it can't be accessed directly from outside the contract. To fetch its value, we've provided a custom public view function `getValue` where the user provides the address. On both Ethereum and Ten, if you call this function you will retrieve the number stored by that address.
+We've now made our data variable private, meaning it can't be accessed directly from outside the contract. To fetch its
+value, we've provided a custom public view function `getValue` where the user provides the address. On both Ethereum and
+Ten, if you call this function you will retrieve the number stored by that address.
 
 :::caution
 In Ethereum, the `_storedValues` variable can also be accessed directly using the `getStorageAt` method, but not in Ten.
 :::
 
-## Step 3: Implementing Data Access Control 
+## Step 3: Implementing Data Access Control
 
-In this step, our aim is to restrict users to only access their own value. This feature can only be implemented in Ten because as mentioned above, `_storedValues` is not hidden in Ethereum.
+In this step, our aim is to restrict users to only access their own value. This feature can only be implemented in Ten
+because as mentioned above, `_storedValues` is not hidden in Ethereum.
 
 ### Code:
 
@@ -135,17 +148,23 @@ contract StorageExample {
 
 ### Explanation:
 
-Since `getValue` is the only function which exposes the values, we can add a check like this: `require(tx.origin == account, "Not authorized!");` If anyone, other than the original account, asks for the value, they will get an error.
+Since `getValue` is the only function which exposes the values, we can add a check like
+this: `require(tx.origin == account, "Not authorized!");` If anyone, other than the original account, asks for the
+value, they will get an error.
 
 :::info
-In Ethereum, since all data is accessible anyway, there is no need to sign calls to view functions, so `tx.origin` can be spoofed.
+In Ethereum, since all data is accessible anyway, there is no need to sign calls to view functions, so `tx.origin` can
+be spoofed.
 :::
 
-In Ten, the platform ensures that calls to view functions are authenticated. Which means that behind the scenes, there is a signature of the `tx.origin` address.
+In Ten, the platform ensures that calls to view functions are authenticated. Which means that behind the scenes, there
+is a signature of the `tx.origin` address.
 
 ## Step 4: Emitting Events
 
-Events in Ethereum are crucial for UIs to react to smart contract state changes. In this step, we'll emit an event when a user stores a value. We'll also gauge the popularity of our contract by emitting an event when certain milestones are reached.
+Events in Ethereum are crucial for UIs to react to smart contract state changes. In this step, we'll emit an event when
+a user stores a value. We'll also gauge the popularity of our contract by emitting an event when certain milestones are
+reached.
 
 ### Code:
 
@@ -175,14 +194,17 @@ contract StorageExample {
 
 ### Explanation:
 
-On Ethereum, events are visible to anyone. For example, you can subscribe to the `DataChanged` event and receive notifications in real-time about the data of everyone else. In Ten, we wanted to do better than that.
+On Ethereum, events are visible to anyone. For example, you can subscribe to the `DataChanged` event and receive
+notifications in real-time about the data of everyone else. In Ten, we wanted to do better than that.
 
 - The `DataChanged` event is specific to an account, so it should only be received by that user.
 - `MilestoneReached`, on the other hand, is intended for everyone, as we want to show how popular our contract is.
 
-The behavior you desire is to restrict the visibility of `DataChanged`, but not that of `MilestoneReached`. **This is exactly how it works by default!**
+The behavior you desire is to restrict the visibility of `DataChanged`, but not that of `MilestoneReached`. **This is
+exactly how it works by default!**
 
 How it works:
+
 - `DataChanged` - has an address as a topic (an indexed field), which makes it relevant to that address.
 - `MilestoneReached` - has no address topic, so it is visible to everyone.
 
