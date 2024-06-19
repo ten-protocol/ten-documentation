@@ -15,7 +15,7 @@ To fully engage with the Ten testnet, you'll need:
 Once you've installed MetaMask, follow the instructions below.
 
 ## Setup MetaMask with Ten
-- Visit the [Ten Gateway](https://testnet.obscu.ro) and follow the instructions. This will add the Ten testnet as a new network in MetaMask and create an authentication token.
+- Visit the [Ten Gateway](https://testnet.ten.xyz) and follow the instructions. This will add the Ten testnet as a new network in MetaMask and create an authentication token.
 
 ## Use Obscuro Discord Faucet
 To obtain Obscuro ETH directly on the Obscuro testnet, utilize the Discord faucet. ENS names won't work; use your actual address. Follow these steps:
