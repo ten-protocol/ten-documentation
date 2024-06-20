@@ -17,4 +17,4 @@ Users need to configure their wallets to connect with Ten the first time they ac
 Before the final deployment, test your dApp in a controlled environment. This ensures that it interacts correctly with the blockchain and provides the desired user experience. Once satisfied with your dApp's functionality and performance, deploy it for public access.
 
 ## 5. Verify & Track the Deployment
-Post-Deployment it's essential to monitor your dApps performance and user interactions. Use the TenScan block explorer to verify and inspect the details of your deployed contract. This tool provides insights into transactions, contract interactions, and more. Learn how to use the block explorer [here](/docs/tools-infrastructure/obscuroscan).
+Post-Deployment it's essential to monitor your dApps performance and user interactions. Use the TenScan block explorer to verify and inspect the details of your deployed contract. This tool provides insights into transactions, contract interactions, and more. Learn how to use the block explorer [here](/docs/tools-infrastructure/tenscan).

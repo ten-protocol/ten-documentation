@@ -41,7 +41,7 @@ Create a treasure hunt of NFTs with all the treasures kept hidden until found
 
 ## Web3 & AI:
 ### Convince AI to give up the prize game
-Can you build a game at the intersection of Web3 and AI. Perhaps, one where you have to convince an AI bot to give you the key to unlock a smart contract holding funds. Obscuro lends itself well to this as you can provide that the AI was set up in an entirely fair way with nobody, not even the developers, at an advantage after the game.
+Can you build a game at the intersection of Web3 and AI. Perhaps, one where you have to convince an AI bot to give you the key to unlock a smart contract holding funds. Ten lends itself well to this as you can provide that the AI was set up in an entirely fair way with nobody, not even the developers, at an advantage after the game.
 ### Generative adventure game
 A Web3 remake of the old adventure games, using AI to make them generative. Combining with Web3 to add real assets of value from tokens to NFTs.
 
