@@ -17,9 +17,9 @@ The Ten Guessing Game is a simple yet powerful demonstration of Ten's unique enc
 ## **Playing the Game**
 
 How to Play the Guessing Game: A Step-by-Step Guide
-This guide assumes you have a Metamask wallet installed and configured with the Obscuro testnet.
+This guide assumes you have a Metamask wallet installed and configured with the Ten testnet.
 
-1. **Verify Gateway Authentication:** Ensure your connected account is properly authenticated through the [Ten Gateway](https://testnet.obscu.ro/).
+1. **Verify Gateway Authentication:** Ensure your connected account is properly authenticated through the [Ten Gateway](https://testnet.ten.xyz/).
 
 2. **Visit the Game Website:** Navigate to the official [website](https://ten-protocol.github.io/sample-applications/guessing-game-v2/) of the guessing game.
 
