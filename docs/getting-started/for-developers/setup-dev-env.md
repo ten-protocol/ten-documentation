@@ -20,3 +20,8 @@ Once your wallet is ready, you can proceed with the development and deployment o
 
 1. **Choose an IDE**: Use your preferred development environment or Integrated Development Environment (IDE) like Truffle, Remix, Hardhat, or Foundry. Check out IDE compatibility and its features [here](/docs/tools-infrastructure/compatible-tools).
 2. **Connect IDE to MetaMask**: Ensure your chosen IDE is connected to your MetaMask wallet.
+
+## 3. Docker Configuration
+
+For developers running a node and infrastructure using Docker on a Mac, please be aware that you must **disable** the
+“Use Rosetta for x86_64/amd64 emulation on Apple Silicon” setting. Failing to do so will prevent the testnet from running correctly.
