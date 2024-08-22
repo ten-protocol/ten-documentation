@@ -35,6 +35,74 @@ You can get free testnet tokens from the [Ten Faucet](/docs/getting-started/for-
 
 6. **Inspect the Transaction (Optional):** You can explore the details of your guess transaction on the block explorer - [Tenscan](https://tenscan.io/).This will allow you to see the status, gas usage, and other details associated with your guess.
 
-## **Contribute**
+## **Building the Guessing Game**
 
-Enhance the guessing game! Fork the game code from [this GitHub repository](#).
+This tutorial will guide you through building the Guessing Game on TEN with secure RNG to generate truly random & secure numbers as well as hidden states to make sure the random number to be guessed is secret.
+
+1. **Pre-requisites:**
+
+2. **Generate Secure Random Number:** We'll use `block.difficulty` to generate a random number. On TEN, `block.difficulty` is private and secure, unlike on Ethereum, where it can be manipulated or predicted.
+
+```solidity
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.18;
+
+contract GuessingGame {
+
+    uint256 private secretNumber;
+
+    constructor() {
+        _generateSecretNumber();
+    }
+
+    function _generateSecretNumber() private {
+        uint256 randomNumber = block.difficulty;
+        secretNumber = (randomNumber % 100000) + 1;
+    }
+}
+```
+
+3. **Store the Random Number Privately:** TEN offers true on-chain encryption for state variables marked with the private modifier. Even using `getStorageAt`, these variables cannot be accessed.
+
+```solidity
+uint256 private secretNumber;
+```
+
+This ensures that secretNumber is stored securely and is inaccessible to anyone outside the contract.
+
+4. **Function to Guess the Number:** The guessing function allows users to submit their guess for the secret number. If correct, they win the prize pool. If incorrect, they are encouraged to try again.
+
+```solidity
+function guess(uint256 _number) external payable {
+    require(_number > 0 && _number <= 100000, "The guess should be between 1 & 100000");
+    require(msg.value == 443e14, "Incorrect Fee");
+
+    if(_number == secretNumber) {
+        payable(msg.sender).transfer(address(this).balance);
+        _generateSecretNumber(); // Reset the secret number after a successful guess
+    } else {
+    }
+}
+```
+
+5. **Function to See the Prize Pool:** This function allows users to view the current prize pool, which is simply the contract's balance.
+
+```solidity
+function getContractBalance() external view returns (uint256) {
+    return address(this).balance;
+}
+```
+
+6. **Feature to Reset the Secret Number After It Has Been Guessed:** After a successful guess, the secret number should be reset to keep the game going. This is handled within the guessing function:
+
+```solidity
+function _generateSecretNumber() private {
+    uint256 randomNumber = block.difficulty;
+    secretNumber = (randomNumber % 100000) + 1;
+}
+
+```
+
+By calling `_generateSecretNumber()` again, the contract resets the secret number, allowing the game to continue with a new random number.
+
+Find the complete contract & frontend here: [this GitHub repository](https://github.com/ten-protocol/sample-applications/tree/main/guessing-game-v2).
