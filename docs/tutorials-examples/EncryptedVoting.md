@@ -105,7 +105,7 @@ By leveraging TEN's encryption features, this Encrypted DAO Voting system ensure
 
 This provides a fair, tamper-resistant, and truly private voting mechanism for DAOs, which is not possible on traditional transparent blockchains.
 
-Find the complete contract & frontend here: [GitHub link to be added]
+Find the complete contract & frontend here: [https://github.com/ten-protocol/sample-applications/tree/main/Encrypted%20DAO%20Voting]
 
 ## **Participating in DAO Voting**
 
