@@ -109,4 +109,4 @@ function withdrawBid() external {
 
 By leveraging TEN's privacy features, this Sealed Bid Auction ensures true bid secrecy until the auction concludes. The highest bid and bidder remain hidden throughout the auction, only being revealed through an event when the auction ends. This provides a fair, tamper-resistant, and truly private bidding process.
 
-Find the complete contract & frontend here: [link]
+Find the complete contract & frontend here: [https://github.com/ten-protocol/sample-applications/tree/main/Sealed%20Bid%20Auctions]
