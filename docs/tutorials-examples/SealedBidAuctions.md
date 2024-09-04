@@ -5,17 +5,13 @@ sidebar_position: 2
 
 Sealed Bid Auction demonstrates TEN's encryption capabilities in a practical scenario. Bidders submit encrypted bids, ensuring true privacy until the auction ends. This showcases how TEN solves the challenge of maintaining bid secrecy in transparent blockchain environments.
 
-## **Participating in the Auction**
+## **Auction Mechanics**
 
-1. **Ensure Gateway Authentication:** Verify your account is authenticated through the [TEN Gateway](https://testnet.ten.xyz/).
-
-2. **Visit the Auction Website:** Navigate to the auction's web interface.
-
-3. **Place Your Bid:** Enter your bid amount and submit. The transaction will be encrypted.
-
-4. **Wait for Auction End:** Once the auction period is over, the winner will be determined.
-
-5. **Check Results or Withdraw:** If you win, you'll be notified. If not, you can withdraw your bid.
+- Bidders submit encrypted bids during the auction period.
+- Each bid is kept secret from other participants and even the auctioneer.
+- The highest bid and bidder remain hidden until the auction concludes.
+- After the auction ends, the highest bid and winner are revealed only to the auctioneer through an event.
+- Losing bidders can withdraw their bids.
 
 :::tip
 You can get free testnet tokens from the [TEN Faucet](/docs/getting-started/for-users/get-tokens).
@@ -103,10 +99,14 @@ By leveraging TEN's privacy features, this Sealed Bid Auction ensures true bid s
 
 Find the complete contract & frontend here: [https://github.com/ten-protocol/sample-applications/tree/main/Sealed%20Bid%20Auctions]
 
-## **Auction Mechanics**
+## **Participating in the Auction**
 
-- Bidders submit encrypted bids during the auction period.
-- Each bid is kept secret from other participants and even the auctioneer.
-- The highest bid and bidder remain hidden until the auction concludes.
-- After the auction ends, the highest bid and winner are revealed only to the auctioneer through an event.
-- Losing bidders can withdraw their bids.
+1. **Ensure Gateway Authentication:** Verify your account is authenticated through the [TEN Gateway](https://testnet.ten.xyz/).
+
+2. **Visit the Auction Website:** Navigate to the auction's web interface.
+
+3. **Place Your Bid:** Enter your bid amount and submit. The transaction will be encrypted.
+
+4. **Wait for Auction End:** Once the auction period is over, the winner will be determined.
+
+5. **Check Results or Withdraw:** If you win, you'll be notified. If not, you can withdraw your bid.
