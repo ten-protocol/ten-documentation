@@ -1,0 +1,78 @@
+---
+sidebar_position: 2
+---
+# Node Rewards
+
+As a node operator, your participation is essential in maintaining a secure, reliable, and high-performance network. In recognition of your contributions, TEN has implemented a comprehensive reward structure to incentivize active and consistent engagement in the network’s testnet phases.
+
+---
+
+## Program Overview
+
+TEN is an encrypted Layer 2 network built on Ethereum, designed by the team behind Corda. TEN offers a highly scalable and private environment for Web3 applications,including Ai, tokenizing real-world assets (RWA), enabling decentralized financial solutions (DeFi) and on-chain games.
+
+### Objective
+
+TEN’s incentivized testnet rewards participants—including node operators, developers, and users—who actively contribute to testing and improving the network. Node operators play a vital role in decentralizing TEN and ensuring robust node operations, and they are rewarded for maintaining network health, stability, and performance.
+
+---
+
+## Node Operator Rewards Structure
+
+TEN has allocated **22,500,000 TEN** (representing 2.25% of the total token supply) to incentivize contributions across the community, including node operations.
+
+### Rewards Overview
+
+1. **Staking Requirements**: To participate as a node operator in the testnet requires no initial stake, (however a minimum of **50,000 TEN tokens** must be staked will be required on Mainnet. This ensures a commitment to maintaining network performance.)
+2. **ETH-Based Compensation**: Node operators receive rewards paid in **ETH** to help cover hosting costs and encourage active participation.
+3. **Delegated Staking Model**: Community members can delegate their TEN tokens to node operators, broadening community involvement and fostering a more decentralized ecosystem.
+
+### Performance-Based Rewards
+
+Performance-based rewards are structured to motivate the consistent and high-quality performance of nodes, as follows:
+
+- **Top 10% Performers**: The highest 10% of node operators, ranked by performance and uptime, will earn the top reward bracket. Top performers will receive a reward equivalent to the minimum mainnet staking requirement and will be offered priority access to participate in the mainnet launch.
+- **Remaining Participants**: Node operators outside the top 10% but in the top 20% will also receive a reward based on their contributions and performance.
+
+### Participation-Based Rewards
+
+Node operators who meet minimum participation requirements but do not rank in the top 20% will still receive a token reward. These rewards aim to foster inclusivity and recognize the contributions of all node operators.
+
+---
+
+## Infrastructure Stipend
+
+In addition to staking rewards, a **TBD infrastructure stipend** will be provided to support the infrastructure and operational costs of running a node. Details on this stipend will be communicated at a later date.
+
+---
+
+## Testnet Phases & Participation
+
+The incentivized testnet is split into three phases, each lasting approximately **6-8 weeks**, followed by a short intermission between phases. The phases are designed to test and validate different aspects of the network:
+
+1. **Phase 1**: Focus on onboarding developers and user quests aimed at network resilience.
+2. **Phase 2**: Dedicated to expanding node operations and enhancing network decentralization.
+3. **Phase 3**: Final phase with an emphasis on testing newly deployed dApps and security-focused initiatives.
+
+### Eligibility
+
+- **Application Deadline**: Node operators must apply by **March 1, 2024**.
+- **Selection**: Applications are prioritized based on node management experience and community commitment, with selected participants notified by email.
+- **Jurisdictional Limitations**: Participation is restricted to users in non-U.S./Canada jurisdictions, compliant with OFAC and applicable local laws.
+
+## Additional Information
+
+- **Updates and Notifications**: Important updates will be shared via the **Ten Discord testnet channel** and by email for selected participants.
+- **Documentation**: Technical documents and guides are available on TEN’s official documentation site, with more added throughout the testnet phases.
+
+### Reward Distribution
+
+All rewards will be distributed after the mainnet launch, following the tokenomics vesting schedule outlined in the official TEN whitepaper.
+
+---
+
+This Node Rewards program aims to build a community-driven network powered by participants' shared efforts and contributions. By rewarding commitment and performance, TEN is cultivating a stable, high-performance Layer 2 ecosystem that is decentralized, secure, and inclusive.
+
+---
+
+For further queries, please reach out via our **[Discord channel](#)** or visit our **[official documentation](#)**.

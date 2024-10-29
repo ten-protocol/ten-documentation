@@ -14,7 +14,7 @@ Transactions are the fundamental operations executed on the Ten network, represe
 ### 2. Batches
 Batches consist of multiple transactions grouped together on the Ten network, functioning similarly to blocks on the Ethereum network. By aggregating transactions into batches, the network enhances throughput and lowers latency, optimizing resource usage and improving overall efficiency.
 
-### 2. Roll-ups
+### 3. Roll-ups
 Roll-ups are a layer 2 scaling mechanism employed by the Ten network to securely aggregate and process transactions off-chain, before submitting a compressed version of these transactions to the Ethereum mainnet (Layer 1) for finalization. This approach significantly boosts throughput and reduces latency while maintaining the security guarantees of the Ethereum network.
 
 ## Gateway
