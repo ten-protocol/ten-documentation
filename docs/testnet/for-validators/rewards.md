@@ -9,7 +9,7 @@ As a node operator, your participation is essential in maintaining a secure, rel
 
 ## Program Overview
 
-TEN is an encrypted Layer 2 network built on Ethereum, designed by the team behind Corda. TEN offers a highly scalable and private environment for Web3 applications,including Ai, tokenizing real-world assets (RWA), enabling decentralized financial solutions (DeFi) and on-chain games.
+TEN is an encrypted Layer 2 network built on Ethereum, designed by the team behind Corda. TEN offers a highly scalable and private environment for Web3 applications,including AI, tokenizing real-world assets (RWA), enabling decentralized financial solutions (DeFi) and on-chain games.
 
 ### Objective
 
@@ -23,7 +23,7 @@ TEN has allocated **22,500,000 TEN** (representing 2.25% of the total token supp
 
 ### Rewards Overview
 
-1. **Staking Requirements**: To participate as a node operator in the testnet requires no initial stake, (however a minimum of **50,000 TEN tokens** must be staked will be required on Mainnet. This ensures a commitment to maintaining network performance.)
+1. **Staking Requirements**: Node operators do not need an initial stake to participate in the testnet (however, a minimum of 50,000 TEN tokens will be required for staking on Mainnet).
 2. **ETH-Based Compensation**: Node operators receive rewards paid in **ETH** to help cover hosting costs and encourage active participation.
 3. **Delegated Staking Model**: Community members can delegate their TEN tokens to node operators, broadening community involvement and fostering a more decentralized ecosystem.
 
@@ -36,13 +36,7 @@ Performance-based rewards are structured to motivate the consistent and high-qua
 
 ### Participation-Based Rewards
 
-Node operators who meet minimum participation requirements but do not rank in the top 20% will still receive a token reward. These rewards aim to foster inclusivity and recognize the contributions of all node operators.
-
----
-
-## Infrastructure Stipend
-
-In addition to staking rewards, a **TBD infrastructure stipend** will be provided to support the infrastructure and operational costs of running a node. Details on this stipend will be communicated at a later date.
+Node operators who meet minimum participation requirements but do not rank in the top 20% will still receive a reward. These rewards aim to foster inclusivity and recognize the contributions of all node operators.
 
 ---
 
@@ -56,7 +50,7 @@ The incentivized testnet is split into three phases, each lasting approximately 
 
 ### Eligibility
 
-- **Application Deadline**: Node operators must apply by **March 1, 2024**.
+- **Application**: Node operators can apply via the [Validator Application Form](https://cform.coinlist.co/forms/56274a78-8291-4899-bee1-a68ecbc5b2b8).
 - **Selection**: Applications are prioritized based on node management experience and community commitment, with selected participants notified by email.
 
   \* Jurisdictional Limitations will be applied.
