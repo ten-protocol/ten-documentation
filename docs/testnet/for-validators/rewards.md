@@ -58,11 +58,12 @@ The incentivized testnet is split into three phases, each lasting approximately 
 
 - **Application Deadline**: Node operators must apply by **March 1, 2024**.
 - **Selection**: Applications are prioritized based on node management experience and community commitment, with selected participants notified by email.
-- **Jurisdictional Limitations**: Participation is restricted to users in non-U.S./Canada jurisdictions, compliant with OFAC and applicable local laws.
+
+  \* Jurisdictional Limitations will be applied.
 
 ## Additional Information
 
-- **Updates and Notifications**: Important updates will be shared via the **Ten Discord testnet channel** and by email for selected participants.
+- **Updates and Notifications**: Important updates will be shared via the **TEN Discord testnet channel** and by email for selected participants.
 - **Documentation**: Technical documents and guides are available on TEN’s official documentation site, with more added throughout the testnet phases.
 
 ### Reward Distribution
@@ -75,4 +76,4 @@ This Node Rewards program aims to build a community-driven network powered by pa
 
 ---
 
-For further queries, please reach out via our **[Discord channel](#)** or visit our **[official documentation](#)**.
+For further queries, please reach out via our **[Discord channel](https://discord.gg/tenprotocol)** or reach out on to **[@TENprotocol](https://twitter.com/tenprotocol)** on X.
