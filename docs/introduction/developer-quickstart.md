@@ -3,47 +3,46 @@ sidebar_position: 4
 ---
 
 # Migrate your dApp to Ten
-Migrating to Ten is a straightforward process that immediately unlocks "Programmable Encryption".
 
-There are a couple of changes you need to make:
+Migrating to Ten enables your dApp to leverage "Programmable Encryption" for added data privacy. Below are steps to help you transition smoothly.
 
-1. Change your hardhat deployment script so that you can use `--network ten`.
-2. Add logic to your view functions to protect data (if needed).
-3. Configure event log visibility (if needed).
-4. Add a widget to your javascript UI to onboard Ten users.
+### Key Migration Steps
+
+1. Update your Hardhat deployment to support the `--network ten` option.
+2. Integrate data protection into your view functions (if applicable).
+3. Set visibility for event logs.
+4. Add a Ten onboarding widget to your JavaScript UI.
 
 ## 1. Configuring Hardhat
 
-To begin building on Ten, you can start by setting up a Hardhat project as usual.
+First, set up a Hardhat project if you haven't already.
 
 ### 1.1 Installing the Ten Hardhat Plugin
 
-To integrate the Ten Network into your Hardhat project, install the ten-hardhat-plugin:
+To add Ten Network compatibility, install the `ten-hardhat-plugin`:
 
 ```bash
 npm install ten-hardhat-plugin
 ```
 
-Note: Plugins can be installed using `npm` or `yarn`.
+_You can use `npm` or `yarn` to install plugins._
 
-### 1.2 Configuring `hardhat.config.js` for the Ten Testnet
+### 1.2 Configuring `hardhat.config.js`
 
-Open `hardhat.config.js` in your project's root directory and configure it in the following way:
+Modify `hardhat.config.js` in your project’s root directory as follows:
 
 ```javascript
-import {HardhatUserConfig} from "hardhat/config";
+import { HardhatUserConfig } from "hardhat/config";
 import "@nomiclabs/hardhat-waffle";
-import 'ten-hardhat-plugin'
+import "ten-hardhat-plugin";
 
 module.exports = {
   solidity: "0.8.10",
   networks: {
-    hardhat: {
-        // Configuration for the Hardhat Network
-    },
+    hardhat: {},
     ten: {
-        url: "https://testnet.ten.xyz/v1/", 
-        chainId: 443, 
+        url: "https://testnet.ten.xyz/v1/",
+        chainId: 443,
         accounts: ["your-private-key"],
     },
   },
@@ -51,26 +50,24 @@ module.exports = {
 
 export default config;
 ```
-Now, you can start writing or migrating the smart contracts.
 
-# 2. Writing Smart Contracts
+Once configured, you’re ready to start writing or migrating your smart contracts.
 
-Ten performs bytecode execution in the EVM identically to Ethereum, allowing developers to leverage their existing codebase and tools.
+## 2. Writing Smart Contracts for Ten
 
-The main difference is that, during execution, private variables and the internal state of the contract are hidden from everyone, including node operators and the sequencer.
-This is a major advantage that represents "Programmable Privacy".
+Ten executes bytecode within the EVM similarly to Ethereum, so you can reuse much of your existing code. However, Ten enhances privacy by hiding private variables and contract states, making it an ideal platform for privacy-focused dApps.
 
 :::info
-In Ten, the internal node database is encrypted, and the execution itself is also encrypted inside the TEE.
+Ten encrypts its internal node database and also encrypts execution within a Trusted Execution Environment (TEE).
 :::
 
-The calls to [getStorageAt](https://docs.alchemy.com/reference/eth-getstorageat) are disabled by default, so all data access will be performed through view functions which are under the control of the smart contract developer. Note that public variables are accessible to everyone because Solidity automatically generates a getter function for them.
+The [getStorageAt](https://docs.alchemy.com/reference/eth-getstorageat) method is disabled by default on Ten, so data access relies on view functions that you define. Public variables remain accessible as Solidity automatically creates getters for them.
 
-We'll illustrate how this works by creating a simple data storage example. In this dApp, users can store a number and retrieve it later.
+Let's illustrate with a basic storage dApp example where users can store and retrieve a number.
 
-## Step 1: Declaring a Public Variable
+## Step 1: Defining a Public Variable
 
-### Code:
+### Code
 
 ```solidity
 // SPDX-License-Identifier: MIT
@@ -85,13 +82,13 @@ contract StorageExample {
 }
 ```
 
-### Explanation:
+### Explanation
 
-In this step, we've declared a public variable `storedValues`. Solidity automatically generates a public getter view function for it, so on both Ethereum and Ten, you can call this view function without any restrictions. We also created a function that allows users to store a value against their address.
+`storedValues` is a public variable. Solidity provides a default getter for it, making it accessible on both Ethereum and Ten. The `storeValue` function allows users to associate a value with their address.
 
-## Step 2: Transitioning to a Private Variable with a Getter Function
+## Step 2: Converting to a Private Variable with a Getter Function
 
-### Code:
+### Code
 
 ```solidity
 contract StorageExample {
@@ -107,19 +104,19 @@ contract StorageExample {
 }
 ```
 
-### Explanation:
+### Explanation
 
-We've now made our data variable private, meaning it can't be accessed directly from outside the contract. To fetch its value, we've provided a custom public view function `getValue` where the user provides the address. On both Ethereum and Ten, if you call this function you will retrieve the number stored by that address.
+The `storedValues` variable is now private, requiring a custom `getValue` function to retrieve data. While both Ethereum and Ten allow you to call this function, on Ten, `_storedValues` is inaccessible outside of `getValue`.
 
 :::caution
-In Ethereum, the `_storedValues` variable can also be accessed directly using the `getStorageAt` method, but not in Ten.
+In Ethereum, `_storedValues` can be accessed directly with `getStorageAt`, but not on Ten.
 :::
 
-## Step 3: Implementing Data Access Control 
+## Step 3: Adding Data Access Control
 
-In this step, we aim to restrict users to only access their own value. This feature can only be implemented in Ten because as mentioned above, `_storedValues` is not hidden in Ethereum.
+We’ll add restrictions so users can only access their own data. This is only possible on Ten since Ten prevents unauthorized access to private state data.
 
-### Code:
+### Code
 
 ```solidity
 contract StorageExample {
@@ -136,21 +133,19 @@ contract StorageExample {
 }
 ```
 
-### Explanation:
+### Explanation
 
-Since `getValue` is the only function which exposes the values, we can add a check like this: `require(tx.origin == account, "Not authorized!");` If anyone, other than the original account, asks for the value, they will get an error.
+By requiring `tx.origin == account`, only the original account can retrieve its data, adding a layer of access control.
 
 :::info
-In Ethereum, since all data is accessible anyway, there is no need to sign calls to view functions, so `tx.origin` can be spoofed.
+Ten uses a "Viewing Key" for authenticated view function calls, ensuring that only authorized users can access their data.
 :::
 
-In Ten, the platform ensures that calls to view functions are authenticated, which means that behind the scenes, there is a "Viewing Key" signature of the `tx.origin` address.
+## Step 4: Emitting Events - Default Visibility
 
-## Step 4: Emitting Events - Default visibility
+Events notify UIs about state changes in smart contracts. We’ll emit an event when a user stores a value and another milestone event when a specific threshold is met.
 
-Events in Ethereum are crucial for UIs to react to smart contract state changes. In this step, we'll emit an event when a user stores a value. We'll also gauge the popularity of our contract by emitting an event when certain milestones are reached.
-
-### Code:
+### Code
 
 ```solidity
 contract StorageExample {
@@ -176,50 +171,26 @@ contract StorageExample {
 }
 ```
 
-### Explanation:
+### Explanation
 
-On Ethereum, events are visible to anyone. For example, you can subscribe to the `DataChanged` event and receive notifications in real time about the data of everyone else. 
+In Ten, event logs default to being accessible to the user they concern:
+- `DataChanged` is visible only to the `account` in the event.
+- `MilestoneReached` is publicly visible to all.
 
-The programmable encryption of Ten allows you full control over visibility but also has sensible defaults. 
-Event logs can be queried using `eth_getLogs` or subscribed to using the `logs` endpoint. Both these calls are authenticated, and the platform makes sure to return only visible logs.
+## Step 5: Customizing Event Visibility
 
-In our case, the requirements are very simple and common sense:
+You may want explicit control over event visibility. To do this, implement the `ContractTransparencyConfig` interface.
 
-- The `DataChanged` event is specific to an account, so it should only be received by that user.
-- `MilestoneReached`, on the other hand, is intended for everyone, as we want to show how popular our contract is.
-
-The behaviour you desire is to restrict the visibility of `DataChanged`, but not that of `MilestoneReached`. **Which is exactly how it works by default!**
-
-Default behaviour:
-
-- `DataChanged` - has an address as a topic (an indexed field), which instructs the platform that the event log is only visible to that address.
-- `MilestoneReached` - has no address topic which by default means it is visible to everyone.
-
-All you have to do is emit events as usual, and the platform applies common-sense visibility rules.
-
-
-## Step 5: Emitting Events - Configuring visibility
-
-Once you prepare your application for production, you will want explicit control over the event visibility.
-
-### Code:
+### Code
 
 ```solidity
 interface ContractTransparencyConfig {
-    enum Field {
-        TOPIC1, TOPIC2, TOPIC3,
-        SENDER,  // tx.origin - msg.sender
-        EVERYONE // the event is public - visible to everyone
-    }
-
-    enum ContractCfg {
-        TRANSPARENT, // internal state via getStorageAt is accessible to everyone, all events are public
-        PRIVATE      // internal state is hidden, and events can be configured individually
-    }
+    enum Field { TOPIC1, TOPIC2, TOPIC3, SENDER, EVERYONE }
+    enum ContractCfg { TRANSPARENT, PRIVATE }
 
     struct EventLogConfig {
-        bytes32 eventSignature; // the event signature hash
-        Field[] visibleTo;      // list of fields denoting who can see the event when private
+        bytes32 eventSignature;
+        Field[] visibleTo;
     }
 
     struct VisibilityConfig {
@@ -230,7 +201,7 @@ interface ContractTransparencyConfig {
     function visibilityRules() external pure returns (VisibilityConfig memory);
 }
 
-contract StorageExample is ContractTransparencyConfig{
+contract StorageExample is ContractTransparencyConfig {
     mapping(address => uint256) private _storedValues;
     uint256 private totalCalls = 0;
 
@@ -252,31 +223,26 @@ contract StorageExample is ContractTransparencyConfig{
     }
 
     function visibilityRules() external pure override returns (VisibilityConfig memory) {
-        EventLogConfig[]  memory eventLogConfigs = new EventLogConfig[](2);
+        EventLogConfig;
 
-        // the signagure of "event DataChanged(address indexed account, uint256 newValue);"
-        bytes32 dataChangedEventSig = hex"0xec851d5c322f7f1dd5581f7432e9f6683a8709a4b1ca754ccb164742b82a7d2f";
-        Field[]  memory relevantTo = new Field[](2);
+        bytes32 dataChangedSig = hex"0xec851d5c322f7f1dd5581f7432e9f6683a8709a4b1ca754ccb164742b82a7d2f";
+        Field;
         relevantTo[0] = Field.TOPIC1;
         relevantTo[1] = Field.SENDER;
-        eventLogConfigs[0] = EventLogConfig(dataChangedEventSig, relevantTo);
+        eventLogConfigs[0] = EventLogConfig(dataChangedSig, relevantTo);
 
-        // the signagure of "event MilestoneReached(uint256 noStoredValues);"
-        bytes32 milestoneReachedEventSig = hex"0xd41033274424d56dd572e7196fb4230cf4141d546b91fc00555cab8403965924";
-        Field[]  memory relevantTo = new Field[](1);
-        relevantTo[0] = Field.EVERYONE;
-        eventLogConfigs[1] = EventLogConfig(milestoneReachedEventSig, relevantTo);
+        bytes32 milestoneSig = hex"0xd41033274424d56dd572e7196fb4230cf4141d546b91fc00555cab8403965924";
+        Field;
+        visibleToAll[0] = Field.EVERYONE;
+        eventLogConfigs[1] = EventLogConfig(milestoneSig, visibleToAll);
 
         return VisibilityConfig(ContractCfg.PRIVATE, eventLogConfigs);
     }
 }
 ```
 
-### Explanation:
+### Explanation
 
-By implementing the `ContractTransparencyConfig.visibilityRules` method you can configure the visibility concerns of the current contract.
-
-A `ContractCfg.PUBLIC` contract behaves exactly like a contract deployed on Ethereum. The storage slots are exposed, and all contracts are public.
-
-For private contracts, you can configure the visibility of each individual event type you're emitting by specifying the "fields" that can receive it. 
-`Field.EVERYONE` means that this is a public event.
+- Implementing `ContractTransparencyConfig.visibilityRules` gives control over event visibility.
+- `ContractCfg.TRANSPARENT`: Contracts with public storage and events, exactly like Ethereum.
+- `ContractCfg.PRIVATE`: Private contracts where the event visibility can be individually specified by using `Field.EVERYONE`.
