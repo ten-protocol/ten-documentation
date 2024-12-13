@@ -53,7 +53,7 @@ module.exports = {
 export default config;
 ```
 
-Once configured, you’re ready to start writing or migrating your smart contracts.
+Once configured, you can start writing or migrating your smart contracts.
 
 ## 2. Writing Smart Contracts for TEN
 
@@ -69,7 +69,7 @@ Public variables remain accessible as Solidity automatically creates getters for
 
 Let's illustrate with a basic storage dApp example where users can store and retrieve a number.
 
-Every step, we'll add a new feature and explain the difference between `TEN` and `Ethereum`.
+At every step, we'll add a new feature and explain the difference between `TEN` and `Ethereum`.
 
 ## Step 1: Basic contract with a Public Variable
 
@@ -116,14 +116,14 @@ contract StorageExample {
 
 ### Explanation
 
-The `storedValues` variable is now private, and we added a basic `getValue` function for users to retreive their value. 
+The `storedValues` variable is now private, and we added a basic `getValue` function for users to retrieve their value. 
 
-On both Ethereum and TEN, anyone can call `getValue` and retrieve any value.   
+On both Ethereum and TEN, anyone can call `getValue` to retrieve any value.   
 On Ethereum, `_storedValues` can also be accessed directly with `getStorageAt`
 
-## Step 3: Adding Data Access Control
+## Step 3:  Data Access Control
 
-In this step we'll add restrictions so users can only access their own data. 
+In this step, we'll add restrictions so users can only access their own data. 
 
 ### Code
 
@@ -274,7 +274,7 @@ The `ContractTransparencyConfig` interface is known by the TEN platform.
 When a contract is deployed, the platform will call the `visibilityRules` function, and store the `VisibilityConfig`.
 
 For each event type, you can configure which fields can access it. 
-This allows the developer to configure an event to be public even if it has EOAs, or to allow the sender of the transaction to access events emitted even if the address is not in the event.  
+This allows the developer to configure an event to be public even if it has EOAs or to allow the sender of the transaction to access events emitted even if the address is not in the event.  
 
 Notice how in the `visibilityRules` above, we configure the `DataChanged` event to be visible to the first field and the sender, and the `MilestoneReached` to be visible to everyone. 
 
