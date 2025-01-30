@@ -8,10 +8,10 @@ Migrating to TEN enables your dApp to leverage "Programmable Encryption". Below 
 
 ### Key Migration Steps
 
-1. Update your Hardhat deployment to support the `--network ten` option.
-2. Add data protection logic to your view functions (if applicable).
-3. Configure visibility rules for event logs and internal storage.
-4. Add the TEN onboarding widget to your JavaScript UI.
+- Update your Hardhat deployment to support the `--network ten` option.
+- Add data protection logic to your view functions (if applicable).
+- Configure visibility rules for event logs and internal storage.
+- Add the TEN onboarding widget to your JavaScript UI.
 
 ## 1. Configuring Hardhat
 
@@ -71,9 +71,9 @@ Let's illustrate with a basic storage dApp example where users can store and ret
 
 At every step, we'll add a new feature and explain the difference between `TEN` and `Ethereum`.
 
-## Step 1: Basic contract with a Public Variable
+### Step 1: Basic contract with a Public Variable
 
-### Code
+#### Code
 
 ```solidity
 // SPDX-License-Identifier: MIT
@@ -88,7 +88,7 @@ contract StorageExample {
 }
 ```
 
-### Explanation
+#### Explanation
 
 In this step, we created a public variable `storedValues` that maps the provided value to the address of the user who called the `storeValue` function. 
 
@@ -96,9 +96,9 @@ Because the variable is public, Solidity will provide a default public getter fo
 
 Since there are no data access restrictions, on both Ethereum and TEN, everyone will be able to read the values of all users.
 
-## Step 2: Converting to a Private Variable with an explicit Getter Function
+### Step 2: Converting to a Private Variable with an explicit Getter Function
 
-### Code
+#### Code
 
 ```solidity
 contract StorageExample {
@@ -114,18 +114,18 @@ contract StorageExample {
 }
 ```
 
-### Explanation
+#### Explanation
 
 The `storedValues` variable is now private, and we added a basic `getValue` function for users to retrieve their value. 
 
 On both Ethereum and TEN, anyone can call `getValue` to retrieve any value.   
 On Ethereum, `_storedValues` can also be accessed directly with `getStorageAt`
 
-## Step 3:  Data Access Control
+### Step 3:  Data Access Control
 
 In this step, we'll add restrictions so users can only access their own data. 
 
-### Code
+#### Code
 
 ```solidity
 contract StorageExample {
@@ -142,7 +142,7 @@ contract StorageExample {
 }
 ```
 
-### Explanation
+#### Explanation
 
 The key line is: ``require(tx.origin == account, "Not authorized!");``, which ensures that the caller of the view function is the owner of the data.
 
@@ -152,13 +152,13 @@ TEN uses  "Viewing Keys" to authenticate view function calls.
 
 **When deployed on TEN, this code guarantees that all users can only access their own values, and nobody can read the `_storedValues`.**
 
-## Step 4: Emitting Events - Default Visibility
+### Step 4: Emitting Events - Default Visibility
 
 Event logs notify UIs about state changes in smart contracts. 
 
 To improve our smart contract, we’ll emit an event when a user stores a value and milestone events when a specific size threshold is met.
 
-### Code
+#### Code
 
 ```solidity
 contract StorageExample {
@@ -184,7 +184,7 @@ contract StorageExample {
 }
 ```
 
-### Explanation
+#### Explanation
 
 Notice how we defined the two events: `DataChanged` and `MilestoneReached`, and are emitting them in the `storeValue` function.
 
@@ -200,13 +200,13 @@ In our case, the default rules ensure that:
 - `MilestoneReached` is publicly visible.
 
 
-## Step 5: Customizing Event Visibility
+### Step 5: Customizing Event Visibility
 
 The default visibility rules are a good starting point, but complex dApps require greater flexibility. 
 
 TEN give you explicit control over event visibility. 
 
-### Code
+#### Code
 
 ```solidity
 interface ContractTransparencyConfig {
@@ -268,7 +268,7 @@ contract StorageExample is ContractTransparencyConfig {
 }
 ```
 
-### Explanation
+#### Explanation
 
 The `ContractTransparencyConfig` interface is known by the TEN platform. 
 When a contract is deployed, the platform will call the `visibilityRules` function, and store the `VisibilityConfig`.
@@ -281,3 +281,77 @@ Notice how in the `visibilityRules` above, we configure the `DataChanged` event 
 The other configuration: `VisibilityConfig.contractCfg` applies to the entire contract:
 - `ContractCfg.TRANSPARENT`: The contracts will have public storage and events, behaving exactly like Ethereum.
 - `ContractCfg.PRIVATE`: The default TEN behaviour, where the storage is not accessible and the events are individually configurable.
+
+
+## Account Abstraction - Native Session Keys
+
+The key feature of ["Account Abstraction"](https://medium.com/p/2e85bde4c54d) (EIP-4337) is "Session keys"(SK) through a proxy smart contract.
+SKs allow users to interact with the blockchain without having to sign every transaction, which is a major UX improvement.
+
+TEN supports "native" SKs - these are managed by the platform and do not require a proxy contract.
+
+In Ten, SKs are managed by dApp developers through dedicated RPC endpoints.
+
+### Solution overview
+
+Imagine you're developing an on-chain game, and you want a smooth UX without the distraction of signing every move.
+
+Conceptually, the game will create a session key for the user, then ask the user to move some funds to that address, and then create "move" transactions signed with the SK.
+
+If the game were to create the SK in the browser, there would be a risk of the user losing the SK, and the funds associated with it, in case of an accidental exit. 
+With TEN, the dApp developer doesn't have to worry about this, because the SKs are managed by TEEs.
+
+### Usage
+
+The below describe the implementation steps for the game developer - which is the main usecase for SKs.
+Note that it can be used for any dApp that requires a no-click UX.
+
+#### When the game starts
+
+Before the user can start playing, the game must create the SK and ask the user to move some funds to that address. 
+The funds will be used to pay for moves. 
+
+- Call the RPC ``sessionkeys_Create`` - without any parameters. This will return a hex-encoded address of the SK. 
+- Create a normal transaction that transfers some ETH to the SK. The amount depends on how many "moves" the user is prepared to prepay for. 
+- Ask the user to sign this transaction with their normal wallet, and submit it to the network using the library of your choice. 
+- Once the receipt is received, call ``sessionkeys_Activate``. 
+
+#### The game
+
+After activation of the SK, create a transaction for each move, but don't ask the user to sign them.
+Instead, submit them to the network unsigned using the RPCs: ``eth_sendRawTransaction`` or ``eth_sendTransaction``. 
+
+Because the SK is active, the platform will sign the transactions on behalf of the user.
+
+As a game developer, you are responsible to keep track of the balance of the SK. You can also query the network for the balance of the address.
+If the SK runs out of balance, you have to ask the user to move more funds to the SK.
+
+#### Finishing the game
+ 
+When a game ends, you have to move the remaining funds back to the main address and deactivate the key.
+
+- create a Tx that moves the funds back from the SK to the main address. Submit it unsigned, because the funds are controlled by the SK.
+- call the RPC: ``sessionkeys_Deactivate``- from now on, unsigned transactions will no longer be signed by the SK.
+
+
+## Game Security
+
+Every on-chain game developer knows that every move that relies on entropy must be executed in two steps. 
+
+Imagine you implement an on-chain coin flip game. The player pays 0.1ETH to choose `Heads` or `Tails`. 
+If they win, they receive 0.2ETH, otherwise they lose the 0.1ETH.
+Even if randomness is unpredictable, this simple game can be exploited in several ways:
+
+- The attacker can create a “proxy” smart contract to play on their behalf. Using a similar mechanism to flash loans in DeFi: the proxy is programmed to make multiple actions, and only “commit” if it can obtain a profit. In our case, if the coin flip is losing, the proxy can just revert. The only cost will be the gas burned. 
+- Transactions consume gas, and the gas cost can inadvertently reveal information. For instance, if a winning move is more computationally intensive than a losing one, players could deduce optimal moves by estimating gas costs for various actions.
+
+The typical solution is to use a commit-reveal scheme. The player commits to a move, and then reveals it. This way, the player can't change their mind after seeing the result.
+This solution has the major drawback that it introduces extra complexity, latency and cost.
+
+### The on-block-end callback 
+
+The best solution is to decouple the move from the execution without increasing the latency or the cost.
+This way, the side-channel attacks are no longer possible because the move is not executed immediately.
+To avoid increasing the latency, the move must be executed at the end of the block.
+
+[//]: # (Todo Stefan - add the code snippet for the on-block-end callback)
