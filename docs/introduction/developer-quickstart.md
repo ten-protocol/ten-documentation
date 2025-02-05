@@ -290,13 +290,13 @@ SKs allow users to interact with the blockchain without having to sign every tra
 
 TEN supports "native" SKs - these are managed by the platform and do not require a proxy contract.
 
-In Ten, SKs are managed by dApp developers through dedicated RPC endpoints.
+In TEN, SKs are managed by dApp developers through dedicated RPC endpoints.
 
 ### Solution overview
 
 Imagine you're developing an on-chain game, and you want a smooth UX without the distraction of signing every move.
 
-Conceptually, the game will create a session key for the user, then ask the user to move some funds to that address, and then create "move" transactions signed with the SK.
+Conceptually, the game will create a session key (SK) for the user, then ask the user to move some funds to that address, and then create "move" transactions signed with the SK.
 
 If the game were to create the SK in the browser, there would be a risk of the user losing the SK, and the funds associated with it, in case of an accidental exit. 
 With TEN, the dApp developer doesn't have to worry about this, because the SKs are managed by TEEs.
@@ -354,10 +354,13 @@ The best solution is to decouple the move from the execution without increasing 
 This way, the side-channel attacks are no longer possible because the move is not executed immediately.
 To avoid increasing the latency, the move must be executed at the end of the block.
 
+See below a simple implementation of the coin flip game using the TEN platform:
+
 ```solidity
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
+// this interface is known by the TEN system contract
 interface TenCallbacks {
     function register(bytes calldata) external payable returns (uint256);
 }
@@ -366,23 +369,25 @@ contract CoinFlip {
     // Event to emit the result of the coin flip
     event CoinFlipResult(address indexed player, bool didWin, uint256 randomNumber);
 
-    TenCallbacks tenCallbacks;
+    private TenCallbacks tenCallbacks;
 
     modifier onlyTenSystemCall() { 
         require(msg.sender == address(tenCallbacks));
         _;
     }
 
-    constructor(address _tenCallbacks) {
-        tenCallbacks = TenCallbacks(_tenCallbacks);
+    // you have to pass in the address of the callbacks contract
+    constructor(address _tenCallbacksAddress) {
+        tenCallbacks = TenCallbacks(_tenCallbacksAddress);
     }
 
+    // Function to initiate a coin flip. 
+    // Notice how it doesn't execute the coin flip directly, but instead registers a callback.
     function flipCoin(bool isHeads) external payable {
-        
         // Assume doFlipCoin costs 50_000 gas;
-        // We deduct a predetirmined amount from the bet to pay for delayed execution.
+        // We deduct a predetermined amount from the bet to pay for delayed execution.
         uint256 etherGasForCoinFlip = 50_000*block.basefee;
-        require(msg.value > etherGasForCoinFlip, "Bet not paying for delayed execution");
+        require(msg.value > etherGasForCoinFlip, "Insufficent gas");
 
         // Encode the function we want to be called by the TEN system contract.
         bytes memory callbackTargetInfo = abi.encodeWithSelector(this.doFlipCoin.selector, msg.sender, msg.value - etherGasForCoinFlip, isHeads);
@@ -391,8 +396,9 @@ contract CoinFlip {
     }
 
     // Function to simulate a coin flip - notice that this must only be callable by the ten system contract.
+    // This function is called by the TEN platform as a synthetic transaction in the same block as the user transaction.
     function doFlipCoin(address bettor, uint256 stake, bool wantsHeads) external onlyTenSystemCall {
-        // Assume getRandomNumber() is an external function that returns a random number
+        // Assume getRandomNumber() is a function that returns a random number
         uint256 randomNumber = getRandomNumber();
 
         // Simulate a coin flip: 0 for tails, 1 for heads
