@@ -354,4 +354,61 @@ The best solution is to decouple the move from the execution without increasing 
 This way, the side-channel attacks are no longer possible because the move is not executed immediately.
 To avoid increasing the latency, the move must be executed at the end of the block.
 
-[//]: # (Todo Stefan - add the code snippet for the on-block-end callback)
+```solidity
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+interface TenCallbacks {
+    function register(bytes calldata) external payable returns (uint256);
+}
+
+contract CoinFlip {
+    // Event to emit the result of the coin flip
+    event CoinFlipResult(address indexed player, bool didWin, uint256 randomNumber);
+
+    TenCallbacks tenCallbacks;
+
+    modifier onlyTenSystemCall() { 
+        require(msg.sender == address(tenCallbacks));
+        _;
+    }
+
+    constructor(address _tenCallbacks) {
+        tenCallbacks = TenCallbacks(_tenCallbacks);
+    }
+
+    function flipCoin(bool isHeads) external payable {
+        
+        // Assume doFlipCoin costs 50_000 gas;
+        // We deduct a predetirmined amount from the bet to pay for delayed execution.
+        uint256 etherGasForCoinFlip = 50_000*block.basefee;
+        require(msg.value > etherGasForCoinFlip, "Bet not paying for delayed execution");
+
+        // Encode the function we want to be called by the TEN system contract.
+        bytes memory callbackTargetInfo = abi.encodeWithSelector(this.doFlipCoin.selector, msg.sender, msg.value - etherGasForCoinFlip, isHeads);
+
+        tenCallbacks.register{value: etherGasForCoinFlip}(callbackTargetInfo);
+    }
+
+    // Function to simulate a coin flip - notice that this must only be callable by the ten system contract.
+    function doFlipCoin(address bettor, uint256 stake, bool wantsHeads) external onlyTenSystemCall {
+        // Assume getRandomNumber() is an external function that returns a random number
+        uint256 randomNumber = getRandomNumber();
+
+        // Simulate a coin flip: 0 for tails, 1 for heads
+        bool isHeads = (randomNumber % 2) == 1;
+
+        if (wantsHeads == isHeads) {
+            //pay out to winner
+            (bool success, ) = payable(bettor).call{value: stake*2}("");
+            require(success, "Payment failed.");
+        }
+        // Emit the result of the coin flip
+        emit CoinFlipResult(msg.sender, isHeads, randomNumber);
+    }
+
+    function getRandomNumber() internal view returns (uint256) {
+        return block.prevrandao;
+    }
+}
+```
