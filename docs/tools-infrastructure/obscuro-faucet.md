@@ -9,7 +9,7 @@ sidebar_position: 2
 Using the steps provided, you can request testnet ETH from the faucet available on the Ten Discord server.
 
 ## **Prerequisites**
-- Make sure you have completed your wallet set up or else follow the [instructions](/docs/getting-started/for-users/setup-you-wallet).
+- Make sure you have completed your wallet set up or else follow the [instructions](/docs/getting-started/for-users/setup-you-wallet.md).
 
 ## **Requesting Testnet ETH**
 1. Make a note of your wallet address or copy it to your clipboard.
