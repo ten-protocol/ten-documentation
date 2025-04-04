@@ -3,7 +3,7 @@ sidebar_position: 3
 ---
 # Sensitive APIs
 
-Ten supports a subset of Ethereum's [JSON-RPC API](https://ethereum.org/en/developers/docs/apis/json-rpc/).
+TEN supports a subset of Ethereum's [JSON-RPC API](https://ethereum.org/en/developers/docs/apis/json-rpc/).
 
 Some of these methods deal with sensitive information. For example, the response to an `eth_getBalance` request will
 contain the balance of an account. An attacker could intercept this response to discover a user's balance. To avoid
