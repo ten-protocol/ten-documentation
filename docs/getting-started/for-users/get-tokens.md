@@ -4,14 +4,13 @@ sidebar_position: 2
 
 # Get Tokens
 
-## Use Ten Discord Faucet
+## Use TEN Discord Faucet
 
-To obtain Ten ETH directly on the Ten testnet, utilize the Discord faucet. Remember, ENS names won't work; use your actual address. Follow these steps:
+To obtain TEN ETH directly on the TEN testnet, utilize the TEN Gas Station. Remember, Follow these steps:
 
-1. Join the Ten [Discord server](https://discord.gg/HSPwgH89YK).
-2. Go to the `#faucet-requests` channel under the `TESTNET INFO` category.
-3. Enter `/faucet` and select the command.
-4. Input your wallet address and hit enter.
-5. Your wallet should receive ETH shortly.
+1. Head over to [TEN Gas Station](https://faucet.ten.xyz/).
+2. Paste your EVM wallet address into the wallet address field.
+3. Log in with your Discord and X (Twitter) accounts.
+4. Then, complete the available tasks.
 
 If your wallet balance remains unchanged, double-check your wallet configuration or refer to the [set up your wallet](/docs/getting-started/for-users/setup-you-wallet) page.
