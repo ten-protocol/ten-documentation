@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # Get Tokens
 
-## Use TEN Discord Faucet
+## Use TEN Gas Station
 
 To obtain TEN ETH directly on the TEN testnet, utilize the TEN Gas Station. Remember, Follow these steps:
 
