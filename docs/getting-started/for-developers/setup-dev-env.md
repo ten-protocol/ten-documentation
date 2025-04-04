@@ -5,13 +5,13 @@ sidebar_position: 2
 
 ## 1. Wallet Setup & Configuration
 
-To start building on Ten, you first need to set up and configure your wallet with the Ten network.
+To start building on TEN, you first need to set up and configure your wallet with the TEN network.
 
 1. **Install MetaMask**: [Install](https://metamask.io/download/) MetaMask either as a browser extension or mobile app.
-2. **Configure MetaMask for Ten**:
-   - Visit the [Ten Gateway](https://testnet.ten.xyz/) for wallet setup.
-   - Click on 'Connect to Ten Testnet' and follow the on-screen instructions.
-   - Learn more about the [Ten Gateway](/docs/tools-infrastructure/hosted-gateway).
+2. **Configure MetaMask for TEN**:
+   - Visit the [TEN Gateway](https://gateway.ten.xyz/) for wallet setup.
+   - Click on 'Connect to TEN Testnet' and follow the on-screen instructions.
+   - Learn more about the [TEN Gateway](/docs/tools-infrastructure/hosted-gateway).
 3. **Acquire Testnet ETH Tokens**: To perform transactions, you'll need testnet ETH tokens. Refer to our [Getting tokens](/docs/getting-started/for-users/get-tokens).
 
 ## 2. Setting Up the Environment

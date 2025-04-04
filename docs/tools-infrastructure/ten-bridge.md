@@ -1,16 +1,16 @@
-# Ten Bridge
+# TEN Bridge
 
 ## Overview
 
-The Ten Bridge project aims to facilitate the seamless transfer of assets between the Ethereum blockchain and the Ten blockchain. This documentation provides an overview of the project, its purpose, supported tokens, and usage instructions.
+The TEN Bridge project aims to facilitate the seamless transfer of assets between the Ethereum blockchain and the TEN blockchain. This documentation provides an overview of the project, its purpose, supported tokens, and usage instructions.
 
 ## Purpose
 
-The primary goal of the Ten Bridge is to enable users to move assets between Ethereum and Ten efficiently and securely. This bridge will serve as a vital infrastructure component for users who wish to interact with assets on both blockchains.
+The primary goal of the TEN Bridge is to enable users to move assets between Ethereum and TEN efficiently and securely. This bridge will serve as a vital infrastructure component for users who wish to interact with assets on both blockchains.
 
 ## Supported Tokens
 
-To provide flexibility and utility to users, the Ten Bridge supports the following tokens:
+To provide flexibility and utility to users, the TEN Bridge supports the following tokens:
 - Ethereum (ETH)
 - TEN token (TEN)
 - Tether (USDT)
@@ -20,12 +20,12 @@ To provide flexibility and utility to users, the Ten Bridge supports the followi
 
 ### Prerequisites
 
-Before using the Ten Bridge, ensure you have the following:
+Before using the TEN Bridge, ensure you have the following:
 - MetaMask or any Ethereum-compatible wallet
 
 ### Steps to Transfer Assets
 
-1. Connect your Ethereum wallet (e.g., MetaMask) to the Ten Bridge interface.
+1. Connect your Ethereum wallet (e.g., MetaMask) to the TEN Bridge interface.
 2. Select the asset you wish to transfer and specify the destination blockchain (Ethereum or TEN).
 3. Enter the amount of the asset you want to transfer.
 4. Review the transaction details and confirm the transfer.
@@ -34,15 +34,15 @@ Before using the Ten Bridge, ensure you have the following:
 
 ### Notes
 
-- Please ensure you have sufficient gas fees (for Ethereum transactions) and Ten network fees to cover the transaction costs.
+- Please ensure you have sufficient gas fees (for Ethereum transactions) and TEN network fees to cover the transaction costs.
 - Transactions may take varying amounts of time to process depending on network congestion and other factors.
 - Always double-check the recipient address before confirming the transfer to avoid any potential loss of assets.
 
 ## Support
 
-For any inquiries or assistance regarding the Ten Bridge, please contact our team at [team@obscu.ro](mailto:team@obscu.ro).
+For any inquiries or assistance regarding the TEN Bridge, please contact our team at [team@obscu.ro](mailto:team@obscu.ro).
 
 ## Conclusion
 
-The Ten Bridge provides a convenient and secure way for users to transfer assets between Ethereum and Ten blockchains. By supporting multiple tokens, including ETH, TEN, USDT and USDC, the bridge enhances interoperability and accessibility for users within the ecosystem.
+The TEN Bridge provides a convenient and secure way for users to transfer assets between Ethereum and TEN blockchains. By supporting multiple tokens, including ETH, TEN, USDT and USDC, the bridge enhances interoperability and accessibility for users within the ecosystem.
 

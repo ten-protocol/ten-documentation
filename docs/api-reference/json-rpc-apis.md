@@ -3,11 +3,11 @@ sidebar_position: 1
 ---
 # JSON-RPC API
 
-Ten offers compatibility with a subset of Ethereum's [JSON-RPC API](https://ethereum.org/en/developers/docs/apis/json-rpc/). This document outlines the supported JSON-RPC API methods.
+TEN offers compatibility with a subset of Ethereum's [JSON-RPC API](https://ethereum.org/en/developers/docs/apis/json-rpc/). This document outlines the supported JSON-RPC API methods.
 
 ## Supported Methods
 
-Ten nodes cater to the following JSON-RPC API methods, accessible via both HTTP and websockets:
+TEN nodes cater to the following JSON-RPC API methods, accessible via both HTTP and websockets:
 
 - `eth_blockNumber`
 - `eth_call`

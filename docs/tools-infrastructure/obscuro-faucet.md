@@ -4,17 +4,18 @@ sidebar_position: 2
 
 # Ten Faucet
 
-![Ten Discord Faucet](../assets/faucet.png)
+![Ten Discord Faucet](../assets/faucet.ten.xyz.jpg)
 
-Using the steps provided, you can request testnet ETH from the faucet available on the Ten Discord server.
+Using the steps provided, you can request testnet ETH from the faucet available on the TEN Gas Station.
 
 ## **Prerequisites**
 - Make sure you have completed your wallet set up or else follow the [instructions](/docs/getting-started/for-users/setup-you-wallet).
 
 ## **Requesting Testnet ETH**
-1. Make a note of your wallet address or copy it to your clipboard.
-2. Join the Ten [Discord server](http://discord.gg/hbbfThQHT3).
-3. Open the `faucet-requests` channel on Ten Discord in the development category.
-4. Request ETH using the `/faucet` command. The faucet will credit 0.5 ETH by default.
-5. Provide your wallet address and hit Enter. The faucet will acknowledge your request.
-6. Your wallet should receive ETH shortly.
+1. Make a note of your EVM wallet address or copy it to your clipboard.
+2. Head over to [TEN Gas Station](https://faucet.ten.xyz/).
+3. Paste your EVM wallet address into the wallet address field.
+4. Log in with your Discord and X (Twitter) accounts.
+5. Then, complete the available tasks.
+
+If your wallet balance remains unchanged, double-check your wallet configuration or refer to the [set up your wallet](/docs/getting-started/for-users/setup-you-wallet) page.

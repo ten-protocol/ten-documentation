@@ -7,24 +7,23 @@ sidebar_position: 2
 ## Galxe
 The main source of activities to participate as a user in testnet are on [Galxe](https://galxe.com/ten)
 
-To fully engage with the Ten testnet, you'll need:
+To fully engage with the TEN testnet, you'll need:
 - MetaMask installed
-- Setup MetaMask to use Ten testnet
+- Setup MetaMask to use TEN testnet
 - Testnet tokens
 
 Once you've installed MetaMask, follow the instructions below.
 
-## Setup MetaMask with Ten
-- Visit the [Ten Gateway](https://gateway.ten.xyz/) and follow the instructions. This will add the Ten testnet as a new network in MetaMask and create an authentication token.
+## Setup MetaMask with TEN
+- Visit the [TEN Gateway](https://gateway.ten.xyz/) and follow the instructions. This will add the TEN testnet as a new network in MetaMask and create an authentication token.
 
-## Use Ten Discord Faucet
-To obtain Ten ETH directly on the Ten testnet, utilize the Discord faucet. ENS names won't work; use your actual address. Follow these steps:
+## Use TEN Gas Station
+To obtain TEN ETH directly on the TEN testnet, utilize the TEN Gas Station. Remember, Follow these steps:
 
-1. Join the Ten [Discord server](https://discord.gg/HSPwgH89YK).
-2. Go to the `#faucet-requests` channel under the `TESTNET INFO` category.
-3. Enter `/faucet` and select the command.
-4. Input your wallet address and hit enter.
-5. Your wallet should receive ETH shortly.
+1. Head over to [TEN Gas Station](https://faucet.ten.xyz/).
+2. Paste your EVM wallet address into the wallet address field.
+3. Log in with your Discord and X (Twitter) accounts.
+4. Then, complete the available tasks.
 
 If your wallet balance remains unchanged, double-check your wallet configuration or refer to the [set up your wallet](/docs/getting-started/for-users/setup-you-wallet) page.
 

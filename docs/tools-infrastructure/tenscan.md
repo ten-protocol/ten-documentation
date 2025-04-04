@@ -4,9 +4,9 @@ sidebar_position: 1
 
 # Tenscan
 
-![Ten Block Explorer](../assets/obscuroscan.png)
+![TEN Block Explorer](../assets/obscuroscan.png)
 
-[TenScan](https://tenscan.io) is a blockchain explorer for the Ten Testnet - Ten’s equivalent of Etherscan. Tenscan allows you to view the latest rollups and transactions on the Testnet, as well as search for historical rollups and transactions. Its functionality will be expanded over time.
+[TenScan](https://tenscan.io) is a blockchain explorer for the TEN Testnet - TEN’s equivalent of Etherscan. Tenscan allows you to view the latest rollups and transactions on the Testnet, as well as search for historical rollups and transactions. Its functionality will be expanded over time.
 
 :::info
 Tenscan is still in its testnet phase. Expect to be able to view individual transactions and accounts encrypted in the future.
@@ -15,10 +15,10 @@ Tenscan is still in its testnet phase. Expect to be able to view individual tran
 ## How does Testnet handle encryption?
 
 :::warning
-On the Testnet, transactions are encrypted but can be decrypted because it uses a rollup encryption key that is long-lived and well-known. It's designed to help users understand how Ten works. However, on the Mainnet, rollups will be encrypted with rotating keys, unknown to anyone or anything apart from the Ten enclaves.
+On the Testnet, transactions are encrypted but can be decrypted because it uses a rollup encryption key that is long-lived and well-known. It's designed to help users understand how TEN works. However, on the Mainnet, rollups will be encrypted with rotating keys, unknown to anyone or anything apart from the TEN enclaves.
 :::
 
-Transactions in Ten are encrypted by default and their contents cannot be viewed by anyone, but how do we know it's really encrypted? Because we can decrypt the transaction batches. 
+Transactions in TEN are encrypted by default and their contents cannot be viewed by anyone, but how do we know it's really encrypted? Because we can decrypt the transaction batches. 
 
 ## Decryption of Transaction Blobs
 

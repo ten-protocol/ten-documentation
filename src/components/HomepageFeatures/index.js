@@ -17,7 +17,7 @@ const FeatureList = [
     png: require('@site/static/img/scale.png').default,
     description: (
       <>
-        Ten enhances the scalability of the Ethereum network by moving computation off-chain to secure enclaves and rolling up encrypted transactions.
+        TEN enhances the scalability of the Ethereum network by moving computation off-chain to secure enclaves and rolling up encrypted transactions.
       </>
     ),
   },
@@ -26,7 +26,7 @@ const FeatureList = [
     png: require('@site/static/img/great-ux-dx.png').default,
     description: (
       <>
-        DApps written for Ethereum will just work on Ten.
+        DApps written for Ethereum will just work on TEN.
         You don't have to learn any new languages and can use all your favorite Ethereum tools.
       </>
     ),

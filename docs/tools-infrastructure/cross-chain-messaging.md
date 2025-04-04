@@ -4,7 +4,7 @@ sidebar_position: 6
 
 # Cross Chain Messaging
 
-Ten features a cross-chain messaging protocol, facilitating secure and decentralized communication across layers.
+TEN features a cross-chain messaging protocol, facilitating secure and decentralized communication across layers.
 
 The foundational contract for this feature is `MessageBus`, present on both L1 and L2. On L1, it's nested under the management contract, while on L2, it's managed by the protocol.
 
@@ -16,7 +16,7 @@ To verify message receipt, users can call `verifyMessageFinalized` on the receiv
 
 This mechanism allows for queries like: **'Has address 0xAAAA.. received 25WETH tokens on the bridge with address 0XAB0FF?'**. If the bridge confirms the receipt, the query returns true.
 
-For messages published on Ten's L2, the management contract transports them to L1 during rollup submission. However, these messages must await the rollup's challenge period to be deemed final.
+For messages published on TEN's L2, the management contract transports them to L1 during rollup submission. However, these messages must await the rollup's challenge period to be deemed final.
 
 ## Advanced Capabilities
 
