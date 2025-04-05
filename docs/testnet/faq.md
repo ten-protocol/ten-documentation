@@ -4,8 +4,8 @@ sidebar_position: 4
 
 # Testnet FAQ
 
-## What is the Ten testnet?
-Ten is a Layer 2 built on Ethereum. Before we can go to mainnet, we need to ensure we’ve tested as thoroughly as possible several key areas of the platform. 
+## What is the TEN testnet?
+TEN is a Layer 2 built on Ethereum. Before we can go to mainnet, we need to ensure we’ve tested as thoroughly as possible several key areas of the platform. 
 
 This includes:
 -	Developer tooling and the developer experience
@@ -14,7 +14,7 @@ This includes:
 -	Security and scalability
 -	Rewards and incentives
 
-The Ten testnet is a version of Ten that rolls up to the Ethereum Sepolia testnet as opposed to Ethereum mainnet. 
+The TEN testnet is a version of TEN that rolls up to the Ethereum Sepolia testnet as opposed to Ethereum mainnet. 
 
 To encourage participation at sufficiently high levels, the testnet is incentivised for developers, users and node operators.
 
@@ -23,7 +23,7 @@ There are no limits to the number of users. However, developers and node operato
 
 You can apply to be a developer [here](https://ten-testnet.deform.cc/developers) and in later phases, you'll be able to apply to be a node operator.
 
-Eligibility for the Ten testnet is detailed in the “Who May Use the Services” section of the Terms and Conditions. Participation is restricted to jurisdictions where it is permitted by applicable law. To be eligible for rewards, participants must undergo KYC, KYB, and AML checks. 
+Eligibility for the TEN testnet is detailed in the “Who May Use the Services” section of the Terms and Conditions. Participation is restricted to jurisdictions where it is permitted by applicable law. To be eligible for rewards, participants must undergo KYC, KYB, and AML checks. 
 
 ## When is the deadline to participate?
 Users can join at any time prior to the end of the incentivized testnet program. Developers and node operators should apply before January 1st 2024.

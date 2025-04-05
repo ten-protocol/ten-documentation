@@ -5,25 +5,25 @@ sidebar_position: 2
 # Random Numbers
 
 
-## Using Randomness on Ten
+## Using Randomness on TEN
 
-Random numbers are available as a secure and private primitive within Ten contracts.
+Random numbers are available as a secure and private primitive within TEN contracts.
 
-A random string of bytes can be accessed in solidity contracts on Ten using `block.prevrandao`, just like on Ethereum mainnet. But it is important to stress that this provides **much stronger** security guarantees than those on mainnet.
+A random string of bytes can be accessed in solidity contracts on TEN using `block.prevrandao`, just like on Ethereum mainnet. But it is important to stress that this provides **much stronger** security guarantees than those on mainnet.
 
-## Benefits of Ten Randomness
+## Benefits of TEN Randomness
 On Ethereum mainnet, `block.prevrandao` must be used with care. It has some important caveats:
 - The same random value is provided to every transaction executing in the same block.
 - The value is known at the time the transactions are being ordered into the block, meaning MEV bots can manipulate outcomes.
 
-The same code on Ten does not expose those attack vectors. It should be noted that:
+The same code on TEN does not expose those attack vectors. It should be noted that:
 - A fresh, uncorrelated key is generated for each transaction.
 - The value cannot be seen outside of the executing code, secure enclave hardware means even node operators can't access it.
 - Outcomes cannot be known until the block is published (which cannot be undone), removing the threat of MEV exploits.
 
 The upshot of all this is that developers have much less to think about and secure contract code can stay simple and clean.
 
-Users also benefit, dApps using randomness on Ten can provide a much better UX because oracles and commit-reveal schemes (which add artificial delays and extra transactions) are no longer necessary.
+Users also benefit, dApps using randomness on TEN can provide a much better UX because oracles and commit-reveal schemes (which add artificial delays and extra transactions) are no longer necessary.
 
 ## Example
 

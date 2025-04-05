@@ -1,13 +1,13 @@
 ---
 sidebar_position: 1
 ---
-# Explore Contracts in Ten
+# Explore Contracts in TEN
 
-Ten offers a distinct environment for smart contract development so you'll need to consider how to design your dApps slightly differently from how you would a transparent dApp. This guide explains these differences:
+TEN offers a distinct environment for smart contract development so you'll need to consider how to design your dApps slightly differently from how you would a transparent dApp. This guide explains these differences:
 
 ## 1. Accessing Storage Values
 
-While both Ethereum and Ten allow easy access to public variables, their handling of private variables differs significantly, highlighting Ethereum's transparency challenges and Ten's privacy solutions.
+While both Ethereum and TEN allow easy access to public variables, their handling of private variables differs significantly, highlighting Ethereum's transparency challenges and TEN's privacy solutions.
 
 ### Ethereum's Transparency Challenge
 
@@ -19,12 +19,12 @@ Accessing a private variable in Ethereum:
 uint256 value = eth.getStorageAt(contractAddress, position);
 ```
 
-### Ten's Privacy Solution
+### TEN's Privacy Solution
 
-To provide privacy on Ethereum, Ten has disabled the `getStorageAt` function. This ensures that private variables can only be accessed via their associated functions, providing genuine programmable privacy.
+To provide privacy on Ethereum, TEN has disabled the `getStorageAt` function. This ensures that private variables can only be accessed via their associated functions, providing genuine programmable privacy.
 
 **Example**:
-Accessing a private variable in Ten:
+Accessing a private variable in TEN:
 ```solidity
 private uint256 privateVariable;
 
@@ -33,7 +33,7 @@ function getPrivateVariable() public view returns (uint256) {
 }
 ```
 
-In summary, while Ethereum's transparency poses challenges for true data privacy, Ten offers a robust solution by ensuring that private data remains genuinely private.
+In summary, while Ethereum's transparency poses challenges for true data privacy, TEN offers a robust solution by ensuring that private data remains genuinely private.
 
 ## 2. Access Control for Functions
 
@@ -57,23 +57,23 @@ This example ensures that only the contract's owner can call the `restrictedFunc
 
 ## 3. Event Visibility
 
-Ten has specific event visibility rules:
+TEN has specific event visibility rules:
 
 - Lifecycle events without an address parameter are public.
 - Events with an address parameter related to an account are private.
 
 **Example**:
 ```solidity
-// Public event on Ten
+// Public event on TEN
 event LifecycleEvent(uint256 indexed value);
 
-// Private event on Ten
+// Private event on TEN
 event AccountEvent(address indexed account, uint256 value);
 ```
 
-## 4. Secure Random Number Generation in Ten
+## 4. Secure Random Number Generation in TEN
 
-Random number generation on blockchains is challenging due to timing, delay, complexity, and fees. Ten offers a unique, immediate, and secure solution.
+Random number generation on blockchains is challenging due to timing, delay, complexity, and fees. TEN offers a unique, immediate, and secure solution.
 
 ### Challenges with On-Chain Randomness
 
@@ -81,9 +81,9 @@ Random number generation on blockchains is challenging due to timing, delay, com
 2. **Delay**: Many solutions introduce a delay, affecting user experience.
 3. **Complexity & Fees**: Solutions like oracles add overhead and costs.
 
-### Ten's Solution  
+### TEN's Solution  
 
-Ten nodes run on secure enclave's, ensuring:
+TEN nodes run on secure enclave's, ensuring:
 
 - **Immediate Randomness**: No delays.
 - **Unpredictability**: Random numbers are based on an inaccessible private seed.
@@ -92,13 +92,13 @@ Ten nodes run on secure enclave's, ensuring:
 **Example**:
 ```solidity
 function getRandomNumber() public view returns (uint256) {
-    // Ten network injects a secure and unique seed to the prevrandao property, note: on other EVM chains this code would be exploitable by MEV bots
+    // TEN network injects a secure and unique seed to the prevrandao property, note: on other EVM chains this code would be exploitable by MEV bots
     return uint256(block.prevrandao);
 }
 ```
 
-Ten's approach ensures secure and straightforward random number generation. For more information on using randomness in Ten, take a look at the [Random Numbers page](/docs/standards-primitives/random-numbers.md).
+TEN's approach ensures secure and straightforward random number generation. For more information on using randomness in TEN, take a look at the [Random Numbers page](/docs/standards-primitives/random-numbers.md).
 
 ## 5. Gas Consumption
 
-Gas consumption is a vital consideration in smart contract development. On Ten, it's essential to optimize your contract functions to ensure efficient gas usage. Always test your contracts in a simulated environment before deploying to gauge gas consumption.
+Gas consumption is a vital consideration in smart contract development. On TEN, it's essential to optimize your contract functions to ensure efficient gas usage. Always test your contracts in a simulated environment before deploying to gauge gas consumption.

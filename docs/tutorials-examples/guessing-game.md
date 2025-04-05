@@ -5,7 +5,7 @@ sidebar_position: 1
 
 ![Guessing Game](../assets/guessing-game.png)
 
-The Ten Guessing Game is a simple yet powerful demonstration of Ten's unique encryption capabilities. Players attempt to guess a secret number, with each guess requiring a token fee. The game showcases the challenges of maintaining secrecy in transparent ecosystems like Ethereum and how Ten addresses these challenges.
+The TEN Guessing Game is a simple yet powerful demonstration of TEN's unique encryption capabilities. Players attempt to guess a secret number, with each guess requiring a token fee. The game showcases the challenges of maintaining secrecy in transparent ecosystems like Ethereum and how TEN addresses these challenges.
 
 ## **Game Mechanics**
 
@@ -17,14 +17,14 @@ The Ten Guessing Game is a simple yet powerful demonstration of Ten's unique enc
 ## **Playing the Game**
 
 How to Play the Guessing Game: A Step-by-Step Guide
-This guide assumes you have a Metamask wallet installed and configured with the Ten testnet.
+This guide assumes you have a Metamask wallet installed and configured with the TEN testnet.
 
-1. **Verify Gateway Authentication:** Ensure your connected account is properly authenticated through the [Ten Gateway](https://testnet.ten.xyz/).
+1. **Verify Gateway Authentication:** Ensure your connected account is properly authenticated through the [TEN Gateway](https://gateway.ten.xyz/).
 
-2. **Visit the Game Website:** Navigate to the official [website](https://ten-protocol.github.io/sample-applications/guessing-game-v2/) of the guessing game.
+2. **Visit the Game Website:** Navigate to the official [website](https://TEN-protocol.github.io/sample-applications/guessing-game-v2/) of the guessing game.
 
 :::tip
-You can get free testnet tokens from the [Ten Faucet](/docs/getting-started/for-users/get-tokens).
+You can get free testnet tokens from the [TEN Faucet](/docs/getting-started/for-users/get-tokens).
 :::
 
 3. **Make Your Guess:** Enter your guess for the secret number within the designated field. This number should be within the specified range (e.g., 1-1000).
@@ -105,4 +105,4 @@ function _generateSecretNumber() private {
 
 By calling `_generateSecretNumber()` again, the contract resets the secret number, allowing the game to continue with a new random number.
 
-Find the complete contract & frontend here: [this GitHub repository](https://github.com/ten-protocol/sample-applications/tree/main/guessing-game-v2).
+Find the complete contract & fronTENd here: [this GitHub repository](https://github.com/TEN-protocol/sample-applications/tree/main/guessing-game-v2).

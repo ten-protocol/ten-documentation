@@ -4,7 +4,7 @@ sidebar_position: 5
 
 # Standard Bridge
 
-The standard Ten bridge is a trustless and decentralized asset bridge leveraging a wrapped token mint and burn pattern. It's built on the cross-chain messaging protocol and operates entirely as a smart contract, eliminating the need for separate runnables or nodes.
+The standard TEN bridge is a trustless and decentralized asset bridge leveraging a wrapped token mint and burn pattern. It's built on the cross-chain messaging protocol and operates entirely as a smart contract, eliminating the need for separate runnables or nodes.
 
 ## Interacting with the Contract
 
@@ -20,7 +20,7 @@ For `sendNative`, simply add value to the transaction. The bridge contract's rec
 
 ## Layer 1 To Layer 2 Specifics
 
-- **Layer 1 (L1)**: Managed by `ObscuroBridge.sol` - the bridge to Ten.
+- **Layer 1 (L1)**: Managed by `ObscuroBridge.sol` - the bridge to TEN.
 - **Layer 2 (L2)**: Managed by `EthereumBridge.sol` - the bridge to Ethereum.
 
 Tokens must be whitelisted to bridge over. Initially, only admin role accounts can whitelist tokens. As the protocol matures, this will change. To whitelist your token, contact us on our [Discord](https://discord.gg/tVnNrQ35Ke).
