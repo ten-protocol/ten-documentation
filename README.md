@@ -1,6 +1,6 @@
-# Website
+# TEN Protocol Developer Documentation
 
-This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
+Documentation for TEN Protocol, built with [Docusaurus 2](https://docusaurus.io/). The released documentation can be found [here](https://docs.ten.xyz)
 
 ### Installation
 
