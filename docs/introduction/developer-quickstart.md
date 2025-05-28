@@ -326,6 +326,26 @@ Because the SK is active, the platform will sign the transactions on behalf of t
 As a game developer, you are responsible to keep track of the balance of the SK. You can also query the network for the balance of the address.
 If the SK runs out of balance, you have to ask the user to move more funds to the SK.
 
+
+#### Managing Session Keys
+
+TEN provides additional RPC endpoints for managing session keys:
+
+- `sessionkeys_Delete` - Permanently removes the session key. This can only be called after deactivating the key. This is useful when you want to clean up unused session keys or when a user wants to completely remove their session key.
+
+- `sessionkeys_List` - Returns the address of the current session key, or an empty response if no session key exists. This is useful for checking if a user has an active session key and getting its address.
+
+
+The session key management endpoints can be called through both HTTP API and RPC methods. For RPC, you can use `eth_getStorageAt` with specific addresses:
+
+- Create: `0x0000000000000000000000000000000000000003`
+- Activate: `0x0000000000000000000000000000000000000004`
+- Deactivate: `0x0000000000000000000000000000000000000005`
+- Delete: `0x0000000000000000000000000000000000000006`
+- List: `0x0000000000000000000000000000000000000007`
+
+
+
 #### Finishing the game
  
 When a game ends, you have to move the remaining funds back to the main address and deactivate the key.
