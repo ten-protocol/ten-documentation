@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.0.0">
 <title data-rh="true">Migrate your dApp to TEN | Ten Documentation</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://docs.ten.xyz/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://docs.ten.xyz/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://docs.ten.xyz/docs/introduction/developer-quickstart"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Migrate your dApp to TEN | Ten Documentation"><meta data-rh="true" name="description" content="Migrating to TEN enables your dApp to leverage &quot;Programmable Encryption&quot;. Below are steps to help you transition smoothly."><meta data-rh="true" property="og:description" content="Migrating to TEN enables your dApp to leverage &quot;Programmable Encryption&quot;. Below are steps to help you transition smoothly."><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://docs.ten.xyz/docs/introduction/developer-quickstart"><link data-rh="true" rel="alternate" href="https://docs.ten.xyz/docs/introduction/developer-quickstart" hreflang="en"><link data-rh="true" rel="alternate" href="https://docs.ten.xyz/docs/introduction/developer-quickstart" hreflang="x-default"><link rel="stylesheet" href="/assets/css/styles.6ac58635.css">
-<script src="/assets/js/runtime~main.00d82021.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.9b6e762a.js" defer="defer"></script>
 <script src="/assets/js/main.6b60a5d7.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -117,6 +117,24 @@ Instead, submit them to the network unsigned using the RPCs: <code>eth_sendRawTr
 <p>Because the SK is active, the platform will sign the transactions on behalf of the user.</p>
 <p>As a game developer, you are responsible to keep track of the balance of the SK. You can also query the network for the balance of the address.
 If the SK runs out of balance, you have to ask the user to move more funds to the SK.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="managing-session-keys">Managing Session Keys<a href="#managing-session-keys" class="hash-link" aria-label="Direct link to Managing Session Keys" title="Direct link to Managing Session Keys">​</a></h4>
+<p>TEN provides additional RPC endpoints for managing session keys:</p>
+<ul>
+<li>
+<p><code>sessionkeys_Delete</code> - Permanently removes the session key. This can only be called after deactivating the key. This is useful when you want to clean up unused session keys or when a user wants to completely remove their session key.</p>
+</li>
+<li>
+<p><code>sessionkeys_List</code> - Returns the address of the current session key, or an empty response if no session key exists. This is useful for checking if a user has an active session key and getting its address.</p>
+</li>
+</ul>
+<p>The session key management endpoints can be called through both HTTP API and RPC methods. For RPC, you can use <code>eth_getStorageAt</code> with specific addresses:</p>
+<ul>
+<li>Create: <code>0x0000000000000000000000000000000000000003</code></li>
+<li>Activate: <code>0x0000000000000000000000000000000000000004</code></li>
+<li>Deactivate: <code>0x0000000000000000000000000000000000000005</code></li>
+<li>Delete: <code>0x0000000000000000000000000000000000000006</code></li>
+<li>List: <code>0x0000000000000000000000000000000000000007</code></li>
+</ul>
 <h4 class="anchor anchorWithStickyNavbar_LWe7" id="finishing-the-game">Finishing the game<a href="#finishing-the-game" class="hash-link" aria-label="Direct link to Finishing the game" title="Direct link to Finishing the game">​</a></h4>
 <p>When a game ends, you have to move the remaining funds back to the main address and deactivate the key.</p>
 <ul>
