@@ -373,6 +373,8 @@ This solution has the major drawback that it introduces extra complexity, latenc
 The best solution is to decouple the move from the execution without increasing the latency or the cost.
 This way, the side-channel attacks are no longer possible because the move is not executed immediately.
 To avoid increasing the latency, the move must be executed at the end of the block.
+Note that contracts can define the handleRefund function, which will be called with value equal to what is left from the gas processing paid for.
+This is called with enough gas to save locally how much should be refunded to whoever paid for the callback.
 
 See below a simple implementation of the coin flip game using the TEN platform:
 
@@ -385,11 +387,19 @@ interface TenCallbacks {
     function register(bytes calldata) external payable returns (uint256);
 }
 
+interface Refunds {
+    function handleRefund(uint256 callbackId) external payable;
+}
+
 contract CoinFlip {
     // Event to emit the result of the coin flip
     event CoinFlipResult(address indexed player, bool didWin, uint256 randomNumber);
 
     private TenCallbacks tenCallbacks;
+    mapping(uint256 callbackId => address player) public callbackToPlayer;
+    mapping(address player => uint256 refundAmount) public playerToRefundAmount;
+
+
 
     modifier onlyTenSystemCall() { 
         require(msg.sender == address(tenCallbacks));
@@ -436,5 +446,19 @@ contract CoinFlip {
     function getRandomNumber() internal view returns (uint256) {
         return block.prevrandao;
     }
+
+    function handleRefund(uint256 callbackId) external payable {
+        address player = callbackToPlayer[callbackId];
+        playerToRefundAmount[player] += msg.value;
+    }
+
+    function claimRefund() external {
+        uint256 refundAmount = playerToRefundAmount[msg.sender];
+        require(refundAmount > 0, "No refunds to claim");
+        playerToRefundAmount[msg.sender] = 0;
+        (bool success, ) = payable(msg.sender).call{value: refundAmount}("");
+        require(success, "Transfer failed");
+    }
+ 
 }
 ```
