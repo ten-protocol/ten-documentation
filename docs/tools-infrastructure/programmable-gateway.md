@@ -54,7 +54,7 @@ const data = await msgRes.json();
 
 **Endpoint:** `POST /v1/authenticate?token=$EncryptionToken`
 
-Submits a signed message in the format "Register <userID> for <account>", proving ownership of the private keys for the account, and links that account with the userID.
+Submits a signed message in the format address & signature, proving ownership of the private keys for the account, and links that account with the encryption token.
 
 ```bash
 curl -X POST "https://testnet.ten.xyz/v1/authenticate/?token=$EncryptionToken" \
@@ -88,14 +88,14 @@ curl -X GET "https://testnet.ten.xyz/v1/query/address?token=$EncryptionToken&a=$
 
 ```javascript
 const response = await fetch(`https://testnet.ten.xyz/v1/query/address?token=${token}&a=${address}`);
-const data = await response.json();
+const data = await response.text();
 ```
 
 ## 5. Revoke Access
 
 **Endpoint:** `POST /v1/revoke?token=$EncryptionToken`
 
-Deletes userID and associated viewing keys.
+Deletes encryption token associated with the account.
 
 ```bash
 curl -X POST "https://testnet.ten.xyz/v1/revoke?token=abc123"
