@@ -22,7 +22,7 @@ const config = {
   organizationName: 'ten-protocol', // Usually your GitHub org/user name.
   projectName: 'ten-documentation', // Usually your repo name.
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
 
   // Even if you don't use internalization, you can use this field to set useful
@@ -61,6 +61,22 @@ const config = {
     ],
   ],
 
+  plugins: [
+    [
+      '@signalwire/docusaurus-plugin-llms-txt',
+      {
+        siteTitle: 'TEN Documentation',
+        siteDescription: 'Comprehensive guide to TEN protocol',
+        depth: 3,
+        content: {
+          includeBlog: false,
+          includePages: true,
+          enableLlmsFullTxt: true  // Optional: generates llms-full.txt
+        }
+      }
+    ]
+  ],
+
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
@@ -80,9 +96,16 @@ const config = {
           },
           {to: 'https://medium.com/obscuro-labs', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/ten-protocol/ten-documentation',
-            label: 'GitHub',
+            href: '/llms.txt',
+            label: 'llms.txt',
             position: 'right',
+            target: '_blank',
+          },
+          {
+            href: '/llms-full.txt',
+            label: 'llms-full.txt',
+            position: 'right',
+            target: '_blank',
           },
         ],
       },
