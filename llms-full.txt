@@ -1,0 +1,3313 @@
+# TEN Documentation
+
+> Comprehensive guide to TEN protocol
+
+- [TEN Documentation](/index.md)
+
+## markdown-page
+
+You don't need React to write simple standalone pages.
+
+- [Markdown page example](/markdown-page.md): You don't need React to write simple standalone pages.
+
+## docs
+
+
+### api-reference
+
+
+#### debug-apis
+
+TEN supports a subset of Geth's DEBUG JSON-RPC API. This
+
+- [Debug JSON-RPC API](/docs/api-reference/debug-apis.md): TEN supports a subset of Geth's DEBUG JSON-RPC API. This
+
+#### json-rpc-apis
+
+TEN offers compatibility with a subset of Ethereum's JSON-RPC API. This document outlines the supported JSON-RPC API methods.
+
+- [JSON-RPC API](/docs/api-reference/json-rpc-apis.md): TEN offers compatibility with a subset of Ethereum's JSON-RPC API. This document outlines the supported JSON-RPC API methods.
+
+#### sensitive-apis
+
+TEN supports a subset of Ethereum's JSON-RPC API.
+
+- [Sensitive APIs](/docs/api-reference/sensitive-apis.md): TEN supports a subset of Ethereum's JSON-RPC API.
+
+### architecture
+
+
+#### consensus
+
+TEN combines Ethereum's L1 security, rollup efficiency, Secure Enclave privacy, and the POBI mechanism for a unique consensus approach.
+
+- [Consensus Mechanism](/docs/architecture/consensus.md): TEN combines Ethereum's L1 security, rollup efficiency, Secure Enclave privacy, and the POBI mechanism for a unique consensus approach.
+
+#### design
+
+TEN is architected as an L2 protocol, leveraging the rollup pattern to store transaction data on the L1 chain. While most rollup implementations aim for scalability, TEN's primary objective is confidentiality. The rollups encapsulate the entire encrypted transaction data.
+
+- [Design](/docs/architecture/design.md): TEN is architected as an L2 protocol, leveraging the rollup pattern to store transaction data on the L1 chain. While most rollup implementations aim for scalability, TEN's primary objective is confidentiality. The rollups encapsulate the entire encrypted transaction data.
+
+#### governance
+
+TEN's governance is explicit, transparent, and draws inspiration from the experiences of Bitcoin and Ethereum. In a decentralized system, control can be:
+
+- [Governance](/docs/architecture/governance.md): TEN's governance is explicit, transparent, and draws inspiration from the experiences of Bitcoin and Ethereum. In a decentralized system, control can be:
+
+#### interaction-with-ethereum
+
+TEN serves as a confidential extension to Ethereum, enabling assets to move seamlessly between the two networks. While many sidechains and L2 solutions have developed bridges to address mismatches between different network models, TEN's approach is distinct, ensuring a decentralized and secure interaction.
+
+- [Interaction with Ethereum](/docs/architecture/interaction-with-ethereum.md): TEN serves as a confidential extension to Ethereum, enabling assets to move seamlessly between the two networks. While many sidechains and L2 solutions have developed bridges to address mismatches between different network models, TEN's approach is distinct, ensuring a decentralized and secure interaction.
+
+#### system-components
+
+Cryptography
+
+- [System Components](/docs/architecture/system-components.md): Cryptography
+
+### category
+
+
+#### api-references
+
+- [API References](/docs/category/api-references.md)
+
+#### architecture
+
+- [Architecture](/docs/category/architecture.md)
+
+#### for-developers
+
+- [For Developers](/docs/category/for-developers.md)
+
+#### for-developers-1
+
+- [For Developers](/docs/category/for-developers-1.md)
+
+#### for-users
+
+- [For Users](/docs/category/for-users.md)
+
+#### for-users-1
+
+- [For Users](/docs/category/for-users-1.md)
+
+#### for-validators
+
+- [For Validators](/docs/category/for-validators.md)
+
+#### for-validators-1
+
+- [For Validators](/docs/category/for-validators-1.md)
+
+#### getting-started
+
+- [Getting started](/docs/category/getting-started.md)
+
+#### governance
+
+- [Governance](/docs/category/governance.md)
+
+#### introduction
+
+- [Introduction](/docs/category/introduction.md)
+
+#### standards--primitives
+
+- [Standards & Primitives](/docs/category/standards--primitives.md)
+
+#### ten-network-association
+
+- [TEN Network Association](/docs/category/ten-network-association.md)
+
+#### testnet
+
+- [Testnet](/docs/category/testnet.md)
+
+#### tools--infrastructure
+
+- [Tools & Infrastructure](/docs/category/tools--infrastructure.md)
+
+#### troubleshooting
+
+- [Troubleshooting](/docs/category/troubleshooting.md)
+
+#### tutorials--examples
+
+- [Tutorials & Examples](/docs/category/tutorials--examples.md)
+
+### getting-started
+
+
+#### for-developers
+
+- [Develop & Deploy dApp](/docs/getting-started/for-developers/develop-deploy-dapp.md): 1. Develop Smart Contracts
+- [Explore Contracts in TEN](/docs/getting-started/for-developers/explore-contracts-in-ten.md): TEN offers a distinct environment for smart contract development so you'll need to consider how to design your dApps slightly differently from how you would a transparent dApp. This guide explains these differences:
+- [Set Up Dev Environment](/docs/getting-started/for-developers/setup-dev-env.md): 1. Wallet Setup & Configuration
+
+#### for-users
+
+- [Get Tokens](/docs/getting-started/for-users/get-tokens.md): Use TEN Gas Station
+- [Set up your wallet](/docs/getting-started/for-users/setup-you-wallet.md): TEN is fully compatible with Ethereum and seamlessly integrates with MetaMask. If you're unfamiliar with MetaMask or wallets, start here.
+
+#### for-validators
+
+- [Running a node](/docs/getting-started/for-validators/running-a-node.md): Thank you for your interest in running a node on TEN!
+
+### governance
+
+
+#### ten-network-association
+
+- [About the TEN Network Association](/docs/governance/ten-network-association/association.md): Introduction and Vision
+- [Token Delegates and Delegating](/docs/governance/ten-network-association/delegation.md): When you get involved in the governance of TEN, you can either vote directly on proposals or hand over your voting power to a delegate. The delegation system allows $TEN token holders to take part passively by transferring their voting power to delegates who share their values and who they trust to vote on their behalf in a way which aligns to those values. This page breaks down what delegates do and how delegation works within the governance of TEN.
+- [Overview of the TEN Token](/docs/governance/ten-network-association/ten-token.md): The TEN token, known as $TEN, is an ERC-20 governance token that lets you take part in the TEN’s on-chain decision-making process. The token is created by a smart contract on Ethereum, which is a secure and reliable decentralized blockchain.
+- [TEN Improvement Proposals (TIP)](/docs/governance/ten-network-association/tip.md): A TEN Improvement Proposal (TIP) is an essential component of the governance of TEN because it is how participants in the TEN community can have an active role in the evolution of TEN.
+
+### introduction
+
+
+#### developer-quickstart
+
+Migrating to TEN enables your dApp to leverage "Programmable Encryption". Below are steps to help you transition smoothly.
+
+- [Migrate your dApp to TEN](/docs/introduction/developer-quickstart.md): Migrating to TEN enables your dApp to leverage "Programmable Encryption". Below are steps to help you transition smoothly.
+
+#### features
+
+1. Encryption: Data Confidentiality and Computational Privacy
+
+- [Features](/docs/introduction/features.md): 1. Encryption: Data Confidentiality and Computational Privacy
+
+#### overview
+
+TEN in Web3
+
+- [Overview](/docs/introduction/overview.md): TEN in Web3
+
+#### technology
+
+At the heart of TEN's innovative approach to blockchain encryption lies the pragmatic use of Trusted Execution Environments (TEEs). These TEEs are not just about encryption; they ensure unparalleled confidentiality while providing absolute certainty about the code in execution. This technology empowers TEN to deliver a unique blend of smart contracts, decentralization, scalability, and encryption, setting a new benchmark in the blockchain realm.
+
+- [Technology](/docs/introduction/technology.md): At the heart of TEN's innovative approach to blockchain encryption lies the pragmatic use of Trusted Execution Environments (TEEs). These TEEs are not just about encryption; they ensure unparalleled confidentiality while providing absolute certainty about the code in execution. This technology empowers TEN to deliver a unique blend of smart contracts, decentralization, scalability, and encryption, setting a new benchmark in the blockchain realm.
+
+### standards-primitives
+
+
+#### fungible-tokens
+
+ERC-20 on TEN
+
+- [Fungible Tokens](/docs/standards-primitives/fungible-tokens.md): ERC-20 on TEN
+
+#### random-numbers
+
+Using Randomness on TEN
+
+- [Random Numbers](/docs/standards-primitives/random-numbers.md): Using Randomness on TEN
+
+### testnet
+
+
+#### faq
+
+What is the TEN testnet?
+
+- [Testnet FAQ](/docs/testnet/faq.md): What is the TEN testnet?
+
+#### for-developers
+
+- [DApp Ideas](/docs/testnet/for-developers/dapp-ideas.md): Below are some of the dApps we'd love to see built on TEN. Feel free to reach out on Discord if you'd like to discuss the ideas in more detail or request support.
+
+#### for-users
+
+- [Getting started with testnet for users](/docs/testnet/for-users/participate.md): Galxe
+
+#### for-validators
+
+- [Node Architecture](/docs/testnet/for-validators/node-architecture.md): SGX Enclave and Trusted Execution Environment (TEE)
+- [Node Overview](/docs/testnet/for-validators/overview.md): Running a node on the TEN network involves participating in the network’s transaction processing, batching, and roll-up mechanisms. As a node operator, you will play a critical role in maintaining the network’s security, scalability, and efficiency. Understanding the flow of transactions and the mechanics of batches and roll-ups is essential for effectively running a node and contributing to the network’s operation.
+- [Node Rewards](/docs/testnet/for-validators/rewards.md): As a node operator, your participation is essential in maintaining a secure, reliable, and high-performance network. In recognition of your contributions, TEN has implemented a comprehensive reward structure to incentivize active and consistent engagement in the network’s testnet phases.
+- [Running a TEN Validator Node on Azure](/docs/testnet/for-validators/running-a-node.md): This guide provides detailed instructions to set up and manage a TEN Validator Node on Azure using Terraform and Ansible. Due to TEN’s use of SGX architecture and cloud-specific security assurances, all current deployments are limited to cloud infrastructure to mitigate risks associated with physical attacks. A proof-of-cloud assertion, provided by TEN, certifies the security and reliability of each validator node running in the cloud.
+
+### tools-infrastructure
+
+
+#### compatible-tools
+
+These are the list of compatible tools & libraries. We are constantly working to improve your developer experience & will support all of them soon.
+
+- [Compatible Tools](/docs/tools-infrastructure/compatible-tools.md): These are the list of compatible tools & libraries. We are constantly working to improve your developer experience & will support all of them soon.
+
+#### cross-chain-messaging
+
+TEN features a cross-chain messaging protocol, facilitating secure and decentralized communication across layers.
+
+- [Cross Chain Messaging](/docs/tools-infrastructure/cross-chain-messaging.md): TEN features a cross-chain messaging protocol, facilitating secure and decentralized communication across layers.
+
+#### hosted-gateway
+
+The TEN Gateway is a critical application that facilitates communication between a TEN node and various tools that require a connection to it, such as MetaMask. Due to the encryption of data within a TEN node, direct communication is not feasible.
+
+- [Hosted Gateway](/docs/tools-infrastructure/hosted-gateway.md): The TEN Gateway is a critical application that facilitates communication between a TEN node and various tools that require a connection to it, such as MetaMask. Due to the encryption of data within a TEN node, direct communication is not feasible.
+
+#### obscuro-faucet
+
+Ten Discord Faucet
+
+- [Ten Faucet](/docs/tools-infrastructure/obscuro-faucet.md): Ten Discord Faucet
+
+#### programmable-gateway
+
+Base URL//testnet.ten.xyz
+
+- [Programmable Access to Gateway](/docs/tools-infrastructure/programmable-gateway.md): Base URL//testnet.ten.xyz
+
+#### standard-bridge
+
+The standard TEN bridge is a trustless and decentralized asset bridge leveraging a wrapped token mint and burn pattern. It's built on the cross-chain messaging protocol and operates entirely as a smart contract, eliminating the need for separate runnables or nodes.
+
+- [Standard Bridge](/docs/tools-infrastructure/standard-bridge.md): The standard TEN bridge is a trustless and decentralized asset bridge leveraging a wrapped token mint and burn pattern. It's built on the cross-chain messaging protocol and operates entirely as a smart contract, eliminating the need for separate runnables or nodes.
+
+#### ten-bridge
+
+Overview
+
+- [TEN Bridge](/docs/tools-infrastructure/ten-bridge.md): Overview
+
+#### tenscan
+
+TEN Block Explorer
+
+- [Tenscan](/docs/tools-infrastructure/tenscan.md): TEN Block Explorer
+
+### troubleshooting
+
+
+#### faq
+
+For Developers
+
+- [FAQs](/docs/troubleshooting/faq.md): For Developers
+
+#### how-to-submit-a-bug-reports
+
+If you have encountered any bugs in TEN, we invite you to tell us about it, thereby making a contribution to help us evolve!
+
+- [How to submit a bug reports](/docs/troubleshooting/how-to-submit-a-bug-reports.md): If you have encountered any bugs in TEN, we invite you to tell us about it, thereby making a contribution to help us evolve!
+
+### tutorials-examples
+
+
+#### guessing-game
+
+Guessing Game
+
+- [Guessing Game](/docs/tutorials-examples/guessing-game.md): Guessing Game
+
+
+---
+
+# Full Documentation Content
+
+## Markdown page example
+
+> You don't need React to write simple standalone pages.
+
+# Markdown page example
+
+You don't need React to write simple standalone pages.
+
+
+---
+
+## Debug JSON-RPC API
+
+> TEN supports a subset of Geth's DEBUG JSON-RPC API. This
+
+# Debug JSON-RPC API
+
+TEN supports a subset of Geth's [DEBUG JSON-RPC API](https://geth.ethereum.org/docs/interacting-with-geth/rpc/ns-debug). This page details which Debug JSON-RPC API methods are supported.
+
+## Supported JSON-RPC API methods[​](#supported-json-rpc-api-methods "Direct link to Supported JSON-RPC API methods")
+
+TEN nodes support the following JSON-RPC API methods over both HTTP and websockets:
+
+* `debug_traceTransaction`
+* `debug_eventLogRelevancy`: returns all event logs generated by the transaction Id, together with the relevancy metadata. Intended for developers on dev networks to debug smart contracts. This call is disabled for production networks
+
+## debug\_LogVisibility[​](#debug_logvisibility "Direct link to debug_LogVisibility")
+
+Request Payload:
+
+```
+{
+    "jsonrpc": "2.0",
+    "method": "debug_eventLogRelevancy",
+    "params": [
+        "0xb29737963fd6768587ede453ab90ff7668115db16915a7833705ef134e793814"
+    ],
+    "id": 1
+}
+```
+
+Request result:
+
+```
+{
+    "jsonrpc": "2.0",
+    "id": 1,
+    "result": [
+            {
+                "address": "0x9802f661d17c65527d7abb59daad5439cb125a67",
+                "topics": [
+                    "0xebfcf7c0a1b09f6499e519a8d8bb85ce33cd539ec6cbd964e116cd74943ead1a"
+                    ],
+                "data": "0x000000000000000000000000987e0a0692475bcc5f13d97e700bb43c1913effe0000000000000000000000000000000000000000000000000000000000000001",
+                "blockNumber": "0x4",
+                "transactionHash": "0xb29737963fd6768587ede453ab90ff7668115db16915a7833705ef134e793814",
+                "transactionIndex": "0x0",
+                "blockHash": "0x2dc21ffe5cf46b8babc3d3c4613a2b8b241013e9f39532a9c9161d81068aa9b6",
+                "logIndex": "0x0",
+                "removed": false,
+                "lifecycleEvent": true,
+                "relAddress1": null,
+                "relAddress2": null,
+                "relAddress3": null,
+                "relAddress4": null
+            }
+    ]
+}
+```
+
+
+---
+
+## JSON-RPC API
+
+> TEN offers compatibility with a subset of Ethereum's JSON-RPC API. This document outlines the supported JSON-RPC API methods.
+
+# JSON-RPC API
+
+TEN offers compatibility with a subset of Ethereum's [JSON-RPC API](https://ethereum.org/en/developers/docs/apis/json-rpc/). This document outlines the supported JSON-RPC API methods.
+
+## Supported Methods[​](#supported-methods "Direct link to Supported Methods")
+
+TEN nodes cater to the following JSON-RPC API methods, accessible via both HTTP and websockets:
+
+* `eth_blockNumber`
+* `eth_call`
+* `eth_chainId`
+* `eth_estimateGas`
+* `eth_gasPrice`
+* `eth_getBalance`
+* `eth_getBlockByHash`
+* `eth_getBlockByNumber`
+* `eth_getCode`
+* `eth_getLogs`
+* `eth_getTransactionByHash`
+* `eth_getTransactionCount`
+* `eth_getTransactionReceipt`
+* `eth_sendRawTransaction`
+
+## Websocket Subscriptions[​](#websocket-subscriptions "Direct link to Websocket Subscriptions")
+
+For websocket connections, additional API methods include:
+
+* `eth_subscribe`
+* `eth_unsubscribe`
+
+Currently, the sole supported subscription type is `logs`.
+
+
+---
+
+## Sensitive APIs
+
+> TEN supports a subset of Ethereum's JSON-RPC API.
+
+# Sensitive APIs
+
+TEN supports a subset of Ethereum's [JSON-RPC API](https://ethereum.org/en/developers/docs/apis/json-rpc/).
+
+Some of these methods deal with sensitive information. For example, the response to an `eth_getBalance` request will contain the balance of an account. An attacker could intercept this response to discover a user's balance. To avoid this, the requests and responses for methods deemed sensitive are encrypted and decrypted by the [hosted gateway](/docs/tools-infrastructure/hosted-gateway.md). To ensure a good user experience, this process is invisible to the end user.
+
+This page details which JSON-RPC API methods are deemed sensitive, and the rules governing who is able to decrypt the response to a given method call.
+
+## Sensitive JSON-RPC API Methods[​](#sensitive-json-rpc-api-methods "Direct link to Sensitive JSON-RPC API Methods")
+
+Of the methods above, the following are deemed sensitive, and their requests and responses are encrypted in transit:
+
+* `eth_call`: Response can only be decrypted by the owner of the account in the request's `from` field
+
+* `eth_estimateGas`: Response can only be decrypted by the owner of the account in the request's `from` field
+
+* `eth_getBalance`: Response can only be decrypted by:
+
+  <!-- -->
+
+  * For account addresses: The owner of the account
+  * For contract addresses: The owner of the account that deployed the contract
+
+* `eth_getLogs`: Response can only be decrypted by the owner of the account, and only includes logs relevant to that account
+
+* `eth_getTransactionByHash`: Response can only be decrypted by the signer of the transaction
+
+* `eth_getTransactionCount`: Response can only be decrypted by the owner of the address
+
+* `eth_getTransactionReceipt`: Response can only be decrypted by the signer of the transaction
+
+* `eth_sendRawTransaction`: Response can only be decrypted by the signer of the transaction
+
+
+---
+
+## Consensus Mechanism
+
+> TEN combines Ethereum's L1 security, rollup efficiency, Secure Enclave privacy, and the POBI mechanism for a unique consensus approach.
+
+# Consensus Mechanism
+
+TEN combines Ethereum's L1 security, rollup efficiency, Secure Enclave privacy, and the POBI mechanism for a unique consensus approach.
+
+## POBI (Proof Of Block Inclusion)[​](#pobi-proof-of-block-inclusion "Direct link to POBI (Proof Of Block Inclusion)")
+
+* **Unique to TEN**: Ensures a single version of truth by validating rollups only if they're included in a block.
+* **Chain Selection**: The chain with the latest block inclusion is deemed the canonical chain.
+
+## Rollup-Based Consensus[​](#rollup-based-consensus "Direct link to Rollup-Based Consensus")
+
+* **Aggregators**: These are L2 nodes that collect, aggregate, and submit batches of transactions to Ethereum L1. They play a crucial role in the consensus mechanism.
+
+* **Sequential Processing**: Transactions are processed in the order they are received, ensuring a consistent state across all nodes.
+
+* **Finality**: Once a rollup is accepted on Ethereum L1, it is considered final. This provides the same level of security as Ethereum itself.
+
+## Attestation[​](#attestation "Direct link to Attestation")
+
+* **Secure Enclave Attestation**: Before an L2 node can participate in the network, it must prove its legitimacy through a process called attestation. This ensures that the node operates within a genuine Secure Enclave.
+
+* **Continuous Attestation**: Nodes must continuously attest to their validity to remain active in the network.
+
+## Economic Incentives[​](#economic-incentives "Direct link to Economic Incentives")
+
+* **Staking**: L2 nodes are required to stake a certain amount of tokens as collateral. This ensures they act honestly, as malicious actions can lead to the loss of their stake.
+
+* **Rewards**: Honest nodes are rewarded for their services, such as aggregating transactions or producing rollups.
+
+* **Penalties**: Malicious nodes or those that fail to meet the network's standards can be penalized, which includes the loss of their staked tokens.
+
+## Sybil Attack Prevention[​](#sybil-attack-prevention "Direct link to Sybil Attack Prevention")
+
+TEN's consensus mechanism is designed to resist Sybil attacks. The combination of Secure Enclave attestation and economic incentives ensures that creating multiple fake nodes is not only challenging but also economically unviable.
+
+
+---
+
+## Design
+
+> TEN is architected as an L2 protocol, leveraging the rollup pattern to store transaction data on the L1 chain. While most rollup implementations aim for scalability, TEN's primary objective is confidentiality. The rollups encapsulate the entire encrypted transaction data.
+
+# Design
+
+TEN is architected as an L2 protocol, leveraging the rollup pattern to store transaction data on the L1 chain. While most rollup implementations aim for scalability, TEN's primary objective is confidentiality. The rollups encapsulate the entire encrypted transaction data.
+
+![L1-L2 Interaction](/assets/images/l1-l2-interaction-c1e5b1835c5389a9beb36f7148db8d85.png)
+
+## L1 Network[​](#l1-network "Direct link to L1 Network")
+
+* **Management Contracts**: On the L1 network, there are several standard Ethereum contracts, often referred to as Management Contracts. These contracts play a pivotal role in the functioning and management of the TEN network.
+
+  * **Network Management**: This contract acts as the gatekeeper for the protocol. It manages the Secure Enclave / TEE attestation requirements, verifies attestation reports, and oversees the stake of the Aggregators.
+
+  * **Rollup Management**: This module accepts rollups submitted by L2 nodes and collaborates with the bridge to process user withdrawal requests.
+
+  * **TEN Bridge**: A crucial contract ensuring the security of the liquidity deposited by Ethereum end-users, mirrored in the confidential TEN ledger.
+
+## L2 Network[​](#l2-network "Direct link to L2 Network")
+
+The L2 design aims to establish a decentralized network of nodes with valid Secure Enclave / TEEs, ensuring transaction confidentiality even amidst potential Secure Enclave / TEE breaches.
+
+* **L2 Nodes**: There are two primary categories of nodes within the TEN network:
+
+  * **Aggregator Nodes**: These nodes, equipped with Secure Enclave / TEEs and the shared secret, can submit rollups to the L1. They process user transactions, roll them up, and submit them for inclusion in Ethereum blocks.
+
+  * **Verifier Nodes**: These nodes, also equipped with Secure Enclave / TEEs and the shared secret, play a significant role in consensus security. They monitor the L1 network, calculating the state based on the submitted rollups.
+
+## Rollup Data Structure[​](#rollup-data-structure "Direct link to Rollup Data Structure")
+
+The Management Contract implements a blockchain-like structure to store the rollups. Each rollup references a parent rollup, and multiple competing sibling rollups can exist simultaneously. It's the responsibility of individual L2 nodes to determine the validity of these siblings.
+
+
+---
+
+## Governance
+
+> TEN's governance is explicit, transparent, and draws inspiration from the experiences of Bitcoin and Ethereum. In a decentralized system, control can be:
+
+# Governance
+
+TEN's governance is explicit, transparent, and draws inspiration from the experiences of Bitcoin and Ethereum. In a decentralized system, control can be:
+
+* **Explicit**: Exercised by a group through direct signing or voting.
+* **Implicit Immutable**: Implemented in an unchangeable protocol.
+* **Implicit Mutable**: Implemented in a protocol represented by an open-source, changeable codebase.
+
+## TEN Controls[​](#ten-controls "Direct link to TEN Controls")
+
+### 1. TEE Attestation Constraints[​](#1-tee-attestation-constraints "Direct link to 1. TEE Attestation Constraints")
+
+The Attestation Constraints control which software can run inside the Secure Enclave, processing user transactions and creating rollups. Independent security auditors analyze and approve the code. The constraints contain the keys of these auditors, determining which software is permitted.
+
+### 2. Administration Of Ethereum Management Contracts[​](#2-administration-of-ethereum-management-contracts "Direct link to 2. Administration Of Ethereum Management Contracts")
+
+Ethereum management contracts in TEN may have upgradeable components to address bugs and introduce new features. Upgradeable components imply administrative control over:
+
+* Bridge logic
+* Rollup logic
+* Attestation logic
+
+### 3. Creating Rollups[​](#3-creating-rollups "Direct link to 3. Creating Rollups")
+
+TEN Aggregators, running attested software and hardware with a stake, have the power to append to the L2 ledger. However, they cannot choose competing software or create forks.
+
+### 4. Canonical Rollup Chain[​](#4-canonical-rollup-chain "Direct link to 4. Canonical Rollup Chain")
+
+The canonical chain in TEN is determined by the rules implemented in the attested software run by Aggregators. A valid Secure Enclave will not sign a rollup built on a non-canonical chain, ensuring ledger integrity.
+
+### 5. Slashing The Stake Of Misbehaving Parties[​](#5-slashing-the-stake-of-misbehaving-parties "Direct link to 5. Slashing The Stake Of Misbehaving Parties")
+
+Aggregators attempting to compromise the ledger's integrity face penalties. Misbehaviors are detected by the protocol, and culprits are penalized through stake slashing.
+
+### 6. Expected Monthly Operational Cost For Nodes[​](#6-expected-monthly-operational-cost-for-nodes "Direct link to 6. Expected Monthly Operational Cost For Nodes")
+
+TEN's fee structure aims for predictable income for node operators and fees for users. A set value representing the monthly operational cost for each node is crucial for determining fees and balancing decentralization with user costs.
+
+
+---
+
+## Interaction with Ethereum
+
+> TEN serves as a confidential extension to Ethereum, enabling assets to move seamlessly between the two networks. While many sidechains and L2 solutions have developed bridges to address mismatches between different network models, TEN's approach is distinct, ensuring a decentralized and secure interaction.
+
+# Interaction with Ethereum
+
+TEN serves as a confidential extension to Ethereum, enabling assets to move seamlessly between the two networks. While many sidechains and L2 solutions have developed bridges to address mismatches between different network models, TEN's approach is distinct, ensuring a decentralized and secure interaction.
+
+## Deposits[​](#deposits "Direct link to Deposits")
+
+* **Process**: Users deposit supported ERC tokens into the Bridge contract's address. Once the transaction is confirmed on Ethereum L1, the TEN-enabled wallet automatically creates an L2 transaction, crediting the user's TEN account with wrapped tokens.
+
+* **Finality Consideration**: Due to Ethereum's probabilistic finality, TEN introduces a dependency mechanism between L2 rollups and L1 blocks to ensure accurate crediting of L2 accounts.
+
+## Withdrawals[​](#withdrawals "Direct link to Withdrawals")
+
+* **Requirement**: To move assets back to Ethereum, TEN provides a secure withdrawal function.
+
+* **Decentralized Approach**: TEN employs economic incentives on top of the POBI protocol to ensure a decentralized withdrawal process, avoiding reliance on multi-signature technology or long waiting periods.
+
+## Rollup Finality[​](#rollup-finality "Direct link to Rollup Finality")
+
+* **Standard Delay**: Typically, a rollup is considered final if a standard number of Ethereum blocks (equivalent to a 1-day period) have passed since its publication on Ethereum L1.
+
+* **Competing Forks**: If multiple forks are detected, finality is suspended on all forks, and withdrawals are halted. The protocol has mechanisms to address such scenarios and ensure user satisfaction.
+
+## TEN Public Events[​](#ten-public-events "Direct link to TEN Public Events")
+
+* **Use Cases**: Ethereum applications can utilize TEN for tasks like organizing fair lotteries or publishing poker game results, which require data originating in L2 to be final.
+
+* **Public Events**: Applications within TEN can emit special "Public Events". Once these events reach finality, they are exposed to external contracts on Ethereum L1.
+
+
+---
+
+## System Components
+
+> Cryptography
+
+# System Components
+
+## Cryptography[​](#cryptography "Direct link to Cryptography")
+
+* **Master Seed**: Every Secure Enclave is provisioned with one or multiple keys, known as the Enclave Key (EK). The first enclave, termed the Genesis Enclave, generates a random byte array called the Master Seed. This seed is encrypted using the EK and stored in the Management Contract.
+
+* **Sharing the Master Seed**: After attestation, subsequent nodes receive the Master Seed encrypted with their key. Before obtaining this shared secret, the L2 nodes must attest their validity.
+
+* **Generating Keys**: Secure Enclaves use the shared secret to generate further keys. These keys are used for various purposes, including network identity and encrypting transactions.
+
+* **Transaction Encryption**: TEN aims to balance user privacy with application functionality. Transactions are encrypted differently based on predefined revealing options, ensuring that they can be decrypted independently after a set time delay.
+
+* **Revelation Mechanism**: TEN uses L1 blocks as a reliable measure of average time. After a set number of blocks, any user can request the encryption key from any TEN node's Secure Enclave.
+
+* **Cryptographic Algorithms**: TEN uses the same cryptographic algorithms as Ethereum for hashing and signing. Communication encryption algorithms are still under consideration.
+
+## State[​](#state "Direct link to State")
+
+TEN's state management is similar to Ethereum's L1 blockchain. It's an account-based L2 decentralized ledger system. The state is stored as a Patricia Trie in each rollup, and each node processes all prior transactions to establish the current state.
+
+## Smart Contracts and the TEN VM[​](#smart-contracts-and-the-ten-vm "Direct link to Smart Contracts and the TEN VM")
+
+* **Smart Contract Types**: TEN supports two types of smart contracts: Public contracts (similar to Ethereum smart contracts) and Private contracts (where the source code isn't publicly available).
+
+* **State Confidentiality between Smart Contracts**: TEN aims to protect user data while allowing contract composition. Developers need to be cautious about data access and potential data leaks when their contracts interact with others.
+
+* **Wallets and Transaction Submission**: User wallets create transactions encrypted with the TEN public key. These transactions can only be decrypted, executed, and viewed by valid Secure Enclaves.
+
+
+---
+
+## API References
+
+## [📄️<!-- --> <!-- -->JSON-RPC API](/docs/api-reference/json-rpc-apis.md)
+
+[TEN offers compatibility with a subset of Ethereum's JSON-RPC API. This document outlines the supported JSON-RPC API methods.](/docs/api-reference/json-rpc-apis.md)
+
+
+---
+
+## Architecture
+
+## [📄️<!-- --> <!-- -->Design](/docs/architecture/design.md)
+
+[TEN is architected as an L2 protocol, leveraging the rollup pattern to store transaction data on the L1 chain. While most rollup implementations aim for scalability, TEN's primary objective is confidentiality. The rollups encapsulate the entire encrypted transaction data.](/docs/architecture/design.md)
+
+
+---
+
+## For Developers
+
+## [📄️<!-- --> <!-- -->Explore Contracts in TEN](/docs/getting-started/for-developers/explore-contracts-in-ten.md)
+
+[TEN offers a distinct environment for smart contract development so you'll need to consider how to design your dApps slightly differently from how you would a transparent dApp. This guide explains these differences:](/docs/getting-started/for-developers/explore-contracts-in-ten.md)
+
+
+---
+
+## For Developers
+
+## [📄️<!-- --> <!-- -->DApp Ideas](/docs/testnet/for-developers/dapp-ideas.md)
+
+[Below are some of the dApps we'd love to see built on TEN. Feel free to reach out on Discord if you'd like to discuss the ideas in more detail or request support.](/docs/testnet/for-developers/dapp-ideas.md)
+
+
+---
+
+## For Users
+
+## [📄️<!-- --> <!-- -->Set up your wallet](/docs/getting-started/for-users/setup-you-wallet.md)
+
+[TEN is fully compatible with Ethereum and seamlessly integrates with MetaMask. If you're unfamiliar with MetaMask or wallets, start here.](/docs/getting-started/for-users/setup-you-wallet.md)
+
+
+---
+
+## For Users
+
+## [📄️<!-- --> <!-- -->Getting started with testnet for users](/docs/testnet/for-users/participate.md)
+
+[Galxe](/docs/testnet/for-users/participate.md)
+
+
+---
+
+## For Validators
+
+## [📄️<!-- --> <!-- -->Running a node](/docs/getting-started/for-validators/running-a-node.md)
+
+[Thank you for your interest in running a node on TEN!](/docs/getting-started/for-validators/running-a-node.md)
+
+
+---
+
+## For Validators
+
+## [📄️<!-- --> <!-- -->Node Overview](/docs/testnet/for-validators/overview.md)
+
+[Running a node on the TEN network involves participating in the network’s transaction processing, batching, and roll-up mechanisms. As a node operator, you will play a critical role in maintaining the network’s security, scalability, and efficiency. Understanding the flow of transactions and the mechanics of batches and roll-ups is essential for effectively running a node and contributing to the network’s operation.](/docs/testnet/for-validators/overview.md)
+
+
+---
+
+## Getting started
+
+## [🗃️<!-- --> <!-- -->For Users](/docs/category/for-users.md)
+
+[2 items](/docs/category/for-users.md)
+
+
+---
+
+## Governance
+
+## [🗃️<!-- --> <!-- -->TEN Network Association](/docs/category/ten-network-association.md)
+
+[4 items](/docs/category/ten-network-association.md)
+
+
+---
+
+## Introduction
+
+## [📄️<!-- --> <!-- -->Overview](/docs/introduction/overview.md)
+
+[TEN in Web3](/docs/introduction/overview.md)
+
+
+---
+
+## Standards & Primitives
+
+## [📄️<!-- --> <!-- -->Fungible Tokens](/docs/standards-primitives/fungible-tokens.md)
+
+[ERC-20 on TEN](/docs/standards-primitives/fungible-tokens.md)
+
+
+---
+
+## TEN Network Association
+
+## [📄️<!-- --> <!-- -->About the TEN Network Association](/docs/governance/ten-network-association/association.md)
+
+[Introduction and Vision](/docs/governance/ten-network-association/association.md)
+
+
+---
+
+## Testnet
+
+## [🗃️<!-- --> <!-- -->For Users](/docs/category/for-users-1.md)
+
+[1 item](/docs/category/for-users-1.md)
+
+
+---
+
+## Tools & Infrastructure
+
+## [📄️<!-- --> <!-- -->Tenscan](/docs/tools-infrastructure/tenscan.md)
+
+[TEN Block Explorer](/docs/tools-infrastructure/tenscan.md)
+
+
+---
+
+## Troubleshooting
+
+## [📄️<!-- --> <!-- -->FAQs](/docs/troubleshooting/faq.md)
+
+[For Developers](/docs/troubleshooting/faq.md)
+
+
+---
+
+## Tutorials & Examples
+
+## [📄️<!-- --> <!-- -->Guessing Game](/docs/tutorials-examples/guessing-game.md)
+
+[Guessing Game](/docs/tutorials-examples/guessing-game.md)
+
+
+---
+
+## Develop & Deploy dApp
+
+> 1. Develop Smart Contracts
+
+# Develop & Deploy dApp
+
+## 1. Develop Smart Contracts[​](#1-develop-smart-contracts "Direct link to 1. Develop Smart Contracts")
+
+Smart contracts are the backbone of your dApp, defining its rules and operations. Begin your development in Solidity based on the instructions [here](/docs/getting-started/for-developers/explore-contracts-in-ten.md).
+
+## 2. Develop the Frontend[​](#2-develop-the-frontend "Direct link to 2. Develop the Frontend")
+
+Use common web tools like HTML, CSS, and JavaScript. You can consider ReactJs, VueJs to enhance development. To connect your frontend to Ethereum, choose a library such as Web3.js or Ether.js. See supported libraries [here](#).
+
+## 3. Integrating TEN Gateway[​](#3-integrating-ten-gateway "Direct link to 3. Integrating TEN Gateway")
+
+Users need to configure their wallets to connect with TEN the first time they access your dApp.
+
+* **Gateway**: During the initial user onboarding, prompt users to visit the [TEN Gateway](https://gateway.ten.xyz/). By clicking "Connect to TEN Testnet" and following the on-screen instructions, they can easily configure their wallets. Learn more about the Hosted TEN Gateway [here](/docs/tools-infrastructure/hosted-gateway.md).
+
+## 4. Test & Deploy the Dapp[​](#4-test--deploy-the-dapp "Direct link to 4. Test & Deploy the Dapp")
+
+Before the final deployment, test your dApp in a controlled environment. This ensures that it interacts correctly with the blockchain and provides the desired user experience. Once satisfied with your dApp's functionality and performance, deploy it for public access.
+
+## 5. Verify & Track the Deployment[​](#5-verify--track-the-deployment "Direct link to 5. Verify & Track the Deployment")
+
+Post-Deployment it's essential to monitor your dApps performance and user interactions. Use the TENScan block explorer to verify and inspect the details of your deployed contract. This tool provides insights into transactions, contract interactions, and more. Learn how to use the block explorer [here](/docs/tools-infrastructure/tenscan.md).
+
+
+---
+
+## Explore Contracts in TEN
+
+> TEN offers a distinct environment for smart contract development so you'll need to consider how to design your dApps slightly differently from how you would a transparent dApp. This guide explains these differences:
+
+# Explore Contracts in TEN
+
+TEN offers a distinct environment for smart contract development so you'll need to consider how to design your dApps slightly differently from how you would a transparent dApp. This guide explains these differences:
+
+## 1. Accessing Storage Values[​](#1-accessing-storage-values "Direct link to 1. Accessing Storage Values")
+
+While both Ethereum and TEN allow easy access to public variables, their handling of private variables differs significantly, highlighting Ethereum's transparency challenges and TEN's privacy solutions.
+
+### Ethereum's Transparency Challenge[​](#ethereums-transparency-challenge "Direct link to Ethereum's Transparency Challenge")
+
+In Ethereum, private variables are intended to be accessed solely through functions. However, due to Ethereum's transparent nature, a workaround exists using the `getStorageAt` function. This method can bypass the designated functions, making true private data storage unattainable.
+
+**Example**: Accessing a private variable in Ethereum:
+
+```
+uint256 value = eth.getStorageAt(contractAddress, position);
+```
+
+### TEN's Privacy Solution[​](#tens-privacy-solution "Direct link to TEN's Privacy Solution")
+
+To provide privacy on Ethereum, TEN has disabled the `getStorageAt` function. This ensures that private variables can only be accessed via their associated functions, providing genuine programmable privacy.
+
+**Example**: Accessing a private variable in TEN:
+
+```
+private uint256 privateVariable;
+
+function getPrivateVariable() public view returns (uint256) {
+    return privateVariable;
+}
+```
+
+In summary, while Ethereum's transparency poses challenges for true data privacy, TEN offers a robust solution by ensuring that private data remains genuinely private.
+
+## 2. Access Control for Functions[​](#2-access-control-for-functions "Direct link to 2. Access Control for Functions")
+
+In smart contract development, it's essential to ensure that only authorized entities can access certain functions. This is achieved using access control mechanisms.
+
+### Access Control Using `require`[​](#access-control-using-require "Direct link to access-control-using-require")
+
+The `require` statement in Solidity is a straightforward way to enforce access control. It checks a condition, and if the condition is not met, the function execution stops, and an optional error message is thrown.
+
+**Example**:
+
+```
+address owner = msg.sender;
+
+function restrictedFunction() public {
+    require(msg.sender == owner, "Only the owner can call this function.");
+    // Rest of the function logic
+}
+```
+
+This example ensures that only the contract's owner can call the `restrictedFunction`.
+
+## 3. Event Visibility[​](#3-event-visibility "Direct link to 3. Event Visibility")
+
+TEN has specific event visibility rules:
+
+* Lifecycle events without an address parameter are public.
+* Events with an address parameter related to an account are private.
+
+**Example**:
+
+```
+// Public event on TEN
+event LifecycleEvent(uint256 indexed value);
+
+// Private event on TEN
+event AccountEvent(address indexed account, uint256 value);
+```
+
+## 4. Secure Random Number Generation in TEN[​](#4-secure-random-number-generation-in-ten "Direct link to 4. Secure Random Number Generation in TEN")
+
+Random number generation on blockchains is challenging due to timing, delay, complexity, and fees. TEN offers a unique, immediate, and secure solution.
+
+### Challenges with On-Chain Randomness[​](#challenges-with-on-chain-randomness "Direct link to Challenges with On-Chain Randomness")
+
+1. **Timing**: If block producers predict randomness, they can manipulate results.
+2. **Delay**: Many solutions introduce a delay, affecting user experience.
+3. **Complexity & Fees**: Solutions like oracles add overhead and costs.
+
+### TEN's Solution[​](#tens-solution "Direct link to TEN's Solution")
+
+TEN nodes run on secure enclave's, ensuring:
+
+* **Immediate Randomness**: No delays.
+* **Unpredictability**: Random numbers are based on an inaccessible private seed.
+* **Simplicity & No Extra Fees**: Every transaction gets its random seed.
+
+**Example**:
+
+```
+function getRandomNumber() public view returns (uint256) {
+    // TEN network injects a secure and unique seed to the prevrandao property, note: on other EVM chains this code would be exploitable by MEV bots
+    return uint256(block.prevrandao);
+}
+```
+
+TEN's approach ensures secure and straightforward random number generation. For more information on using randomness in TEN, take a look at the [Random Numbers page](/docs/standards-primitives/random-numbers.md).
+
+## 5. Gas Consumption[​](#5-gas-consumption "Direct link to 5. Gas Consumption")
+
+Gas consumption is a vital consideration in smart contract development. On TEN, it's essential to optimize your contract functions to ensure efficient gas usage. Always test your contracts in a simulated environment before deploying to gauge gas consumption.
+
+
+---
+
+## Set Up Dev Environment
+
+> 1. Wallet Setup & Configuration
+
+# Set Up Dev Environment
+
+## 1. Wallet Setup & Configuration[​](#1-wallet-setup--configuration "Direct link to 1. Wallet Setup & Configuration")
+
+To start building on TEN, you first need to set up and configure your wallet with the TEN network.
+
+1. **Install MetaMask**: [Install](https://metamask.io/download/) MetaMask either as a browser extension or mobile app.
+
+2. **Configure MetaMask for TEN**:
+
+   <!-- -->
+
+   * Visit the [TEN Gateway](https://gateway.ten.xyz/) for wallet setup.
+   * Click on 'Connect to TEN Testnet' and follow the on-screen instructions.
+   * Learn more about the [TEN Gateway](/docs/tools-infrastructure/hosted-gateway.md).
+
+3. **Acquire Testnet ETH Tokens**: To perform transactions, you'll need testnet ETH tokens. Refer to our [Getting tokens](/docs/getting-started/for-users/get-tokens.md).
+
+## 2. Setting Up the Environment[​](#2-setting-up-the-environment "Direct link to 2. Setting Up the Environment")
+
+Once your wallet is ready, you can proceed with the development and deployment of your smart contracts.
+
+1. **Choose an IDE**: Use your preferred development environment or Integrated Development Environment (IDE) like Truffle, Remix, Hardhat, or Foundry. Check out IDE compatibility and its features [here](/docs/tools-infrastructure/compatible-tools.md).
+2. **Connect IDE to MetaMask**: Ensure your chosen IDE is connected to your MetaMask wallet.
+
+## 3. Docker Configuration[​](#3-docker-configuration "Direct link to 3. Docker Configuration")
+
+For developers running a node and infrastructure using Docker on a Mac, please be aware that you must **disable** the “Use Rosetta for x86\_64/amd64 emulation on Apple Silicon” setting. Failing to do so will prevent the testnet from running correctly.
+
+
+---
+
+## Get Tokens
+
+> Use TEN Gas Station
+
+# Get Tokens
+
+## Use TEN Gas Station[​](#use-ten-gas-station "Direct link to Use TEN Gas Station")
+
+To obtain TEN ETH directly on the TEN testnet, utilize the TEN Gas Station. Remember, Follow these steps:
+
+1. Head over to [TEN Gas Station](https://faucet.ten.xyz/).
+2. Paste your EVM wallet address into the wallet address field.
+3. Log in with your Discord and X (Twitter) accounts.
+4. Then, complete the available tasks.
+
+If your wallet balance remains unchanged, double-check your wallet configuration or refer to the [set up your wallet](/docs/getting-started/for-users/setup-you-wallet.md) page.
+
+
+---
+
+## Set up your wallet
+
+> TEN is fully compatible with Ethereum and seamlessly integrates with MetaMask. If you're unfamiliar with MetaMask or wallets, start here.
+
+# Set up your wallet
+
+TEN is fully compatible with Ethereum and seamlessly integrates with MetaMask. If you're unfamiliar with MetaMask or wallets, start here.
+
+To engage with TEN:
+
+1. [Install](https://metamask.io/download/) MetaMask as a browser extension or mobile app.
+2. To use TEN, you have to configure the wallet using the TEN Gateway. Go to the [TEN Gateway](https://gateway.ten.xyz/) for wallet setup, click 'Connect to TEN Testnet', and follow the setup steps. Know more about the TEN Gateway [here](/docs/tools-infrastructure/hosted-gateway.md).
+
+No matter your activity on TEN, you'll probably need tokens to make transactions. See our following section: [Getting tokens.](/docs/getting-started/for-users/get-tokens.md)
+
+## Facing a problem with configuring MetaMask?[​](#facing-a-problem-with-configuring-metamask "Direct link to Facing a problem with configuring MetaMask?")
+
+When using a dApp on TEN, start by checking its documentation and resources. If that doesn't help, consult the TEN docs' [troubleshooting](/docs/category/troubleshooting.md) section or seek assistance on the TEN [Discord](http://discord.gg/yQfmKeNzNd). If the issue appears to be with MetaMask, head to MetaMask's [Help Center](https://support.metamask.io/hc/en-us) to browse their forums or engage with their Support team.
+
+## Other wallets[​](#other-wallets "Direct link to Other wallets")
+
+TEN currently supports MetaMask and will soon extend compatibility to all EVM-based wallets.
+
+
+---
+
+## Running a node
+
+> Thank you for your interest in running a node on TEN!
+
+# Running a node
+
+Thank you for your interest in running a node on TEN!
+
+Currently, the capability to run individual nodes is not available publicly. However, we're actively working on this feature and will be launching it soon.
+
+If you are interested in running a TEN validator - use [the form on Coinlist](https://coinlist.co/ten-testnet) to submit your application.
+
+The deadline to apply is set for 1 March 2024.
+
+
+---
+
+## About the TEN Network Association
+
+> Introduction and Vision
+
+# About the TEN Network Association
+
+## Introduction and Vision[​](#introduction-and-vision "Direct link to Introduction and Vision")
+
+### Mission Statement[​](#mission-statement "Direct link to Mission Statement")
+
+The TEN Network Association, the Association, aims to push forward the growth and development of the open-source TEN Network software protocol, building a lively and engaged community around it.
+
+### Purpose[​](#purpose "Direct link to Purpose")
+
+The Association is a not-for-profit organization based in Switzerland, dedicated to promoting, developing, and supporting the TEN software protocol and its ecosystem. The Association’s goal is to tackle challenges within the Web3 space through decentralized governance and community-driven projects.
+
+## Governance and Structure[​](#governance-and-structure "Direct link to Governance and Structure")
+
+### Legal Framework[​](#legal-framework "Direct link to Legal Framework")
+
+The Association operates as a Swiss Association governed by Swiss law. The legal foundation includes the Articles of Association, General Assembly Regulations, Organizational Regulations, and Governance Regulations.
+
+### Organizational Structure[​](#organizational-structure "Direct link to Organizational Structure")
+
+There are a number of bodies within the Association. New bodies can be created over time.
+
+1. **TEN Governance, or DAO**: participants in the TEN ecosystem who submit proposals for the advancement of TEN.
+2. **General Assembly**: the top decision-making body made up of all members.
+3. **Board**: manages and oversees the Association's operations.
+4. **Subcommittees**: created to handle specific tasks and projects, for example, the administration of grant programs.
+
+### Decision-Making Process[​](#decision-making-process "Direct link to Decision-Making Process")
+
+Decisions are made through a combination of General Assembly votes and decentralized governance mechanisms using TEN tokens. Each token gives you one vote, and you can delegate your voting rights. You also need to hold the TEN tokens for at least 30 days. This prevents flash loan attacks. Responsible progress of TEN’s evolution is essential to its long term health and well being. If a proposal is voted in by the DAO but it would be bad for the mission of the TEN Network Association or if a law or regulation would be broken then the Board can step in to assist.
+
+## Projects and Initiatives[​](#projects-and-initiatives "Direct link to Projects and Initiatives")
+
+### Ongoing Projects[​](#ongoing-projects "Direct link to Ongoing Projects")
+
+The Association supports a variety of projects aimed at improving TEN and its ecosystem, including software development, community-building, and educational initiatives. The Association also selects specific teams to help develop and enrich the TEN.
+
+### Proposals and Voting[​](#proposals-and-voting "Direct link to Proposals and Voting")
+
+DAO members can submit proposals for new projects or changes to the protocol. Proposals are reviewed and voted on by participants in the TEN ecosystem.
+
+## Community and Communication[​](#community-and-communication "Direct link to Community and Communication")
+
+### Communication Channels[​](#communication-channels "Direct link to Communication Channels")
+
+There are a number of communication channels dedicated to different purposes so all participants in the TEN ecosystem have an opportunity to engage widely with their fellow ecosystem participants.
+
+The Association **[website](https://association.ten.xyz)** is the main hub for information and updates.<br /><!-- -->The Association **[forum](https://forum.ten.xyz)** is specifically focused on discussions on submitted improvement proposal. Improvement proposals will contain a link to the relevent discussion in the forum.<br /><!-- -->You can follow the Association on **[X](https://x.com/tenassociation)** for updates and the latest news.
+
+### Community Guidelines[​](#community-guidelines "Direct link to Community Guidelines")
+
+We encourage respect, constructive feedback, and collaboration. We have clear guidelines and disciplinary actions for breaches.
+
+## Legal and Compliance Information[​](#legal-and-compliance-information "Direct link to Legal and Compliance Information")
+
+### Legal Disclaimers[​](#legal-disclaimers "Direct link to Legal Disclaimers")
+
+Disclaimers are provided about the nature of the Association, risks involved, and legal obligations of members.
+
+### Compliance Information[​](#compliance-information "Direct link to Compliance Information")
+
+The Association adheres to Swiss laws and regulations, and compliance information is regularly updated and published.
+
+## Feedback and Improvement[​](#feedback-and-improvement "Direct link to Feedback and Improvement")
+
+### Feedback Mechanisms[​](#feedback-mechanisms "Direct link to Feedback Mechanisms")
+
+Participants of the TEN ecosystem can provide feedback through the **[TEN Discord server](https://discord.gg/yQfmKeNzNd)**, occasional surveys, and direct communication using the contact details below.
+
+### Continuous Improvement[​](#continuous-improvement "Direct link to Continuous Improvement")
+
+Processes are in place for continuous improvement based on community feedback, ensuring the Association evolves and adapts to meet its goals effectively.
+
+The Association can be contacted by email: <governance@ten.xyz>
+
+The Association’s mailing address is:<br /><!-- -->TEN Network Association,<br /><!-- -->c/o MJP Partners AG,<br /><!-- -->Bahnhofstrasse 20,<br /><!-- -->6300 Zug
+
+
+---
+
+## Token Delegates and Delegating
+
+> When you get involved in the governance of TEN, you can either vote directly on proposals or hand over your voting power to a delegate. The delegation system allows $TEN token holders to take part passively by transferring their voting power to delegates who share their values and who they trust to vote on their behalf in a way which aligns to those values. This page breaks down what delegates do and how delegation works within the governance of TEN.
+
+# Token Delegates and Delegating
+
+When you get involved in the governance of TEN, you can either vote directly on proposals or hand over your voting power to a delegate. The delegation system allows $TEN token holders to take part passively by transferring their voting power to delegates who share their values and who they trust to vote on their behalf in a way which aligns to those values. This page breaks down what delegates do and how delegation works within the governance of TEN.
+
+## What is a delegate?[​](#what-is-a-delegate "Direct link to What is a delegate?")
+
+A delegate is someone in the TEN community chosen to represent other token holders and vote on their behalf. They are selected by token holders who decide to give their voting power to them. Delegates must stick to the rules set by TEN Network Association and act in the best interest of the token holders they represent.
+
+## Why delegate?[​](#why-delegate "Direct link to Why delegate?")
+
+Delegation is useful because it allows token holders to be part of the governance of TEN without having to follow every single proposal and vote. By delegating, token holders can let a representative vote on proposals in a way that matches their own views and values.
+
+If you delegate your voting power, you can take it back whenever you want. You might want to do this if there's a proposal you feel strongly about and want to vote on directly.
+
+## How to delegate[​](#how-to-delegate "Direct link to How to delegate")
+
+The governance of TEN uses Tally to make delegation easy:
+
+1. Connect your Ethereum wallet to Tally and go to the TEN governance page.
+2. Click on the "delegate" button.
+3. Find the delegate you want to give your voting power to and confirm the delegation by following the prompts on Tally.
+
+With Tally, you can change or cancel your delegation at any time. You can also split your voting power among multiple delegates.
+
+
+---
+
+## Overview of the TEN Token
+
+> The TEN token, known as $TEN, is an ERC-20 governance token that lets you take part in the TEN’s on-chain decision-making process. The token is created by a smart contract on Ethereum, which is a secure and reliable decentralized blockchain.
+
+# Overview of the TEN Token
+
+The TEN token, known as $TEN, is an ERC-20 governance token that lets you take part in the TEN’s on-chain decision-making process. The token is created by a smart contract on Ethereum, which is a secure and reliable decentralized blockchain.
+
+With TEN's governance model, you get to manage both the governance rules laid out in the governance guidelines and the technologies it oversees through the submission of improvement proposals. If you hold TEN tokens you can vote on TEN improvement proposals (TIPs) which influence how TEN operates and evolves. For example, deciding on project grants, updating the validator whitelist for gated TEN networks, and deciding on bug bounties and ecosystem incentives.
+
+When you vote on a TIP, you're using your TEN tokens to show whether you’re for or against it. The more TEN tokens you have, the more weight your vote carries. This is because the voting system, using smart contracts, is designed to be token-weighted, meaning your vote's power depends on how many tokens are in your wallet.
+
+You can also delegate your TEN tokens to other wallets. So, you can vote with your tokens or someone else’s if they’ve given you their voting power. This is useful for folks who might not have time to go over proposals regularly. Just keep in mind, you need to have held your TEN tokens for at least 30 days before you can use them to vote. This helps prevent any quick, manipulative flash-loan attacks.
+
+To summarize, the TEN token is a special digital asset that gives you the power to vote on proposals that impact how TEN is governed and the technology it controls. By holding TEN tokens, you get to help shape the future of the TEN ecosystem along with other like-minded participants.
+
+
+---
+
+## TEN Improvement Proposals (TIP)
+
+> A TEN Improvement Proposal (TIP) is an essential component of the governance of TEN because it is how participants in the TEN community can have an active role in the evolution of TEN.
+
+# TEN Improvement Proposals (TIP)
+
+A TEN Improvement Proposal (TIP) is an essential component of the governance of TEN because it is how participants in the TEN community can have an active role in the evolution of TEN.
+
+TIPs are submitted by anyone holding TEN tokens and who are therefore members of the TEN Governance, or DAO. TIPs are used to modify procedures, install or modify software, update permission whitelists where they exist. Also TIPs include requests for funds or grants and provide guidelines or information to the community.
+
+## TIP Structure[​](#tip-structure "Direct link to TIP Structure")
+
+The following sections should be completed when creating a TIP to make them transparent, structured and easy to understand. The structure of a TIP follows the SMARTKIT approach:
+
+1. **Summary**: A brief summary of the TIP.
+2. **Motivation**: Justification for implementing the TIP.
+3. **Alignment**: Explanation of how the TIP aligns with TEN's mission and values.
+4. **Risks**: description of any risks of proceeding with the TIP.
+5. **Terms**: Definitions of unique, new, or industry-specific terms (optional).
+6. **Key Details**: Detailed breakdown of platforms, technologies, and design decisions. Includes alternate designs and related work.
+7. **Implementation**: Steps to implement the TIP, including assumptions, resources, type of expertise required and costs breakdown. Legal documentation should be included if relevant.
+8. **Timing**: Start date, milestones, and completion dates.
+
+## Lifecycle of a TIP[​](#lifecycle-of-a-tip "Direct link to Lifecycle of a TIP")
+
+A TIP will go through several steps to help make sure as many members of the TEN community as possible can engage with and review the TIP. Progressing past each step represents levelling-up in the process. Timeframes for each step help encourage reviews to be done in a timely manner.
+
+| Level     | Description                           | Timeframe |
+| --------- | ------------------------------------- | --------- |
+| 8 (End)   | ⭐ TIP Implementation                 | Minutes   |
+| 7         | ⬆️ Ethereum Finalization Period       | 3 days    |
+| 6         | ⬆️ TEN to Ethereum Message            | 0.5 day   |
+| 5         | ⬆️ Reaction Period                    | 3 days    |
+| 4         | ⬆️ Acknowledge and Confirm            | 3 days    |
+| 3         | ⬆️ On-chain Vote                      | 14 days   |
+| 2         | ⬆️ On-chain Voting Preparation        | 3 days    |
+| 🛑        | Gate                                  |           |
+| 1 (Start) | ⬆️ Interest Gathering, Off-chain Vote | 14 days   |
+
+### Level 1: Interest Gathering, Off-chain Vote[​](#level-1-interest-gathering-off-chain-vote "Direct link to Level 1: Interest Gathering, Off-chain Vote")
+
+This first level is a preliminary filter to remove TIPs with low levels of interest or TIPs which will break the rules of the TEN governance system, e.g. are unlawful.
+
+* Submission of TIP on Snapshot with a link to the TEN governance forum. Only holders of TEN tokens can submit a TIP
+* Discussion on the TEN governance forum and the opportunity to vote over 14 days to gauge interest. To vote you must hold at least one TEN token for 30 days or more
+* A simple majority vote (more than 50%) against the proposal at this stage discourages progressing to level 2
+
+### Level 2: On-chain Voting Preparation[​](#level-2-on-chain-voting-preparation "Direct link to Level 2: On-chain Voting Preparation")
+
+This second level is the first step towards formalizing the TIP and preparing for the more meaningful vote at the next level.
+
+* Official submission via governance smart contracts on TEN
+* Requires a wallet address representing at least 1 TEN token held for at least 30 days
+* 3-day discussion period before voter snapshot and voting
+
+### Level 3: On-chain Vote[​](#level-3-on-chain-vote "Direct link to Level 3: On-chain Vote")
+
+At this third level those who are eligible to vote will do so. There is a minimum threshold of engagement so only genuinely relevant TIPs are progressed.
+
+* On-chain voting by participants of TEN's governance via Tally
+* A simple majority vote in favor (more than 50%) plus meeting a minimum threshold of engagement means the TIP will be moved on to level 4 voting. The minimum threshold of engagement is 5% of all TEN tokens in circulation
+* A majority vote against the TIP brings the lifecycle to an end. The original submitter is welcome to resubmit the TIP at Level 1 taking on board feedback and comments
+
+### Level 4: Acknowledge and Confirm[​](#level-4-acknowledge-and-confirm "Direct link to Level 4: Acknowledge and Confirm")
+
+This fourth level is a safety backstop and is particularly important in the early life of TEN. Consider this level to be the training wheels.
+
+* The TEN Governance Board are requested to acknowledge the voting outcome for the TIP
+* Confirmation moves the TIP to the next Level
+
+### Level 5: Reaction Period[​](#level-5-reaction-period "Direct link to Level 5: Reaction Period")
+
+The fifth level recognizes not everyone can be satisfied all of the time therefore individuals have an opportunity to change how they engage with TEN.
+
+* Post-approval 3-day period in which members of the TEN ecosystem can react to the approved TIP by changing how they engage with TEN, for example, withdrawing assets on TEN or deploying changes to smart contracts on TEN.
+
+### Level 6: TEN to Ethereum Message[​](#level-6-ten-to-ethereum-message "Direct link to Level 6: TEN to Ethereum Message")
+
+The sixth level is an important step so the voting result can be immutably captured on Ethereum mainnet.
+
+* Sending an L2-to-L1 message indicating TIP approval, finalizing on Ethereum mainnet
+* A 12 hour period is ample time for the L2-to-L1 message to be finalized by the TEN validators
+
+### Level 7: Ethereum Finalization Period[​](#level-7-ethereum-finalization-period "Direct link to Level 7: Ethereum Finalization Period")
+
+This level is a safety margin in case there is a transaction in process on Ethereum which would be detrimentally affected by the execution of the TIP.
+
+* 3-day period to finalize in-progress transactions on Ethereum mainnet before implementation
+
+### Level 8: TIP Implementation[​](#level-8-tip-implementation "Direct link to Level 8: TIP Implementation")
+
+This is the final level where the TIP is fully executed and implemented. Only a future TIP will change the end result of the TIP.
+
+* Final execution of the TIP either on the Ethereum mainnet or via L1-to-L2 transactions
+
+## Additional Waiting Periods[​](#additional-waiting-periods "Direct link to Additional Waiting Periods")
+
+For breaking changes, additional waiting periods mean stakeholders and partners can prepare for the TIP's changes. These waiting periods give time for members of the ecosystem to react to the TIP and make any necessary changes or updates.
+
+## Conclusion[​](#conclusion "Direct link to Conclusion")
+
+The TIP process, spanning 8 levels, typically takes 40.5 days from start to finish. The levels have been designed to allow for thorough consideration, discussion, and thoughtful voting. This process aligns proposed changes with TEN's mission and values, allowing stakeholders to prepare for and adapt to new changes.
+
+
+---
+
+## Migrate your dApp to TEN
+
+> Migrating to TEN enables your dApp to leverage "Programmable Encryption". Below are steps to help you transition smoothly.
+
+# Migrate your dApp to TEN
+
+Migrating to TEN enables your dApp to leverage "Programmable Encryption". Below are steps to help you transition smoothly.
+
+### Key Migration Steps[​](#key-migration-steps "Direct link to Key Migration Steps")
+
+* Update your Hardhat deployment to support the `--network ten` option.
+* Add data protection logic to your view functions (if applicable).
+* Configure visibility rules for event logs and internal storage.
+* Add the TEN onboarding widget to your JavaScript UI.
+
+## 1. Configuring Hardhat[​](#1-configuring-hardhat "Direct link to 1. Configuring Hardhat")
+
+First, set up a Hardhat project if you haven't already.
+
+### 1.1 Installing the TEN Hardhat Plugin[​](#11-installing-the-ten-hardhat-plugin "Direct link to 1.1 Installing the TEN Hardhat Plugin")
+
+To add TEN Network compatibility, install the `ten-hardhat-plugin`:
+
+```
+npm install ten-hardhat-plugin
+```
+
+*You can use `npm` or `yarn` to install plugins.*
+
+### 1.2 Configuring `hardhat.config.js`[​](#12-configuring-hardhatconfigjs "Direct link to 12-configuring-hardhatconfigjs")
+
+Modify `hardhat.config.js` in your project’s root directory as follows:
+
+```
+import { HardhatUserConfig } from "hardhat/config";
+import "@nomiclabs/hardhat-waffle";
+import "ten-hardhat-plugin";
+
+module.exports = {
+  solidity: "0.8.10",
+  networks: {
+    hardhat: {
+        // Configuration for the Hardhat Network
+    },
+    ten: {
+        url: "https://testnet.ten.xyz/v1/",
+        chainId: 443,
+        accounts: ["your-private-key"],
+    },
+  },
+};
+
+export default config;
+```
+
+Once configured, you can start writing or migrating your smart contracts.
+
+## 2. Writing Smart Contracts for TEN[​](#2-writing-smart-contracts-for-ten "Direct link to 2. Writing Smart Contracts for TEN")
+
+TEN executes smart contracts within the EVM similarly to Ethereum, so you can reuse your existing code. However, the execution and the internal state are hidden from everyone, including node operators and the sequencer.
+
+info
+
+TEN encrypts both the execution and its internal database using Trusted Execution Environments (TEEs).
+
+The [getStorageAt](https://docs.alchemy.com/reference/eth-getstorageat) method is disabled by default on TEN, so data access relies on view functions that you define. Public variables remain accessible as Solidity automatically creates getters for them.
+
+Let's illustrate with a basic storage dApp example where users can store and retrieve a number.
+
+At every step, we'll add a new feature and explain the difference between `TEN` and `Ethereum`.
+
+### Step 1: Basic contract with a Public Variable[​](#step-1-basic-contract-with-a-public-variable "Direct link to Step 1: Basic contract with a Public Variable")
+
+#### Code[​](#code "Direct link to Code")
+
+```
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+contract StorageExample {
+    mapping(address => uint256) public storedValues;
+
+    function storeValue(uint256 value) public {
+        storedValues[tx.origin] = value;
+    }
+}
+```
+
+#### Explanation[​](#explanation "Direct link to Explanation")
+
+In this step, we created a public variable `storedValues` that maps the provided value to the address of the user who called the `storeValue` function.
+
+Because the variable is public, Solidity will provide a default public getter for it.
+
+Since there are no data access restrictions, on both Ethereum and TEN, everyone will be able to read the values of all users.
+
+### Step 2: Converting to a Private Variable with an explicit Getter Function[​](#step-2-converting-to-a-private-variable-with-an-explicit-getter-function "Direct link to Step 2: Converting to a Private Variable with an explicit Getter Function")
+
+#### Code[​](#code-1 "Direct link to Code")
+
+```
+contract StorageExample {
+    mapping(address => uint256) private _storedValues;
+
+    function storeValue(uint256 value) public {
+        _storedValues[tx.origin] = value;
+    }
+    
+    function getValue(address account) public view returns (uint256) {
+        return _storedValues[account];
+    }
+}
+```
+
+#### Explanation[​](#explanation-1 "Direct link to Explanation")
+
+The `storedValues` variable is now private, and we added a basic `getValue` function for users to retrieve their value.
+
+On both Ethereum and TEN, anyone can call `getValue` to retrieve any value.<br /><!-- -->On Ethereum, `_storedValues` can also be accessed directly with `getStorageAt`
+
+### Step 3: Data Access Control[​](#step-3--data-access-control "Direct link to Step 3:  Data Access Control")
+
+In this step, we'll add restrictions so users can only access their own data.
+
+#### Code[​](#code-2 "Direct link to Code")
+
+```
+contract StorageExample {
+    mapping(address => uint256) private _storedValues;
+
+    function storeValue(uint256 value) public {
+        _storedValues[tx.origin] = value;
+    }
+
+    function getValue(address account) public view returns (uint256) {
+        require(tx.origin == account, "Not authorized!");
+        return _storedValues[account];
+    }
+}
+```
+
+#### Explanation[​](#explanation-2 "Direct link to Explanation")
+
+The key line is: `require(tx.origin == account, "Not authorized!");`, which ensures that the caller of the view function is the owner of the data.
+
+info
+
+TEN uses "Viewing Keys" to authenticate view function calls.
+
+**When deployed on TEN, this code guarantees that all users can only access their own values, and nobody can read the `_storedValues`.**
+
+### Step 4: Emitting Events - Default Visibility[​](#step-4-emitting-events---default-visibility "Direct link to Step 4: Emitting Events - Default Visibility")
+
+Event logs notify UIs about state changes in smart contracts.
+
+To improve our smart contract, we’ll emit an event when a user stores a value and milestone events when a specific size threshold is met.
+
+#### Code[​](#code-3 "Direct link to Code")
+
+```
+contract StorageExample {
+    mapping(address => uint256) private _storedValues;
+    uint256 private totalCalls = 0;
+
+    event DataChanged(address indexed account, uint256 newValue);
+    event MilestoneReached(uint256 noStoredValues);
+
+    function storeValue(uint256 value) public {
+        _storedValues[tx.origin] = value;
+        emit DataChanged(tx.origin, value);
+        totalCalls++;
+        if (totalCalls % 1000 == 0) {
+            emit MilestoneReached(totalCalls);
+        }
+    }
+
+    function getValue(address account) public view returns (uint256) {
+        require(tx.origin == account, "Not authorized!");
+        return _storedValues[account];
+    }
+}
+```
+
+#### Explanation[​](#explanation-3 "Direct link to Explanation")
+
+Notice how we defined the two events: `DataChanged` and `MilestoneReached`, and are emitting them in the `storeValue` function.
+
+In Ethereum, everyone can query and subscribe to these events. This obviously can't be the case for TEN because it would completely break the functionality.
+
+Notice how in this version, we have no configuration for event log visibility, so we are relying on the default rules.
+
+Rule 1: Event logs that contain EOAs as indexed fields (topics) are only visible to those EOAs. Rule 2: Event logs that don't contain any EOA are visible to everyone.
+
+In our case, the default rules ensure that:
+
+* `DataChanged` is visible only to the address that is storing the value.
+* `MilestoneReached` is publicly visible.
+
+### Step 5: Customizing Event Visibility[​](#step-5-customizing-event-visibility "Direct link to Step 5: Customizing Event Visibility")
+
+The default visibility rules are a good starting point, but complex dApps require greater flexibility.
+
+TEN give you explicit control over event visibility.
+
+#### Code[​](#code-4 "Direct link to Code")
+
+```
+interface ContractTransparencyConfig {
+    enum Field { TOPIC1, TOPIC2, TOPIC3, SENDER, EVERYONE }
+    enum ContractCfg { TRANSPARENT, PRIVATE }
+
+    struct EventLogConfig {
+        bytes32 eventSignature;
+        Field[] visibleTo;
+    }
+
+    struct VisibilityConfig {
+        ContractCfg contractCfg;
+        EventLogConfig[] eventLogConfigs;
+    }
+
+    function visibilityRules() external pure returns (VisibilityConfig memory);
+}
+
+contract StorageExample is ContractTransparencyConfig {
+    mapping(address => uint256) private _storedValues;
+    uint256 private totalCalls = 0;
+
+    event DataChanged(address indexed account, uint256 newValue);
+    event MilestoneReached(uint256 noStoredValues);
+
+    function storeValue(uint256 value) public {
+        _storedValues[tx.origin] = value;
+        emit DataChanged(tx.origin, value);
+        totalCalls++;
+        if (totalCalls % 1000 == 0) {
+            emit MilestoneReached(totalCalls);
+        }
+    }
+
+    function getValue(address account) public view returns (uint256) {
+        require(tx.origin == account, "Not authorized!");
+        return _storedValues[account];
+    }
+
+    function visibilityRules() external pure override returns (VisibilityConfig memory) {
+        EventLogConfig[]  memory eventLogConfigs = new EventLogConfig[](2);
+
+        // the signature of "event DataChanged(address indexed account, uint256 newValue);"
+        bytes32 dataChangedEventSig = hex"0xec851d5c322f7f1dd5581f7432e9f6683a8709a4b1ca754ccb164742b82a7d2f";
+        Field[]  memory relevantTo = new Field[](2);
+        relevantTo[0] = Field.TOPIC1;
+        relevantTo[1] = Field.SENDER;
+        eventLogConfigs[0] = EventLogConfig(dataChangedEventSig, relevantTo);
+
+        // the signature of "event MilestoneReached(uint256 noStoredValues);"
+        bytes32 milestoneReachedEventSig = hex"0xd41033274424d56dd572e7196fb4230cf4141d546b91fc00555cab8403965924";
+        Field[]  memory relevantTo = new Field[](1);
+        relevantTo[0] = Field.EVERYONE;
+        eventLogConfigs[1] = EventLogConfig(milestoneReachedEventSig, relevantTo);
+
+        return VisibilityConfig(ContractCfg.PRIVATE, eventLogConfigs);
+    }
+}
+```
+
+#### Explanation[​](#explanation-4 "Direct link to Explanation")
+
+The `ContractTransparencyConfig` interface is known by the TEN platform. When a contract is deployed, the platform will call the `visibilityRules` function, and store the `VisibilityConfig`.
+
+For each event type, you can configure which fields can access it. This allows the developer to configure an event to be public even if it has EOAs or to allow the sender of the transaction to access events emitted even if the address is not in the event.
+
+Notice how in the `visibilityRules` above, we configure the `DataChanged` event to be visible to the first field and the sender, and the `MilestoneReached` to be visible to everyone.
+
+The other configuration: `VisibilityConfig.contractCfg` applies to the entire contract:
+
+* `ContractCfg.TRANSPARENT`: The contracts will have public storage and events, behaving exactly like Ethereum.
+* `ContractCfg.PRIVATE`: The default TEN behaviour, where the storage is not accessible and the events are individually configurable.
+
+## Account Abstraction - Native Session Keys[​](#account-abstraction---native-session-keys "Direct link to Account Abstraction - Native Session Keys")
+
+The key feature of ["Account Abstraction"](https://medium.com/p/2e85bde4c54d) (EIP-4337) is "Session keys"(SK) through a proxy smart contract. SKs allow users to interact with the blockchain without having to sign every transaction, which is a major UX improvement.
+
+TEN supports "native" SKs - these are managed by the platform and do not require a proxy contract.
+
+In TEN, SKs are managed by dApp developers through dedicated RPC endpoints.
+
+### Solution overview[​](#solution-overview "Direct link to Solution overview")
+
+Imagine you're developing an on-chain game, and you want a smooth UX without the distraction of signing every move.
+
+Conceptually, the game will create a session key (SK) for the user, then ask the user to move some funds to that address, and then create "move" transactions signed with the SK.
+
+If the game were to create the SK in the browser, there would be a risk of the user losing the SK, and the funds associated with it, in case of an accidental exit. With TEN, the dApp developer doesn't have to worry about this, because the SKs are managed by TEEs.
+
+### Usage[​](#usage "Direct link to Usage")
+
+The below describe the implementation steps for the game developer - which is the main usecase for SKs. Note that it can be used for any dApp that requires a no-click UX.
+
+#### When the game starts[​](#when-the-game-starts "Direct link to When the game starts")
+
+Before the user can start playing, the game must create the SK and ask the user to move some funds to that address. The funds will be used to pay for moves.
+
+* Call the RPC `sessionkeys_Create` - without any parameters. This will return a hex-encoded address of the SK.
+* Create a normal transaction that transfers some ETH to the SK. The amount depends on how many "moves" the user is prepared to prepay for.
+* Ask the user to sign this transaction with their normal wallet, and submit it to the network using the library of your choice.
+* Once the receipt is received, call `sessionkeys_Activate`.
+
+#### The game[​](#the-game "Direct link to The game")
+
+After activation of the SK, create a transaction for each move, but don't ask the user to sign them. Instead, submit them to the network unsigned using the RPCs: `eth_sendRawTransaction` or `eth_sendTransaction`.
+
+Because the SK is active, the platform will sign the transactions on behalf of the user.
+
+As a game developer, you are responsible to keep track of the balance of the SK. You can also query the network for the balance of the address. If the SK runs out of balance, you have to ask the user to move more funds to the SK.
+
+#### Managing Session Keys[​](#managing-session-keys "Direct link to Managing Session Keys")
+
+TEN provides additional RPC endpoints for managing session keys:
+
+* `sessionkeys_Delete` - Permanently removes the session key. This can only be called after deactivating the key. This is useful when you want to clean up unused session keys or when a user wants to completely remove their session key.
+
+* `sessionkeys_List` - Returns the address of the current session key, or an empty response if no session key exists. This is useful for checking if a user has an active session key and getting its address.
+
+The session key management endpoints can be called through both HTTP API and RPC methods. For RPC, you can use `eth_getStorageAt` with specific addresses:
+
+* Create: `0x0000000000000000000000000000000000000003`
+* Activate: `0x0000000000000000000000000000000000000004`
+* Deactivate: `0x0000000000000000000000000000000000000005`
+* Delete: `0x0000000000000000000000000000000000000006`
+* List: `0x0000000000000000000000000000000000000007`
+
+#### Finishing the game[​](#finishing-the-game "Direct link to Finishing the game")
+
+When a game ends, you have to move the remaining funds back to the main address and deactivate the key.
+
+* create a Tx that moves the funds back from the SK to the main address. Submit it unsigned, because the funds are controlled by the SK.
+* call the RPC: `sessionkeys_Deactivate`- from now on, unsigned transactions will no longer be signed by the SK.
+
+## Game Security[​](#game-security "Direct link to Game Security")
+
+Every on-chain game developer knows that every move that relies on entropy must be executed in two steps.
+
+Imagine you implement an on-chain coin flip game. The player pays 0.1ETH to choose `Heads` or `Tails`. If they win, they receive 0.2ETH, otherwise they lose the 0.1ETH. Even if randomness is unpredictable, this simple game can be exploited in several ways:
+
+* The attacker can create a “proxy” smart contract to play on their behalf. Using a similar mechanism to flash loans in DeFi: the proxy is programmed to make multiple actions, and only “commit” if it can obtain a profit. In our case, if the coin flip is losing, the proxy can just revert. The only cost will be the gas burned.
+* Transactions consume gas, and the gas cost can inadvertently reveal information. For instance, if a winning move is more computationally intensive than a losing one, players could deduce optimal moves by estimating gas costs for various actions.
+
+The typical solution is to use a commit-reveal scheme. The player commits to a move, and then reveals it. This way, the player can't change their mind after seeing the result. This solution has the major drawback that it introduces extra complexity, latency and cost.
+
+### The on-block-end callback[​](#the-on-block-end-callback "Direct link to The on-block-end callback")
+
+The best solution is to decouple the move from the execution without increasing the latency or the cost. This way, the side-channel attacks are no longer possible because the move is not executed immediately. To avoid increasing the latency, the move must be executed at the end of the block. Note that contracts can define the handleRefund function, which will be called with value equal to what is left from the gas processing paid for. This is called with enough gas to save locally how much should be refunded to whoever paid for the callback.
+
+See below a simple implementation of the coin flip game using the TEN platform:
+
+```
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+// this interface is known by the TEN system contract
+interface TenCallbacks {
+    function register(bytes calldata) external payable returns (uint256);
+}
+
+interface Refunds {
+    function handleRefund(uint256 callbackId) external payable;
+}
+
+contract CoinFlip {
+    // Event to emit the result of the coin flip
+    event CoinFlipResult(address indexed player, bool didWin, uint256 randomNumber);
+
+    private TenCallbacks tenCallbacks;
+    mapping(uint256 callbackId => address player) public callbackToPlayer;
+    mapping(address player => uint256 refundAmount) public playerToRefundAmount;
+
+
+
+    modifier onlyTenSystemCall() { 
+        require(msg.sender == address(tenCallbacks));
+        _;
+    }
+
+    // you have to pass in the address of the callbacks contract
+    constructor(address _tenCallbacksAddress) {
+        tenCallbacks = TenCallbacks(_tenCallbacksAddress);
+    }
+
+    // Function to initiate a coin flip. 
+    // Notice how it doesn't execute the coin flip directly, but instead registers a callback.
+    function flipCoin(bool isHeads) external payable {
+        // Assume doFlipCoin costs 50_000 gas;
+        // We deduct a predetermined amount from the bet to pay for delayed execution.
+        uint256 etherGasForCoinFlip = 50_000*block.basefee;
+        require(msg.value > etherGasForCoinFlip, "Insufficent gas");
+
+        // Encode the function we want to be called by the TEN system contract.
+        bytes memory callbackTargetInfo = abi.encodeWithSelector(this.doFlipCoin.selector, msg.sender, msg.value - etherGasForCoinFlip, isHeads);
+
+        tenCallbacks.register{value: etherGasForCoinFlip}(callbackTargetInfo);
+    }
+
+    // Function to simulate a coin flip - notice that this must only be callable by the ten system contract.
+    // This function is called by the TEN platform as a synthetic transaction in the same block as the user transaction.
+    function doFlipCoin(address bettor, uint256 stake, bool wantsHeads) external onlyTenSystemCall {
+        // Assume getRandomNumber() is a function that returns a random number
+        uint256 randomNumber = getRandomNumber();
+
+        // Simulate a coin flip: 0 for tails, 1 for heads
+        bool isHeads = (randomNumber % 2) == 1;
+
+        if (wantsHeads == isHeads) {
+            //pay out to winner
+            (bool success, ) = payable(bettor).call{value: stake*2}("");
+            require(success, "Payment failed.");
+        }
+        // Emit the result of the coin flip
+        emit CoinFlipResult(msg.sender, isHeads, randomNumber);
+    }
+
+    function getRandomNumber() internal view returns (uint256) {
+        return block.prevrandao;
+    }
+
+    function handleRefund(uint256 callbackId) external payable {
+        address player = callbackToPlayer[callbackId];
+        playerToRefundAmount[player] += msg.value;
+    }
+
+    function claimRefund() external {
+        uint256 refundAmount = playerToRefundAmount[msg.sender];
+        require(refundAmount > 0, "No refunds to claim");
+        playerToRefundAmount[msg.sender] = 0;
+        (bool success, ) = payable(msg.sender).call{value: refundAmount}("");
+        require(success, "Transfer failed");
+    }
+ 
+}
+```
+
+
+---
+
+## Features
+
+> 1. Encryption: Data Confidentiality and Computational Privacy
+
+# Features
+
+### 1. **Encryption: Data Confidentiality and Computational Privacy**[​](#1-encryption-data-confidentiality-and-computational-privacy "Direct link to 1-encryption-data-confidentiality-and-computational-privacy")
+
+TEN leverages hardware-based [Trusted Execution Environments (TEE)](https://whitepaper.ten.xyz/obscuro-whitepaper/technical-background.html#trusted-execution-environment) to achieve data confidentiality and computational privacy.
+
+### 2. **Scaling: Ethereum Layer 2 Rollup**[​](#2-scaling-ethereum-layer-2-rollup "Direct link to 2-scaling-ethereum-layer-2-rollup")
+
+Designed as a decentralized Ethereum L2 Rollup protocol, TEN enhances the scalability of the Ethereum network.
+
+### 3. **MEV-free: Prevention of Maximal Extractable Value**[​](#3-mev-free-prevention-of-maximal-extractable-value "Direct link to 3-mev-free-prevention-of-maximal-extractable-value")
+
+TEN is designed to prevent [Maximal Extractable Value (MEV)](https://ethereum.org/en/developers/docs/mev/), ensuring fairness in transaction ordering.
+
+### 4. **RNG: Generate Random Number Securely**[​](#4-rng-generate-random-number-securely "Direct link to 4-rng-generate-random-number-securely")
+
+TEN can generate secure random numbers without using any additional libraries or external applications. Generated random numbers are completely secure and no validator or user can peek into the generated numbers.
+
+### 5. **Great UX: Privacy Preservation**[​](#5-great-ux-privacy-preservation "Direct link to 5-great-ux-privacy-preservation")
+
+TEN prioritizes privacy while maintaining a seamless user experience, allowing users to access their preferred dApps and services without additional applications or exTENsions.
+
+### 6. **Great Developer Experience: Efficiency and Simplicity**[​](#6-great-developer-experience-efficiency-and-simplicity "Direct link to 6-great-developer-experience-efficiency-and-simplicity")
+
+TEN fills the gap between L2 rollups like Optimistic and ZK rollups. Leveraging confidential computing and economic incentives, it mirrors the efficiency and simplicity of Optimistic rollups. Developers can build on TEN using just Solidity, without needing new SDKs, frameworks or languages.
+
+### 7. **High Performance: Fast Bridge**[​](#7-high-performance-fast-bridge "Direct link to 7-high-performance-fast-bridge")
+
+TEN's design allows faster bridging of assets between Ethereum and TEN when compared to Optimistic rollups.
+
+
+---
+
+## Overview
+
+> TEN in Web3
+
+# Overview
+
+![TEN in Web3](/assets/images/overview-banner-5802f2f2deee39c331f1f9002e4838b2.png)
+
+*The full Litepaper is available to view [here](https://ten.xyz/litepaper).*
+
+TEN is revolutionizing Ethereum with encrypted layer 2 solution. Just as HTTPS transformed Web 2.0, ushering in a new era of secure applications and enhanced user trust, TEN is set to redefine the Ethereum ecosystem. By introducing an encrypted Ethereum Layer 2, TEN not only amplifies transaction speed and efficiency but also fortifies it with the robust security and consensus mechanisms inherent to Ethereum.
+
+Serving as a cutting-edge Layer 2 blockchain solution, TEN significantly reduces transaction costs while seamlessly inheriting Ethereum's unparalleled security features. What sets TEN apart is its commitment to privacy and encryption. Every transaction input, the intricate state of smart contracts, and the entire execution process remain encrypted, ensuring utmost confidentiality. This encryption in blockchain ensures users and developers enjoy a familiar Web2 experience without compromising on privacy or functionality.
+
+With TEN, the possibilities for Web3 applications are boundless. From next-gen gaming platforms and advanced DeFi 2.0 systems to dark pool trading, sealed-bid auctions, confidential agreements, secure identity management, and beyond, TEN is at the forefront of a private and efficient decentralized future.
+
+
+---
+
+## Technology
+
+> At the heart of TEN's innovative approach to blockchain encryption lies the pragmatic use of Trusted Execution Environments (TEEs). These TEEs are not just about encryption; they ensure unparalleled confidentiality while providing absolute certainty about the code in execution. This technology empowers TEN to deliver a unique blend of smart contracts, decentralization, scalability, and encryption, setting a new benchmark in the blockchain realm.
+
+# Technology
+
+At the heart of TEN's innovative approach to blockchain encryption lies the pragmatic use of Trusted Execution Environments (TEEs). These TEEs are not just about encryption; they ensure unparalleled confidentiality while providing absolute certainty about the code in execution. This technology empowers TEN to deliver a unique blend of smart contracts, decentralization, scalability, and encryption, setting a new benchmark in the blockchain realm.
+
+By integrating encryption directly into the Ethereum Mainnet, TEN harnesses the Mainnet's inherent liveness and availability, ensuring impeccable ledger integrity. But what truly sets TEN apart is its proprietary Proof of Block Inclusion (POBI) protocol. This groundbreaking protocol guarantees that TEN's confidential roll-ups achieve consensus within a decentralized TEN network, ensuring both security and transparency.
+
+
+---
+
+## Fungible Tokens
+
+> ERC-20 on TEN
+
+# Fungible Tokens
+
+## ERC-20 on TEN[​](#erc-20-on-ten "Direct link to ERC-20 on TEN")
+
+The ERC-20 standard, while originally proposed for Ethereum, is also applicable to TEN's Layer 2. It provides an API for tokens within Smart Contracts and offers functionalities to:
+
+* Transfer tokens between accounts on TEN
+* Retrieve the current token balance of an account on TEN
+* Determine the total supply of the token on the TEN network
+* Approve third-party accounts to spend a specific amount of tokens on TEN
+
+A Smart Contract on TEN that implements the following methods and events adheres to the ERC-20 standard:
+
+### Methods:[​](#methods "Direct link to Methods:")
+
+* `name()`: Returns the name of the token.
+* `symbol()`: Returns the symbol of the token.
+* `decimals()`: Returns the number of decimals the token uses.
+* `totalSupply()`: Returns the total token supply.
+* `balanceOf(address _owner)`: Returns the token balance of the specified address.
+* `transfer(address _to, uint256 _value)`: Transfers tokens to a specified address.
+* `transferFrom(address _from, address _to, uint256 _value)`: Transfers tokens from one address to another.
+* `approve(address _spender, uint256 _value)`: Approves a third-party account to spend a specified amount of tokens.
+* `allowance(address _owner, address _spender)`: Returns the amount of tokens approved by an owner for a spender.
+
+### Events:[​](#events "Direct link to Events:")
+
+* `Transfer(address indexed _from, address indexed _to, uint256 _value)`: Triggered when tokens are transferred.
+* `Approval(address indexed _owner, address indexed _spender, uint256 _value)`: Triggered when `approve` function is called.
+
+## Examples[​](#examples "Direct link to Examples")
+
+```
+pragma solidity ^0.4.24;
+
+import "./IERC20.sol";
+import "../../math/SafeMath.sol";
+
+/**
+ * @title Standard ERC20 token
+ *
+ * @dev Implementation of the basic standard token.
+ * https://github.com/ethereum/EIPs/blob/master/EIPS/eip-20.md
+ * Originally based on code by FirstBlood: https://github.com/Firstbloodio/token/blob/master/smart_contract/FirstBloodToken.sol
+ */
+contract ERC20 is IERC20 {
+  using SafeMath for uint256;
+
+  mapping (address => uint256) private _balances;
+
+  mapping (address => mapping (address => uint256)) private _allowed;
+
+  uint256 private _totalSupply;
+
+  /**
+  * @dev Total number of tokens in existence
+  */
+  function totalSupply() public view returns (uint256) {
+    return _totalSupply;
+  }
+
+  /**
+  * @dev Gets the balance of the specified address.
+  * @param owner The address to query the balance of.
+  * @return An uint256 representing the amount owned by the passed address.
+  */
+  function balanceOf(address owner) public view returns (uint256) {
+    return _balances[owner];
+  }
+
+  /**
+   * @dev Function to check the amount of tokens that an owner allowed to a spender.
+   * @param owner address The address which owns the funds.
+   * @param spender address The address which will spend the funds.
+   * @return A uint256 specifying the amount of tokens still available for the spender.
+   */
+  function allowance(
+    address owner,
+    address spender
+   )
+    public
+    view
+    returns (uint256)
+  {
+    return _allowed[owner][spender];
+  }
+
+  /**
+  * @dev Transfer token for a specified address
+  * @param to The address to transfer to.
+  * @param value The amount to be transferred.
+  */
+  function transfer(address to, uint256 value) public returns (bool) {
+    require(value <= _balances[msg.sender]);
+    require(to != address(0));
+
+    _balances[msg.sender] = _balances[msg.sender].sub(value);
+    _balances[to] = _balances[to].add(value);
+    emit Transfer(msg.sender, to, value);
+    return true;
+  }
+
+  /**
+   * @dev Approve the passed address to spend the specified amount of tokens on behalf of msg.sender.
+   * Beware that changing an allowance with this method brings the risk that someone may use both the old
+   * and the new allowance by unfortunate transaction ordering. One possible solution to mitigate this
+   * race condition is to first reduce the spender's allowance to 0 and set the desired value afterwards:
+   * https://github.com/ethereum/EIPs/issues/20#issuecomment-263524729
+   * @param spender The address which will spend the funds.
+   * @param value The amount of tokens to be spent.
+   */
+  function approve(address spender, uint256 value) public returns (bool) {
+    require(spender != address(0));
+
+    _allowed[msg.sender][spender] = value;
+    emit Approval(msg.sender, spender, value);
+    return true;
+  }
+
+  /**
+   * @dev Transfer tokens from one address to another
+   * @param from address The address which you want to send tokens from
+   * @param to address The address which you want to transfer to
+   * @param value uint256 the amount of tokens to be transferred
+   */
+  function transferFrom(
+    address from,
+    address to,
+    uint256 value
+  )
+    public
+    returns (bool)
+  {
+    require(value <= _balances[from]);
+    require(value <= _allowed[from][msg.sender]);
+    require(to != address(0));
+
+    _balances[from] = _balances[from].sub(value);
+    _balances[to] = _balances[to].add(value);
+    _allowed[from][msg.sender] = _allowed[from][msg.sender].sub(value);
+    emit Transfer(from, to, value);
+    return true;
+  }
+
+  /**
+   * @dev Increase the amount of tokens that an owner allowed to a spender.
+   * approve should be called when allowed_[_spender] == 0. To increment
+   * allowed value is better to use this function to avoid 2 calls (and wait until
+   * the first transaction is mined)
+   * From MonolithDAO Token.sol
+   * @param spender The address which will spend the funds.
+   * @param addedValue The amount of tokens to increase the allowance by.
+   */
+  function increaseAllowance(
+    address spender,
+    uint256 addedValue
+  )
+    public
+    returns (bool)
+  {
+    require(spender != address(0));
+
+    _allowed[msg.sender][spender] = (
+      _allowed[msg.sender][spender].add(addedValue));
+    emit Approval(msg.sender, spender, _allowed[msg.sender][spender]);
+    return true;
+  }
+
+  /**
+   * @dev Decrease the amount of tokens that an owner allowed to a spender.
+   * approve should be called when allowed_[_spender] == 0. To decrement
+   * allowed value is better to use this function to avoid 2 calls (and wait until
+   * the first transaction is mined)
+   * From MonolithDAO Token.sol
+   * @param spender The address which will spend the funds.
+   * @param subtractedValue The amount of tokens to decrease the allowance by.
+   */
+  function decreaseAllowance(
+    address spender,
+    uint256 subtractedValue
+  )
+    public
+    returns (bool)
+  {
+    require(spender != address(0));
+
+    _allowed[msg.sender][spender] = (
+      _allowed[msg.sender][spender].sub(subtractedValue));
+    emit Approval(msg.sender, spender, _allowed[msg.sender][spender]);
+    return true;
+  }
+
+  /**
+   * @dev Internal function that mints an amount of the token and assigns it to
+   * an account. This encapsulates the modification of balances such that the
+   * proper events are emitted.
+   * @param account The account that will receive the created tokens.
+   * @param amount The amount that will be created.
+   */
+  function _mint(address account, uint256 amount) internal {
+    require(account != 0);
+    _totalSupply = _totalSupply.add(amount);
+    _balances[account] = _balances[account].add(amount);
+    emit Transfer(address(0), account, amount);
+  }
+
+  /**
+   * @dev Internal function that burns an amount of the token of a given
+   * account.
+   * @param account The account whose tokens will be burnt.
+   * @param amount The amount that will be burnt.
+   */
+  function _burn(address account, uint256 amount) internal {
+    require(account != 0);
+    require(amount <= _balances[account]);
+
+    _totalSupply = _totalSupply.sub(amount);
+    _balances[account] = _balances[account].sub(amount);
+    emit Transfer(account, address(0), amount);
+  }
+
+  /**
+   * @dev Internal function that burns an amount of the token of a given
+   * account, deducting from the sender's allowance for said account. Uses the
+   * internal burn function.
+   * @param account The account whose tokens will be burnt.
+   * @param amount The amount that will be burnt.
+   */
+  function _burnFrom(address account, uint256 amount) internal {
+    require(amount <= _allowed[account][msg.sender]);
+
+    // Should https://github.com/OpenZeppelin/zeppelin-solidity/issues/707 be accepted,
+    // this function needs to emit an event with the updated approval.
+    _allowed[account][msg.sender] = _allowed[account][msg.sender].sub(
+      amount);
+    _burn(account, amount);
+  }
+}
+```
+
+## Further Reading[​](#further-reading "Direct link to Further Reading")
+
+* [EIP-20: ERC-20 Token Standard](https://eips.ethereum.org/EIPS/eip-20)
+* [OpenZeppelin - Tokens](https://openzeppelin.com/)
+* [OpenZeppelin - ERC-20 Implementation](https://openzeppelin.com/)
+* [Alchemy - Guide to Solidity ERC20 Tokens](https://alchemyapi.io/)
+
+***
+
+This documentation provides an overview of the ERC-20 standard adapted for TEN's Layer 2 solution. For a more detailed understanding and technical specifications, you can refer to the official [EIP-20 documentation](https://eips.ethereum.org/EIPS/eip-20) and TEN's official documentation.
+
+
+---
+
+## Random Numbers
+
+> Using Randomness on TEN
+
+# Random Numbers
+
+## Using Randomness on TEN[​](#using-randomness-on-ten "Direct link to Using Randomness on TEN")
+
+Random numbers are available as a secure and private primitive within TEN contracts.
+
+A random string of bytes can be accessed in solidity contracts on TEN using `block.prevrandao`, just like on Ethereum mainnet. But it is important to stress that this provides **much stronger** security guarantees than those on mainnet.
+
+## Benefits of TEN Randomness[​](#benefits-of-ten-randomness "Direct link to Benefits of TEN Randomness")
+
+On Ethereum mainnet, `block.prevrandao` must be used with care. It has some important caveats:
+
+* The same random value is provided to every transaction executing in the same block.
+* The value is known at the time the transactions are being ordered into the block, meaning MEV bots can manipulate outcomes.
+
+The same code on TEN does not expose those attack vectors. It should be noted that:
+
+* A fresh, uncorrelated key is generated for each transaction.
+* The value cannot be seen outside of the executing code, secure enclave hardware means even node operators can't access it.
+* Outcomes cannot be known until the block is published (which cannot be undone), removing the threat of MEV exploits.
+
+The upshot of all this is that developers have much less to think about and secure contract code can stay simple and clean.
+
+Users also benefit, dApps using randomness on TEN can provide a much better UX because oracles and commit-reveal schemes (which add artificial delays and extra transactions) are no longer necessary.
+
+## Example[​](#example "Direct link to Example")
+
+This example is taken from a live app, the [Guessing Game demo application](/docs/tutorials-examples/guessing-game.md).
+
+This solidity function is used to reset the secret number which players are guessing. It is called both when the contract is first deployed, and also after a player wins the game.
+
+It will set the `secretNumber` private state to an integer between 1 and MAX\_GUESS.
+
+```
+function _resetSecretNumber() private {
+   uint256 randomNumber = block.prevrandao;
+   secretNumber = (randomNumber % MAX_GUESS) + 1;
+}
+```
+
+Now the game is immediately available to play again, with a fair random seed that had no external (oracle) dependency and no enforced delay or commit-reveal transactions.
+
+warning
+
+Be aware that the random seed is the same for the entire transaction. That means if your contract was called from another contract, then both contracts would see the same random seed during that transaction.
+
+In many cases this does not matter, the result of the dice roll or the lottery winner is immediately made public anyway, so there is no information to leak. But in some cases you may want to put a check in place to ensure that a longer-lived random secret cannot be leaked. For example, you may choose to require your contract can only be called directly, not from other contracts.
+
+This is important for situations (like the guessing game above) where the random seed must not revealed even **after** the transaction is completed.
+
+
+---
+
+## Testnet FAQ
+
+> What is the TEN testnet?
+
+# Testnet FAQ
+
+## What is the TEN testnet?[​](#what-is-the-ten-testnet "Direct link to What is the TEN testnet?")
+
+TEN is a Layer 2 built on Ethereum. Before we can go to mainnet, we need to ensure we’ve tested as thoroughly as possible several key areas of the platform.
+
+This includes:
+
+* Developer tooling and the developer experience
+* User experience and tooling, including wallets and bridges
+* Decentralization at scale, including node operation
+* Security and scalability
+* Rewards and incentives
+
+The TEN testnet is a version of TEN that rolls up to the Ethereum Sepolia testnet as opposed to Ethereum mainnet.
+
+To encourage participation at sufficiently high levels, the testnet is incentivised for developers, users and node operators.
+
+## Who is eligible?[​](#who-is-eligible "Direct link to Who is eligible?")
+
+There are no limits to the number of users. However, developers and node operators will have to go through an application process to ensure suitability. Application decision responses will be sent via email.
+
+You can apply to be a developer [here](https://ten-testnet.deform.cc/developers) and in later phases, you'll be able to apply to be a node operator.
+
+Eligibility for the TEN testnet is detailed in the “Who May Use the Services” section of the Terms and Conditions. Participation is restricted to jurisdictions where it is permitted by applicable law. To be eligible for rewards, participants must undergo KYC, KYB, and AML checks.
+
+## When is the deadline to participate?[​](#when-is-the-deadline-to-participate "Direct link to When is the deadline to participate?")
+
+Users can join at any time prior to the end of the incentivized testnet program. Developers and node operators should apply before January 1st 2024.
+
+## What are the required activities?[​](#what-are-the-required-activities "Direct link to What are the required activities?")
+
+### Users[​](#users "Direct link to Users")
+
+Users will receive points based on activities carried out on Galxe. These are based on both performance and participation.
+
+### Developers[​](#developers "Direct link to Developers")
+
+Developers will receive points based on the dApps they deploy to testnet. You must apply to be a developer and accepted in order to participate. There is a list of suggested dApps to build here.
+
+### Node operators[​](#node-operators "Direct link to Node operators")
+
+Node runners will receive points based on the following parameters: • Uptime • Query execution performance • Community engagement
+
+## What are the rewards?[​](#what-are-the-rewards "Direct link to What are the rewards?")
+
+Rewards are in the form of TEN tokens. They will be rewarded based on the amount of points you have collected as a percentage of the total points. The total amount of tokens allocated to incentivized community contributions is 2.25% of the total token supply.
+
+
+---
+
+## DApp Ideas
+
+> Below are some of the dApps we'd love to see built on TEN. Feel free to reach out on Discord if you'd like to discuss the ideas in more detail or request support.
+
+# DApp Ideas
+
+Below are some of the dApps we'd love to see built on TEN. Feel free to reach out on Discord if you'd like to discuss the ideas in more detail or request support.
+
+## On-chain gaming[​](#on-chain-gaming "Direct link to On-chain gaming")
+
+### Heads Up, Texas Hold'em Poker[​](#heads-up-texas-holdem-poker "Direct link to Heads Up, Texas Hold'em Poker")
+
+The most popular form of poker, played as heads up to remove the requirement for anti-botting on tables and remove friction and complexity in waiting for players to move. Problems to solve:
+
+* How do players find each other and get matched up
+* How do you move the game forward (who pays – could be fraction of the blind)
+* How do you deal with players stalling (need to look at blocks progressed? Is that possible? Perhaps an oracle is a better solution)
+
+### Minesweeper[​](#minesweeper "Direct link to Minesweeper")
+
+Another simple game that requires privacy. Idea here is to play the game, tournament style. Players are given random ordering and make a move in the game. If they hit a mine, they’re out of the game. Last player(s) get a prize.
+
+### Reverse auction (lowest unique number wins)[​](#reverse-auction-lowest-unique-number-wins "Direct link to Reverse auction (lowest unique number wins)")
+
+Simple game where the lowest unique bid of a particular round, wins the round. Requires privacy to keep bids hidden until the round ends.
+
+### Round based average number guessing game[​](#round-based-average-number-guessing-game "Direct link to Round based average number guessing game")
+
+Round based guessing game where the number ends up being the average of all the guesses in the previous round.
+
+## DeFi[​](#defi "Direct link to DeFi")
+
+### Dark Pool Trading[​](#dark-pool-trading "Direct link to Dark Pool Trading")
+
+A dark pool is a privately organised exchange for trading securities where exposure is hidden until after execution and reporting. This allows investors to trade without publicly revealing their intentions during the search for a buyer or seller and hiding any pricing data, which could result in investors receiving poorer prices.
+
+### MEV resistant fork of Uniswap or any other DEX with private limit orders (intents) implemented[​](#mev-resistant-fork-of-uniswap-or-any-other-dex-with-private-limit-orders-intents-implemented "Direct link to MEV resistant fork of Uniswap or any other DEX with private limit orders (intents) implemented")
+
+With TEN, a fork of any EVM dApp will just work and will be MEV resistant straight out of the box. But can you also add private limit orders (intents)?
+
+### Fork of Aave or any other lending pool with hidden liquidation levels[​](#fork-of-aave-or-any-other-lending-pool-with-hidden-liquidation-levels "Direct link to Fork of Aave or any other lending pool with hidden liquidation levels")
+
+Having liquidation levels out in the open encourages traders to chase and sometimes move the market to force liquidate others. Keeping these private until they're actually hit would be a huge step forward.
+
+## NFTs:[​](#nfts "Direct link to NFTs:")
+
+### Nested NFTs[​](#nested-nfts "Direct link to Nested NFTs")
+
+NFTs with other NFTs or other secrets held within. Perhaps other tokens?
+
+### Sealed bid auction minting[​](#sealed-bid-auction-minting "Direct link to Sealed bid auction minting")
+
+Allowing NFTs to be bid on through a sealed-bid auction mechanism
+
+### Build your own treasure hunt (with POAPs)[​](#build-your-own-treasure-hunt-with-poaps "Direct link to Build your own treasure hunt (with POAPs)")
+
+Create a treasure hunt of NFTs with all the treasures kept hidden until found
+
+## Web3 & AI:[​](#web3--ai "Direct link to Web3 & AI:")
+
+### Convince AI to give up the prize game[​](#convince-ai-to-give-up-the-prize-game "Direct link to Convince AI to give up the prize game")
+
+Can you build a game at the intersection of Web3 and AI. Perhaps, one where you have to convince an AI bot to give you the key to unlock a smart contract holding funds. TEN lends itself well to this as you can provide that the AI was set up in an entirely fair way with nobody, not even the developers, at an advantage after the game.
+
+### Generative adventure game[​](#generative-adventure-game "Direct link to Generative adventure game")
+
+A Web3 remake of the old adventure games, using AI to make them generative. Combining with Web3 to add real assets of value from tokens to NFTs.
+
+### DAOs[​](#daos "Direct link to DAOs")
+
+Voting with hidden votes until round completes
+
+### Oracles[​](#oracles "Direct link to Oracles")
+
+The old oracle model is broken: once a data feed is available to one dApp, anyone else can freeload. Private data feeds are the way forward. An oracle solution that dispenses data based on subscriptions with potential for auction mechanics fixes the problem.
+
+
+---
+
+## Getting started with testnet for users
+
+> Galxe
+
+# Getting started with testnet for users
+
+## Galxe[​](#galxe "Direct link to Galxe")
+
+The main source of activities to participate as a user in testnet are on [Galxe](https://galxe.com/ten)
+
+To fully engage with the TEN testnet, you'll need:
+
+* MetaMask installed
+* Setup MetaMask to use TEN testnet
+* Testnet tokens
+
+Once you've installed MetaMask, follow the instructions below.
+
+## Setup MetaMask with TEN[​](#setup-metamask-with-ten "Direct link to Setup MetaMask with TEN")
+
+* Visit the [TEN Gateway](https://gateway.ten.xyz/) and follow the instructions. This will add the TEN testnet as a new network in MetaMask and create an authentication token.
+
+## Use TEN Gas Station[​](#use-ten-gas-station "Direct link to Use TEN Gas Station")
+
+To obtain TEN ETH directly on the TEN testnet, utilize the TEN Gas Station. Remember, Follow these steps:
+
+1. Head over to [TEN Gas Station](https://faucet.ten.xyz/).
+2. Paste your EVM wallet address into the wallet address field.
+3. Log in with your Discord and X (Twitter) accounts.
+4. Then, complete the available tasks.
+
+If your wallet balance remains unchanged, double-check your wallet configuration or refer to the [set up your wallet](/docs/getting-started/for-users/setup-you-wallet.md) page.
+
+You're now fully setup to participate. Begin on [Galxe](https://galxe.com/ten)
+
+
+---
+
+## Node Architecture
+
+> SGX Enclave and Trusted Execution Environment (TEE)
+
+# Node Architecture
+
+## SGX Enclave and Trusted Execution Environment (TEE)[​](#sgx-enclave-and-trusted-execution-environment-tee "Direct link to SGX Enclave and Trusted Execution Environment (TEE)")
+
+The TEN network leverages Intel Software Guard Extensions (SGX) enclaves to create a secure and trusted execution environment (TEE) for processing transactions and executing smart contracts. SGX enclaves are isolated regions of memory that are encrypted and protected from unauthorized access, ensuring that sensitive data remains confidential and secure. Every transaction and smart contract execution on the TEN network is processed within an SGX enclave, guaranteeing the integrity and confidentiality of the data involved. Additionally, SGX enclaves provide hardware-based attestation, enabling nodes to verify the authenticity of each other and establish trust within the network.
+
+## Node Composition[​](#node-composition "Direct link to Node Composition")
+
+![TEN Validator Composition](/assets/images/ten-validator-composition-06841f0021b4acb068aff3f1318eb9d3.png)
+
+The TEN Validator is composed of the following components:
+
+## Host and Enclave Architecture[​](#host-and-enclave-architecture "Direct link to Host and Enclave Architecture")
+
+#### Process Separation[​](#process-separation "Direct link to Process Separation")
+
+* Separate OS processes for Host and Enclave
+* Communication via gRPC
+* Enclave managed by independent supervisor
+
+#### Security Considerations[​](#security-considerations "Direct link to Security Considerations")
+
+* Minimized TCB (Trusted Computing Base)
+* Reduced attestation frequency
+
+### Host Component Responsibilities[​](#host-component-responsibilities "Direct link to Host Component Responsibilities")
+
+* External request handling
+* L1/L2 network synchronization
+* Secret management and rollup publishing
+* Peer node communication
+* High-availability management
+
+### Enclave Components and Responsibilities[​](#enclave-components-and-responsibilities "Direct link to Enclave Components and Responsibilities")
+
+* Transaction validation and execution
+* Smart contract computation
+* Cryptographic operations and key management
+* State management and confidential data processing
+* Attestation generation and verification
+* Secure random number generation
+* Batch processing and sequencing
+
+## Deployment Containerization[​](#deployment-containerization "Direct link to Deployment Containerization")
+
+There are four deployment containers on a TEN Validator node:
+
+* **Host**: The host component is responsible for external communications and network operations.
+* **HostDB/Postgres**: Postgres is used to store the validator's host state.
+* **Enclave**: The enclave component is responsible for sensitive computations and data processing (SGX).
+* **EnclaveDB/Edgeless**: Edgeless is used to store the validator's enclave state (SGX).
+
+Running a TEN validator will automatically deploy these containers.
+
+
+---
+
+## Node Overview
+
+> Running a node on the TEN network involves participating in the network’s transaction processing, batching, and roll-up mechanisms. As a node operator, you will play a critical role in maintaining the network’s security, scalability, and efficiency. Understanding the flow of transactions and the mechanics of batches and roll-ups is essential for effectively running a node and contributing to the network’s operation.
+
+# Node Overview
+
+Running a node on the TEN network involves participating in the network’s transaction processing, batching, and roll-up mechanisms. As a node operator, you will play a critical role in maintaining the network’s security, scalability, and efficiency. Understanding the flow of transactions and the mechanics of batches and roll-ups is essential for effectively running a node and contributing to the network’s operation.
+
+## Transaction Flow (TX)[​](#transaction-flow-tx "Direct link to Transaction Flow (TX)")
+
+![TEN Validator Flow](/assets/images/ten-validator-flow-726be10515f8ffa9b9ec945810682e8d.png)
+
+### 1. Transactions[​](#1-transactions "Direct link to 1. Transactions")
+
+Transactions are the fundamental operations executed on the TEN network, representing actions such as transferring value, interacting with smart contracts, or executing other network functions. Each transaction serves as a discrete unit of activity, altering the state of the network based on its payload.
+
+### 2. Batches[​](#2-batches "Direct link to 2. Batches")
+
+Batches consist of multiple transactions grouped together on the TEN network, functioning similarly to blocks on the Ethereum network. By aggregating transactions into batches, the network enhances throughput and lowers latency, optimizing resource usage and improving overall efficiency.
+
+### 3. Roll-ups[​](#3-roll-ups "Direct link to 3. Roll-ups")
+
+Roll-ups are a layer 2 scaling mechanism employed by the TEN network to securely aggregate and process transactions off-chain, before submitting a compressed version of these transactions to the Ethereum mainnet (Layer 1) for finalization. This approach significantly boosts throughput and reduces latency while maintaining the security guarantees of the Ethereum network.
+
+## Gateway[​](#gateway "Direct link to Gateway")
+
+The TEN Gateway is a network managed service and load balancer that routes transactions to the appropriate TEN validator nodes. It is responsible for securely encrypting and decrypting transactions, ensuring that sensitive data remains confidential throughout the transaction process. Validators interact with the Gateway to receive transactions, process them, and submit them to the Sequencer for batching and roll-up.
+
+## Node Types[​](#node-types "Direct link to Node Types")
+
+There are two types of nodes in the TEN network: Sequencers and Validators. They use the same software but have different roles and responsibilities. As a node operator you will be running a Validator node, but it is important to understand the role of Sequencers in the network.
+
+### Sequencer[​](#sequencer "Direct link to Sequencer")
+
+The TEN Sequencer is a central node that is responsible for ordering transactions, generating new batches, and creating roll-ups on the TEN network. It is the only node that can create new batches and is responsible for broadcasting these to the network, as well as submitting them to the Ethereum mainnet via roll-up.
+
+### Validator[​](#validator "Direct link to Validator")
+
+A TEN Validator is decentralized node that participates in the TEN network by processing transactions, validating transactions and batches against Ethereum L1 roll-ups, and providing data availability. The participation of multiple validators ensures the network’s security and integrity.
+
+
+---
+
+## Node Rewards
+
+> As a node operator, your participation is essential in maintaining a secure, reliable, and high-performance network. In recognition of your contributions, TEN has implemented a comprehensive reward structure to incentivize active and consistent engagement in the network’s testnet phases.
+
+# Node Rewards
+
+As a node operator, your participation is essential in maintaining a secure, reliable, and high-performance network. In recognition of your contributions, TEN has implemented a comprehensive reward structure to incentivize active and consistent engagement in the network’s testnet phases.
+
+***
+
+## Program Overview[​](#program-overview "Direct link to Program Overview")
+
+TEN is an encrypted Layer 2 network built on Ethereum, designed by the team behind Corda. TEN offers a highly scalable and private environment for Web3 applications,including AI, tokenizing real-world assets (RWA), enabling decentralized financial solutions (DeFi) and on-chain games.
+
+### Objective[​](#objective "Direct link to Objective")
+
+TEN’s incentivized testnet rewards participants—including node operators, developers, and users—who actively contribute to testing and improving the network. Node operators play a vital role in decentralizing TEN and ensuring robust node operations, and they are rewarded for maintaining network health, stability, and performance.
+
+***
+
+## Node Operator Rewards Structure[​](#node-operator-rewards-structure "Direct link to Node Operator Rewards Structure")
+
+TEN has allocated **22,500,000 TEN** (representing 2.25% of the total token supply) to incentivize contributions across the community, including node operations.
+
+### Rewards Overview[​](#rewards-overview "Direct link to Rewards Overview")
+
+1. **Staking Requirements**: Node operators do not need an initial stake to participate in the testnet (however, a minimum of 50,000 TEN tokens will be required for staking on Mainnet).
+2. **ETH-Based Compensation**: Node operators receive rewards paid in **ETH** to help cover hosting costs and encourage active participation.
+3. **Delegated Staking Model**: Community members can delegate their TEN tokens to node operators, broadening community involvement and fostering a more decentralized ecosystem.
+
+### Performance-Based Rewards[​](#performance-based-rewards "Direct link to Performance-Based Rewards")
+
+Performance-based rewards are structured to motivate the consistent and high-quality performance of nodes, as follows:
+
+* **Top 10% Performers**: The highest 10% of node operators, ranked by performance and uptime, will earn the top reward bracket. Top performers will receive a reward equivalent to the minimum mainnet staking requirement and will be offered priority access to participate in the mainnet launch.
+* **Remaining Participants**: Node operators outside the top 10% but in the top 20% will also receive a reward based on their contributions and performance.
+
+### Participation-Based Rewards[​](#participation-based-rewards "Direct link to Participation-Based Rewards")
+
+Node operators who meet minimum participation requirements but do not rank in the top 20% will still receive a reward. These rewards aim to foster inclusivity and recognize the contributions of all node operators.
+
+***
+
+## Testnet Phases & Participation[​](#testnet-phases--participation "Direct link to Testnet Phases & Participation")
+
+The incentivized testnet is split into three phases, each lasting approximately **6-8 weeks**, followed by a short intermission between phases. The phases are designed to test and validate different aspects of the network:
+
+1. **Phase 1**: Focus on onboarding developers and user quests aimed at network resilience.
+2. **Phase 2**: Dedicated to expanding node operations and enhancing network decentralization.
+3. **Phase 3**: Final phase with an emphasis on testing newly deployed dApps and security-focused initiatives.
+
+### Eligibility[​](#eligibility "Direct link to Eligibility")
+
+* **Application**: Node operators can apply via the [Validator Application Form](https://cform.coinlist.co/forms/56274a78-8291-4899-bee1-a68ecbc5b2b8).
+
+* **Selection**: Applications are prioritized based on node management experience and community commitment, with selected participants notified by email.
+
+  \* Jurisdictional Limitations will be applied.
+
+## Additional Information[​](#additional-information "Direct link to Additional Information")
+
+* **Updates and Notifications**: Important updates will be shared via the **TEN Discord testnet channel** and by email for selected participants.
+* **Documentation**: Technical documents and guides are available on TEN’s official documentation site, with more added throughout the testnet phases.
+
+### Reward Distribution[​](#reward-distribution "Direct link to Reward Distribution")
+
+All rewards will be distributed after the mainnet launch, following the tokenomics vesting schedule outlined in the official TEN whitepaper.
+
+***
+
+This Node Rewards program aims to build a community-driven network powered by participants' shared efforts and contributions. By rewarding commitment and performance, TEN is cultivating a stable, high-performance Layer 2 ecosystem that is decentralized, secure, and inclusive.
+
+***
+
+For further queries, please reach out via our **[Discord channel](https://discord.gg/tenprotocol)** or reach out on to **[@TENprotocol](https://twitter.com/tenprotocol)** on X.
+
+
+---
+
+## Running a TEN Validator Node on Azure
+
+> This guide provides detailed instructions to set up and manage a TEN Validator Node on Azure using Terraform and Ansible. Due to TEN’s use of SGX architecture and cloud-specific security assurances, all current deployments are limited to cloud infrastructure to mitigate risks associated with physical attacks. A proof-of-cloud assertion, provided by TEN, certifies the security and reliability of each validator node running in the cloud.
+
+# Running a TEN Validator Node on Azure
+
+This guide provides detailed instructions to set up and manage a TEN Validator Node on Azure using Terraform and Ansible. Due to TEN’s use of SGX architecture and cloud-specific security assurances, all current deployments are limited to cloud infrastructure to mitigate risks associated with physical attacks. A proof-of-cloud assertion, provided by TEN, certifies the security and reliability of each validator node running in the cloud.
+
+***
+
+## Overview[​](#overview "Direct link to Overview")
+
+The deployment process leverages **Terraform** for Azure infrastructure provisioning and **Ansible** for configuring the Validator Node. By following this guide, you’ll set up a secure, compliant environment that meets TEN’s standards for validator operations.
+
+* **Terraform**: Automates the creation of Azure resources for a TEN Validator Node.
+* **Ansible**: Configures and deploys node software on the provisioned infrastructure.
+
+***
+
+## Requirements[​](#requirements "Direct link to Requirements")
+
+Before starting, ensure the following dependencies are installed on your local machine:
+
+* [**Terraform**](https://www.terraform.io/downloads.html) (version >= 0.12)
+  <!-- -->
+  * [Terraform Installation Guide](https://learn.hashicorp.com/tutorials/terraform/install-cli)
+
+* [**Ansible**](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html)
+
+  * [Ansible Installation guide](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html)
+  * **Required Ansible Collections**: Install with:
+    <!-- -->
+    ```
+    ansible-galaxy collection install community.docker community.crypto
+    ```
+
+* [**Azure CLI**](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli): For authenticating and managing Azure resources.
+
+* [**Docker**](https://docs.docker.com/get-docker/): Required for node deployment.
+
+* [**Docker Compose**](https://docs.docker.com/compose/install/): Used for managing containerized services.
+
+* [**Git**](https://git-scm.com/downloads): For repository cloning and version control.
+
+***
+
+## Clone the TEN Validator Repository[​](#clone-the-ten-validator-repository "Direct link to Clone the TEN Validator Repository")
+
+```
+git clone https://github.com/ten-protocol/ten-validator.git
+cd ten-validator
+```
+
+## Azure Setup Instructions (Terraform)[​](#azure-setup-instructions-terraform "Direct link to Azure Setup Instructions (Terraform)")
+
+### Step 1: Authenticate and Configure Azure[​](#step-1-authenticate-and-configure-azure "Direct link to Step 1: Authenticate and Configure Azure")
+
+1. **Log into Azure**:
+   <!-- -->
+   ```
+   az login
+   ```
+2. Set Your Azure Subscription: Specify the Azure subscription for deploying the resources:
+   <!-- -->
+   ```
+   az account set --subscription <your-subscription-id>
+   ```
+
+### Step 2: Configure Terraform Variables (optional)[​](#step-2-configure-terraform-variables-optional "Direct link to Step 2: Configure Terraform Variables (optional)")
+
+```
+cp terraform.tfvars.example terraform.tfvars
+```
+
+### Step 3: Deploy the Terraform Script[​](#step-3-deploy-the-terraform-script "Direct link to Step 3: Deploy the Terraform Script")
+
+```
+terraform init
+terraform apply
+```
+
+### Step 4: Access the Validator Node (Optional)[​](#step-4-access-the-validator-node-optional "Direct link to Step 4: Access the Validator Node (Optional)")
+
+1. `chmod +x get-key.sh ./get-key.sh`
+2. `ssh -i <path-to-key> <username>@<public-ip>`
+
+## TEN Validator Setup Instructions (Ansible)[​](#ten-validator-setup-instructions-ansible "Direct link to TEN Validator Setup Instructions (Ansible)")
+
+1. Network Configuration: Node network settings are located in `ansible/files/network_vars.yml`. These settings are typically not changed and are specific to the L2 network. One will be provided by the TEN team for ITN (testnet) and another for mainnet.
+
+2. Run the Installation Script: Use Ansible to configure and deploy the TEN Validator Node:
+
+   ```
+   chmod +x install-ten.sh
+   ./install-ten.sh
+   ```
+
+   During deployment, you will be prompted to enter:
+
+   * Host ID: Public key of the validator node wallet
+
+   * Private Key: Private key of the validator node wallet
+
+   * Host Public P2P Address: Public IP or DNS of the node
+
+   * SSH Details: Username and key path (or password if applicable)
+
+   * L1 WS URL: WebSocket URL for the Layer 1 node (e.g., Infura)
+
+   * Postgres DB Host: Leave blank to provision a new database
+
+   Note: If Terraform provisioned the VM, default values are often applicable—just press Enter to accept.
+
+## Managing the Validator Node[​](#managing-the-validator-node "Direct link to Managing the Validator Node")
+
+Coming soon! (monitoring, backups, tear down, etc.)
+
+
+---
+
+## Compatible Tools
+
+> These are the list of compatible tools & libraries. We are constantly working to improve your developer experience & will support all of them soon.
+
+# Compatible Tools
+
+These are the list of compatible tools & libraries. We are constantly working to improve your developer experience & will support all of them soon.
+
+| Tool / Library | Status | Note                     |
+| -------------- | ------ | ------------------------ |
+| ethers.js      | ⚠️     | Works, but with few bugs |
+| Remix IDE      | ⚠️     | Works, but with few bugs |
+| Hardhat        | ⚠️     | Works, but with few bugs |
+| web3.py        | ✅     | Works without any issues |
+| web3.js        | ✅     | Works without any issues |
+
+
+---
+
+## Cross Chain Messaging
+
+> TEN features a cross-chain messaging protocol, facilitating secure and decentralized communication across layers.
+
+# Cross Chain Messaging
+
+TEN features a cross-chain messaging protocol, facilitating secure and decentralized communication across layers.
+
+The foundational contract for this feature is `MessageBus`, present on both L1 and L2. On L1, it's nested under the management contract, while on L2, it's managed by the protocol.
+
+## How It Works[​](#how-it-works "Direct link to How It Works")
+
+Users invoke the `publishMessage` function on `MessageBus`. This function triggers an event, capturing the message details. The protocol then ensures this message is accessible on the counterpart `MessageBus`.
+
+To verify message receipt, users can call `verifyMessageFinalized` on the receiving layer's `MessageBus`. If the message matches the original details, it returns `true`.
+
+This mechanism allows for queries like: **'Has address 0xAAAA.. received 25WETH tokens on the bridge with address 0XAB0FF?'**. If the bridge confirms the receipt, the query returns true.
+
+For messages published on TEN's L2, the management contract transports them to L1 during rollup submission. However, these messages must await the rollup's challenge period to be deemed final.
+
+## Advanced Capabilities[​](#advanced-capabilities "Direct link to Advanced Capabilities")
+
+`MessageBus` offers a method to query non-finalized delivered messages: `getMessageTimeOfFinality`. This previews messages still within the challenge period.
+
+Such "preview" functionality can empower dApps to offer faster-than-challenge-period finality. For instance, a contract might allow immediate withdrawals from a bridge at a fee, transferring withdrawal rights to the fee payer upon message finalization.
+
+## Security[​](#security "Direct link to Security")
+
+The protocol listens only to events from the contract address linked to the management contract. Messages are tied to L1 blocks, recalculating state during reorganizations. L2 messages also link to L1 block hashes, ensuring state updates align with the correct fork.
+
+The protocol securely manages the keys for the L2 contract within SGX. Extracting the private key controlling the L2 `MessageBus` would necessitate breaching SGX. Even if achieved, the protocol would auto-reject such transactions, as it scans all external transactions.
+
+## Interface[​](#interface "Direct link to Interface")
+
+Below are the interfaces for interacting with `MessageBus`. For queries or issues, join our [Discord](https://discord.gg/tVnNrQ35Ke).
+
+```
+interface Structs {
+    struct CrossChainMessage {
+        address sender;
+        uint64  sequence;
+        uint32  nonce;
+        uint32  topic;
+        bytes   payload;
+        uint8   consistencyLevel;
+    }
+}
+
+interface IMessageBus {
+    function publishMessage(
+        uint32 nonce,
+        uint32 topic,
+        bytes calldata payload, 
+        uint8 consistencyLevel
+    ) external returns (uint64 sequence);
+
+    function verifyMessageFinalized(
+        Structs.CrossChainMessage calldata crossChainMessage
+    ) external view returns (bool);
+    
+    function getMessageTimeOfFinality(
+        Structs.CrossChainMessage calldata crossChainMessage
+    ) external view returns (uint256);
+}
+```
+
+
+---
+
+## Hosted Gateway
+
+> The TEN Gateway is a critical application that facilitates communication between a TEN node and various tools that require a connection to it, such as MetaMask. Due to the encryption of data within a TEN node, direct communication is not feasible.
+
+# Hosted Gateway
+
+The TEN Gateway is a critical application that facilitates communication between a TEN node and various tools that require a connection to it, such as MetaMask. Due to the encryption of data within a TEN node, direct communication is not feasible.
+
+The program conforms to the Ethereum JSON-RPC specification ([Ethereum JSON-RPC Specification](https://playground.open-rpc.org/?schemaUrl=https://raw.githubusercontent.com/ethereum/eth1.0-apis/assembled-spec/openrpc.json)) and also supports additional APIs to ensure compatibility with popular tools like MetaMask.
+
+You have the flexibility to host the TEN Gateway yourself or use one of the hosted gateways if you choose to join TEN. You also have the option to run and use the program independently. The diagram below illustrates different usage scenarios, with Bob and Charlie using the hosted version and Alice managing it independently.
+
+## Workflow[​](#workflow "Direct link to Workflow")
+
+The onboarding process is straightforward and requires only a few clicks:
+
+1. The user navigates to a website where a hosted TEN Gateway is running and clicks on "Join TEN." This action will add a network to their wallet.
+2. The user then connects their wallet and switches to the TEN network, if they have not done so already.
+3. In the wallet popup, the user is prompted to sign over an EIP-712 formatted message or text message which includes an encryption token.
+
+## Endpoints[​](#endpoints "Direct link to Endpoints")
+
+### GET /join[​](#get-join "Direct link to GET /join")
+
+This endpoint generates a key-pair, saves it in the database, derives an encryption token from the keys, and returns the encryption token.
+
+### GET /getmessage[​](#get-getmessage "Direct link to GET /getmessage")
+
+This endpoint generates a message for the user to sign in order to authenticate their address. We currently support EIP712 messages and simple text messages that need to be signed with Personal sign by the user.
+
+Here is an example for the GET request body:
+
+```
+{
+    "encryptionToken": "2d127471df48dad460a60194496f975fd9d558d1",
+    "formats": ["EIP712", "Personal"]
+}
+```
+
+* `encryptionToken` is mandatory and is the encryption token generated by the /join endpoint.
+
+* `formats` is optional and can be either "EIP712" or "Personal". If not provided / or both are provided, the default value is "EIP712".
+
+Message returned by the endpoint is in the following format:
+
+```
+{
+    "message": "<message>",
+    "type": "<EIP712/Personal>"
+}
+```
+
+EIP712 Message uses following format:
+
+```
+{
+    types: {
+      EIP712Domain: [
+        { name: "name", type: "string" },
+        { name: "version", type: "string" },
+        { name: "chainId", type: "uint256" },
+      ],
+      Authentication: [
+        { name: "Encryption Token", type: "address" },
+      ],
+    },
+    primaryType: "Authentication",
+    domain: {
+      name: "Ten",
+      version: "1.0",
+      chainId: <TenChainID>,
+    },
+    message: {
+      "Encryption Token": <encryptionToken>
+    },
+}
+```
+
+And Personal Message uses following format:
+
+```
+Token: %s on chain: %d version: %d
+```
+
+### POST /authenticate?token=$EncryptionToken[​](#post-authenticatetokenencryptiontoken "Direct link to POST /authenticate?token=$EncryptionToken")
+
+This endpoint enables the addition of multiple addresses for each encryption token. Prior to saving, it performs several checks on the signature and encryption token.
+
+Here's an example of the POST request body for the /authenticate endpoint:
+
+```
+{
+    "address": "0xEF1C76228AeaDE07B74eA4a749d02f539cCff16a",
+    "signature": "0x781699d25d62ebaa3cc0901ac1fd9fda4e7e3b143bee854b262434e3e22021d1607b5680924ac439dec9838344d6785100c7043312cec07b7fd1e9d26983f69f1b",
+    "type": "EIP712"
+}
+```
+
+* `address` is mandatory and is the address of the user who is trying to authenticate
+* `signature` is mandatory and is the signature of the message generated by the /getmessage endpoint
+* `type` is optional and can be either "EIP712" or "Personal". If not provided, the default value is "EIP712".
+
+### GET /query/address?token=$EncryptionToken\&a=$Address[​](#get-queryaddresstokenencryptiontokenaaddress "Direct link to GET /query/address?token=$EncryptionToken\&a=$Address")
+
+This endpoint returns a boolean value (true or false) based on whether the given address is registered with the provided encryption token.
+
+### GET /revoke?token=$EncryptionToken[​](#get-revoketokenencryptiontoken "Direct link to GET /revoke?token=$EncryptionToken")
+
+This endpoint facilitates the removal of a certain encryption token's access by deleting the key-pair from the database. This is particularly useful when a user wishes to revoke access for a specific encryption token.
+
+
+---
+
+## Ten Faucet
+
+> Ten Discord Faucet
+
+# Ten Faucet
+
+![Ten Discord Faucet](/assets/images/faucet.ten.xyz-b867b87d2e217d4c67df393bb160c172.jpg)
+
+Using the steps provided, you can request testnet ETH from the faucet available on the TEN Gas Station.
+
+## **Prerequisites**[​](#prerequisites "Direct link to prerequisites")
+
+* Make sure you have completed your wallet set up or else follow the [instructions](/docs/getting-started/for-users/setup-you-wallet.md).
+
+## **Requesting Testnet ETH**[​](#requesting-testnet-eth "Direct link to requesting-testnet-eth")
+
+1. Make a note of your EVM wallet address or copy it to your clipboard.
+2. Head over to [TEN Gas Station](https://faucet.ten.xyz/).
+3. Paste your EVM wallet address into the wallet address field.
+4. Log in with your Discord and X (Twitter) accounts.
+5. Then, complete the available tasks.
+
+If your wallet balance remains unchanged, double-check your wallet configuration or refer to the [set up your wallet](/docs/getting-started/for-users/setup-you-wallet.md) page.
+
+
+---
+
+## Programmable Access to Gateway
+
+> Base URL//testnet.ten.xyz
+
+# Programmable Access to Gateway
+
+# TEN Network Gateway API
+
+Base URL: `https://testnet.ten.xyz`
+
+## 1. Get Encryption Token[​](#1-get-encryption-token "Direct link to 1. Get Encryption Token")
+
+**Endpoint:** `GET /v1/join`
+
+Generates and returns an EncryptionToken.
+
+```
+curl -X GET https://testnet.ten.xyz/v1/join
+```
+
+```
+const response = await fetch('https://testnet.ten.xyz/v1/join');
+const token = await response.text();
+```
+
+## 2. Get Message to Sign[​](#2-get-message-to-sign "Direct link to 2. Get Message to Sign")
+
+**Endpoint:** `POST /v1/getmessage`
+
+Generates and returns a message (if needed 712 typed message too) for the user to sign based on the provided encryption token.
+
+```
+curl -X POST "https://testnet.ten.xyz/v1/getmessage/" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "encryptionToken": "$EncryptionToken",
+    "formats": ["EIP712"]
+  }'
+```
+
+```
+const msgRes = await fetch('https://testnet.ten.xyz/v1/getmessage/', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({
+    encryptionToken: token,
+    formats: ['EIP712'],
+  }),
+});
+const data = await msgRes.json();
+```
+
+## 3. Authenticate User[​](#3-authenticate-user "Direct link to 3. Authenticate User")
+
+**Endpoint:** `POST /v1/authenticate?token=$EncryptionToken`
+
+Submits a signed message in the format address & signature, proving ownership of the private keys for the account, and links that account with the encryption token.
+
+```
+curl -X POST "https://testnet.ten.xyz/v1/authenticate/?token=$EncryptionToken" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "address": "$Address",
+    "signature": "$Signature"
+  }'
+```
+
+```
+await fetch(`https://testnet.ten.xyz/v1/authenticate/?token=${EncryptionToken}`, {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({
+    address,
+    signature: sig
+  }),
+});
+```
+
+## 4. Query Address Registration[​](#4-query-address-registration "Direct link to 4. Query Address Registration")
+
+**Endpoint:** `GET /v1/query/address?token=$EncryptionToken&a=$Address`
+
+Returns a JSON response indicating whether the address "a" is registered for the user.
+
+```
+curl -X GET "https://testnet.ten.xyz/v1/query/address?token=$EncryptionToken&a=$Address"
+```
+
+```
+const response = await fetch(`https://testnet.ten.xyz/v1/query/address?token=${token}&a=${address}`);
+const data = await response.text();
+```
+
+## 5. Revoke Access[​](#5-revoke-access "Direct link to 5. Revoke Access")
+
+**Endpoint:** `POST /v1/revoke?token=$EncryptionToken`
+
+Deletes encryption token associated with the account.
+
+```
+curl -X POST "https://testnet.ten.xyz/v1/revoke?token=abc123"
+```
+
+```
+await fetch(`https://testnet.ten.xyz/v1/revoke?token=${token}`, {
+  method: 'POST'
+});
+```
+
+## RPC Usage[​](#rpc-usage "Direct link to RPC Usage")
+
+After authentication, use the encryption token with RPC calls:
+
+```
+https://testnet.ten.xyz/v1/?token=<EncryptionToken>
+```
+
+
+---
+
+## Standard Bridge
+
+> The standard TEN bridge is a trustless and decentralized asset bridge leveraging a wrapped token mint and burn pattern. It's built on the cross-chain messaging protocol and operates entirely as a smart contract, eliminating the need for separate runnables or nodes.
+
+# Standard Bridge
+
+The standard TEN bridge is a trustless and decentralized asset bridge leveraging a wrapped token mint and burn pattern. It's built on the cross-chain messaging protocol and operates entirely as a smart contract, eliminating the need for separate runnables or nodes.
+
+## Interacting with the Contract[​](#interacting-with-the-contract "Direct link to Interacting with the Contract")
+
+Users can interact with the bridge contract through the `sendERC20` or `sendNative` functions. Note: ERC20 tokens must be whitelisted before use.
+
+### Using `sendERC20`:[​](#using-senderc20 "Direct link to using-senderc20")
+
+1. Approve the bridge contract to manage a specific amount of tokens using the ERC20 `approve()` method.
+2. Invoke `sendERC20` specifying the approved amount and the recipient's address on the other side.
+3. Wait briefly for the cross-chain protocol to synchronize the layers.
+4. Utilize your assets on the other layer.
+
+For `sendNative`, simply add value to the transaction. The bridge contract's received value during `sendNative` execution will be logged as a transfer to the other layer.
+
+## Layer 1 To Layer 2 Specifics[​](#layer-1-to-layer-2-specifics "Direct link to Layer 1 To Layer 2 Specifics")
+
+* **Layer 1 (L1)**: Managed by `ObscuroBridge.sol` - the bridge to TEN.
+* **Layer 2 (L2)**: Managed by `EthereumBridge.sol` - the bridge to Ethereum.
+
+Tokens must be whitelisted to bridge over. Initially, only admin role accounts can whitelist tokens. As the protocol matures, this will change. To whitelist your token, contact us on our [Discord](https://discord.gg/tVnNrQ35Ke).
+
+## Security[​](#security "Direct link to Security")
+
+The bridge uses the `CrossChainEnabledObscuro` contract, offering a `onlyCrossChainSender` modifier to restrict public function access. The bridge initialization phase securely links the two bridge contracts. The setup ensures that `receiveAsset` can only be invoked with a valid cross-chain message from the correct contract.
+
+## Building Bridges[​](#building-bridges "Direct link to Building Bridges")
+
+The standard bridge operates without needing private platform capabilities, meaning anyone can build a bridge using the cross-chain messaging API. No permissions are required. We encourage innovative bridge construction and are here to assist. Join our Discord for discussions, questions, or support.
+
+## Interface[​](#interface "Direct link to Interface")
+
+Interact with the bridge using the following interface:
+
+```
+interface IBridge {
+    function sendNative(address receiver) external payable;
+
+    function sendERC20(
+        address asset,
+        uint256 amount,
+        address receiver
+    ) external;
+}
+```
+
+For more details, discussions, or support, join our [Discord](https://t.co/UJC0FUAY2T).
+
+
+---
+
+## TEN Bridge
+
+> Overview
+
+# TEN Bridge
+
+## Overview[​](#overview "Direct link to Overview")
+
+The TEN Bridge project aims to facilitate the seamless transfer of assets between the Ethereum blockchain and the TEN blockchain. This documentation provides an overview of the project, its purpose, supported tokens, and usage instructions.
+
+## Purpose[​](#purpose "Direct link to Purpose")
+
+The primary goal of the TEN Bridge is to enable users to move assets between Ethereum and TEN efficiently and securely. This bridge will serve as a vital infrastructure component for users who wish to interact with assets on both blockchains.
+
+## Supported Tokens[​](#supported-tokens "Direct link to Supported Tokens")
+
+To provide flexibility and utility to users, the TEN Bridge supports the following tokens:
+
+* Ethereum (ETH)
+* TEN token (TEN)
+* Tether (USDT)
+* USD Coin (USDC)
+
+## Usage[​](#usage "Direct link to Usage")
+
+### Prerequisites[​](#prerequisites "Direct link to Prerequisites")
+
+Before using the TEN Bridge, ensure you have the following:
+
+* MetaMask or any Ethereum-compatible wallet
+
+### Steps to Transfer Assets[​](#steps-to-transfer-assets "Direct link to Steps to Transfer Assets")
+
+1. Connect your Ethereum wallet (e.g., MetaMask) to the TEN Bridge interface.
+2. Select the asset you wish to transfer and specify the destination blockchain (Ethereum or TEN).
+3. Enter the amount of the asset you want to transfer.
+4. Review the transaction details and confirm the transfer.
+5. Once confirmed, wait for the transaction to be processed. The transfer may take some time depending on network congestion.
+6. Once the transfer is complete, you will receive a confirmation notification.
+
+### Notes[​](#notes "Direct link to Notes")
+
+* Please ensure you have sufficient gas fees (for Ethereum transactions) and TEN network fees to cover the transaction costs.
+* Transactions may take varying amounts of time to process depending on network congestion and other factors.
+* Always double-check the recipient address before confirming the transfer to avoid any potential loss of assets.
+
+## Support[​](#support "Direct link to Support")
+
+For any inquiries or assistance regarding the TEN Bridge, please contact our team at <team@obscu.ro>.
+
+## Conclusion[​](#conclusion "Direct link to Conclusion")
+
+The TEN Bridge provides a convenient and secure way for users to transfer assets between Ethereum and TEN blockchains. By supporting multiple tokens, including ETH, TEN, USDT and USDC, the bridge enhances interoperability and accessibility for users within the ecosystem.
+
+
+---
+
+## Tenscan
+
+> TEN Block Explorer
+
+# Tenscan
+
+![TEN Block Explorer](/assets/images/obscuroscan-f5224d709de0a75cad55c3feed7b3b91.png)
+
+[TenScan](https://tenscan.io) is a blockchain explorer for the TEN Testnet - TEN’s equivalent of Etherscan. Tenscan allows you to view the latest rollups and transactions on the Testnet, as well as search for historical rollups and transactions. Its functionality will be expanded over time.
+
+info
+
+Tenscan is still in its testnet phase. Expect to be able to view individual transactions and accounts encrypted in the future.
+
+## How does Testnet handle encryption?[​](#how-does-testnet-handle-encryption "Direct link to How does Testnet handle encryption?")
+
+warning
+
+On the Testnet, transactions are encrypted but can be decrypted because it uses a rollup encryption key that is long-lived and well-known. It's designed to help users understand how TEN works. However, on the Mainnet, rollups will be encrypted with rotating keys, unknown to anyone or anything apart from the TEN enclaves.
+
+Transactions in TEN are encrypted by default and their contents cannot be viewed by anyone, but how do we know it's really encrypted? Because we can decrypt the transaction batches.
+
+## Decryption of Transaction Blobs[​](#decryption-of-transaction-blobs "Direct link to Decryption of Transaction Blobs")
+
+1. Head over to [Tenscan Batches](https://tenscan.io/batches) page. Batches can contain 0, 1 or more transactions.
+2. Scroll down the page and make sure that the choosen batch contain at least 1 transaction (see *"No. of Transactions"*)
+3. Copy Encrypted Tx Blob, just click on it!
+4. Find the *"Resources"* dropdown menu in the top right corner of Tenscan and select [*"Decrypt."*](https://tenscan.io/resources/decrypt)
+5. Paste the copied Tx Blob and hit **decrypt** button. Awesome! The result is presented as raw decrypted text.
+
+tip
+
+To decode numeric values, such as 'value', you need to use [hex to decimal converters](https://www.binaryhexconverter.com/hex-to-decimal-converter). In the case of Value, the result will be represented in wei.
+
+
+---
+
+## FAQs
+
+> For Developers
+
+# FAQs
+
+## For Developers[​](#for-developers "Direct link to For Developers")
+
+### How do I access the TEN RPC Endpoint?[​](#how-do-i-access-the-ten-rpc-endpoint "Direct link to How do I access the TEN RPC Endpoint?")
+
+You will need to obtain an account-specific, unique RPC link using [TEN Hosted Gateway](/docs/tools-infrastructure/hosted-gateway.md) and authenticate your account to access the Viewing Key and be able to use the RPC endpoints listed in the [API References](/docs/api-reference/json-rpc-apis.md).
+
+Keep in mind that you will not be able to query data on accounts that have not been authenticated to a specific Encryption token.
+
+### How can I port my dApp from other networks to TEN?[​](#how-can-i-port-my-dapp-from-other-networks-to-ten "Direct link to How can I port my dApp from other networks to TEN?")
+
+You need to follow the following steps:
+
+1. Change the functions of your smart contracts according to the instructions given [here](/docs/getting-started/for-developers/explore-contracts-in-ten.md).
+2. Integrate TEN Gateway into your dApp.
+3. Deploy your SCs into TEN using [compatible tools](/docs/tools-infrastructure/compatible-tools.md) (e.g. Truffle Suite).
+4. Invite your users to learn more about encryption!
+
+###
+
+## For Users[​](#for-users "Direct link to For Users")
+
+### Do I have to add an account through TEN Gateway each time to use the network?[​](#do-i-have-to-add-an-account-through-ten-gateway-each-time-to-use-the-network "Direct link to Do I have to add an account through TEN Gateway each time to use the network?")
+
+No, you just need to [add your account](/docs/getting-started/for-users/setup-you-wallet.md) once and the RPC will be available until you revoke access.
+
+### How do I connect to TEN from multiple devices?[​](#how-do-i-connect-to-ten-from-multiple-devices "Direct link to How do I connect to TEN from multiple devices?")
+
+Choose your preferred and most convenient method from those listed below:
+
+1. Use one RPC link you once received on all your devices.
+2. Use a different link for each individual device, reconnecting as described above.
+
+TEN supports using multiple VKs for each individual wallet, which means reconnecting from a different device won't make your previous connection obsolete, as long as you do not use the revoke function in TEN Gateway.
+
+### TEN is only available in Metamask?[​](#ten-is-only-available-in-metamask "Direct link to TEN is only available in Metamask?")
+
+No, TEN is available in any non-custodial EVM wallet that supports custom RPCs and networks, and allows you to sign transactions using the `eth_sign` function
+
+### How do I get test tokens?[​](#how-do-i-get-test-tokens "Direct link to How do I get test tokens?")
+
+The only way to get test tokens in TEN — through the faucet on our [Discord server](https://discord.gg/tVnNrQ35Ke).
+
+### Can I share my RPC link with other users?[​](#can-i-share-my-rpc-link-with-other-users "Direct link to Can I share my RPC link with other users?")
+
+You should refrain from publishing your link because if you do, it will be compromised and anyone using it will be able to access your decrypted transaction data.
+
+warning
+
+Compromising your Encryption token obtained from TEN Gateway will result in a breach of your data privacy.
+
+In case your Encryption token has been compromised, you need to revoke it using either the Gateway Widget or TEN Hosted Gateway.
+
+
+---
+
+## How to submit a bug reports
+
+> If you have encountered any bugs in TEN, we invite you to tell us about it, thereby making a contribution to help us evolve!
+
+# How to submit a bug reports
+
+If you have encountered any bugs in TEN, we invite you to tell us about it, thereby making a contribution to help us evolve!
+
+The process is incredibly simple, follow the steps listed below so that we can fix the errors you find as soon as possible:
+
+1. Join our [Discord server](https://discord.gg/tVnNrQ35Ke).
+2. Find [support tickets](https://discord.com/channels/916052669955727371/1148647792290562080) in the channel list
+
+![Bug Reports-1](/assets/images/bug-reports-1-bdd56eb788c54316ba4f2aa25eb45c38.jpg)
+
+3. Select the appropriate ticket: *"Bug Report"*
+
+![Bug Reports-2](/assets/images/bug-reports-2-3a0de45f02428b73a9d1b8847e411bec.jpg)
+
+4. Fill the form
+
+![Bug Reports-3](/assets/images/bug-reports-3-702724f0b0f98b0139fbcd6453ad3e22.jpg)
+
+5. If necessary - provide screenshots in the ticket that was just opened for you 🙂
+
+GIF Guide
+
+![Bug Reports-gif](/assets/images/bug-reports-gif-1b40806e1ff7f41b898fd0d066ba824e.gif)
+
+### Next Steps[​](#next-steps "Direct link to Next Steps")
+
+Our support team will review your bug and submit it to GitHub, and then they will share the Issue link with you to track progress.
+
+Your ticket number and your Discord Handle will be listed in the Issue so we know exactly who assisted us in development!
+
+warning
+
+You can only have one ticket open, and if you find another bug, please specify it in the existing ticket.
+
+Your ticket will remain open until the bug is fixed.
+
+
+---
+
+## Guessing Game
+
+> Guessing Game
+
+# Guessing Game
+
+![Guessing Game](/assets/images/guessing-game-2b17294db01b3d25cf8ef18b6e775b8e.png)
+
+The TEN Guessing Game is a simple yet powerful demonstration of TEN's unique encryption capabilities. Players attempt to guess a secret number, with each guess requiring a token fee. The game showcases the challenges of maintaining secrecy in transparent ecosystems like Ethereum and how TEN addresses these challenges.
+
+## **Game Mechanics**[​](#game-mechanics "Direct link to game-mechanics")
+
+* The game's objective is to guess a secret number.
+* Each guess requires an entrance fee of 1 unit of the token (1x10^18 units make a single token).
+* Correct guesses result in the player receiving all accumulated entrance fees.
+* The game then resets with a new random secret number.
+
+## **Playing the Game**[​](#playing-the-game "Direct link to playing-the-game")
+
+How to Play the Guessing Game: A Step-by-Step Guide This guide assumes you have a Metamask wallet installed and configured with the TEN testnet.
+
+1. **Verify Gateway Authentication:** Ensure your connected account is properly authenticated through the [TEN Gateway](https://gateway.ten.xyz/).
+
+2. **Visit the Game Website:** Navigate to the official [website](https://TEN-protocol.github.io/sample-applications/guessing-game-v2/) of the guessing game.
+
+tip
+
+You can get free testnet tokens from the [TEN Faucet](/docs/getting-started/for-users/get-tokens.md).
+
+3. **Make Your Guess:** Enter your guess for the secret number within the designated field. This number should be within the specified range (e.g., 1-1000).
+
+4. **Sign the Transaction:** Click on the "Submit" or similar button. A Metamask window will pop up asking you to sign a transaction authorizing your guess on the blockchain. Carefully review the transaction details and gas fees before confirming.
+
+5. **Wait for the Result:** The transaction will be processed on the blockchain, and it may take a few seconds to minutes for the result to be confirmed. You can see the status/result of your guess on the message log below the guessing field.
+
+6. **Inspect the Transaction (Optional):** You can explore the details of your guess transaction on the block explorer - [Tenscan](https://tenscan.io/).This will allow you to see the status, gas usage, and other details associated with your guess.
+
+## **Building the Guessing Game**[​](#building-the-guessing-game "Direct link to building-the-guessing-game")
+
+This tutorial will guide you through building the Guessing Game on TEN with secure RNG to generate truly random & secure numbers as well as hidden states to make sure the random number to be guessed is secret.
+
+1. **Pre-requisites:**
+
+2. **Generate Secure Random Number:** We'll use `block.difficulty` to generate a random number. On TEN, `block.difficulty` is private and secure, unlike on Ethereum, where it can be manipulated or predicted.
+
+```
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.18;
+
+contract GuessingGame {
+
+    uint256 private secretNumber;
+
+    constructor() {
+        _generateSecretNumber();
+    }
+
+    function _generateSecretNumber() private {
+        uint256 randomNumber = block.difficulty;
+        secretNumber = (randomNumber % 100000) + 1;
+    }
+}
+```
+
+3. **Store the Random Number Privately:** TEN offers true on-chain encryption for state variables marked with the private modifier. Even using `getStorageAt`, these variables cannot be accessed.
+
+```
+uint256 private secretNumber;
+```
+
+This ensures that secretNumber is stored securely and is inaccessible to anyone outside the contract.
+
+4. **Function to Guess the Number:** The guessing function allows users to submit their guess for the secret number. If correct, they win the prize pool. If incorrect, they are encouraged to try again.
+
+```
+function guess(uint256 _number) external payable {
+    require(_number > 0 && _number <= 100000, "The guess should be between 1 & 100000");
+    require(msg.value == 443e14, "Incorrect Fee");
+
+    if(_number == secretNumber) {
+        payable(msg.sender).transfer(address(this).balance);
+        _generateSecretNumber(); // Reset the secret number after a successful guess
+    } else {
+    }
+}
+```
+
+5. **Function to See the Prize Pool:** This function allows users to view the current prize pool, which is simply the contract's balance.
+
+```
+function getContractBalance() external view returns (uint256) {
+    return address(this).balance;
+}
+```
+
+6. **Feature to Reset the Secret Number After It Has Been Guessed:** After a successful guess, the secret number should be reset to keep the game going. This is handled within the guessing function:
+
+```
+function _generateSecretNumber() private {
+    uint256 randomNumber = block.difficulty;
+    secretNumber = (randomNumber % 100000) + 1;
+}
+```
+
+By calling `_generateSecretNumber()` again, the contract resets the secret number, allowing the game to continue with a new random number.
+
+Find the complete contract & fronTENd here: [this GitHub repository](https://github.com/TEN-protocol/sample-applications/tree/main/guessing-game-v2).
+
+
+---
+

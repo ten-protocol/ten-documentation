@@ -1,0 +1,308 @@
+# TEN Documentation
+
+> Comprehensive guide to TEN protocol
+
+- [TEN Documentation](/index.md)
+
+## markdown-page
+
+You don't need React to write simple standalone pages.
+
+- [Markdown page example](/markdown-page.md): You don't need React to write simple standalone pages.
+
+## docs
+
+
+### api-reference
+
+
+#### debug-apis
+
+TEN supports a subset of Geth's DEBUG JSON-RPC API. This
+
+- [Debug JSON-RPC API](/docs/api-reference/debug-apis.md): TEN supports a subset of Geth's DEBUG JSON-RPC API. This
+
+#### json-rpc-apis
+
+TEN offers compatibility with a subset of Ethereum's JSON-RPC API. This document outlines the supported JSON-RPC API methods.
+
+- [JSON-RPC API](/docs/api-reference/json-rpc-apis.md): TEN offers compatibility with a subset of Ethereum's JSON-RPC API. This document outlines the supported JSON-RPC API methods.
+
+#### sensitive-apis
+
+TEN supports a subset of Ethereum's JSON-RPC API.
+
+- [Sensitive APIs](/docs/api-reference/sensitive-apis.md): TEN supports a subset of Ethereum's JSON-RPC API.
+
+### architecture
+
+
+#### consensus
+
+TEN combines Ethereum's L1 security, rollup efficiency, Secure Enclave privacy, and the POBI mechanism for a unique consensus approach.
+
+- [Consensus Mechanism](/docs/architecture/consensus.md): TEN combines Ethereum's L1 security, rollup efficiency, Secure Enclave privacy, and the POBI mechanism for a unique consensus approach.
+
+#### design
+
+TEN is architected as an L2 protocol, leveraging the rollup pattern to store transaction data on the L1 chain. While most rollup implementations aim for scalability, TEN's primary objective is confidentiality. The rollups encapsulate the entire encrypted transaction data.
+
+- [Design](/docs/architecture/design.md): TEN is architected as an L2 protocol, leveraging the rollup pattern to store transaction data on the L1 chain. While most rollup implementations aim for scalability, TEN's primary objective is confidentiality. The rollups encapsulate the entire encrypted transaction data.
+
+#### governance
+
+TEN's governance is explicit, transparent, and draws inspiration from the experiences of Bitcoin and Ethereum. In a decentralized system, control can be:
+
+- [Governance](/docs/architecture/governance.md): TEN's governance is explicit, transparent, and draws inspiration from the experiences of Bitcoin and Ethereum. In a decentralized system, control can be:
+
+#### interaction-with-ethereum
+
+TEN serves as a confidential extension to Ethereum, enabling assets to move seamlessly between the two networks. While many sidechains and L2 solutions have developed bridges to address mismatches between different network models, TEN's approach is distinct, ensuring a decentralized and secure interaction.
+
+- [Interaction with Ethereum](/docs/architecture/interaction-with-ethereum.md): TEN serves as a confidential extension to Ethereum, enabling assets to move seamlessly between the two networks. While many sidechains and L2 solutions have developed bridges to address mismatches between different network models, TEN's approach is distinct, ensuring a decentralized and secure interaction.
+
+#### system-components
+
+Cryptography
+
+- [System Components](/docs/architecture/system-components.md): Cryptography
+
+### category
+
+
+#### api-references
+
+- [API References](/docs/category/api-references.md)
+
+#### architecture
+
+- [Architecture](/docs/category/architecture.md)
+
+#### for-developers
+
+- [For Developers](/docs/category/for-developers.md)
+
+#### for-developers-1
+
+- [For Developers](/docs/category/for-developers-1.md)
+
+#### for-users
+
+- [For Users](/docs/category/for-users.md)
+
+#### for-users-1
+
+- [For Users](/docs/category/for-users-1.md)
+
+#### for-validators
+
+- [For Validators](/docs/category/for-validators.md)
+
+#### for-validators-1
+
+- [For Validators](/docs/category/for-validators-1.md)
+
+#### getting-started
+
+- [Getting started](/docs/category/getting-started.md)
+
+#### governance
+
+- [Governance](/docs/category/governance.md)
+
+#### introduction
+
+- [Introduction](/docs/category/introduction.md)
+
+#### standards--primitives
+
+- [Standards & Primitives](/docs/category/standards--primitives.md)
+
+#### ten-network-association
+
+- [TEN Network Association](/docs/category/ten-network-association.md)
+
+#### testnet
+
+- [Testnet](/docs/category/testnet.md)
+
+#### tools--infrastructure
+
+- [Tools & Infrastructure](/docs/category/tools--infrastructure.md)
+
+#### troubleshooting
+
+- [Troubleshooting](/docs/category/troubleshooting.md)
+
+#### tutorials--examples
+
+- [Tutorials & Examples](/docs/category/tutorials--examples.md)
+
+### getting-started
+
+
+#### for-developers
+
+- [Develop & Deploy dApp](/docs/getting-started/for-developers/develop-deploy-dapp.md): 1. Develop Smart Contracts
+- [Explore Contracts in TEN](/docs/getting-started/for-developers/explore-contracts-in-ten.md): TEN offers a distinct environment for smart contract development so you'll need to consider how to design your dApps slightly differently from how you would a transparent dApp. This guide explains these differences:
+- [Set Up Dev Environment](/docs/getting-started/for-developers/setup-dev-env.md): 1. Wallet Setup & Configuration
+
+#### for-users
+
+- [Get Tokens](/docs/getting-started/for-users/get-tokens.md): Use TEN Gas Station
+- [Set up your wallet](/docs/getting-started/for-users/setup-you-wallet.md): TEN is fully compatible with Ethereum and seamlessly integrates with MetaMask. If you're unfamiliar with MetaMask or wallets, start here.
+
+#### for-validators
+
+- [Running a node](/docs/getting-started/for-validators/running-a-node.md): Thank you for your interest in running a node on TEN!
+
+### governance
+
+
+#### ten-network-association
+
+- [About the TEN Network Association](/docs/governance/ten-network-association/association.md): Introduction and Vision
+- [Token Delegates and Delegating](/docs/governance/ten-network-association/delegation.md): When you get involved in the governance of TEN, you can either vote directly on proposals or hand over your voting power to a delegate. The delegation system allows $TEN token holders to take part passively by transferring their voting power to delegates who share their values and who they trust to vote on their behalf in a way which aligns to those values. This page breaks down what delegates do and how delegation works within the governance of TEN.
+- [Overview of the TEN Token](/docs/governance/ten-network-association/ten-token.md): The TEN token, known as $TEN, is an ERC-20 governance token that lets you take part in the TEN’s on-chain decision-making process. The token is created by a smart contract on Ethereum, which is a secure and reliable decentralized blockchain.
+- [TEN Improvement Proposals (TIP)](/docs/governance/ten-network-association/tip.md): A TEN Improvement Proposal (TIP) is an essential component of the governance of TEN because it is how participants in the TEN community can have an active role in the evolution of TEN.
+
+### introduction
+
+
+#### developer-quickstart
+
+Migrating to TEN enables your dApp to leverage "Programmable Encryption". Below are steps to help you transition smoothly.
+
+- [Migrate your dApp to TEN](/docs/introduction/developer-quickstart.md): Migrating to TEN enables your dApp to leverage "Programmable Encryption". Below are steps to help you transition smoothly.
+
+#### features
+
+1. Encryption: Data Confidentiality and Computational Privacy
+
+- [Features](/docs/introduction/features.md): 1. Encryption: Data Confidentiality and Computational Privacy
+
+#### overview
+
+TEN in Web3
+
+- [Overview](/docs/introduction/overview.md): TEN in Web3
+
+#### technology
+
+At the heart of TEN's innovative approach to blockchain encryption lies the pragmatic use of Trusted Execution Environments (TEEs). These TEEs are not just about encryption; they ensure unparalleled confidentiality while providing absolute certainty about the code in execution. This technology empowers TEN to deliver a unique blend of smart contracts, decentralization, scalability, and encryption, setting a new benchmark in the blockchain realm.
+
+- [Technology](/docs/introduction/technology.md): At the heart of TEN's innovative approach to blockchain encryption lies the pragmatic use of Trusted Execution Environments (TEEs). These TEEs are not just about encryption; they ensure unparalleled confidentiality while providing absolute certainty about the code in execution. This technology empowers TEN to deliver a unique blend of smart contracts, decentralization, scalability, and encryption, setting a new benchmark in the blockchain realm.
+
+### standards-primitives
+
+
+#### fungible-tokens
+
+ERC-20 on TEN
+
+- [Fungible Tokens](/docs/standards-primitives/fungible-tokens.md): ERC-20 on TEN
+
+#### random-numbers
+
+Using Randomness on TEN
+
+- [Random Numbers](/docs/standards-primitives/random-numbers.md): Using Randomness on TEN
+
+### testnet
+
+
+#### faq
+
+What is the TEN testnet?
+
+- [Testnet FAQ](/docs/testnet/faq.md): What is the TEN testnet?
+
+#### for-developers
+
+- [DApp Ideas](/docs/testnet/for-developers/dapp-ideas.md): Below are some of the dApps we'd love to see built on TEN. Feel free to reach out on Discord if you'd like to discuss the ideas in more detail or request support.
+
+#### for-users
+
+- [Getting started with testnet for users](/docs/testnet/for-users/participate.md): Galxe
+
+#### for-validators
+
+- [Node Architecture](/docs/testnet/for-validators/node-architecture.md): SGX Enclave and Trusted Execution Environment (TEE)
+- [Node Overview](/docs/testnet/for-validators/overview.md): Running a node on the TEN network involves participating in the network’s transaction processing, batching, and roll-up mechanisms. As a node operator, you will play a critical role in maintaining the network’s security, scalability, and efficiency. Understanding the flow of transactions and the mechanics of batches and roll-ups is essential for effectively running a node and contributing to the network’s operation.
+- [Node Rewards](/docs/testnet/for-validators/rewards.md): As a node operator, your participation is essential in maintaining a secure, reliable, and high-performance network. In recognition of your contributions, TEN has implemented a comprehensive reward structure to incentivize active and consistent engagement in the network’s testnet phases.
+- [Running a TEN Validator Node on Azure](/docs/testnet/for-validators/running-a-node.md): This guide provides detailed instructions to set up and manage a TEN Validator Node on Azure using Terraform and Ansible. Due to TEN’s use of SGX architecture and cloud-specific security assurances, all current deployments are limited to cloud infrastructure to mitigate risks associated with physical attacks. A proof-of-cloud assertion, provided by TEN, certifies the security and reliability of each validator node running in the cloud.
+
+### tools-infrastructure
+
+
+#### compatible-tools
+
+These are the list of compatible tools & libraries. We are constantly working to improve your developer experience & will support all of them soon.
+
+- [Compatible Tools](/docs/tools-infrastructure/compatible-tools.md): These are the list of compatible tools & libraries. We are constantly working to improve your developer experience & will support all of them soon.
+
+#### cross-chain-messaging
+
+TEN features a cross-chain messaging protocol, facilitating secure and decentralized communication across layers.
+
+- [Cross Chain Messaging](/docs/tools-infrastructure/cross-chain-messaging.md): TEN features a cross-chain messaging protocol, facilitating secure and decentralized communication across layers.
+
+#### hosted-gateway
+
+The TEN Gateway is a critical application that facilitates communication between a TEN node and various tools that require a connection to it, such as MetaMask. Due to the encryption of data within a TEN node, direct communication is not feasible.
+
+- [Hosted Gateway](/docs/tools-infrastructure/hosted-gateway.md): The TEN Gateway is a critical application that facilitates communication between a TEN node and various tools that require a connection to it, such as MetaMask. Due to the encryption of data within a TEN node, direct communication is not feasible.
+
+#### obscuro-faucet
+
+Ten Discord Faucet
+
+- [Ten Faucet](/docs/tools-infrastructure/obscuro-faucet.md): Ten Discord Faucet
+
+#### programmable-gateway
+
+Base URL//testnet.ten.xyz
+
+- [Programmable Access to Gateway](/docs/tools-infrastructure/programmable-gateway.md): Base URL//testnet.ten.xyz
+
+#### standard-bridge
+
+The standard TEN bridge is a trustless and decentralized asset bridge leveraging a wrapped token mint and burn pattern. It's built on the cross-chain messaging protocol and operates entirely as a smart contract, eliminating the need for separate runnables or nodes.
+
+- [Standard Bridge](/docs/tools-infrastructure/standard-bridge.md): The standard TEN bridge is a trustless and decentralized asset bridge leveraging a wrapped token mint and burn pattern. It's built on the cross-chain messaging protocol and operates entirely as a smart contract, eliminating the need for separate runnables or nodes.
+
+#### ten-bridge
+
+Overview
+
+- [TEN Bridge](/docs/tools-infrastructure/ten-bridge.md): Overview
+
+#### tenscan
+
+TEN Block Explorer
+
+- [Tenscan](/docs/tools-infrastructure/tenscan.md): TEN Block Explorer
+
+### troubleshooting
+
+
+#### faq
+
+For Developers
+
+- [FAQs](/docs/troubleshooting/faq.md): For Developers
+
+#### how-to-submit-a-bug-reports
+
+If you have encountered any bugs in TEN, we invite you to tell us about it, thereby making a contribution to help us evolve!
+
+- [How to submit a bug reports](/docs/troubleshooting/how-to-submit-a-bug-reports.md): If you have encountered any bugs in TEN, we invite you to tell us about it, thereby making a contribution to help us evolve!
+
+### tutorials-examples
+
+
+#### guessing-game
+
+Guessing Game
+
+- [Guessing Game](/docs/tutorials-examples/guessing-game.md): Guessing Game
