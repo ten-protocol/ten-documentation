@@ -1,6 +1,8 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
+require('dotenv').config();
+
 const {themes} = require('prism-react-renderer');
 const lightTheme = themes.github;
 const darkTheme = themes.dracula;
@@ -31,6 +33,11 @@ const config = {
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
+  },
+
+  // Add Mendable configuration
+  customFields: {
+    mendableAnonKey: process.env.MENDABLE_ANON_KEY || 'YOUR_ANON_KEY',
   },
 
   presets: [
