@@ -86,14 +86,6 @@ Cryptography
 
 - [For Developers](/docs/category/for-developers-1.md)
 
-#### for-users
-
-- [For Users](/docs/category/for-users.md)
-
-#### for-users-1
-
-- [For Users](/docs/category/for-users-1.md)
-
 #### for-validators
 
 - [For Validators](/docs/category/for-validators.md)
@@ -147,14 +139,12 @@ Cryptography
 - [Explore Contracts in TEN](/docs/getting-started/for-developers/explore-contracts-in-ten.md): TEN offers a distinct environment for smart contract development so you'll need to consider how to design your dApps slightly differently from how you would a transparent dApp. This guide explains these differences:
 - [Set Up Dev Environment](/docs/getting-started/for-developers/setup-dev-env.md): 1. Wallet Setup & Configuration
 
-#### for-users
-
-- [Get Tokens](/docs/getting-started/for-users/get-tokens.md): Use TEN Gas Station
-- [Set up your wallet](/docs/getting-started/for-users/setup-you-wallet.md): TEN is fully compatible with Ethereum and seamlessly integrates with MetaMask. If you're unfamiliar with MetaMask or wallets, start here.
-
 #### for-validators
 
-- [Running a node](/docs/getting-started/for-validators/running-a-node.md): Thank you for your interest in running a node on TEN!
+- [Node Architecture](/docs/getting-started/for-validators/node-architecture.md): SGX Enclave and Trusted Execution Environment (TEE)
+- [Node Overview](/docs/getting-started/for-validators/overview.md): Running a node on the TEN network involves participating in the network’s transaction processing, batching, and roll-up mechanisms. As a node operator, you will play a critical role in maintaining the network’s security, scalability, and efficiency. Understanding the flow of transactions and the mechanics of batches and roll-ups is essential for effectively running a node and contributing to the network’s operation.
+- [Node Rewards](/docs/getting-started/for-validators/rewards.md): As a node operator, your participation is essential in maintaining a secure, reliable, and high-performance network. In recognition of your contributions, TEN has implemented a comprehensive reward structure to incentivize active and consistent engagement in the network’s testnet phases.
+- [Running a TEN Validator Node on Azure](/docs/getting-started/for-validators/running-a-node.md): This guide provides detailed instructions to set up and manage a TEN Validator Node on Azure using Terraform and Ansible. Due to TEN’s use of SGX architecture and cloud-specific security assurances, all current deployments are limited to cloud infrastructure to mitigate risks associated with physical attacks. A proof-of-cloud assertion, provided by TEN, certifies the security and reliability of each validator node running in the cloud.
 
 ### governance
 
@@ -177,9 +167,9 @@ Migrating to TEN enables your dApp to leverage "Programmable Encryption". Below 
 
 #### features
 
-1. Encryption: Data Confidentiality and Computational Privacy
+Encryption: Data Access Controls and Computational Privacy
 
-- [Features](/docs/introduction/features.md): 1. Encryption: Data Confidentiality and Computational Privacy
+- [Features](/docs/introduction/features.md): Encryption: Data Access Controls and Computational Privacy
 
 #### overview
 
@@ -211,19 +201,9 @@ Using Randomness on TEN
 ### testnet
 
 
-#### faq
-
-What is the TEN testnet?
-
-- [Testnet FAQ](/docs/testnet/faq.md): What is the TEN testnet?
-
 #### for-developers
 
 - [DApp Ideas](/docs/testnet/for-developers/dapp-ideas.md): Below are some of the dApps we'd love to see built on TEN. Feel free to reach out on Discord if you'd like to discuss the ideas in more detail or request support.
-
-#### for-users
-
-- [Getting started with testnet for users](/docs/testnet/for-users/participate.md): Galxe
 
 #### for-validators
 
@@ -255,9 +235,9 @@ The TEN Gateway is a critical application that facilitates communication between
 
 #### obscuro-faucet
 
-Ten Discord Faucet
+TEN Discord Faucet
 
-- [Ten Faucet](/docs/tools-infrastructure/obscuro-faucet.md): Ten Discord Faucet
+- [TEN Faucet](/docs/tools-infrastructure/obscuro-faucet.md): TEN Discord Faucet
 
 #### programmable-gateway
 
@@ -694,29 +674,11 @@ TEN's state management is similar to Ethereum's L1 blockchain. It's an account-b
 
 ---
 
-## For Users
-
-## [📄️<!-- --> <!-- -->Set up your wallet](/docs/getting-started/for-users/setup-you-wallet.md)
-
-[TEN is fully compatible with Ethereum and seamlessly integrates with MetaMask. If you're unfamiliar with MetaMask or wallets, start here.](/docs/getting-started/for-users/setup-you-wallet.md)
-
-
----
-
-## For Users
-
-## [📄️<!-- --> <!-- -->Getting started with testnet for users](/docs/testnet/for-users/participate.md)
-
-[Galxe](/docs/testnet/for-users/participate.md)
-
-
----
-
 ## For Validators
 
-## [📄️<!-- --> <!-- -->Running a node](/docs/getting-started/for-validators/running-a-node.md)
+## [📄️<!-- --> <!-- -->Node Overview](/docs/getting-started/for-validators/overview.md)
 
-[Thank you for your interest in running a node on TEN!](/docs/getting-started/for-validators/running-a-node.md)
+[Running a node on the TEN network involves participating in the network’s transaction processing, batching, and roll-up mechanisms. As a node operator, you will play a critical role in maintaining the network’s security, scalability, and efficiency. Understanding the flow of transactions and the mechanics of batches and roll-ups is essential for effectively running a node and contributing to the network’s operation.](/docs/getting-started/for-validators/overview.md)
 
 
 ---
@@ -732,9 +694,9 @@ TEN's state management is similar to Ethereum's L1 blockchain. It's an account-b
 
 ## Getting started
 
-## [🗃️<!-- --> <!-- -->For Users](/docs/category/for-users.md)
+## [🗃️<!-- --> <!-- -->For Developers](/docs/category/for-developers.md)
 
-[2 items](/docs/category/for-users.md)
+[3 items](/docs/category/for-developers.md)
 
 
 ---
@@ -777,9 +739,9 @@ TEN's state management is similar to Ethereum's L1 blockchain. It's an account-b
 
 ## Testnet
 
-## [🗃️<!-- --> <!-- -->For Users](/docs/category/for-users-1.md)
+## [🗃️<!-- --> <!-- -->For Developers](/docs/category/for-developers-1.md)
 
-[1 item](/docs/category/for-users-1.md)
+[1 item](/docs/category/for-developers-1.md)
 
 
 ---
@@ -990,65 +952,305 @@ For developers running a node and infrastructure using Docker on a Mac, please b
 
 ---
 
-## Get Tokens
+## Node Architecture
 
-> Use TEN Gas Station
+> SGX Enclave and Trusted Execution Environment (TEE)
 
-# Get Tokens
+# Node Architecture
 
-## Use TEN Gas Station[​](#use-ten-gas-station "Direct link to Use TEN Gas Station")
+## SGX Enclave and Trusted Execution Environment (TEE)[​](#sgx-enclave-and-trusted-execution-environment-tee "Direct link to SGX Enclave and Trusted Execution Environment (TEE)")
 
-To obtain TEN ETH directly on the TEN testnet, utilize the TEN Gas Station. Remember, Follow these steps:
+The TEN network leverages Intel Software Guard Extensions (SGX) enclaves to create a secure and trusted execution environment (TEE) for processing transactions and executing smart contracts. SGX enclaves are isolated regions of memory that are encrypted and protected from unauthorized access, ensuring that sensitive data remains confidential and secure. Every transaction and smart contract execution on the TEN network is processed within an SGX enclave, guaranteeing the integrity and confidentiality of the data involved. Additionally, SGX enclaves provide hardware-based attestation, enabling nodes to verify the authenticity of each other and establish trust within the network.
 
-1. Head over to [TEN Gas Station](https://faucet.ten.xyz/).
-2. Paste your EVM wallet address into the wallet address field.
-3. Log in with your Discord and X (Twitter) accounts.
-4. Then, complete the available tasks.
+## Node Composition[​](#node-composition "Direct link to Node Composition")
 
-If your wallet balance remains unchanged, double-check your wallet configuration or refer to the [set up your wallet](/docs/getting-started/for-users/setup-you-wallet.md) page.
+![TEN Validator Composition](/assets/images/ten-validator-composition-06841f0021b4acb068aff3f1318eb9d3.png)
+
+The TEN Validator is composed of the following components:
+
+## Host and Enclave Architecture[​](#host-and-enclave-architecture "Direct link to Host and Enclave Architecture")
+
+#### Process Separation[​](#process-separation "Direct link to Process Separation")
+
+* Separate OS processes for Host and Enclave
+* Communication via gRPC
+* Enclave managed by independent supervisor
+
+#### Security Considerations[​](#security-considerations "Direct link to Security Considerations")
+
+* Minimized TCB (Trusted Computing Base)
+* Reduced attestation frequency
+
+### Host Component Responsibilities[​](#host-component-responsibilities "Direct link to Host Component Responsibilities")
+
+* External request handling
+* L1/L2 network synchronization
+* Secret management and rollup publishing
+* Peer node communication
+* High-availability management
+
+### Enclave Components and Responsibilities[​](#enclave-components-and-responsibilities "Direct link to Enclave Components and Responsibilities")
+
+* Transaction validation and execution
+* Smart contract computation
+* Cryptographic operations and key management
+* State management and confidential data processing
+* Attestation generation and verification
+* Secure random number generation
+* Batch processing and sequencing
+
+## Deployment Containerization[​](#deployment-containerization "Direct link to Deployment Containerization")
+
+There are four deployment containers on a TEN Validator node:
+
+* **Host**: The host component is responsible for external communications and network operations.
+* **HostDB/Postgres**: Postgres is used to store the validator's host state.
+* **Enclave**: The enclave component is responsible for sensitive computations and data processing (SGX).
+* **EnclaveDB/Edgeless**: Edgeless is used to store the validator's enclave state (SGX).
+
+Running a TEN validator will automatically deploy these containers.
 
 
 ---
 
-## Set up your wallet
+## Node Overview
 
-> TEN is fully compatible with Ethereum and seamlessly integrates with MetaMask. If you're unfamiliar with MetaMask or wallets, start here.
+> Running a node on the TEN network involves participating in the network’s transaction processing, batching, and roll-up mechanisms. As a node operator, you will play a critical role in maintaining the network’s security, scalability, and efficiency. Understanding the flow of transactions and the mechanics of batches and roll-ups is essential for effectively running a node and contributing to the network’s operation.
 
-# Set up your wallet
+# Node Overview
 
-TEN is fully compatible with Ethereum and seamlessly integrates with MetaMask. If you're unfamiliar with MetaMask or wallets, start here.
+Running a node on the TEN network involves participating in the network’s transaction processing, batching, and roll-up mechanisms. As a node operator, you will play a critical role in maintaining the network’s security, scalability, and efficiency. Understanding the flow of transactions and the mechanics of batches and roll-ups is essential for effectively running a node and contributing to the network’s operation.
 
-To engage with TEN:
+## Transaction Flow (TX)[​](#transaction-flow-tx "Direct link to Transaction Flow (TX)")
 
-1. [Install](https://metamask.io/download/) MetaMask as a browser extension or mobile app.
-2. To use TEN, you have to configure the wallet using the TEN Gateway. Go to the [TEN Gateway](https://gateway.ten.xyz/) for wallet setup, click 'Connect to TEN Testnet', and follow the setup steps. Know more about the TEN Gateway [here](/docs/tools-infrastructure/hosted-gateway.md).
+![TEN Validator Flow](/assets/images/ten-validator-flow-726be10515f8ffa9b9ec945810682e8d.png)
 
-No matter your activity on TEN, you'll probably need tokens to make transactions. See our following section: [Getting tokens.](/docs/getting-started/for-users/get-tokens.md)
+### 1. Transactions[​](#1-transactions "Direct link to 1. Transactions")
 
-## Facing a problem with configuring MetaMask?[​](#facing-a-problem-with-configuring-metamask "Direct link to Facing a problem with configuring MetaMask?")
+Transactions are the fundamental operations executed on the TEN network, representing actions such as transferring value, interacting with smart contracts, or executing other network functions. Each transaction serves as a discrete unit of activity, altering the state of the network based on its payload.
 
-When using a dApp on TEN, start by checking its documentation and resources. If that doesn't help, consult the TEN docs' [troubleshooting](/docs/category/troubleshooting.md) section or seek assistance on the TEN [Discord](http://discord.gg/yQfmKeNzNd). If the issue appears to be with MetaMask, head to MetaMask's [Help Center](https://support.metamask.io/hc/en-us) to browse their forums or engage with their Support team.
+### 2. Batches[​](#2-batches "Direct link to 2. Batches")
 
-## Other wallets[​](#other-wallets "Direct link to Other wallets")
+Batches consist of multiple transactions grouped together on the TEN network, functioning similarly to blocks on the Ethereum network. By aggregating transactions into batches, the network enhances throughput and lowers latency, optimizing resource usage and improving overall efficiency.
 
-TEN currently supports MetaMask and will soon extend compatibility to all EVM-based wallets.
+### 3. Roll-ups[​](#3-roll-ups "Direct link to 3. Roll-ups")
+
+Roll-ups are a layer 2 scaling mechanism employed by the TEN network to securely aggregate and process transactions off-chain, before submitting a compressed version of these transactions to the Ethereum mainnet (Layer 1) for finalization. This approach significantly boosts throughput and reduces latency while maintaining the security guarantees of the Ethereum network.
+
+## Gateway[​](#gateway "Direct link to Gateway")
+
+The TEN Gateway is a network managed service and load balancer that routes transactions to the appropriate TEN validator nodes. It is responsible for securely encrypting and decrypting transactions, ensuring that sensitive data remains confidential throughout the transaction process. Validators interact with the Gateway to receive transactions, process them, and submit them to the Sequencer for batching and roll-up.
+
+## Node Types[​](#node-types "Direct link to Node Types")
+
+There are two types of nodes in the TEN network: Sequencers and Validators. They use the same software but have different roles and responsibilities. As a node operator you will be running a Validator node, but it is important to understand the role of Sequencers in the network.
+
+### Sequencer[​](#sequencer "Direct link to Sequencer")
+
+The TEN Sequencer is a central node that is responsible for ordering transactions, generating new batches, and creating roll-ups on the TEN network. It is the only node that can create new batches and is responsible for broadcasting these to the network, as well as submitting them to the Ethereum mainnet via roll-up.
+
+### Validator[​](#validator "Direct link to Validator")
+
+A TEN Validator is decentralized node that participates in the TEN network by processing transactions, validating transactions and batches against Ethereum L1 roll-ups, and providing data availability. The participation of multiple validators ensures the network’s security and integrity.
 
 
 ---
 
-## Running a node
+## Node Rewards
 
-> Thank you for your interest in running a node on TEN!
+> As a node operator, your participation is essential in maintaining a secure, reliable, and high-performance network. In recognition of your contributions, TEN has implemented a comprehensive reward structure to incentivize active and consistent engagement in the network’s testnet phases.
 
-# Running a node
+# Node Rewards
 
-Thank you for your interest in running a node on TEN!
+As a node operator, your participation is essential in maintaining a secure, reliable, and high-performance network. In recognition of your contributions, TEN has implemented a comprehensive reward structure to incentivize active and consistent engagement in the network’s testnet phases.
 
-Currently, the capability to run individual nodes is not available publicly. However, we're actively working on this feature and will be launching it soon.
+***
 
-If you are interested in running a TEN validator - use [the form on Coinlist](https://coinlist.co/ten-testnet) to submit your application.
+## Program Overview[​](#program-overview "Direct link to Program Overview")
 
-The deadline to apply is set for 1 March 2024.
+TEN is an encrypted Layer 2 network built on Ethereum, designed by the team behind Corda. TEN offers a highly scalable and private environment for Web3 applications,including AI, tokenizing real-world assets (RWA), enabling decentralized financial solutions (DeFi) and on-chain games.
+
+### Objective[​](#objective "Direct link to Objective")
+
+TEN’s incentivized testnet rewards participants—including node operators, developers, and users—who actively contribute to testing and improving the network. Node operators play a vital role in decentralizing TEN and ensuring robust node operations, and they are rewarded for maintaining network health, stability, and performance.
+
+***
+
+## Node Operator Rewards Structure[​](#node-operator-rewards-structure "Direct link to Node Operator Rewards Structure")
+
+TEN has allocated **22,500,000 TEN** (representing 2.25% of the total token supply) to incentivize contributions across the community, including node operations.
+
+### Rewards Overview[​](#rewards-overview "Direct link to Rewards Overview")
+
+1. **Staking Requirements**: Node operators do not need an initial stake to participate in the testnet (however, a minimum of 50,000 TEN tokens will be required for staking on Mainnet).
+2. **ETH-Based Compensation**: Node operators receive rewards paid in **ETH** to help cover hosting costs and encourage active participation.
+3. **Delegated Staking Model**: Community members can delegate their TEN tokens to node operators, broadening community involvement and fostering a more decentralized ecosystem.
+
+### Performance-Based Rewards[​](#performance-based-rewards "Direct link to Performance-Based Rewards")
+
+Performance-based rewards are structured to motivate the consistent and high-quality performance of nodes, as follows:
+
+* **Top 10% Performers**: The highest 10% of node operators, ranked by performance and uptime, will earn the top reward bracket. Top performers will receive a reward equivalent to the minimum mainnet staking requirement and will be offered priority access to participate in the mainnet launch.
+* **Remaining Participants**: Node operators outside the top 10% but in the top 20% will also receive a reward based on their contributions and performance.
+
+### Participation-Based Rewards[​](#participation-based-rewards "Direct link to Participation-Based Rewards")
+
+Node operators who meet minimum participation requirements but do not rank in the top 20% will still receive a reward. These rewards aim to foster inclusivity and recognize the contributions of all node operators.
+
+***
+
+## Testnet Phases & Participation[​](#testnet-phases--participation "Direct link to Testnet Phases & Participation")
+
+The incentivized testnet is split into three phases, each lasting approximately **6-8 weeks**, followed by a short intermission between phases. The phases are designed to test and validate different aspects of the network:
+
+1. **Phase 1**: Focus on onboarding developers and user quests aimed at network resilience.
+2. **Phase 2**: Dedicated to expanding node operations and enhancing network decentralization.
+3. **Phase 3**: Final phase with an emphasis on testing newly deployed dApps and security-focused initiatives.
+
+### Eligibility[​](#eligibility "Direct link to Eligibility")
+
+* **Application**: Node operators can apply via the [Validator Application Form](https://cform.coinlist.co/forms/56274a78-8291-4899-bee1-a68ecbc5b2b8).
+
+* **Selection**: Applications are prioritized based on node management experience and community commitment, with selected participants notified by email.
+
+  \* Jurisdictional Limitations will be applied.
+
+## Additional Information[​](#additional-information "Direct link to Additional Information")
+
+* **Updates and Notifications**: Important updates will be shared via the **TEN Discord testnet channel** and by email for selected participants.
+* **Documentation**: Technical documents and guides are available on TEN’s official documentation site, with more added throughout the testnet phases.
+
+### Reward Distribution[​](#reward-distribution "Direct link to Reward Distribution")
+
+All rewards will be distributed after the mainnet launch, following the tokenomics vesting schedule outlined in the official TEN whitepaper.
+
+***
+
+This Node Rewards program aims to build a community-driven network powered by participants' shared efforts and contributions. By rewarding commitment and performance, TEN is cultivating a stable, high-performance Layer 2 ecosystem that is decentralized, secure, and inclusive.
+
+***
+
+For further queries, please reach out via our **[Discord channel](https://discord.gg/tenprotocol)** or reach out on to **[@TENprotocol](https://twitter.com/tenprotocol)** on X.
+
+
+---
+
+## Running a TEN Validator Node on Azure
+
+> This guide provides detailed instructions to set up and manage a TEN Validator Node on Azure using Terraform and Ansible. Due to TEN’s use of SGX architecture and cloud-specific security assurances, all current deployments are limited to cloud infrastructure to mitigate risks associated with physical attacks. A proof-of-cloud assertion, provided by TEN, certifies the security and reliability of each validator node running in the cloud.
+
+# Running a TEN Validator Node on Azure
+
+This guide provides detailed instructions to set up and manage a TEN Validator Node on Azure using Terraform and Ansible. Due to TEN’s use of SGX architecture and cloud-specific security assurances, all current deployments are limited to cloud infrastructure to mitigate risks associated with physical attacks. A proof-of-cloud assertion, provided by TEN, certifies the security and reliability of each validator node running in the cloud.
+
+***
+
+## Overview[​](#overview "Direct link to Overview")
+
+The deployment process leverages **Terraform** for Azure infrastructure provisioning and **Ansible** for configuring the Validator Node. By following this guide, you’ll set up a secure, compliant environment that meets TEN’s standards for validator operations.
+
+* **Terraform**: Automates the creation of Azure resources for a TEN Validator Node.
+* **Ansible**: Configures and deploys node software on the provisioned infrastructure.
+
+***
+
+## Requirements[​](#requirements "Direct link to Requirements")
+
+Before starting, ensure the following dependencies are installed on your local machine:
+
+* [**Terraform**](https://www.terraform.io/downloads.html) (version >= 0.12)
+  <!-- -->
+  * [Terraform Installation Guide](https://learn.hashicorp.com/tutorials/terraform/install-cli)
+
+* [**Ansible**](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html)
+
+  * [Ansible Installation guide](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html)
+  * **Required Ansible Collections**: Install with:
+    <!-- -->
+    ```
+    ansible-galaxy collection install community.docker community.crypto
+    ```
+
+* [**Azure CLI**](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli): For authenticating and managing Azure resources.
+
+* [**Docker**](https://docs.docker.com/get-docker/): Required for node deployment.
+
+* [**Docker Compose**](https://docs.docker.com/compose/install/): Used for managing containerized services.
+
+* [**Git**](https://git-scm.com/downloads): For repository cloning and version control.
+
+***
+
+## Clone the TEN Validator Repository[​](#clone-the-ten-validator-repository "Direct link to Clone the TEN Validator Repository")
+
+```
+git clone https://github.com/ten-protocol/ten-validator.git
+cd ten-validator
+```
+
+## Azure Setup Instructions (Terraform)[​](#azure-setup-instructions-terraform "Direct link to Azure Setup Instructions (Terraform)")
+
+### Step 1: Authenticate and Configure Azure[​](#step-1-authenticate-and-configure-azure "Direct link to Step 1: Authenticate and Configure Azure")
+
+1. **Log into Azure**:
+   <!-- -->
+   ```
+   az login
+   ```
+2. Set Your Azure Subscription: Specify the Azure subscription for deploying the resources:
+   <!-- -->
+   ```
+   az account set --subscription <your-subscription-id>
+   ```
+
+### Step 2: Configure Terraform Variables (optional)[​](#step-2-configure-terraform-variables-optional "Direct link to Step 2: Configure Terraform Variables (optional)")
+
+```
+cp terraform.tfvars.example terraform.tfvars
+```
+
+### Step 3: Deploy the Terraform Script[​](#step-3-deploy-the-terraform-script "Direct link to Step 3: Deploy the Terraform Script")
+
+```
+terraform init
+terraform apply
+```
+
+### Step 4: Access the Validator Node (Optional)[​](#step-4-access-the-validator-node-optional "Direct link to Step 4: Access the Validator Node (Optional)")
+
+1. `chmod +x get-key.sh ./get-key.sh`
+2. `ssh -i <path-to-key> <username>@<public-ip>`
+
+## TEN Validator Setup Instructions (Ansible)[​](#ten-validator-setup-instructions-ansible "Direct link to TEN Validator Setup Instructions (Ansible)")
+
+1. Network Configuration: Node network settings are located in `ansible/files/network_vars.yml`. These settings are typically not changed and are specific to the L2 network. One will be provided by the TEN team for ITN (testnet) and another for mainnet.
+
+2. Run the Installation Script: Use Ansible to configure and deploy the TEN Validator Node:
+
+   ```
+   chmod +x install-ten.sh
+   ./install-ten.sh
+   ```
+
+   During deployment, you will be prompted to enter:
+
+   * Host ID: Public key of the validator node wallet
+
+   * Private Key: Private key of the validator node wallet
+
+   * Host Public P2P Address: Public IP or DNS of the node
+
+   * SSH Details: Username and key path (or password if applicable)
+
+   * L1 WS URL: WebSocket URL for the Layer 1 node (e.g., Infura)
+
+   * Postgres DB Host: Leave blank to provision a new database
+
+   Note: If Terraform provisioned the VM, default values are often applicable—just press Enter to accept.
+
+## Managing the Validator Node[​](#managing-the-validator-node "Direct link to Managing the Validator Node")
+
+Coming soon! (monitoring, backups, tear down, etc.)
 
 
 ---
@@ -1739,35 +1941,39 @@ contract CoinFlip {
 
 ## Features
 
-> 1. Encryption: Data Confidentiality and Computational Privacy
+> Encryption: Data Access Controls and Computational Privacy
 
 # Features
 
-### 1. **Encryption: Data Confidentiality and Computational Privacy**[​](#1-encryption-data-confidentiality-and-computational-privacy "Direct link to 1-encryption-data-confidentiality-and-computational-privacy")
+## **Encryption: Data Access Controls and Computational Privacy**[​](#encryption-data-access-controls-and-computational-privacy "Direct link to encryption-data-access-controls-and-computational-privacy")
 
-TEN leverages hardware-based [Trusted Execution Environments (TEE)](https://whitepaper.ten.xyz/obscuro-whitepaper/technical-background.html#trusted-execution-environment) to achieve data confidentiality and computational privacy.
+TEN runs the EVM inside trusted hardware known as [Trusted Execution Environments (TEEs)](https://whitepaper.ten.xyz/obscuro-whitepaper/technical-background.html#trusted-execution-environment) to achieve [decentralised data access controls](https://medium.com/obscuro-labs/web3-needs-access-control-9a80719eec4a) and computational privacy. Nobody can read the internal state of the contracts, not even node operators of the sequencer. The developer can configure who can receive and query event logs.
 
-### 2. **Scaling: Ethereum Layer 2 Rollup**[​](#2-scaling-ethereum-layer-2-rollup "Direct link to 2-scaling-ethereum-layer-2-rollup")
+## **Scaling: Ethereum Layer 2 Rollup**[​](#scaling-ethereum-layer-2-rollup "Direct link to scaling-ethereum-layer-2-rollup")
 
 Designed as a decentralized Ethereum L2 Rollup protocol, TEN enhances the scalability of the Ethereum network.
 
-### 3. **MEV-free: Prevention of Maximal Extractable Value**[​](#3-mev-free-prevention-of-maximal-extractable-value "Direct link to 3-mev-free-prevention-of-maximal-extractable-value")
+## **MEV-free: Prevention of Maximal Extractable Value**[​](#mev-free-prevention-of-maximal-extractable-value "Direct link to mev-free-prevention-of-maximal-extractable-value")
 
 TEN is designed to prevent [Maximal Extractable Value (MEV)](https://ethereum.org/en/developers/docs/mev/), ensuring fairness in transaction ordering.
 
-### 4. **RNG: Generate Random Number Securely**[​](#4-rng-generate-random-number-securely "Direct link to 4-rng-generate-random-number-securely")
+## **RNG: Secure, Free Random Number Generation**[​](#rng-secure-free-random-number-generation "Direct link to rng-secure-free-random-number-generation")
 
-TEN can generate secure random numbers without using any additional libraries or external applications. Generated random numbers are completely secure and no validator or user can peek into the generated numbers.
+TEN can generate secure random numbers without using any additional libraries or external applications. Generated random numbers are completely secure and no validator or user can peek into the generated numbers. No more calls to third-party oracles.
 
-### 5. **Great UX: Privacy Preservation**[​](#5-great-ux-privacy-preservation "Direct link to 5-great-ux-privacy-preservation")
+## \*\*Native Async Execution for Games \*\*[​](#native-async-execution-for-games- "Direct link to **Native Async Execution for Games **")
 
-TEN prioritizes privacy while maintaining a seamless user experience, allowing users to access their preferred dApps and services without additional applications or exTENsions.
+To prevent users from exploiting on-chain games, TEN has features that enable moves tobe executed separately from transactions, but in the same block. You get the same latency, but no vulnerability.
 
-### 6. **Great Developer Experience: Efficiency and Simplicity**[​](#6-great-developer-experience-efficiency-and-simplicity "Direct link to 6-great-developer-experience-efficiency-and-simplicity")
+## **Precise Timestamping**[​](#precise-timestamping "Direct link to precise-timestamping")
 
-TEN fills the gap between L2 rollups like Optimistic and ZK rollups. Leveraging confidential computing and economic incentives, it mirrors the efficiency and simplicity of Optimistic rollups. Developers can build on TEN using just Solidity, without needing new SDKs, frameworks or languages.
+Every transaction has a precise timestamp available when it has reached the sequencer. This allows you to create on-chain games that require continous flow or games where users compete on pricise timing.
 
-### 7. **High Performance: Fast Bridge**[​](#7-high-performance-fast-bridge "Direct link to 7-high-performance-fast-bridge")
+## **System Smart Contracts**[​](#system-smart-contracts "Direct link to system-smart-contracts")
+
+You can create platform level smart contracts that can drive certain behaviours e.g. a platform contract that refunds all gas costs for particular dApps or randmly rewards transactions on the network with prizes.
+
+## **High Performance: Fast Bridge**[​](#high-performance-fast-bridge "Direct link to high-performance-fast-bridge")
 
 TEN's design allows faster bridging of assets between Ethereum and TEN when compared to Optimistic rollups.
 
@@ -1784,11 +1990,71 @@ TEN's design allows faster bridging of assets between Ethereum and TEN when comp
 
 *The full Litepaper is available to view [here](https://ten.xyz/litepaper).*
 
-TEN is revolutionizing Ethereum with encrypted layer 2 solution. Just as HTTPS transformed Web 2.0, ushering in a new era of secure applications and enhanced user trust, TEN is set to redefine the Ethereum ecosystem. By introducing an encrypted Ethereum Layer 2, TEN not only amplifies transaction speed and efficiency but also fortifies it with the robust security and consensus mechanisms inherent to Ethereum.
+# Overview
 
-Serving as a cutting-edge Layer 2 blockchain solution, TEN significantly reduces transaction costs while seamlessly inheriting Ethereum's unparalleled security features. What sets TEN apart is its commitment to privacy and encryption. Every transaction input, the intricate state of smart contracts, and the entire execution process remain encrypted, ensuring utmost confidentiality. This encryption in blockchain ensures users and developers enjoy a familiar Web2 experience without compromising on privacy or functionality.
+**TEN Protocol** is a next-generation, Ethereum-compatible Layer-2 rollup that brings **programmable privacy**, **AI-native design**, and **shared encrypted state** to smart contracts. By combining **Trusted Execution Environments (TEEs)** with encrypted EVM transactions, TEN introduces a new primitive: the **confidential rollup** — enabling developers to build trustless applications with data access controls, private logic, and autonomous agents.
 
-With TEN, the possibilities for Web3 applications are boundless. From next-gen gaming platforms and advanced DeFi 2.0 systems to dark pool trading, sealed-bid auctions, confidential agreements, secure identity management, and beyond, TEN is at the forefront of a private and efficient decentralized future.
+TEN reclaims the critical Web2 feature Web3 left behind: **privacy with permissioning**. This unlocks entire categories of applications previously impossible on-chain — like private messaging, hidden game logic, confidential trading strategies, and collaborative AI agents.
+
+***
+
+## Core Technology[​](#core-technology "Direct link to Core Technology")
+
+* **Confidential Rollups**<br /><!-- -->A new rollup architecture that merges the scalability of optimistic rollups with privacy guarantees.
+
+* **Encrypted EVM**<br /><!-- -->Smart contracts execute inside TEEs, shielding logic, inputs, and state from all observers — even node operators.
+
+* **Encrypted Transactions**<br /><!-- -->Wallets encrypt transaction data before submission. Decryption occurs only under programmable rules.
+
+* **Trusted Execution Environments (TEEs)**<br /><!-- -->Hardware-isolated enclaves trusted by hyperscalers, banks, and AI leaders — now used to run encrypted smart contracts and agents on-chain.
+
+* **Smart Transparency**<br /><!-- -->Developers control what data is public, private, or time-delayed — supporting selective disclosure and compliance.
+
+***
+
+## AI-Native Architecture[​](#ai-native-architecture "Direct link to AI-Native Architecture")
+
+Every user and dApp can run a personal **autonomous AI agent** inside a TEE:
+
+* Manage assets, execute logic, interact with dApps
+* Suggest strategies or transact on behalf of users
+* Enable confidential collaboration between institutions
+
+***
+
+## Key Use Cases[​](#key-use-cases "Direct link to Key Use Cases")
+
+* **Private Gaming**<br /><!-- -->Fully on-chain hidden-state games (e.g., poker, fog-of-war) with no off-chain servers. AI agents as players, opponents, or coaches.
+
+* **Confidential DeFi**<br /><!-- -->Dark pools, private DEXs, and liquidation-resistant lending — all with hidden thresholds, encrypted order books, and tamper-proof execution.
+
+* **TEE-Stablecoins**<br /><!-- -->Reserve-backed stablecoins with provable, confidential attestation and on-chain enforcement of issuance/redeemability.
+
+* **Autonomous Agreements**<br /><!-- -->Confidential contracts (SLAs, NDAs, term sheets) enforced by oracles without revealing parties or terms.
+
+* **Agent Marketplaces**<br /><!-- -->Deploy trustless AI agents — financial bots, predictors, or assistants — with protected algorithms and private coordination.
+
+***
+
+## Developer Experience[​](#developer-experience "Direct link to Developer Experience")
+
+* Native Solidity / Hardhat / MetaMask compatibility
+* Session keys for seamless UX
+* Free, in-contract randomness (no oracles)
+* Precise timestamping & async execution
+* Native Ethereum bridge
+
+***
+
+## Data Revelation[​](#data-revelation "Direct link to Data Revelation")
+
+Confidentiality on your terms:
+
+* Programmable disclosure (time-based or conditional)
+* Full control over visibility windows
+* Optional perpetual privacy via governance
+
+***
 
 
 ---
@@ -2121,61 +2387,6 @@ This is important for situations (like the guessing game above) where the random
 
 ---
 
-## Testnet FAQ
-
-> What is the TEN testnet?
-
-# Testnet FAQ
-
-## What is the TEN testnet?[​](#what-is-the-ten-testnet "Direct link to What is the TEN testnet?")
-
-TEN is a Layer 2 built on Ethereum. Before we can go to mainnet, we need to ensure we’ve tested as thoroughly as possible several key areas of the platform.
-
-This includes:
-
-* Developer tooling and the developer experience
-* User experience and tooling, including wallets and bridges
-* Decentralization at scale, including node operation
-* Security and scalability
-* Rewards and incentives
-
-The TEN testnet is a version of TEN that rolls up to the Ethereum Sepolia testnet as opposed to Ethereum mainnet.
-
-To encourage participation at sufficiently high levels, the testnet is incentivised for developers, users and node operators.
-
-## Who is eligible?[​](#who-is-eligible "Direct link to Who is eligible?")
-
-There are no limits to the number of users. However, developers and node operators will have to go through an application process to ensure suitability. Application decision responses will be sent via email.
-
-You can apply to be a developer [here](https://ten-testnet.deform.cc/developers) and in later phases, you'll be able to apply to be a node operator.
-
-Eligibility for the TEN testnet is detailed in the “Who May Use the Services” section of the Terms and Conditions. Participation is restricted to jurisdictions where it is permitted by applicable law. To be eligible for rewards, participants must undergo KYC, KYB, and AML checks.
-
-## When is the deadline to participate?[​](#when-is-the-deadline-to-participate "Direct link to When is the deadline to participate?")
-
-Users can join at any time prior to the end of the incentivized testnet program. Developers and node operators should apply before January 1st 2024.
-
-## What are the required activities?[​](#what-are-the-required-activities "Direct link to What are the required activities?")
-
-### Users[​](#users "Direct link to Users")
-
-Users will receive points based on activities carried out on Galxe. These are based on both performance and participation.
-
-### Developers[​](#developers "Direct link to Developers")
-
-Developers will receive points based on the dApps they deploy to testnet. You must apply to be a developer and accepted in order to participate. There is a list of suggested dApps to build here.
-
-### Node operators[​](#node-operators "Direct link to Node operators")
-
-Node runners will receive points based on the following parameters: • Uptime • Query execution performance • Community engagement
-
-## What are the rewards?[​](#what-are-the-rewards "Direct link to What are the rewards?")
-
-Rewards are in the form of TEN tokens. They will be rewarded based on the amount of points you have collected as a percentage of the total points. The total amount of tokens allocated to incentivized community contributions is 2.25% of the total token supply.
-
-
----
-
 ## DApp Ideas
 
 > Below are some of the dApps we'd love to see built on TEN. Feel free to reach out on Discord if you'd like to discuss the ideas in more detail or request support.
@@ -2251,44 +2462,6 @@ Voting with hidden votes until round completes
 ### Oracles[​](#oracles "Direct link to Oracles")
 
 The old oracle model is broken: once a data feed is available to one dApp, anyone else can freeload. Private data feeds are the way forward. An oracle solution that dispenses data based on subscriptions with potential for auction mechanics fixes the problem.
-
-
----
-
-## Getting started with testnet for users
-
-> Galxe
-
-# Getting started with testnet for users
-
-## Galxe[​](#galxe "Direct link to Galxe")
-
-The main source of activities to participate as a user in testnet are on [Galxe](https://galxe.com/ten)
-
-To fully engage with the TEN testnet, you'll need:
-
-* MetaMask installed
-* Setup MetaMask to use TEN testnet
-* Testnet tokens
-
-Once you've installed MetaMask, follow the instructions below.
-
-## Setup MetaMask with TEN[​](#setup-metamask-with-ten "Direct link to Setup MetaMask with TEN")
-
-* Visit the [TEN Gateway](https://gateway.ten.xyz/) and follow the instructions. This will add the TEN testnet as a new network in MetaMask and create an authentication token.
-
-## Use TEN Gas Station[​](#use-ten-gas-station "Direct link to Use TEN Gas Station")
-
-To obtain TEN ETH directly on the TEN testnet, utilize the TEN Gas Station. Remember, Follow these steps:
-
-1. Head over to [TEN Gas Station](https://faucet.ten.xyz/).
-2. Paste your EVM wallet address into the wallet address field.
-3. Log in with your Discord and X (Twitter) accounts.
-4. Then, complete the available tasks.
-
-If your wallet balance remains unchanged, double-check your wallet configuration or refer to the [set up your wallet](/docs/getting-started/for-users/setup-you-wallet.md) page.
-
-You're now fully setup to participate. Begin on [Galxe](https://galxe.com/ten)
 
 
 ---
@@ -2797,13 +2970,13 @@ This endpoint facilitates the removal of a certain encryption token's access by 
 
 ---
 
-## Ten Faucet
+## TEN Faucet
 
-> Ten Discord Faucet
+> TEN Discord Faucet
 
-# Ten Faucet
+# TEN Faucet
 
-![Ten Discord Faucet](/assets/images/faucet.ten.xyz-b867b87d2e217d4c67df393bb160c172.jpg)
+![TEN Discord Faucet](/assets/images/faucet.ten.xyz-b867b87d2e217d4c67df393bb160c172.jpg)
 
 Using the steps provided, you can request testnet ETH from the faucet available on the TEN Gas Station.
 
@@ -3118,41 +3291,6 @@ You need to follow the following steps:
 3. Deploy your SCs into TEN using [compatible tools](/docs/tools-infrastructure/compatible-tools.md) (e.g. Truffle Suite).
 4. Invite your users to learn more about encryption!
 
-###
-
-## For Users[​](#for-users "Direct link to For Users")
-
-### Do I have to add an account through TEN Gateway each time to use the network?[​](#do-i-have-to-add-an-account-through-ten-gateway-each-time-to-use-the-network "Direct link to Do I have to add an account through TEN Gateway each time to use the network?")
-
-No, you just need to [add your account](/docs/getting-started/for-users/setup-you-wallet.md) once and the RPC will be available until you revoke access.
-
-### How do I connect to TEN from multiple devices?[​](#how-do-i-connect-to-ten-from-multiple-devices "Direct link to How do I connect to TEN from multiple devices?")
-
-Choose your preferred and most convenient method from those listed below:
-
-1. Use one RPC link you once received on all your devices.
-2. Use a different link for each individual device, reconnecting as described above.
-
-TEN supports using multiple VKs for each individual wallet, which means reconnecting from a different device won't make your previous connection obsolete, as long as you do not use the revoke function in TEN Gateway.
-
-### TEN is only available in Metamask?[​](#ten-is-only-available-in-metamask "Direct link to TEN is only available in Metamask?")
-
-No, TEN is available in any non-custodial EVM wallet that supports custom RPCs and networks, and allows you to sign transactions using the `eth_sign` function
-
-### How do I get test tokens?[​](#how-do-i-get-test-tokens "Direct link to How do I get test tokens?")
-
-The only way to get test tokens in TEN — through the faucet on our [Discord server](https://discord.gg/tVnNrQ35Ke).
-
-### Can I share my RPC link with other users?[​](#can-i-share-my-rpc-link-with-other-users "Direct link to Can I share my RPC link with other users?")
-
-You should refrain from publishing your link because if you do, it will be compromised and anyone using it will be able to access your decrypted transaction data.
-
-warning
-
-Compromising your Encryption token obtained from TEN Gateway will result in a breach of your data privacy.
-
-In case your Encryption token has been compromised, you need to revoke it using either the Gateway Widget or TEN Hosted Gateway.
-
 
 ---
 
@@ -3233,7 +3371,7 @@ You can get free testnet tokens from the [TEN Faucet](/docs/getting-started/for-
 
 4. **Sign the Transaction:** Click on the "Submit" or similar button. A Metamask window will pop up asking you to sign a transaction authorizing your guess on the blockchain. Carefully review the transaction details and gas fees before confirming.
 
-5. **Wait for the Result:** The transaction will be processed on the blockchain, and it may take a few seconds to minutes for the result to be confirmed. You can see the status/result of your guess on the message log below the guessing field.
+5. **Wait for the Result:** The transaction will be processed on TEN, and it may take a few seconds for the result to be confirmed. You can see the status/result of your guess on the message log below the guessing field.
 
 6. **Inspect the Transaction (Optional):** You can explore the details of your guess transaction on the block explorer - [Tenscan](https://tenscan.io/).This will allow you to see the status, gas usage, and other details associated with your guess.
 

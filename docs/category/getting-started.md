@@ -1,3 +1,3 @@
-## [🗃️<!-- --> <!-- -->For Users](/docs/category/for-users.md)
+## [🗃️<!-- --> <!-- -->For Developers](/docs/category/for-developers.md)
 
-[2 items](/docs/category/for-users.md)
+[3 items](/docs/category/for-developers.md)

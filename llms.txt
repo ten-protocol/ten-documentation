@@ -86,14 +86,6 @@ Cryptography
 
 - [For Developers](/docs/category/for-developers-1.md)
 
-#### for-users
-
-- [For Users](/docs/category/for-users.md)
-
-#### for-users-1
-
-- [For Users](/docs/category/for-users-1.md)
-
 #### for-validators
 
 - [For Validators](/docs/category/for-validators.md)
@@ -147,14 +139,12 @@ Cryptography
 - [Explore Contracts in TEN](/docs/getting-started/for-developers/explore-contracts-in-ten.md): TEN offers a distinct environment for smart contract development so you'll need to consider how to design your dApps slightly differently from how you would a transparent dApp. This guide explains these differences:
 - [Set Up Dev Environment](/docs/getting-started/for-developers/setup-dev-env.md): 1. Wallet Setup & Configuration
 
-#### for-users
-
-- [Get Tokens](/docs/getting-started/for-users/get-tokens.md): Use TEN Gas Station
-- [Set up your wallet](/docs/getting-started/for-users/setup-you-wallet.md): TEN is fully compatible with Ethereum and seamlessly integrates with MetaMask. If you're unfamiliar with MetaMask or wallets, start here.
-
 #### for-validators
 
-- [Running a node](/docs/getting-started/for-validators/running-a-node.md): Thank you for your interest in running a node on TEN!
+- [Node Architecture](/docs/getting-started/for-validators/node-architecture.md): SGX Enclave and Trusted Execution Environment (TEE)
+- [Node Overview](/docs/getting-started/for-validators/overview.md): Running a node on the TEN network involves participating in the network’s transaction processing, batching, and roll-up mechanisms. As a node operator, you will play a critical role in maintaining the network’s security, scalability, and efficiency. Understanding the flow of transactions and the mechanics of batches and roll-ups is essential for effectively running a node and contributing to the network’s operation.
+- [Node Rewards](/docs/getting-started/for-validators/rewards.md): As a node operator, your participation is essential in maintaining a secure, reliable, and high-performance network. In recognition of your contributions, TEN has implemented a comprehensive reward structure to incentivize active and consistent engagement in the network’s testnet phases.
+- [Running a TEN Validator Node on Azure](/docs/getting-started/for-validators/running-a-node.md): This guide provides detailed instructions to set up and manage a TEN Validator Node on Azure using Terraform and Ansible. Due to TEN’s use of SGX architecture and cloud-specific security assurances, all current deployments are limited to cloud infrastructure to mitigate risks associated with physical attacks. A proof-of-cloud assertion, provided by TEN, certifies the security and reliability of each validator node running in the cloud.
 
 ### governance
 
@@ -177,9 +167,9 @@ Migrating to TEN enables your dApp to leverage "Programmable Encryption". Below 
 
 #### features
 
-1. Encryption: Data Confidentiality and Computational Privacy
+Encryption: Data Access Controls and Computational Privacy
 
-- [Features](/docs/introduction/features.md): 1. Encryption: Data Confidentiality and Computational Privacy
+- [Features](/docs/introduction/features.md): Encryption: Data Access Controls and Computational Privacy
 
 #### overview
 
@@ -211,19 +201,9 @@ Using Randomness on TEN
 ### testnet
 
 
-#### faq
-
-What is the TEN testnet?
-
-- [Testnet FAQ](/docs/testnet/faq.md): What is the TEN testnet?
-
 #### for-developers
 
 - [DApp Ideas](/docs/testnet/for-developers/dapp-ideas.md): Below are some of the dApps we'd love to see built on TEN. Feel free to reach out on Discord if you'd like to discuss the ideas in more detail or request support.
-
-#### for-users
-
-- [Getting started with testnet for users](/docs/testnet/for-users/participate.md): Galxe
 
 #### for-validators
 
@@ -255,9 +235,9 @@ The TEN Gateway is a critical application that facilitates communication between
 
 #### obscuro-faucet
 
-Ten Discord Faucet
+TEN Discord Faucet
 
-- [Ten Faucet](/docs/tools-infrastructure/obscuro-faucet.md): Ten Discord Faucet
+- [TEN Faucet](/docs/tools-infrastructure/obscuro-faucet.md): TEN Discord Faucet
 
 #### programmable-gateway
 

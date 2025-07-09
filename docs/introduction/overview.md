@@ -4,8 +4,68 @@
 
 *The full Litepaper is available to view [here](https://ten.xyz/litepaper).*
 
-TEN is revolutionizing Ethereum with encrypted layer 2 solution. Just as HTTPS transformed Web 2.0, ushering in a new era of secure applications and enhanced user trust, TEN is set to redefine the Ethereum ecosystem. By introducing an encrypted Ethereum Layer 2, TEN not only amplifies transaction speed and efficiency but also fortifies it with the robust security and consensus mechanisms inherent to Ethereum.
+# Overview
 
-Serving as a cutting-edge Layer 2 blockchain solution, TEN significantly reduces transaction costs while seamlessly inheriting Ethereum's unparalleled security features. What sets TEN apart is its commitment to privacy and encryption. Every transaction input, the intricate state of smart contracts, and the entire execution process remain encrypted, ensuring utmost confidentiality. This encryption in blockchain ensures users and developers enjoy a familiar Web2 experience without compromising on privacy or functionality.
+**TEN Protocol** is a next-generation, Ethereum-compatible Layer-2 rollup that brings **programmable privacy**, **AI-native design**, and **shared encrypted state** to smart contracts. By combining **Trusted Execution Environments (TEEs)** with encrypted EVM transactions, TEN introduces a new primitive: the **confidential rollup** — enabling developers to build trustless applications with data access controls, private logic, and autonomous agents.
 
-With TEN, the possibilities for Web3 applications are boundless. From next-gen gaming platforms and advanced DeFi 2.0 systems to dark pool trading, sealed-bid auctions, confidential agreements, secure identity management, and beyond, TEN is at the forefront of a private and efficient decentralized future.
+TEN reclaims the critical Web2 feature Web3 left behind: **privacy with permissioning**. This unlocks entire categories of applications previously impossible on-chain — like private messaging, hidden game logic, confidential trading strategies, and collaborative AI agents.
+
+***
+
+## Core Technology[​](#core-technology "Direct link to Core Technology")
+
+* **Confidential Rollups**<br /><!-- -->A new rollup architecture that merges the scalability of optimistic rollups with privacy guarantees.
+
+* **Encrypted EVM**<br /><!-- -->Smart contracts execute inside TEEs, shielding logic, inputs, and state from all observers — even node operators.
+
+* **Encrypted Transactions**<br /><!-- -->Wallets encrypt transaction data before submission. Decryption occurs only under programmable rules.
+
+* **Trusted Execution Environments (TEEs)**<br /><!-- -->Hardware-isolated enclaves trusted by hyperscalers, banks, and AI leaders — now used to run encrypted smart contracts and agents on-chain.
+
+* **Smart Transparency**<br /><!-- -->Developers control what data is public, private, or time-delayed — supporting selective disclosure and compliance.
+
+***
+
+## AI-Native Architecture[​](#ai-native-architecture "Direct link to AI-Native Architecture")
+
+Every user and dApp can run a personal **autonomous AI agent** inside a TEE:
+
+* Manage assets, execute logic, interact with dApps
+* Suggest strategies or transact on behalf of users
+* Enable confidential collaboration between institutions
+
+***
+
+## Key Use Cases[​](#key-use-cases "Direct link to Key Use Cases")
+
+* **Private Gaming**<br /><!-- -->Fully on-chain hidden-state games (e.g., poker, fog-of-war) with no off-chain servers. AI agents as players, opponents, or coaches.
+
+* **Confidential DeFi**<br /><!-- -->Dark pools, private DEXs, and liquidation-resistant lending — all with hidden thresholds, encrypted order books, and tamper-proof execution.
+
+* **TEE-Stablecoins**<br /><!-- -->Reserve-backed stablecoins with provable, confidential attestation and on-chain enforcement of issuance/redeemability.
+
+* **Autonomous Agreements**<br /><!-- -->Confidential contracts (SLAs, NDAs, term sheets) enforced by oracles without revealing parties or terms.
+
+* **Agent Marketplaces**<br /><!-- -->Deploy trustless AI agents — financial bots, predictors, or assistants — with protected algorithms and private coordination.
+
+***
+
+## Developer Experience[​](#developer-experience "Direct link to Developer Experience")
+
+* Native Solidity / Hardhat / MetaMask compatibility
+* Session keys for seamless UX
+* Free, in-contract randomness (no oracles)
+* Precise timestamping & async execution
+* Native Ethereum bridge
+
+***
+
+## Data Revelation[​](#data-revelation "Direct link to Data Revelation")
+
+Confidentiality on your terms:
+
+* Programmable disclosure (time-based or conditional)
+* Full control over visibility windows
+* Optional perpetual privacy via governance
+
+***

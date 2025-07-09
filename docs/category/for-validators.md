@@ -1,3 +1,3 @@
-## [📄️<!-- --> <!-- -->Running a node](/docs/getting-started/for-validators/running-a-node.md)
+## [📄️<!-- --> <!-- -->Node Overview](/docs/getting-started/for-validators/overview.md)
 
-[Thank you for your interest in running a node on TEN!](/docs/getting-started/for-validators/running-a-node.md)
+[Running a node on the TEN network involves participating in the network’s transaction processing, batching, and roll-up mechanisms. As a node operator, you will play a critical role in maintaining the network’s security, scalability, and efficiency. Understanding the flow of transactions and the mechanics of batches and roll-ups is essential for effectively running a node and contributing to the network’s operation.](/docs/getting-started/for-validators/overview.md)

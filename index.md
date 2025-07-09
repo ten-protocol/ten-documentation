@@ -2,4 +2,4 @@
 
 ### Encryption
 
-The first Ethereum L2 to bring confidential EVM smart contracts (with shared state). You can now build an AMM without MEV.
+The first L2 to encrypt Ethereum. TEN allows you to build contracts with data access controls, just like Web2. Suddenly anything becomes possible.

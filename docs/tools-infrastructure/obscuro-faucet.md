@@ -1,6 +1,6 @@
-# Ten Faucet
+# TEN Faucet
 
-![Ten Discord Faucet](/assets/images/faucet.ten.xyz-b867b87d2e217d4c67df393bb160c172.jpg)
+![TEN Discord Faucet](/assets/images/faucet.ten.xyz-b867b87d2e217d4c67df393bb160c172.jpg)
 
 Using the steps provided, you can request testnet ETH from the faucet available on the TEN Gas Station.
 

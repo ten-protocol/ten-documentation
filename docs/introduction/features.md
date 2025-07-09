@@ -1,29 +1,33 @@
 # Features
 
-### 1. **Encryption: Data Confidentiality and Computational Privacy**[​](#1-encryption-data-confidentiality-and-computational-privacy "Direct link to 1-encryption-data-confidentiality-and-computational-privacy")
+## **Encryption: Data Access Controls and Computational Privacy**[​](#encryption-data-access-controls-and-computational-privacy "Direct link to encryption-data-access-controls-and-computational-privacy")
 
-TEN leverages hardware-based [Trusted Execution Environments (TEE)](https://whitepaper.ten.xyz/obscuro-whitepaper/technical-background.html#trusted-execution-environment) to achieve data confidentiality and computational privacy.
+TEN runs the EVM inside trusted hardware known as [Trusted Execution Environments (TEEs)](https://whitepaper.ten.xyz/obscuro-whitepaper/technical-background.html#trusted-execution-environment) to achieve [decentralised data access controls](https://medium.com/obscuro-labs/web3-needs-access-control-9a80719eec4a) and computational privacy. Nobody can read the internal state of the contracts, not even node operators of the sequencer. The developer can configure who can receive and query event logs.
 
-### 2. **Scaling: Ethereum Layer 2 Rollup**[​](#2-scaling-ethereum-layer-2-rollup "Direct link to 2-scaling-ethereum-layer-2-rollup")
+## **Scaling: Ethereum Layer 2 Rollup**[​](#scaling-ethereum-layer-2-rollup "Direct link to scaling-ethereum-layer-2-rollup")
 
 Designed as a decentralized Ethereum L2 Rollup protocol, TEN enhances the scalability of the Ethereum network.
 
-### 3. **MEV-free: Prevention of Maximal Extractable Value**[​](#3-mev-free-prevention-of-maximal-extractable-value "Direct link to 3-mev-free-prevention-of-maximal-extractable-value")
+## **MEV-free: Prevention of Maximal Extractable Value**[​](#mev-free-prevention-of-maximal-extractable-value "Direct link to mev-free-prevention-of-maximal-extractable-value")
 
 TEN is designed to prevent [Maximal Extractable Value (MEV)](https://ethereum.org/en/developers/docs/mev/), ensuring fairness in transaction ordering.
 
-### 4. **RNG: Generate Random Number Securely**[​](#4-rng-generate-random-number-securely "Direct link to 4-rng-generate-random-number-securely")
+## **RNG: Secure, Free Random Number Generation**[​](#rng-secure-free-random-number-generation "Direct link to rng-secure-free-random-number-generation")
 
-TEN can generate secure random numbers without using any additional libraries or external applications. Generated random numbers are completely secure and no validator or user can peek into the generated numbers.
+TEN can generate secure random numbers without using any additional libraries or external applications. Generated random numbers are completely secure and no validator or user can peek into the generated numbers. No more calls to third-party oracles.
 
-### 5. **Great UX: Privacy Preservation**[​](#5-great-ux-privacy-preservation "Direct link to 5-great-ux-privacy-preservation")
+## \*\*Native Async Execution for Games \*\*[​](#native-async-execution-for-games- "Direct link to **Native Async Execution for Games **")
 
-TEN prioritizes privacy while maintaining a seamless user experience, allowing users to access their preferred dApps and services without additional applications or exTENsions.
+To prevent users from exploiting on-chain games, TEN has features that enable moves tobe executed separately from transactions, but in the same block. You get the same latency, but no vulnerability.
 
-### 6. **Great Developer Experience: Efficiency and Simplicity**[​](#6-great-developer-experience-efficiency-and-simplicity "Direct link to 6-great-developer-experience-efficiency-and-simplicity")
+## **Precise Timestamping**[​](#precise-timestamping "Direct link to precise-timestamping")
 
-TEN fills the gap between L2 rollups like Optimistic and ZK rollups. Leveraging confidential computing and economic incentives, it mirrors the efficiency and simplicity of Optimistic rollups. Developers can build on TEN using just Solidity, without needing new SDKs, frameworks or languages.
+Every transaction has a precise timestamp available when it has reached the sequencer. This allows you to create on-chain games that require continous flow or games where users compete on pricise timing.
 
-### 7. **High Performance: Fast Bridge**[​](#7-high-performance-fast-bridge "Direct link to 7-high-performance-fast-bridge")
+## **System Smart Contracts**[​](#system-smart-contracts "Direct link to system-smart-contracts")
+
+You can create platform level smart contracts that can drive certain behaviours e.g. a platform contract that refunds all gas costs for particular dApps or randmly rewards transactions on the network with prizes.
+
+## **High Performance: Fast Bridge**[​](#high-performance-fast-bridge "Direct link to high-performance-fast-bridge")
 
 TEN's design allows faster bridging of assets between Ethereum and TEN when compared to Optimistic rollups.
