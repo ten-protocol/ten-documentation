@@ -31,7 +31,7 @@ You can get free testnet tokens from the [TEN Faucet](/docs/getting-started/for-
 
 4. **Sign the Transaction:** Click on the "Submit" or similar button. A Metamask window will pop up asking you to sign a transaction authorizing your guess on the blockchain. Carefully review the transaction details and gas fees before confirming.
 
-5. **Wait for the Result:** The transaction will be processed on the blockchain, and it may take a few seconds to minutes for the result to be confirmed. You can see the status/result of your guess on the message log below the guessing field.
+5. **Wait for the Result:** The transaction will be processed on TEN, and it may take a few seconds for the result to be confirmed. You can see the status/result of your guess on the message log below the guessing field.
 
 6. **Inspect the Transaction (Optional):** You can explore the details of your guess transaction on the block explorer - [Tenscan](https://tenscan.io/).This will allow you to see the status, gas usage, and other details associated with your guess.
 

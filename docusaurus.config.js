@@ -9,7 +9,7 @@ const darkTheme = themes.dracula;
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Ten Documentation',
+  title: 'TEN Documentation',
   tagline: 'Encrypting Ethereum',
   favicon: 'img/favicon.ico',
 
@@ -91,7 +91,7 @@ const config = {
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
         logo: {
-          alt: 'Ten Logo',
+          alt: 'TEN Logo',
           src: 'img/logo.svg',
         },
         items: [

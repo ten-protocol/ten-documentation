@@ -18,7 +18,7 @@ function HomepageHeader() {
           <Link
             className="button button--secondary button--lg"
             to="/docs/tutorials-examples/guessing-game">
-            Try Ten 🔐
+            Try TEN 🔐
           </Link>
           <Link
             className="button button--secondary button--lg"
@@ -35,8 +35,8 @@ export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`Ten Layer 2 | Developer Docs`}
-      description="Developer documentation for Ten">
+      title={`TEN Layer 2 | Developer Docs`}
+      description="Developer documentation for TEN">
       <HomepageHeader />
       <main>
         <HomepageFeatures />
