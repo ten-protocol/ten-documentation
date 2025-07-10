@@ -110,6 +110,10 @@ Cryptography
 
 - [Standards & Primitives](/docs/category/standards--primitives.md)
 
+#### ten-mica-whitepaper
+
+- [TEN MiCA Whitepaper](/docs/category/ten-mica-whitepaper.md)
+
 #### ten-network-association
 
 - [TEN Network Association](/docs/category/ten-network-association.md)
@@ -148,6 +152,10 @@ Cryptography
 
 ### governance
 
+
+#### ten-mica-whitepaper
+
+- [TEN MiCA Whitepaper](/docs/governance/ten-mica-whitepaper/mica-whitepaper-intro.md): Under the EU’s Markets in Crypto-Assets Regulation (MiCAR) (EU 2023/1114), all crypto-assets offered to the public or admitted to trading must have a corresponding Whitepaper. These documents outline key details such as asset features, risks, rights, and the underlying technology.
 
 #### ten-network-association
 
