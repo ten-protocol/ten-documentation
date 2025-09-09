@@ -1,6 +1,6 @@
 {
-  "label": "For Developers",
-  "position": 2,
+  "label": "Troubleshooting",
+  "position":9,
   "link": {
     "type": "generated-index"
   }

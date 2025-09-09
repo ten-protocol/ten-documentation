@@ -1,7 +1,6 @@
 ---
 sidebar_position: 1
 ---
-# Overview
 
 ![TEN in Web3](../assets/overview-banner.png)
 
@@ -31,45 +30,6 @@ TEN reclaims the critical Web2 feature Web3 left behind: **privacy with permissi
 
 - **Smart Transparency**  
   Developers control what data is public, private, or time-delayed — supporting selective disclosure and compliance.
-
----
-
-## AI-Native Architecture
-
-Every user and dApp can run a personal **autonomous AI agent** inside a TEE:
-
-- Manage assets, execute logic, interact with dApps
-- Suggest strategies or transact on behalf of users
-- Enable confidential collaboration between institutions
-
----
-
-## Key Use Cases
-
-- **Private Gaming**  
-  Fully on-chain hidden-state games (e.g., poker, fog-of-war) with no off-chain servers. AI agents as players, opponents, or coaches.
-
-- **Confidential DeFi**  
-  Dark pools, private DEXs, and liquidation-resistant lending — all with hidden thresholds, encrypted order books, and tamper-proof execution.
-
-- **TEE-Stablecoins**  
-  Reserve-backed stablecoins with provable, confidential attestation and on-chain enforcement of issuance/redeemability.
-
-- **Autonomous Agreements**  
-  Confidential contracts (SLAs, NDAs, term sheets) enforced by oracles without revealing parties or terms.
-
-- **Agent Marketplaces**  
-  Deploy trustless AI agents — financial bots, predictors, or assistants — with protected algorithms and private coordination.
-
----
-
-## Developer Experience
-
-- Native Solidity / Hardhat / MetaMask compatibility  
-- Session keys for seamless UX  
-- Free, in-contract randomness (no oracles)  
-- Precise timestamping & async execution  
-- Native Ethereum bridge  
 
 ---
 
