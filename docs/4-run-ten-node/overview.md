@@ -6,7 +6,7 @@ Running a node on the TEN network involves participating in the network’s tran
 
 
 ## Transaction Flow (TX)
-![TEN Validator Flow](../../assets/ten-validator-flow.png)
+![TEN Validator Flow](../assets/ten-validator-flow.png)
 
 ### 1. Transactions
 Transactions are the fundamental operations executed on the TEN network, representing actions such as transferring value, interacting with smart contracts, or executing other network functions. Each transaction serves as a discrete unit of activity, altering the state of the network based on its payload.

@@ -3,7 +3,7 @@ sidebar_position: 1
 ---
 # Guessing Game
 
-![Guessing Game](../assets/guessing-game.png)
+![Guessing Game](../../assets/guessing-game.png)
 
 The TEN Guessing Game is a simple yet powerful demonstration of TEN's unique encryption capabilities. Players attempt to guess a secret number, with each guess requiring a token fee. The game showcases the challenges of maintaining secrecy in transparent ecosystems like Ethereum and how TEN addresses these challenges.
 

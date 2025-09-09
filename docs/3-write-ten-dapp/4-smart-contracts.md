@@ -1,4 +1,8 @@
-## Writing Smart Contracts for TEN
+---
+sidebar_position: 4
+---
+
+# Writing Smart Contracts for TEN
 
 TEN executes smart contracts within the EVM similarly to Ethereum, so you can reuse your existing code. 
 However, the execution and the internal state are hidden from everyone, including node operators and the sequencer.

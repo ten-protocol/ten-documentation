@@ -10,22 +10,22 @@ The process is incredibly simple, follow the steps listed below so that we can f
 1. Join our [Discord server](https://discord.gg/tVnNrQ35Ke).
 2. Find [support tickets](https://discord.com/channels/916052669955727371/1148647792290562080) in the channel list 
 
-![Bug Reports-1](../assets/bug-reports-1.jpg)
+![Bug Reports-1](../../assets/bug-reports-1.jpg)
 
 3. Select the appropriate ticket: *"Bug Report"*
 
-![Bug Reports-2](../assets/bug-reports-2.jpg)
+![Bug Reports-2](../../assets/bug-reports-2.jpg)
 
 4. Fill the form
 
-![Bug Reports-3](../assets/bug-reports-3.jpg)
+![Bug Reports-3](../../assets/bug-reports-3.jpg)
 
 5. If necessary - provide screenshots in the ticket that was just opened for you 🙂
 
 <details>
   <summary>GIF Guide</summary>
   
-  ![Bug Reports-gif](../assets/bug-reports-gif.gif)
+  ![Bug Reports-gif](../../assets/bug-reports-gif.gif)
   
 </details>
 

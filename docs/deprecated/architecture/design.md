@@ -5,7 +5,7 @@ sidebar_position: 1
 
 TEN is architected as an L2 protocol, leveraging the rollup pattern to store transaction data on the L1 chain. While most rollup implementations aim for scalability, TEN's primary objective is confidentiality. The rollups encapsulate the entire encrypted transaction data.
 
-![L1-L2 Interaction](../assets/l1-l2-interaction.png)
+![L1-L2 Interaction](../../assets/l1-l2-interaction.png)
 
 ## L1 Network
 

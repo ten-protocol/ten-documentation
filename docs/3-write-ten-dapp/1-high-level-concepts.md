@@ -2,6 +2,8 @@
 sidebar_position: 1
 ---
 
+# High Level Concepts
+
 TEN Protocol is fully **Ethereum-compatible**, meaning you can use all your familiar development tools; Solidity, Hardhat, Foundry, MetaMask, and Remix, without any changes. The key difference is that TEN adds powerful privacy and confidentiality features on top of the standard EVM functionality.
 
 Below are the core concepts that make TEN unique while maintaining complete compatibility with existing Ethereum tooling and workflows.
@@ -18,7 +20,10 @@ Unlike Ethereum where all contract state is publicly visible, TEN provides **gen
 
 TEN introduces **Smart Transparency**—a paradigm where smart contracts enforce rules of data access, not just computation. This provides fine-grained control over who can see what data and when, including programmable disclosure, conditional data access, and event visibility rules.
 
-## "Personal" Data
+## TEN Gateway
+The TEN Gateway securely routes encrypted transactions between users and validator nodes, ensuring data confidentiality throughout the transaction process.
+
+## Personal Data
 
 TEN enables true **personal data** management on-chain by ensuring that sensitive user information remains encrypted and accessible only to authorized parties. This supports applications like private messaging, confidential medical records, and identity verification systems while maintaining compliance with data protection regulations.
 

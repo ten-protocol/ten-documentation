@@ -1,7 +1,7 @@
 ---
-sidebar_position: 1
+sidebar_position: 2
 ---
-# Set Up Dev Environment
+# Set Up Development Environment
 
 ## 1. Wallet Setup & Configuration
 

@@ -2,9 +2,7 @@
 sidebar_position: 1
 ---
 
-# Introduction
-
-## What is TEN Protocol?
+# What is TEN Protocol?
 
 TEN is a next-generation Ethereum Layer 2 rollup protocol that introduces data confidentiality, computational privacy, and resistance to Maximal Extractable Value (MEV) by leveraging hardware-based Trusted Execution Environments (TEEs). TEN represents a major step forward in decentralized system design by reintroducing **data access controls** — a foundational feature of Web2 that Web3 largely abandoned in favor of radical transparency.
 
@@ -62,8 +60,3 @@ TEN's confidential rollup architecture enables previously impossible on-chain ap
 - [High-Level Explanation](https://medium.com/obscuro-labs/ten-in-a-nutshell-for-devs-874666910f65)
 - [iGaming Features](https://medium.com/@tudor.malene/the-ideal-gaming-chain-bb5674202ec2)
 
----
-
-## Next Steps
-
-Ready to explore TEN Protocol? Check out our [Getting Started](/docs/getting-started) guide to begin building confidential applications, or dive into the [Architecture](/docs/architecture) section to understand the technical foundations of confidential rollups.

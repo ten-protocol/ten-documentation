@@ -8,7 +8,7 @@ The TEN network leverages Intel Software Guard Extensions (SGX) enclaves to crea
 
 ## Node Composition
 
-![TEN Validator Composition](../../assets/ten-validator-composition.png)
+![TEN Validator Composition](../assets/ten-validator-composition.png)
 
 The TEN Validator is composed of the following components:
 

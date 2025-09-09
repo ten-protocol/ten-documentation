@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # Tenscan
 
-![TEN Block Explorer](../assets/obscuroscan.png)
+![TEN Block Explorer](../../assets/obscuroscan.png)
 
 [TenScan](https://tenscan.io) is a blockchain explorer for the TEN Testnet - TEN’s equivalent of Etherscan. Tenscan allows you to view the latest rollups and transactions on the Testnet, as well as search for historical rollups and transactions. Its functionality will be expanded over time.
 
