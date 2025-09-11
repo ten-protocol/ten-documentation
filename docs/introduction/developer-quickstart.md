@@ -311,7 +311,7 @@ Note that it can be used for any dApp that requires a no-click UX.
 Before the user can start playing, the game must create the SK and ask the user to move some funds to that address.
 The funds will be used to pay for moves.
 
-- Call the RPC `eth_getStorageAt` with address `0x0000000000000000000000000000000000000003` (CreateSessionKeyCQMethod) - this will return the hex-encoded address of the SK.
+- Call the RPC `eth_getStorageAt` with address `0x0000000000000000000000000000000000000003` - this will return the hex-encoded address of the SK. The dApp needs to store this address for future use.
 - Create a normal transaction that transfers some ETH to the SK. The amount depends on how many "moves" the user is prepared to prepay for.
 - Ask the user to sign this transaction with their normal wallet, and submit it to the network using the library of your choice.
 - Once the receipt is received, the session key is automatically active and ready to use.
@@ -319,7 +319,7 @@ The funds will be used to pay for moves.
 #### The game
 
 After creation of the SK, create a transaction for each move, but don't ask the user to sign them.
-Instead, submit them to the network unsigned using the RPC `eth_getStorageAt` with address `0x0000000000000000000000000000000000000005` (SendUnsignedTxCQMethod) and the following parameters:
+Instead, submit them to the network unsigned using the RPC `eth_getStorageAt` with address `0x0000000000000000000000000000000000000005` and the following parameters:
 
 ```json
 {
@@ -337,7 +337,7 @@ If the SK runs out of balance, you have to ask the user to move more funds to th
 
 TEN provides additional RPC endpoints for managing session keys:
 
-- `eth_getStorageAt` with address `0x0000000000000000000000000000000000000004` (DeleteSessionKeyCQMethod) - Permanently removes the session key. This requires the following parameters:
+- `eth_getStorageAt` with address `0x0000000000000000000000000000000000000004` - Permanently removes the session key. This requires the following parameters:
 
 ```json
 {
@@ -356,7 +356,7 @@ The session key management endpoints can be called through both HTTP API and RPC
 When a game ends, you have to move the remaining funds back to the main address and delete the session key.
 
 - Create a transaction that moves the funds back from the SK to the main address. Submit it unsigned using the SendUnsignedTxCQMethod, because the funds are controlled by the SK.
-- Call `eth_getStorageAt` with address `0x0000000000000000000000000000000000000004` (DeleteSessionKeyCQMethod) to permanently remove the session key.
+- Call `eth_getStorageAt` with address `0x0000000000000000000000000000000000000004` to permanently remove the session key.
 
 ### Example Implementation
 
@@ -435,14 +435,6 @@ async function deleteSessionKey(sessionKeyAddress) {
   return data.result; // Returns 0x01 for success, 0x00 for failure
 }
 ```
-
-### Key Benefits
-
-- **No Activation/Deactivation**: Session keys are implicitly active when created and remain active until deleted
-- **Multiple Session Keys**: Users can have up to 100 session keys (one per dApp)
-- **Simplified API**: Uses `eth_getStorageAt` with custom addresses instead of separate RPC methods
-- **Secure Management**: Session keys are managed by TEEs, eliminating the risk of losing private keys
-- **Base64 Transaction Encoding**: Unsigned transactions must be base64 encoded when sent via SendUnsignedTxCQMethod
 
 ## Game Security
 
