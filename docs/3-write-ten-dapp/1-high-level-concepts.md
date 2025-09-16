@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# High Level Concepts
+# High level concepts
 
 TEN Protocol is fully **Ethereum-compatible**, meaning you can use all your familiar development tools; Solidity, Hardhat, Foundry, MetaMask, and Remix, without any changes. The key difference is that TEN adds powerful privacy and confidentiality features on top of the standard EVM functionality.
 

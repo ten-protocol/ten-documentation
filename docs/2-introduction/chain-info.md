@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-# TEN Protocol Chain Information
+# Chain Information
 
 ## TEN Public RPC Endpoints TODO
 
