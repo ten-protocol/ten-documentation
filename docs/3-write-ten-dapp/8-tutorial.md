@@ -22,14 +22,16 @@ We'll create a **Flash Arbitrage Trading System** that:
 
 ## Step 1: Project Setup
 
+Note you will need to use npm v22.19.0 to create a hardhat project. 
+
 Create a new Hardhat project:
 
 ```bash
 mkdir ten-hft-dapp
 cd ten-hft-dapp
 npm init -y
-npm install --save-dev hardhat @nomiclabs/hardhat-ethers ethers
-npx hardhat
+npm install --save-dev hardhat
+npx hardhat --init
 ```
 
 Configure Hardhat for TEN Testnet in `hardhat.config.js`:
