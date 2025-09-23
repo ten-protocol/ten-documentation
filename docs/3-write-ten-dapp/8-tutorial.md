@@ -24,28 +24,28 @@ We'll create a **Flash Arbitrage Trading System** that:
 
 Note you will need to use npm v22.19.0 to create a hardhat project. 
 
-Create a new Hardhat project:
+Create a new Hardhat project - make sure to use Hardhat v3 and select Mocha and Ethers when asked which type of project you'd like to initialise. 
 
 ```bash
 mkdir ten-hft-dapp
 cd ten-hft-dapp
-npm init -y
-npm install --save-dev hardhat
 npx hardhat --init
 ```
 
-Configure Hardhat for TEN Testnet in `hardhat.config.js`:
+You can test the project is inialised by running `npx hardhat test`. 
 
-```javascript
-require('@nomiclabs/hardhat-ethers');
+Configure Hardhat for TEN Testnet in `hardhat.config.ts`:
+
+```typescript
 
 module.exports = {
-  solidity: "0.8.19",
   networks: {
+    ..., 
     ten: {
-      url: "https://testnet.ten.xyz/v1/",
+      type: "http",
+      url: "https://testnet-rpc.ten.xyz/v1/?token=${YOUR_GATEWAY_TOKEN}$",
       accounts: [process.env.PRIVATE_KEY],
-      chainId: 443
+      chainId: 8443
     }
   }
 };
@@ -121,11 +121,9 @@ contract FlashArbitrageTrader {
     ) external onlyOwner returns (uint256) {
         require(tokenA != tokenB, "Invalid token pair");
         
-        // Calculate potential profit
         uint256 priceDiff = priceA > priceB ? priceA - priceB : priceB - priceA;
         require(priceDiff >= MIN_PROFIT_THRESHOLD, "Insufficient profit margin");
         
-        // Use TEN's precise timestamping
         uint256 currentTimestamp = block.timestamp;
         
         uint256 opportunityId = nextOpportunityId++;
@@ -156,7 +154,6 @@ contract FlashArbitrageTrader {
         require(block.timestamp <= opportunity.expiryTime, "Opportunity expired");
         require(amount > 0, "Invalid amount");
         
-        // Precise timing check - critical for HFT
         uint256 executionTimestamp = block.timestamp;
         require(
             executionTimestamp >= opportunity.timestamp,
@@ -231,39 +228,38 @@ contract FlashArbitrageTrader {
 
 ## Step 3: Deployment Script
 
-Create `scripts/deploy.js`:
+Create `scripts/deploy.ts`:
 
-```javascript
-const { ethers } = require("hardhat");
+```typescript
+// scripts/deploy.ts
+import { ethers } from "ethers"
+import hre from "hardhat"
 
 async function main() {
-  console.log("Deploying FlashArbitrageTrader to TEN Testnet...");
-  
-  const FlashArbitrageTrader = await ethers.getContractFactory("FlashArbitrageTrader");
-  const trader = await FlashArbitrageTrader.deploy();
-  
-  await trader.deployed();
-  
-  console.log("FlashArbitrageTrader deployed to:", trader.address);
-  
-  // Verify deployment with timestamp check
-  const currentTimestamp = await trader.getCurrentTimestamp();
-  console.log("Contract timestamp:", currentTimestamp.toString());
+  console.log("Deploying FlashArbitrageTrader to TEN Testnet...")
+
+  // ethers v6 + hardhat-ethers v4 style
+  const trader = await ethers.deployContract("FlashArbitrageTrader")
+  await trader.waitForDeployment()
+
+  console.log("FlashArbitrageTrader deployed to:", await trader.getAddress())
+
+  const currentTimestamp = await trader.getCurrentTimestamp()
+  console.log("Contract timestamp:", currentTimestamp.toString())
 }
 
-main()
-  .then(() => process.exit(0))
-  .catch((error) => {
-    console.error(error);
-    process.exit(1);
-  });
+main().catch((err) => {
+  console.error(err)
+  process.exit(1)
+})
+
 ```
 
 ## Step 4: Testing and Deployment
 
 Deploy the contract:
 ```bash
-npx hardhat run scripts/deploy.js --network ten
+npx hardhat run scripts/deploy.ts --network ten
 ```
 
 Test precise timestamping:
@@ -291,13 +287,6 @@ console.log('Timestamp difference:', timestamp2 - timestamp1);
 - Time-bounded trading opportunities
 - Automatic expiration of stale opportunities
 - Latency measurement and optimization
-
-## Advanced Enhancements
-
-1. **MEV Protection**: TEN's encrypted mempool prevents front-running
-2. **Session Keys**: Enable rapid trading without constant wallet confirmations
-3. **Random Number Integration**: Use TEN's native randomness for fair opportunity distribution
-4. **Cross-Chain Integration**: Monitor opportunities across multiple chains
 
 ## Conclusion
 
