@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # Chain Information
 
-## TEN Public RPC Endpoints TODO
+## TEN Public RPC Endpoints
 
 :::caution
 - TEN Protocol RPC endpoints support standard Ethereum JSON-RPC methods with additional privacy features
@@ -17,7 +17,7 @@ This section provides an overview of the available public RPC endpoints for TEN 
 | Name | RPC Url(s) | Chain ID | Block explorer | Underlying chain | Gateway |Bridge | Faucet |
 |------|------------|----------|----------------|------------------|---------|---------|---------|
 | TEN Mainnet | `https://rpc.ten.xyz/` | `443` | [TENscan](https://tenscan.io/) | Ethereum | [Gateway](https://gateway.ten.xyz/) |[Bridge]( https://bridge.ten.xyz/) | [Faucet](https://faucet.ten.xyz/) 
-| TEN Sepolia Testnet | `https://testnet.ten.xyz/` | `8443` | [TENscan](https://testnet.tenscan.io/) | Ethereum Sepolia | [Gateway](https://testnet.ten.xyz/)  |[Bridge](https://testnet.bridge.ten.xyz/) | [Faucet](https://testnet.faucet.ten.xyz/) |
+| TEN Sepolia Testnet | `https://testnet.ten.xyz/` | `8443` | [TENscan](https://testnet.tenscan.io/) | Ethereum Sepolia | [Gateway](https://testnet.ten.xyz/)  |[Bridge](https://testnet.bridge.ten.xyz/) | [Faucet](https://faucet.ten.xyz/) |
 
 :::info More RPC endpoints
 Additional TEN Protocol RPC endpoints and infrastructure providers will be listed here as they become available.

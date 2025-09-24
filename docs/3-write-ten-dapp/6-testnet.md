@@ -12,7 +12,7 @@ TEN Sepolia is our testnet that replicates the capabilities of the TEN Mainnet n
 
 ![TEN Hosted Gateway](../assets/gateway.png)
 
-Visit the TEN testnet gateway [here](https://gateway.ten.xyz/). Follow the onscreen instructions to authenticate with the hosted gateway that allows you to interact with the testnet. 
+Visit the TEN testnet gateway [here](https://testnet.ten.xyz/). Follow the onscreen instructions to authenticate with the hosted gateway that allows you to interact with the testnet. 
 
 ## TEN Sepolia Faucet
 
@@ -22,14 +22,13 @@ Using the steps provided, you can request testnet ETH from the faucet available 
 
 ## **Requesting Testnet ETH**
 1. Make a note of your EVM wallet address or copy it to your clipboard.
-2. Head over to [TEN Gas Station](https://faucet.ten.xyz/).
+2. Head over to [TEN Gas Station](https://testnet-faucet.ten.xyz/).
 3. Paste your EVM wallet address into the wallet address field.
 4. Log in with your Discord and X (Twitter) accounts.
 5. Then, complete the available tasks.
 
-If your wallet balance remains unchanged, double-check your wallet configuration or refer to the [set up your wallet](/docs/getting-started/for-users/setup-you-wallet) page.
 
 ## TENscan 
 
-You can use the TEN block explorer to view transaction data occuring on the testnet [here](https://tenscan.io/)
+You can use the TEN block explorer to view transaction data occuring on the testnet [here](https://testnet.tenscan.io/)
 
