@@ -14,9 +14,10 @@ sidebar_position: 2
 
 This section provides an overview of the available public RPC endpoints for TEN Protocol networks and necessary details to interact with them.
 
-| Name | RPC Url(s) | Chain ID | Block explorer | Underlying chain | Tech stack | Faucet |
-|------|------------|----------|----------------|------------------|------------|---------|
-| TEN Sepolia Testnet | `https://testnet.ten.xyz/v1/` | `8443` | [TENscan](https://tenscan.io/) | Ethereum Sepolia | Confidential Rollup (TEE) | [Faucet](https://faucet.ten.xyz/) |
+| Name | RPC Url(s) | Chain ID | Block explorer | Underlying chain | Gateway |Bridge | Faucet |
+|------|------------|----------|----------------|------------------|---------|---------|---------|
+| TEN Mainnet | `https://rpc.ten.xyz/` | `443` | [TENscan](https://tenscan.io/) | Ethereum | [Gateway](https://gateway.ten.xyz/) |[Bridge]( https://bridge.ten.xyz/) | [Faucet](https://faucet.ten.xyz/) 
+| TEN Sepolia Testnet | `https://testnet.ten.xyz/` | `8443` | [TENscan](https://testnet.tenscan.io/) | Ethereum Sepolia | [Gateway](https://testnet.ten.xyz/)  |[Bridge](https://testnet.bridge.ten.xyz/) | [Faucet](https://testnet.faucet.ten.xyz/) |
 
 :::info More RPC endpoints
 Additional TEN Protocol RPC endpoints and infrastructure providers will be listed here as they become available.
@@ -62,7 +63,7 @@ To add TEN Sepolia Testnet to your wallet, use the following configuration:
 
 ```json
 {
-  "chainId": "0x1BB",
+  "chainId": "0x20FB",
   "chainName": "TEN Sepolia Testnet",
   "rpcUrls": ["https://testnet.ten.xyz/v1/"],
   "nativeCurrency": {
@@ -70,6 +71,6 @@ To add TEN Sepolia Testnet to your wallet, use the following configuration:
     "symbol": "ETH",
     "decimals": 18
   },
-  "blockExplorerUrls": ["https://tenscan.io/"]
+  "blockExplorerUrls": ["https://testnet.tenscan.io/"]
 }
 ```
