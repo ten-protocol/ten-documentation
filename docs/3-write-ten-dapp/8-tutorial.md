@@ -24,7 +24,7 @@ We'll create a **Flash Arbitrage Trading System** that:
 
 Note you will need to use npm v22.19.0 to create a hardhat project. 
 
-Create a new Hardhat project - make sure to use Hardhat v3 and select Mocha and Ethers when asked which type of project you'd like to initialise. 
+Create a new Hardhat project - make sure to use Hardhat v3 and select Runner and Viem when asked which type of project you'd like to initialise. 
 
 ```bash
 mkdir ten-hft-dapp
@@ -228,48 +228,32 @@ contract FlashArbitrageTrader {
 
 ## Step 3: Deployment Script
 
-Create `scripts/deploy.ts`:
+We will make use of Hardhat Ignition to deploy the smart contracts. 
+
+Create `ingnition/modules/FlashArbitrageTrader.ts`:
 
 ```typescript
-// scripts/deploy.ts
-import { ethers } from "ethers"
-import hre from "hardhat"
+import { buildModule } from "@nomicfoundation/hardhat-ignition/modules";
 
-async function main() {
-  console.log("Deploying FlashArbitrageTrader to TEN Testnet...")
-
-  // ethers v6 + hardhat-ethers v4 style
-  const trader = await ethers.deployContract("FlashArbitrageTrader")
-  await trader.waitForDeployment()
-
-  console.log("FlashArbitrageTrader deployed to:", await trader.getAddress())
-
-  const currentTimestamp = await trader.getCurrentTimestamp()
-  console.log("Contract timestamp:", currentTimestamp.toString())
-}
-
-main().catch((err) => {
-  console.error(err)
-  process.exit(1)
+export default buildModule("FlashArbitrageTraderModule", (m) => {
+  const trader = m.contract("FlashArbitrageTrader")
+  return { trader }
 })
 
-```
 
+```
 ## Step 4: Testing and Deployment
 
 Deploy the contract:
 ```bash
-npx hardhat run scripts/deploy.ts --network ten
+npx hardhat ignition deploy ignition/modules/FlashArbitrageTraderScript.ts --network ten
 ```
 
-Test precise timestamping:
-```javascript
-// Verify timestamp precision
-const timestamp1 = await contract.getCurrentTimestamp();
-await new Promise(resolve => setTimeout(resolve, 1000));
-const timestamp2 = await contract.getCurrentTimestamp();
-console.log('Timestamp difference:', timestamp2 - timestamp1);
-```
+You can make function calls on the contract in `FlashArbitrageTraderScript.ts` 
+
+More information on how to implement ignition modules can be found [here](https://hardhat.org/ignition/docs/guides/creating-modules)
+
+Test TODO
 
 ## Key Features Demonstrated
 
