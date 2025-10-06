@@ -4,24 +4,29 @@ sidebar_position: 1
 
 # High level concepts
 
-TEN Protocol is fully **Ethereum-compatible**, meaning you can use all your familiar development tools; Solidity, Hardhat, Foundry, MetaMask, and Remix, without any changes. The key difference is that TEN adds powerful privacy and confidentiality features on top of the standard EVM functionality.
-
 Below are the core concepts that make TEN unique while maintaining complete compatibility with existing Ethereum tooling and workflows.
 
 ## End-to-End Encryption
 
-TEN implements comprehensive end-to-end encryption through its **Encrypted EVM** architecture. All smart contract execution occurs inside **Trusted Execution Environments (TEEs)**, ensuring that transaction data, contract logic, inputs, and state remain encrypted and private from all external observers—including node operators and validators.
+All contract execution runs inside TEEs; inputs, state, and (optionally) logs can be private. See the [Overview](/docs/1-overview/Overview) for architecture and threat model.
 
 ## Smart Contract Execution with Hidden State
 
-Unlike Ethereum where all contract state is publicly visible, TEN provides **genuine private variables** through its encrypted execution environment. TEN disables `getStorageAt` and ensures private variables are truly private, only accessible through authorized functions that developers define.
+TEN disables `getStorageAt` by default and ensures private variables are truly private, only accessible through authorized functions that developers define.
 
 ## Data Access Control Primitives
 
-TEN introduces **Smart Transparency**—a paradigm where smart contracts enforce rules of data access, not just computation. This provides fine-grained control over who can see what data and when, including programmable disclosure, conditional data access, and event visibility rules.
+TEN introduces **[Smart Transparency](https://medium.com/obscuro-labs/web3-needs-access-control-9a80719eec4a)** — a paradigm where smart contracts enforce rules of data access, not just computation. This provides fine-grained control over who can see what data and when, including programmable disclosure, conditional data access, and event visibility rules.
 
 ## TEN Gateway
-The TEN Gateway securely routes encrypted transactions between users and validator nodes, ensuring data confidentiality throughout the transaction process.
+Web service running in TEEs that provides the secure edge for dApps and user wallets:
+
+- Routes encrypted transactions between clients and validator/sequencer nodes
+- Manages Viewing Keys on behalf of users for authenticated private view calls
+- Manages Session Keys to enable no-click UX under developer-defined policies
+- Caches encrypted metadata and frequently accessed data for performance and availability
+
+See [TEN Gateway](/docs/3-write-ten-dapp/6-testnet#ten-gateway).
 
 ## Personal Data
 
@@ -29,7 +34,7 @@ TEN enables true **personal data** management on-chain by ensuring that sensitiv
 
 ## Free Native On-Chain Randomness
 
-TEN provides **secure, immediate, and free randomness** without oracles or external dependencies. Random numbers are generated within secure enclaves, ensuring unpredictability while eliminating the delays, complexity, and fees associated with traditional oracle-based solutions.
+Secure, immediate, and free randomness via enclave-backed `block.prevrandao`—no oracles needed.
 
 ```solidity
 function getRandomNumber() public view returns (uint256) {

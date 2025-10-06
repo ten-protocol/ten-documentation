@@ -12,6 +12,7 @@ Migrating to TEN enables your dApp to leverage "Programmable Encryption". Below 
 - Add data protection logic to your view functions (if applicable).
 - Configure visibility rules for event logs and internal storage.
 - Add the TEN onboarding widget to your JavaScript UI.
+- Add features that make use of secure, verifiable randomness using `block.prevrandao` or precision timestamping 
 
 ## 1. Configuring Hardhat
 
@@ -44,7 +45,7 @@ module.exports = {
     },
     ten: {
         url: "https://testnet.ten.xyz/v1/",
-        chainId: 443,
+        chainId: 8443,
         accounts: ["your-private-key"],
     },
   },

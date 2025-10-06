@@ -14,7 +14,7 @@ If you analyze any successful digital application — Netflix, WhatsApp, Spotify
 
 ## TEN's Solution: Smart Transparency
 
-TEN introduces **Smart Transparency** — a paradigm where smart contracts not only enforce rules of computation, but also enforce rules of data access. By integrating programmable encryption, TEEs, and an Ethereum-compatible execution environment, TEN enables encrypted, autonomous, and composable smart contracts that preserve privacy without sacrificing decentralization or composability.
+TEN introduces **Smart Transparency** — a paradigm where smart contracts not only enforce rules of computation, but also enforce rules of data access. By integrating [programmable encryption](https://medium.com/obscuro-labs/web3-needs-access-control-9a80719eec4a), TEEs, and an Ethereum-compatible execution environment, TEN enables encrypted, autonomous, and composable smart contracts that preserve privacy without sacrificing decentralization or composability.
 
 ### Core Architecture
 
@@ -22,7 +22,7 @@ TEN introduces **Smart Transparency** — a paradigm where smart contracts not o
 
 **Trustless Design**: TEN leverages TEEs for privacy but not for integrity. If a TEE is compromised or a manufacturer behaves maliciously, the system gracefully degrades into a transparent blockchain, preserving ledger integrity while forfeiting privacy.
 
-**Ethereum Foundation**: TEN uses Ethereum as a base layer for security and data availability while enabling lower transaction costs similar to other Layer 2 networks, with quick finality synchronized to L1 block cadence.
+**Ethereum Layer 1**: TEN uses Ethereum as a base layer for security and data availability while enabling lower transaction costs similar to other Layer 2 networks, with quick finality synchronized to L1 block cadence.
 
 ## Key Differentiators from Transparent Chains
 
@@ -33,6 +33,8 @@ TEN introduces **Smart Transparency** — a paradigm where smart contracts not o
 | **Smart Contract State** | Fully visible | Encrypted with selective disclosure |
 | **Transaction Privacy** | Public by default | Private by default |
 | **Compliance** | Difficult | Time-delayed revelation for deterrence |
+| **Account-based smart contract execution** | Account model with public state and calls | Account model, EVM-compatible, encrypted state and calls |
+| **Decentralised** | Decentralizsed consensus | Sequencer and decentralised validators |
 
 ## Addressing Key Challenges
 
