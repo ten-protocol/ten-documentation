@@ -10,6 +10,8 @@ Below are the core concepts that make TEN unique while maintaining complete comp
 
 All contract execution runs inside TEEs; inputs, state, and (optionally) logs can be private. See the [Overview](/docs/1-overview/Overview) for architecture and threat model.
 
+Clients establish HTTPS connections that terminate inside TEEs via the TEN Gateway, preventing plaintext exposure on intermediaries; smart contracts then execute entirely within the enclave boundary, and contract state plus sensitive metadata are stored encrypted at rest, with read access enforced through Viewing Keys and policy logic.
+
 ## Smart Contract Execution with Hidden State
 
 TEN disables `getStorageAt` by default and ensures private variables are truly private, only accessible through authorized functions that developers define.
@@ -46,12 +48,43 @@ function getRandomNumber() public view returns (uint256) {
 
 Every transaction on TEN receives a **precise timestamp** when it reaches the sequencer, enabling applications that require exact timing information such as real-time games, auction systems, and time-sensitive financial instruments.
 
+An example of how this works can be found in the [TEN Aviator](https://github.com/ten-protocol/ten-aviator/tree/1aa6454da5c52586eaccc9cf3d957b9c5d5f2f6d) game that utilises real-time game state tracking. 
+
+```solidity
+function checkGameEnd() external onlyOwner {
+        if (block.timestamp >= gameStartTime + gameDuration) {
+            endGame();
+        }
+    }
+```
+
 ## Native Commit-Reveal (Required by Many Games)
 
 TEN eliminates the need for traditional commit-reveal schemes through its **native async execution** and **on-block-end callbacks**. This provides the same security benefits without the complexity, latency, and cost of separate commit and reveal transactions, enabling seamless gaming experiences.
 
+TEN proviudes seure entropy that is generated within the TEE environment using hardware-based random number generation, ensuring that random values cannot be predicted or manipulated by node operators or external parties.
+
+```solidity
+function _resetSecretNumber() private {
+   uint256 randomNumber = block.prevrandao;
+   secretNumber = (randomNumber % MAX_GUESS) + 1;
+}
+```
+
+On Ethereum mainnet, `block.prevrandao` must be used with care. It has some important caveats:
+- The same random value is provided to every transaction executing in the same block.
+- The value is known at the time the transactions are being ordered into the block, meaning MEV bots can manipulate outcomes.
+
+The same code on TEN does not expose those attack vectors. It should be noted that:
+- A fresh, uncorrelated key is generated for each transaction.
+- The value cannot be seen outside of the executing code, secure enclave hardware means even node operators can't access it.
+- Outcomes cannot be known until the block is published (which cannot be undone), removing the threat of MEV exploits.
+
+
 ## Native Session Keys
 
 TEN provides **native session key** support managed by TEEs, eliminating the need for proxy contracts while enabling seamless user experiences. Users can play games or interact with dApps without signing every transaction, while developers benefit from simple integration through standard RPC endpoints.
+
+The management of these session keys is provided by the [ten-kit](https://github.com/ten-protocol/ten-kit/tree/2c4265bdb2832249af8c9ec21c4b60d02eb8dd3a?tab=readme-ov-file#advanced-example-with-session-keys) library that provdes the React components and hooks needed as well as wallet connection and privacy-preserving transactions. 
 
 ---
