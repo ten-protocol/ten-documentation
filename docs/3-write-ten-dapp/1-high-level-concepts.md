@@ -8,13 +8,15 @@ Below are the core concepts that make TEN unique while maintaining complete comp
 
 ## End-to-End Encryption
 
-All contract execution runs inside TEEs; inputs, state, and (optionally) logs can be private. See the [Overview](/docs/1-overview/Overview) for architecture and threat model.
+All contract execution runs inside TEEs; inputs, state, and (optionally) logs can be private. See the [Overview](../1-overview/overview.md) for architecture and threat model.
 
 Clients establish HTTPS connections that terminate inside TEEs via the TEN Gateway, preventing plaintext exposure on intermediaries; smart contracts then execute entirely within the enclave boundary, and contract state plus sensitive metadata are stored encrypted at rest, with read access enforced through Viewing Keys and policy logic.
 
 ## Smart Contract Execution with Hidden State
 
 TEN disables `getStorageAt` by default and ensures private variables are truly private, only accessible through authorized functions that developers define.
+ 
+See [Smart Contracts](./4-smart-contracts.md) for more information.
 
 ## Data Access Control Primitives
 
@@ -28,7 +30,7 @@ Web service running in TEEs that provides the secure edge for dApps and user wal
 - Manages Session Keys to enable no-click UX under developer-defined policies
 - Caches encrypted metadata and frequently accessed data for performance and availability
 
-See [TEN Gateway](/docs/3-write-ten-dapp/6-testnet#ten-gateway).
+See [TEN Gateway](./9-testnet.md#ten-gateway) for more information.
 
 ## Personal Data
 
@@ -80,11 +82,15 @@ The same code on TEN does not expose those attack vectors. It should be noted th
 - The value cannot be seen outside of the executing code, secure enclave hardware means even node operators can't access it.
 - Outcomes cannot be known until the block is published (which cannot be undone), removing the threat of MEV exploits.
 
+See [Secure Entropy](./7-secure-entropy.md) for more information.
+
 
 ## Native Session Keys
 
 TEN provides **native session key** support managed by TEEs, eliminating the need for proxy contracts while enabling seamless user experiences. Users can play games or interact with dApps without signing every transaction, while developers benefit from simple integration through standard RPC endpoints.
 
 The management of these session keys is provided by the [ten-kit](https://github.com/ten-protocol/ten-kit/tree/2c4265bdb2832249af8c9ec21c4b60d02eb8dd3a?tab=readme-ov-file#advanced-example-with-session-keys) library that provdes the React components and hooks needed as well as wallet connection and privacy-preserving transactions. 
+
+See [Session Keys](./6-session-keys.md) for more information.
 
 ---

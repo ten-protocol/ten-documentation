@@ -34,7 +34,7 @@ TEN introduces **Smart Transparency** — a paradigm where smart contracts not o
 | **Transaction Privacy** | Public by default | Private by default |
 | **Compliance** | Difficult | Time-delayed revelation for deterrence |
 | **Account-based smart contract execution** | Account model with public state and calls | Account model, EVM-compatible, encrypted state and calls |
-| **Decentralised** | Decentralizsed consensus | Sequencer and decentralised validators |
+| **Decentralised** | Decentralised consensus | Sequencer and decentralised validators |
 
 ## Addressing Key Challenges
 
