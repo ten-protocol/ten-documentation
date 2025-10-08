@@ -1,7 +1,7 @@
 ---
 sidebar_position: 6
 ---
-# Account Abstraction - Native Session Keys
+# Account Abstraction
 
 
 The key feature of ["Account Abstraction"](https://medium.com/p/2e85bde4c54d) (EIP-4337) is "Session keys"(SK) through a proxy smart contract.
