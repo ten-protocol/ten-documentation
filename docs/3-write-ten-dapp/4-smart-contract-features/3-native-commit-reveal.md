@@ -24,42 +24,42 @@ The best solution is to decouple the move from the execution without increasing 
 This way, the side-channel attacks are no longer possible because the move is not executed immediately.
 To avoid increasing the latency, the move must be executed in the same block as the "commit" transaction.
 
-*The TEN platform provides a way to register a callback to be executed at the end of the current block.*
+**The TEN platform provides a way to register a callback to be executed at the end of the current block.**
 
-Note that contracts can define the handleRefund function, which will be called with value equal to what is left from the gas processing paid for.
-This is called with enough gas to save locally how much should be refunded to whoever paid for the callback.
+### How it works
 
-See below a simple implementation of the coin flip game using the TEN platform:
+TEN provides a "System Contract" (a contract deployed and known by the platform.) 
+You can get the address of the system contract for our testnet [here](https://sepolia.tenscan.io/resources/verified-data) - "Ten Callbacks".
+
+The interface for registering the callback is: [IPublicCallbacks](https://github.com/ten-protocol/go-ten/blob/main/contracts/src/system/interfaces/IPublicCallbacks.sol).
+
+### Example
+
+See below a secure implementation of the coin flip game using the callback:
 
 ```solidity
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
 // this interface is known by the TEN system contract
-interface TenCallbacks {
-    function register(bytes calldata) external payable returns (uint256);
-}
-
-interface Refunds {
-    function handleRefund(uint256 callbackId) external payable;
+interface IPublicCallbacks {
+    function register(bytes calldata callback) external payable returns (uint256);
 }
 
 contract CoinFlip {
     // Event to emit the result of the coin flip
     event CoinFlipResult(address indexed player, bool didWin, uint256 randomNumber);
 
-    private TenCallbacks tenCallbacks;
+    private IPublicCallbacks tenCallbacks;
     mapping(uint256 callbackId => address player) public callbackToPlayer;
     mapping(address player => uint256 refundAmount) public playerToRefundAmount;
-
-
 
     modifier onlyTenSystemCall() { 
         require(msg.sender == address(tenCallbacks));
         _;
     }
 
-    // you have to pass in the address of the callbacks contract
+    // you have to pass in the address of the system contract
     constructor(address _tenCallbacksAddress) {
         tenCallbacks = TenCallbacks(_tenCallbacksAddress);
     }
@@ -75,6 +75,7 @@ contract CoinFlip {
         // Encode the function we want to be called by the TEN system contract.
         bytes memory callbackTargetInfo = abi.encodeWithSelector(this.doFlipCoin.selector, msg.sender, msg.value - etherGasForCoinFlip, isHeads);
 
+        // Commit the move
         tenCallbacks.register{value: etherGasForCoinFlip}(callbackTargetInfo);
     }
 
@@ -97,21 +98,13 @@ contract CoinFlip {
     }
 
     function getRandomNumber() internal view returns (uint256) {
-        return block.prevrandao;
+        // see native entropy
     }
 
-    function handleRefund(uint256 callbackId) external payable {
-        address player = callbackToPlayer[callbackId];
-        playerToRefundAmount[player] += msg.value;
-    }
-
-    function claimRefund() external {
-        uint256 refundAmount = playerToRefundAmount[msg.sender];
-        require(refundAmount > 0, "No refunds to claim");
-        playerToRefundAmount[msg.sender] = 0;
-        (bool success, ) = payable(msg.sender).call{value: refundAmount}("");
-        require(success, "Transfer failed");
-    }
- 
 }
 ```
+
+Notice how we split the logic in two. The first part is the "commit" part, which is executed by the user.
+The second part is the "reveal" part, which is executed only by the TEN platform.
+
+*Note that you have to enforce the second function to be called only by the TEN system contract.*

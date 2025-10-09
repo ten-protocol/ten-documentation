@@ -16,20 +16,23 @@ To achieve this, we had to:
 2. Disable the `getStorageAt` method, so now contracts can have secrets (as long as the `private` state variables are not exposed via public view functions). This prevents anyone with RPC access to the node from reading the data.
 3. Authenticate "view function calls" so that the smart contract knows who is calling the view function. Without this feature there is no "Data Access **Control**", because the dApp developer can't write access control logic. 
 4. Event logs are another way to expose data from a contract to the outside world. A practical platform needs a way to configure who can read the various event logs.
-5. Access to "Transaction Receipts", which contain the logs and the status of the transaction, must also be controlled. 
+5. Control access to the "Transaction Receipts", which contain the logs and status of the transaction. 
 
 ## Data Access Control Rules
 
 Here, we'll list the platform rules. The examples below will showcase how exactly to use these rules in practice.
 
 - Any contract can be configured to be "transparent" or "private". By default, it is "private", which means the internal storage is not accessible. "Transparent" contracts behave exactly like Ethereum.
-- Any RPC call accessing data like: "eth_call", "eth_estimateGas", "eth_getTransactionReceipt", "eth_logs", must be signed by a viewing key (VK). The VK itself must be signed by the main account. (Note that this is behind the scenes.)
-- Event log visibility can be configured per event. For each event log, the developer can specify which fields can access it. The fields are the three indexed fields (topics) of the event log, and the sender of the transaction. This only applies if the field is an EOA ("Externally owned Account"). The event log can also be configured to be "public".
+- Any RPC call accessing data like: `eth_call`, `eth_estimateGas`, `eth_getTransactionReceipt`, `eth_logs`, must be signed by a [viewing key (VK)](./4-smart-contracts.md). The VK itself must be signed by the main account. (Note that this is behind the scenes.)
+- Event log visibility is configurable. Each event log can be visible to one or multiple of the topics (indexed fields), and the sender of the transaction, only if the topic is the `address` of an "Externally owned Account" (EOA). The event log can also be configured to be "public" - visible to everyone.
 - When there is no configuration, the default event log visibility is:
-  - Rule 1: Event logs that contain EOAs as indexed fields (topics) are only visible to those EOAs.
+  - Rule 1: Event logs that contain EOAs as topics are only visible to those EOAs.
   - Rule 2: Event logs that don't contain any EOA are visible to everyone.
-- As a general rule, transaction receipts can be queried by anyone who can access an event log emitted by that transaction plus the sender of the transaction. Also, by everyone if the transaction calls a "transparent" contract.
-- "eth_getStorageAt" can be called on "transparent" contracts.
+- As a general rule, transaction receipts are visible to:
+  - anyone who can access at least one event log emitted by that transaction,
+  - the sender of the transaction, and
+  - everyone, if the transaction called a transparent contract.
+- `eth_getStorageAt` can be called on "transparent" contracts.
 
 
 ## Data Access Control Example
@@ -116,7 +119,7 @@ The key line is: ``require(tx.origin == account, "Not authorized!");``, which en
 
 **When deployed on TEN, this code guarantees that all users can only access their own values, and nobody can read the `_storedValues`.**
 
-On Ethereum, the `tx.origin` is not authenticated, so the check above is not effective. Also, `getStorageAt` is available.
+On Ethereum, the `tx.origin` is not authenticated, so the check above is not effective and `eth_getStorageAt` is available.
 
 
 ### Step 4: Emitting Events - Default Visibility
@@ -159,8 +162,8 @@ In Ethereum, everyone can query and subscribe to these events. If this was possi
 
 Notice how in this version, we have no configuration for event log visibility, so we are relying on the default rules:
 
-Rule 1: Event logs that contain ("Externally owned Account") EOAs as indexed fields (topics) are only visible to those EOAs.
-Rule 2: Event logs that don't contain any EOA are visible to everyone.
+- Rule 1: Event logs that contain ("Externally owned Account") EOAs as indexed fields (topics) are only visible to those EOAs.
+- Rule 2: Event logs that don't contain any EOA are visible to everyone.
 
 In our case, the default rules ensure that:
 - `DataChanged` is visible only to the address that is storing the value.
@@ -239,7 +242,7 @@ contract StorageExample is ContractTransparencyConfig {
 
 #### Explanation
 
-The `ContractTransparencyConfig` interface is known by the TEN platform.
+The [`ContractTransparencyConfig`](https://github.com/ten-protocol/go-ten/blob/main/contracts/src/system/config/IContractTransparencyConfig.sol) interface is known by the TEN platform.
 When a contract is deployed, the platform will call the `visibilityRules` function, and store the `VisibilityConfig`.
 
 For each event type, you can configure which fields can access it.
