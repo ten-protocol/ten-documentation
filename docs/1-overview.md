@@ -1,8 +1,10 @@
 ---
-sidebar_position: 1
+sidebar_label: Overview
+title: Overview
+sidebar_position: 0
 ---
 
-![TEN in Web3](../assets/overview-banner.png)
+![TEN in Web3](./assets/overview-banner.png)
 
 _The full Litepaper is available to view [here](https://ten.xyz/litepaper)._
  
