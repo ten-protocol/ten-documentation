@@ -3,8 +3,6 @@ sidebar_position: 8
 ---
 # Cross-chain bridging
 
-TODO Stefan to review
-
 The TEN Bridge project aims to facilitate the seamless transfer of assets between the Ethereum blockchain and the TEN blockchain. This documentation provides an overview of the project, its purpose, supported tokens, and usage instructions.
 
 ## Purpose

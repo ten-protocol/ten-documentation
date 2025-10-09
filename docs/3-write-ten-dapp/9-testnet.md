@@ -4,8 +4,6 @@ sidebar_position: 9
 
 # Testnet
 
-**TODO** Update with new sepolia links after mainnet deployment
-
 TEN Sepolia is our testnet that replicates the capabilities of the TEN Mainnet network. Linked to the Sepolia testnet, you can authenticate with the testnet TEN gateway, use the TEN faucet, and develop and deploy dApps for testing. 
 
 ## TEN Gateway

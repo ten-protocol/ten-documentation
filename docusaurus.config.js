@@ -102,18 +102,6 @@ const config = {
             label: 'Documentation',
           },
           {to: 'https://medium.com/obscuro-labs', label: 'Blog', position: 'left'},
-          {
-            href: '/llms.txt',
-            label: 'llms.txt',
-            position: 'right',
-            target: '_blank',
-          },
-          {
-            href: '/llms-full.txt',
-            label: 'llms-full.txt',
-            position: 'right',
-            target: '_blank',
-          },
         ],
       },
       footer: {

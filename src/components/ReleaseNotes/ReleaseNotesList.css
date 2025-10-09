@@ -1,0 +1,15 @@
+/* Keep styles minimal to respect Docusaurus theme */
+.release-notes {
+  width: 100%;
+}
+
+.release .card__header h3 {
+  margin: 0;
+}
+
+.release .card__footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+

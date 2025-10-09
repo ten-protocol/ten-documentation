@@ -32,11 +32,12 @@ export default function FooterWrapper(props) {
 
   return (
     <>
-      <MendableFloatingButton 
+      // this doesnt work so ive disabled it
+      {/* <MendableFloatingButton 
         anon_key={customFields.mendableAnonKey}
         icon={icon}
         floatingButtonStyle={floatingButtonStyle}
-      />
+      /> */}
       <Footer {...props} />
     </>
   );

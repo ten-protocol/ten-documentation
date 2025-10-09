@@ -2,7 +2,7 @@
 sidebar_position: 3
 ---
 
-# Migrate your dApp to TEN
+# Network Configuration 
 
 Migrating to TEN enables your dApp to leverage "Programmable Encryption". Below are steps to help you transition smoothly.
 

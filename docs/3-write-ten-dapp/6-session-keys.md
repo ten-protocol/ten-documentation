@@ -46,7 +46,7 @@ As a game developer, you are responsible to keep track of the balance of the SK.
 If the SK runs out of balance, you have to ask the user to move more funds to the SK.
 
 
-### Managing Session Keys @TODO Ziga to update
+### Managing Session Keys
 
 TEN provides additional RPC endpoints for managing session keys:
 

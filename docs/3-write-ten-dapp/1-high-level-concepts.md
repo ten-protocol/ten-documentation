@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# High level concepts
+# High Level Concepts
 
 Below are the core concepts that make TEN unique while maintaining complete compatibility with existing Ethereum tooling and workflows.
 
