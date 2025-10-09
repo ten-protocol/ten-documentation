@@ -14,6 +14,10 @@ To start building on TEN, you first need to set up and configure your wallet wit
    - Learn more about the [TEN Gateway](/docs/tools-infrastructure/hosted-gateway).
 3. **Acquire Testnet ETH Tokens**: To perform transactions, you'll need testnet ETH tokens. Refer to our [Getting tokens](/docs/getting-started/for-users/get-tokens).
 
+These wallets are confirmed to work smoothly with the gateway:
+- Metamask
+- Rabbit Wallet
+
 ## 2. Setting Up the Environment
 
 Once your wallet is ready, you can proceed with the development and deployment of your smart contracts.

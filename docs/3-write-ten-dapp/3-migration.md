@@ -41,7 +41,7 @@ module.exports = {
   solidity: "0.8.10",
   networks: {
     hardhat: {
-        // Configuration for the Hardhat Network
+    // Configuration for the Hardhat Network
     },
     ten: {
         url: "https://testnet.ten.xyz/v1/",
