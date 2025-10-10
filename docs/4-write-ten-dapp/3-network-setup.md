@@ -2,9 +2,9 @@
 sidebar_position: 3
 ---
 
-# Network Configuration 
+# Network Configuration
 
-Migrating to TEN enables your dApp to leverage "Programmable Encryption". Below are steps to help you transition smoothly.
+Migrating to TEN enables your dApp to leverage “programmable encryption.” Below are steps to help you transition smoothly.
 
 ### Key Migration Steps
 
@@ -12,7 +12,7 @@ Migrating to TEN enables your dApp to leverage "Programmable Encryption". Below 
 - Add data protection logic to your view functions (if applicable).
 - Configure visibility rules for event logs and internal storage.
 - Add the TEN onboarding widget to your JavaScript UI.
-- Add features that make use of secure, verifiable randomness using `block.prevrandao` or precision timestamping 
+- Add features that make use of secure, verifiable randomness using `block.prevrandao` or precise timestamping
 
 ## 1. Configuring Hardhat
 

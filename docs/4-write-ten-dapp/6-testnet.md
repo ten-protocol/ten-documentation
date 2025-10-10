@@ -1,5 +1,5 @@
 ---
-sidebar_position: 9
+sidebar_position: 6
 ---
 
 # Testnet
@@ -10,7 +10,7 @@ TEN Sepolia is our testnet that replicates the capabilities of the TEN Mainnet n
 
 ![TEN Hosted Gateway](../assets/gateway.png)
 
-Visit the TEN testnet gateway [here](https://testnet.ten.xyz/). Follow the onscreen instructions to authenticate with the hosted gateway that allows you to interact with the testnet. 
+Visit the TEN testnet gateway [here](https://testnet.ten.xyz/). Follow the on‑screen instructions to authenticate with the hosted gateway that allows you to interact with the testnet.
 
 ## TEN Sepolia Faucet
 
@@ -28,5 +28,5 @@ Using the steps provided, you can request testnet ETH from the faucet available 
 
 ## TENscan 
 
-You can use the TEN block explorer to view transaction data occuring on the testnet [here](https://testnet.tenscan.io/)
+You can use the TEN block explorer to view transaction data occurring on the testnet [here](https://testnet.tenscan.io/).
 

@@ -1,12 +1,12 @@
 ---
-sidebar_position: 10
+sidebar_position: 7
 ---
 
 # Sample dApps
 
 Below you can view our in-house sample dApps developed to harness the power of TEN. 
 
-## Battleships 
+## Battleships
 
 On-chain game heavily inspired by the classic board game Battleships. Players are presented with a grid and select squares to try to sink as many of the ships as possible. Each successful hit or ship sinking is rewarded with a ZEN game token.
 
@@ -20,7 +20,7 @@ A high-stakes betting game where players wager tokens on a rocket's flight traje
 
 ![TEN Battleships](../assets/crash.png)
 
-View the respository for the TEN Crash game [here](https://github.com/ten-protocol/ten-aviator).
+View the repository for the TEN Crash game [here](https://github.com/ten-protocol/ten-aviator).
 
 ## Trickly
 

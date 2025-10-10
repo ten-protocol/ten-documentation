@@ -50,7 +50,7 @@ function getRandomNumber() public view returns (uint256) {
 
 Every transaction on TEN receives a **precise timestamp** when it reaches the sequencer, enabling applications that require exact timing information such as real-time games, auction systems, and time-sensitive financial instruments.
 
-An example of how this works can be found in the [TEN Aviator](https://github.com/ten-protocol/ten-aviator/tree/1aa6454da5c52586eaccc9cf3d957b9c5d5f2f6d) game that utilises real-time game state tracking. 
+An example of how this works can be found in the [TEN Aviator](https://github.com/ten-protocol/ten-aviator/tree/1aa6454da5c52586eaccc9cf3d957b9c5d5f2f6d) game that utilises real-time game state tracking.
 
 ```solidity
 function checkGameEnd() external onlyOwner {
@@ -64,7 +64,7 @@ function checkGameEnd() external onlyOwner {
 
 TEN eliminates the need for traditional commit-reveal schemes through its **native async execution** and **on-block-end callbacks**. This provides the same security benefits without the complexity, latency, and cost of separate commit and reveal transactions, enabling seamless gaming experiences.
 
-TEN proviudes seure entropy that is generated within the TEE environment using hardware-based random number generation, ensuring that random values cannot be predicted or manipulated by node operators or external parties.
+TEN provides secure entropy that is generated within the TEE environment using hardware-based random number generation, ensuring that random values cannot be predicted or manipulated by node operators or external parties.
 
 ```solidity
 function _resetSecretNumber() private {
@@ -89,7 +89,7 @@ See [Secure Entropy](./7-secure-entropy.md) for more information.
 
 TEN provides **native session key** support managed by TEEs, eliminating the need for proxy contracts while enabling seamless user experiences. Users can play games or interact with dApps without signing every transaction, while developers benefit from simple integration through standard RPC endpoints.
 
-The management of these session keys is provided by the [ten-kit](https://github.com/ten-protocol/ten-kit/tree/2c4265bdb2832249af8c9ec21c4b60d02eb8dd3a?tab=readme-ov-file#advanced-example-with-session-keys) library that provdes the React components and hooks needed as well as wallet connection and privacy-preserving transactions. 
+The management of these session keys is provided by the [ten-kit](https://github.com/ten-protocol/ten-kit/tree/2c4265bdb2832249af8c9ec21c4b60d02eb8dd3a?tab=readme-ov-file#advanced-example-with-session-keys) library, which provides the React components and hooks needed, as well as wallet connection and privacy‑preserving transactions.
 
 See [Session Keys](./6-session-keys.md) for more information.
 

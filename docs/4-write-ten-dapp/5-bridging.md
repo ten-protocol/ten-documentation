@@ -1,13 +1,13 @@
 ---
-sidebar_position: 8
+sidebar_position: 5
 ---
-# Cross-chain bridging
+# Cross-Chain Bridging
 
 The TEN Bridge project aims to facilitate the seamless transfer of assets between the Ethereum blockchain and the TEN blockchain. This documentation provides an overview of the project, its purpose, supported tokens, and usage instructions.
 
 ## Purpose
 
-The primary goal of the TEN Bridge is to enable users to move assets between Ethereum and TEN efficiently and securely. This bridge will serve as a vital infrastructure component for users who wish to interact with assets on both blockchains. LINK TBC
+The primary goal of the TEN Bridge is to enable users to move assets between Ethereum and TEN efficiently and securely. This bridge will serve as a vital infrastructure component for users who wish to interact with assets on both blockchains. (Link TBC)
 
 ## Supported Tokens
 
@@ -41,7 +41,7 @@ Before using the TEN Bridge, ensure you have the following:
 
 ## Support
 
-For any inquiries or assistance regarding the TEN Bridge, please contact our team at [team@obscu.ro](mailto:team@obscu.ro).
+For any enquiries or assistance regarding the TEN Bridge, please contact our team at [team@obscu.ro](mailto:team@obscu.ro).
 
 ## Conclusion
 

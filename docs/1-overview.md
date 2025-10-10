@@ -2,6 +2,7 @@
 sidebar_label: Overview
 title: Overview
 sidebar_position: 0
+slug: /overview
 ---
 
 ![TEN in Web3](./assets/overview-banner.png)
