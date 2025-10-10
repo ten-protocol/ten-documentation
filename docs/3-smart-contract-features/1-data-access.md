@@ -107,7 +107,7 @@ contract StorageExample {
     }
 
     function getValue(address account) public view returns (uint256) {
-        require(tx.origin == account, "Not authorized!");
+        require(tx.origin == account, "Not authorised!");
         return _storedValues[account];
     }
 }
@@ -115,7 +115,7 @@ contract StorageExample {
 
 #### Explanation
 
-The key line is: ``require(tx.origin == account, "Not authorized!");``, which ensures that the caller of the view function is the owner of the data.
+The key line is: ``require(tx.origin == account, "Not authorised!");``, which ensures that the caller of the view function is the owner of the data.
 
 **When deployed on TEN, this code guarantees that all users can only access their own values, and nobody can read the `_storedValues`.**
 
@@ -148,7 +148,7 @@ contract StorageExample {
     }
 
     function getValue(address account) public view returns (uint256) {
-        require(tx.origin == account, "Not authorized!");
+        require(tx.origin == account, "Not authorised!");
         return _storedValues[account];
     }
 }
@@ -170,7 +170,7 @@ In our case, the default rules ensure that:
 - `MilestoneReached` is publicly visible.
 
 
-### Step 5: Customizing Event Visibility
+### Step 5: Customising Event Visibility
 
 The default visibility rules are a good starting point, but complex dApps require greater flexibility.
 
@@ -215,7 +215,7 @@ contract StorageExample is ContractTransparencyConfig {
     }
 
     function getValue(address account) public view returns (uint256) {
-        require(tx.origin == account, "Not authorized!");
+        require(tx.origin == account, "Not authorised!");
         return _storedValues[account];
     }
 

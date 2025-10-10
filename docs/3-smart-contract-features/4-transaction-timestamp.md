@@ -27,7 +27,7 @@ Each transaction is accompanied by the precise timestamp when included in a bloc
 ## How it works
 
 TEN provides a "System Contract" (a contract deployed and known by the platform.)
-You can get the address of the system contract for our testnet [here](https://sepolia.tenscan.io/resources/verified-data) - "??".
+You can get the address of the system contract for our testnet [here](https://sepolia.tenscan.io/resources/verified-data) - under `TenSystemCalls`.
 
 The interface you must implement is:
 

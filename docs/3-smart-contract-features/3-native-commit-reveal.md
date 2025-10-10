@@ -29,7 +29,7 @@ To avoid increasing the latency, the move must be executed in the same block as 
 ### How it works
 
 TEN provides a "System Contract" (a contract deployed and known by the platform.) 
-You can get the address of the system contract for our testnet [here](https://sepolia.tenscan.io/resources/verified-data) - "Ten Callbacks".
+You can get the address of the system contract for our testnet [here](https://sepolia.tenscan.io/resources/verified-data) - "Ten System Contract".
 
 The interface for registering the callback is: [IPublicCallbacks](https://github.com/ten-protocol/go-ten/blob/main/contracts/src/system/interfaces/IPublicCallbacks.sol).
 

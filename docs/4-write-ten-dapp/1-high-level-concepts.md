@@ -14,7 +14,7 @@ Clients establish HTTPS connections that terminate inside TEEs via the TEN Gatew
 
 ## Smart Contract Execution with Hidden State
 
-TEN disables `getStorageAt` by default and ensures private variables are truly private, only accessible through authorized functions that developers define.
+TEN disables `getStorageAt` by default and ensures private variables are truly private, only accessible through authorised functions that developers define.
  
 Revisit [Data Acess](../3-smart-contract-features/1-data-access.md) for more information.
 
@@ -34,7 +34,7 @@ See [TEN Gateway](./9-testnet.md#ten-gateway) for more information.
 
 ## Personal Data
 
-TEN enables true **personal data** management on-chain by ensuring that sensitive user information remains encrypted and accessible only to authorized parties. This supports applications like private messaging, confidential medical records, and identity verification systems while maintaining compliance with data protection regulations.
+TEN enables true **personal data** management on-chain by ensuring that sensitive user information remains encrypted and accessible only to authorised parties. This supports applications like private messaging, confidential medical records, and identity verification systems while maintaining compliance with data protection regulations.
 
 ## Free Native On-Chain Randomness
 
