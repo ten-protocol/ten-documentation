@@ -16,7 +16,7 @@ Clients establish HTTPS connections that terminate inside TEEs via the TEN Gatew
 
 TEN disables `getStorageAt` by default and ensures private variables are truly private, only accessible through authorized functions that developers define.
  
-See [Smart Contracts](./4-smart-contracts.md) for more information.
+Revisit [Data Acess](../3-smart-contract-features/1-data-access.md) for more information.
 
 ## Data Access Control Primitives
 
@@ -38,7 +38,7 @@ TEN enables true **personal data** management on-chain by ensuring that sensitiv
 
 ## Free Native On-Chain Randomness
 
-Secure, immediate, and free randomness via enclave-backed `block.prevrandao`—no oracles needed.
+Secure, immediate, and free randomness via enclave-backed `block.prevrandao` — no oracles needed.
 
 ```solidity
 function getRandomNumber() public view returns (uint256) {
@@ -82,7 +82,7 @@ The same code on TEN does not expose those attack vectors. It should be noted th
 - The value cannot be seen outside of the executing code, secure enclave hardware means even node operators can't access it.
 - Outcomes cannot be known until the block is published (which cannot be undone), removing the threat of MEV exploits.
 
-See [Secure Entropy](./7-secure-entropy.md) for more information.
+See [Secure Entropy](../3-smart-contract-features/2-native-entropy.md) for more information.
 
 
 ## Native Session Keys
@@ -91,6 +91,6 @@ TEN provides **native session key** support managed by TEEs, eliminating the nee
 
 The management of these session keys is provided by the [ten-kit](https://github.com/ten-protocol/ten-kit/tree/2c4265bdb2832249af8c9ec21c4b60d02eb8dd3a?tab=readme-ov-file#advanced-example-with-session-keys) library, which provides the React components and hooks needed, as well as wallet connection and privacy‑preserving transactions.
 
-See [Session Keys](./6-session-keys.md) for more information.
+See [Session Keys](./4-session-keys.md) for more information.
 
 ---
