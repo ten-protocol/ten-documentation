@@ -18,7 +18,7 @@ To start building on TEN, you first need to set up and configure your wallet wit
 
 These wallets are confirmed to work smoothly with the TEN Gateway:
 - MetaMask
-- Rabbit Wallet
+- Rabby Wallet
 
 ## 2. Setting Up the Environment
 

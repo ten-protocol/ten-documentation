@@ -79,7 +79,7 @@ contract CoinFlip {
         tenCallbacks.register{value: etherGasForCoinFlip}(callbackTargetInfo);
     }
 
-    // Function to simulate a coin flip - notice that this must only be callable by the ten system contract.
+    // Function to simulate a coin flip - notice that this must only be callable by the TEN system contract.
     // This function is called by the TEN platform as a synthetic transaction in the same block as the user transaction.
     function doFlipCoin(address bettor, uint256 stake, bool wantsHeads) external onlyTenSystemCall {
         // Assume getRandomNumber() is a function that returns a random number

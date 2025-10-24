@@ -18,7 +18,7 @@ View the repository for Battleships [here](https://github.com/ten-protocol/battl
 
 A high-stakes betting game where players wager tokens on a rocket's flight trajectory. The rocket's multiplier increases over time, but crashes at an unpredictable moment. Players must cash out before the crash to win their bet multiplied by the current value, or lose everything if they're too greedy.
 
-![TEN Battleships](../assets/crash.png)
+![TEN Aviator](../assets/crash.png)
 
 View the repository for the TEN Crash game [here](https://github.com/ten-protocol/ten-aviator).
 

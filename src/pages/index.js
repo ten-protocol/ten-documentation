@@ -17,7 +17,7 @@ function HomepageHeader() {
         <div className={styles.buttonGroup}>
           <Link
             className="button button--secondary button--lg"
-            to="https://battleships.ten.xyz/"
+            to="https://testnet.ten.xyz/"
           >
             Try TEN 🔐
           </Link>
