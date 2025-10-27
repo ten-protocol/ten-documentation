@@ -29,3 +29,43 @@
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
+/* Custom link colors */
+/* Links in markdown content */
+.markdown a {
+  color: #1976d2; /* Blue color for light mode */
+  text-decoration: none;
+}
+
+.markdown a:hover {
+  color: #0d47a1; /* Darker blue on hover */
+  text-decoration: underline;
+}
+
+/* Links in dark mode */
+[data-theme='dark'] .markdown a {
+  color: #64b5f6; /* Light blue for dark mode */
+}
+
+[data-theme='dark'] .markdown a:hover {
+  color: #90caf9; /* Lighter blue on hover in dark mode */
+}
+
+/* Alternative: Target all links globally */
+/* 
+a {
+  color: #1976d2 !important;
+}
+
+a:hover {
+  color: #0d47a1 !important;
+}
+
+[data-theme='dark'] a {
+  color: #64b5f6 !important;
+}
+
+[data-theme='dark'] a:hover {
+  color: #90caf9 !important;
+}
+*/
+
