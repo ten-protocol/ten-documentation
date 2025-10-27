@@ -1,3 +1,3 @@
-## [🗃️<!-- --> <!-- -->TEN Network Association](/docs/category/ten-network-association.md)
+## [📄️<!-- --> <!-- -->Governance](/docs/governance/governance.md)
 
-[4 items](/docs/category/ten-network-association.md)
+[TEN's governance is explicit, transparent, and draws inspiration from the experiences of Bitcoin and Ethereum. In a decentralized system, control can be:](/docs/governance/governance.md)
