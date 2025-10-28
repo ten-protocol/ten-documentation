@@ -1,11 +1,11 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-require('dotenv').config();
+require("dotenv").config()
 
-const {themes} = require('prism-react-renderer');
-const lightTheme = themes.github;
-const darkTheme = themes.dracula;
+const { themes } = require("prism-react-renderer")
+const lightTheme = themes.github
+const darkTheme = themes.dracula
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -107,18 +107,6 @@ const config = {
             label: "Blog",
             position: "left",
           },
-          {
-            href: "/llms.txt",
-            label: "llms.txt",
-            position: "right",
-            target: "_blank",
-          },
-          {
-            href: "/llms-full.txt",
-            label: "llms-full.txt",
-            position: "right",
-            target: "_blank",
-          },
         ],
       },
       footer: {
@@ -155,7 +143,7 @@ const config = {
               },
               {
                 label: "GitHub",
-                href: "https://github.com/ten-protocol/go-ten",
+                href: "https://github.com/ten-protocol/ten-documentation",
               },
             ],
           },
@@ -169,4 +157,4 @@ const config = {
     }),
 }
 
-module.exports = config;
+module.exports = config
