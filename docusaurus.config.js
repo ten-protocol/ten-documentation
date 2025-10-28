@@ -84,6 +84,18 @@ const config = {
     ],
   ],
 
+  themes: [
+    [
+      "@easyops-cn/docusaurus-search-local",
+      {
+        hashed: true,
+        docsRouteBasePath: "/", // adjust if your docs live elsewhere
+        highlightSearchTermsOnTargetPage: true,
+        explicitSearchResultPath: true,
+      },
+    ],
+  ],
+
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
@@ -107,6 +119,7 @@ const config = {
             label: "Blog",
             position: "left",
           },
+          { type: "search", position: "right" },
         ],
       },
       footer: {
