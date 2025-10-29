@@ -23,7 +23,7 @@ To achieve this, we had to:
 Here, we'll list the platform rules. The examples below will showcase how exactly to use these rules in practice.
 
 - Any contract can be configured to be "transparent" or "private". By default, it is "private", which means the internal storage is not accessible. "Transparent" contracts behave exactly like Ethereum.
-- Any RPC call accessing data like: `eth_call`, `eth_estimateGas`, `eth_getTransactionReceipt`, `eth_logs`, must be signed by a [viewing key (VK)](./4-smart-contracts.md). The VK itself must be signed by the main account. (Note that this is behind the scenes.)
+- Any RPC call accessing data like: `eth_call`, `eth_estimateGas`, `eth_getTransactionReceipt`, `eth_logs`, must be signed by a [viewing key (VK)](../4-write-ten-dapp/1-high-level-concepts.md#ten-gateway). The VK itself must be signed by the main account. (Note that this is behind the scenes.)
 - Event log visibility is configurable. Each event log can be visible to one or multiple of the topics (indexed fields), and the sender of the transaction, only if the topic is the `address` of an "Externally owned Account" (EOA). The event log can also be configured to be "public" - visible to everyone.
 - When there is no configuration, the default event log visibility is:
   - Rule 1: Event logs that contain EOAs as topics are only visible to those EOAs.
