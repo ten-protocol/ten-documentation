@@ -30,7 +30,7 @@ Web service running in TEEs that provides the secure edge for dApps and user wal
 - Manages Session Keys to enable no-click UX under developer-defined policies
 - Caches encrypted metadata and frequently accessed data for performance and availability
 
-See [TEN Gateway](./6-testnetmd#ten-gateway) for more information.
+See [TEN Gateway](./6-testnet.md#ten-gateway) for more information.
 
 ## Personal Data
 
