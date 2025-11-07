@@ -10,6 +10,10 @@ You don't need React to write simple standalone pages.
 
 - [Markdown page example](/markdown-page.md): You don't need React to write simple standalone pages.
 
+## search
+
+- [Search the documentation](/search.md)
+
 ## docs
 
 

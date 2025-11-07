@@ -4,7 +4,7 @@ Below are the core concepts that make TEN unique while maintaining complete comp
 
 ## End-to-End Encryption[​](#end-to-end-encryption "Direct link to End-to-End Encryption")
 
-All contract execution runs inside TEEs; inputs, state, and (optionally) logs can be private. See the [Overview](/docs/1-overview/overview.md) for architecture and threat model.
+All contract execution runs inside TEEs; inputs, state, and (optionally) logs can be private. See the [Overview](/docs/overview.md) for architecture and threat model.
 
 Clients establish HTTPS connections that terminate inside TEEs via the TEN Gateway, preventing plaintext exposure on intermediaries; smart contracts then execute entirely within the enclave boundary, and contract state plus sensitive metadata are stored encrypted at rest, with read access enforced through Viewing Keys and policy logic.
 
@@ -27,7 +27,7 @@ Web service running in TEEs that provides the secure edge for dApps and user wal
 * Manages Session Keys to enable no-click UX under developer-defined policies
 * Caches encrypted metadata and frequently accessed data for performance and availability
 
-See [TEN Gateway](/docs/write-ten-dapp/9-testnet.md#ten-gateway) for more information.
+See [TEN Gateway](/docs/write-ten-dapp/testnet.md#ten-gateway) for more information.
 
 ## Personal Data[​](#personal-data "Direct link to Personal Data")
 

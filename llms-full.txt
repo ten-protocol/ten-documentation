@@ -10,6 +10,10 @@ You don't need React to write simple standalone pages.
 
 - [Markdown page example](/markdown-page.md): You don't need React to write simple standalone pages.
 
+## search
+
+- [Search the documentation](/search.md)
+
 ## docs
 
 
@@ -194,6 +198,37 @@ You can follow this tutorial on GitHub that demonstrates how TEN’s precise tim
 # Markdown page example
 
 You don't need React to write simple standalone pages.
+
+
+---
+
+## Search the documentation
+
+[Skip to main content](#__docusaurus_skipToContent_fallback)
+
+[![TEN Logo](/img/logo.svg)![TEN Logo](/img/logo-white.svg)](/index.md)
+
+[Documentation](/docs/overview.md)[Blog](https://medium.com/obscuro-labs)
+
+Search
+
+# Search the documentation
+
+Docs
+
+* [Introduction](/docs/overview.md)
+
+Community
+
+* [Discord](https://discord.gg/Zgx2ycH7Xw)
+* [Twitter](https://twitter.com/tenprotocol)
+
+More
+
+* [Blog](https://medium.com/obscuro-labs)
+* [GitHub](https://github.com/ten-protocol/ten-documentation)
+
+Copyright © 2025 Ten Docs, Inc. Built with Docusaurus.
 
 
 ---
@@ -1057,7 +1092,7 @@ Here, we'll list the platform rules. The examples below will showcase how exactl
 
 * Any contract can be configured to be "transparent" or "private". By default, it is "private", which means the internal storage is not accessible. "Transparent" contracts behave exactly like Ethereum.
 
-* Any RPC call accessing data like: `eth_call`, `eth_estimateGas`, `eth_getTransactionReceipt`, `eth_logs`, must be signed by a [viewing key (VK)](/docs/smart-contract-features/4-smart-contracts.md). The VK itself must be signed by the main account. (Note that this is behind the scenes.)
+* Any RPC call accessing data like: `eth_call`, `eth_estimateGas`, `eth_getTransactionReceipt`, `eth_logs`, must be signed by a [viewing key (VK)](/docs/write-ten-dapp/high-level-concepts.md#ten-gateway). The VK itself must be signed by the main account. (Note that this is behind the scenes.)
 
 * Event log visibility is configurable. Each event log can be visible to one or multiple of the topics (indexed fields), and the sender of the transaction, only if the topic is the `address` of an "Externally owned Account" (EOA). The event log can also be configured to be "public" - visible to everyone.
 
@@ -1574,7 +1609,7 @@ Below are the core concepts that make TEN unique while maintaining complete comp
 
 ## End-to-End Encryption[​](#end-to-end-encryption "Direct link to End-to-End Encryption")
 
-All contract execution runs inside TEEs; inputs, state, and (optionally) logs can be private. See the [Overview](/docs/1-overview/overview.md) for architecture and threat model.
+All contract execution runs inside TEEs; inputs, state, and (optionally) logs can be private. See the [Overview](/docs/overview.md) for architecture and threat model.
 
 Clients establish HTTPS connections that terminate inside TEEs via the TEN Gateway, preventing plaintext exposure on intermediaries; smart contracts then execute entirely within the enclave boundary, and contract state plus sensitive metadata are stored encrypted at rest, with read access enforced through Viewing Keys and policy logic.
 
@@ -1597,7 +1632,7 @@ Web service running in TEEs that provides the secure edge for dApps and user wal
 * Manages Session Keys to enable no-click UX under developer-defined policies
 * Caches encrypted metadata and frequently accessed data for performance and availability
 
-See [TEN Gateway](/docs/write-ten-dapp/9-testnet.md#ten-gateway) for more information.
+See [TEN Gateway](/docs/write-ten-dapp/testnet.md#ten-gateway) for more information.
 
 ## Personal Data[​](#personal-data "Direct link to Personal Data")
 
@@ -1927,9 +1962,9 @@ To start building on TEN, you first need to set up and configure your wallet wit
 
    * Visit the [TEN Gateway](https://gateway.ten.xyz/) for wallet setup.
    * Click on “Connect to TEN Testnet” and follow the on-screen instructions.
-   * Learn more about the [TEN Gateway](/docs/tools-infrastructure/hosted-gateway.md).
+   * Learn more about the [TEN Gateway](/docs/write-ten-dapp/high-level-concepts.md#ten-gateway).
 
-3. **Acquire Testnet ETH Tokens**: To perform transactions, you'll need testnet ETH tokens. Refer to our [Getting tokens](/docs/getting-started/for-users/get-tokens.md).
+3. **Acquire Testnet ETH Tokens**: To perform transactions, you'll need testnet ETH tokens. Refer to our [Getting tokens](/docs/write-ten-dapp/testnet.md#requesting-testnet-eth).
 
 ### Supported Wallets[​](#supported-wallets "Direct link to Supported Wallets")
 
@@ -1942,7 +1977,7 @@ These wallets are confirmed to work smoothly with the TEN Gateway:
 
 Once your wallet is ready, you can proceed with the development and deployment of your smart contracts.
 
-1. **Choose an IDE**: Use your preferred development environment or Integrated Development Environment (IDE) like Truffle, Remix, Hardhat, or Foundry. Check out IDE compatibility and its features [here](/docs/tools-infrastructure/compatible-tools.md).
+1. **Choose an IDE**: Use your preferred development environment or Integrated Development Environment (IDE) like Truffle, Remix, Hardhat, or Foundry.
 2. **Connect IDE to MetaMask**: Ensure your chosen IDE is connected to your MetaMask wallet.
 
 ## 3. Docker Configuration[​](#3-docker-configuration "Direct link to 3. Docker Configuration")
