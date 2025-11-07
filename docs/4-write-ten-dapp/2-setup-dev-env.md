@@ -11,8 +11,8 @@ To start building on TEN, you first need to set up and configure your wallet wit
 2. **Configure MetaMask for TEN**:
    - Visit the [TEN Gateway](https://gateway.ten.xyz/) for wallet setup.
    - Click on “Connect to TEN Testnet” and follow the on-screen instructions.
-   - Learn more about the [TEN Gateway](/docs/tools-infrastructure/hosted-gateway).
-3. **Acquire Testnet ETH Tokens**: To perform transactions, you'll need testnet ETH tokens. Refer to our [Getting tokens](/docs/getting-started/for-users/get-tokens).
+   - Learn more about the [TEN Gateway](../4-write-ten-dapp/1-high-level-concepts.md#ten-gateway).
+3. **Acquire Testnet ETH Tokens**: To perform transactions, you'll need testnet ETH tokens. Refer to our [Getting tokens](../4-write-ten-dapp/6-testnet.md#requesting-testnet-eth).
 
 ### Supported Wallets
 
@@ -24,7 +24,7 @@ These wallets are confirmed to work smoothly with the TEN Gateway:
 
 Once your wallet is ready, you can proceed with the development and deployment of your smart contracts.
 
-1. **Choose an IDE**: Use your preferred development environment or Integrated Development Environment (IDE) like Truffle, Remix, Hardhat, or Foundry. Check out IDE compatibility and its features [here](/docs/tools-infrastructure/compatible-tools).
+1. **Choose an IDE**: Use your preferred development environment or Integrated Development Environment (IDE) like Truffle, Remix, Hardhat, or Foundry.
 2. **Connect IDE to MetaMask**: Ensure your chosen IDE is connected to your MetaMask wallet.
 
 ## 3. Docker Configuration
