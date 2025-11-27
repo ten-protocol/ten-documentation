@@ -1,3 +1,3 @@
-## [📄️<!-- --> <!-- -->About the TEN Network Association](/docs/governance/ten-network-association/association.md)
+## [📄️<!-- --> <!-- -->TEN Community Airdrop](/docs/governance/ten-network-association/airdrop.md)
 
-[Introduction and Vision](/docs/governance/ten-network-association/association.md)
+[Overview](/docs/governance/ten-network-association/airdrop.md)

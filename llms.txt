@@ -57,6 +57,7 @@ TEN's governance is explicit, transparent, and draws inspiration from the experi
 
 #### ten-network-association
 
+- [TEN Community Airdrop](/docs/governance/ten-network-association/airdrop.md): Overview
 - [About the TEN Network Association](/docs/governance/ten-network-association/association.md): Introduction and Vision
 - [Token Delegates and Delegating](/docs/governance/ten-network-association/delegation.md): When you get involved in the governance of TEN, you can either vote directly on proposals or hand over your voting power to a delegate. The delegation system allows $TEN token holders to take part passively by transferring their voting power to delegates who share their values and who they trust to vote on their behalf in a way which aligns to those values. This page breaks down what delegates do and how delegation works within the governance of TEN.
 - [Overview of the TEN Token](/docs/governance/ten-network-association/ten-token.md): The TEN token, known as $TEN, is an ERC-20 governance token that lets you take part in the TEN’s on-chain decision-making process. The token is created by a smart contract on Ethereum, which is a secure and reliable decentralized blockchain.
