@@ -9,179 +9,192 @@ import TabItem from '@theme/TabItem';
 
 ## Overview
 
-The TEN Community Airdrop is a core initiative designed to recognize and reward early adopters, contributors, and active participants who helped shape the TEN Network. It aligns with the Association’s mission by distributing part of the token supply to the community in a transparent and responsible way.
+The TEN Community Airdrop rewards early participants who helped shape the network through testing, contributing, community engagement, and participation in Cookie Seasons. A total of **49,340 addresses** qualified across all chapters, with **6.150% of the total TEN supply** allocated to the airdrop.
+
+TEN Token Contract Address: [0xEa9Bb54fC76BfD5DD2FF2f6dA641E78C230bB683](https://etherscan.io/address/0xEa9Bb54fC76BfD5DD2FF2f6dA641E78C230bB683)
+
+Airdrop Claims Website: http://airdrop.ten.xyz/
 
 :::info Airdrop at a glance
-- **49,340 eligible addresses** in total  
-- **6.150% of total token supply** allocated across all chapters  
-- **50% unlock at TGE, 50% unlock after 6 months**  
-- Identical vesting schedule across **Ethereum Mainnet** and **TEN Mainnet**
+- **49,340 eligible addresses**
+- **6.150% of total supply** allocated to the community
+- **50% unlock at TGE**
+- **50% unlock after 6 months**
+- Vesting starts at **TGE for all recipients**, regardless of claim chain or date
 :::
-
-### Eligibility and Groups
-
-In total, **49,340 addresses** are eligible for the TEN Community Airdrop. These addresses are distributed across several groups:
-
-1. **Chapter One** — Early Testers and Early Contributors  
-   Full eligibility details:  
-   https://blogs.ten.xyz/ten-airdrop-chapter-one-of-our-community-rewards-story/
-
-2. **Final Chapter** — Testers, Contributors, and Cookie Snappers from Season 1  
-   Full eligibility details:  
-   https://blogs.ten.xyz/airdrop-final-chapter/
-
-3. **Cookie Season 3 Snappers and Cookie MAF Stakers** — participants from Season 3 activities and MAF staking.
-
-Across all of these chapters, a total of **6.150% of the total token supply** is allocated to the Community Airdrop.
 
 ---
 
-### Vesting Policy
+## Eligibility Groups
 
-To support long-term sustainability and reduce short-term volatility, the airdrop is subject to vesting.
+The following groups are included in the TEN Community Airdrop:
+
+1. **Chapter One** – Early Testers & Early Contributors  
+   Full details: [Chapter One – Community Rewards Story](https://blogs.ten.xyz/ten-airdrop-chapter-one-of-our-community-rewards-story/)
+
+2. **Final Chapter** – Testers, Contributors, Cookie Season 1 Snappers  
+   Full details: [Final Chapter – Airdrop](https://blogs.ten.xyz/airdrop-final-chapter/)
+
+3. **Cookie Season 3 Snappers and Cookie MAF Stakers**
+
+Across all of these groups, the total allocation for the Community Airdrop is **6.150% of the TEN token supply**.
+
+---
+
+## Vesting Policy
 
 :::note Vesting start point
-All vesting schedules **start at the TGE date**, regardless of when or on which chain the tokens are claimed.
+All vesting schedules **start at the TGE date**, regardless of:
+- when you claim; or  
+- whether you claim on Ethereum Mainnet or TEN Mainnet.
 :::
 
-#### Standard Vesting Terms
+### Standard Vesting (most recipients)
 
-For all eligible recipients (unless subject to large-allocation terms below):
+For all eligible recipients **with less than 12,000 tokens available at TGE**:
 
-- **50% of the allocated tokens unlock at Token Generation Event (TGE).**
-- The **remaining 50% are locked for 6 months**, with a **single, one-time unlock after the 6-month period**.
-- This one-time unlock will occur **not earlier than 27.05.2025**.
+- **50%** of the allocated tokens unlock at **Token Generation Event (TGE)**.  
+- The **remaining 50%** are locked for **6 months**, with a **single, one-time unlock** after the 6-month period.  
+- The second unlock happens **not earlier than 27 May 2025**.
 
-Even if you choose to claim later on **TEN Mainnet** (launch date as per [roadmap.ten.xyz](http://roadmap.ten.xyz/)), your vesting **still counts from TGE**. When you claim on TEN Mainnet, you will be able to claim all tokens that have already vested by that time, including the amounts that would be claimable for someone who claimed on Ethereum at TGE.
+Even if you choose to claim later on **TEN Mainnet** (launch date shown at [roadmap.ten.xyz](https://roadmap.ten.xyz/)), your vesting still counts from TGE. When you claim, you will be able to receive all tokens that have already vested by that time.
 
-#### Large Allocation Vesting 
+---
 
-Recipients with **12,000 or more tokens available at TGE** are considered **Large Allocation Participants** and are subject to a smoother, linear vesting schedule to promote fair distribution and reduce concentration risk:
+### Large Allocation Vesting (≥12,000 tokens at TGE)
 
-- The TGE-available portion (the first 50%) unlocks **in weekly tranches of 12,000 tokens** until that portion is fully unlocked.
-- After the 6-month lock, the remaining 50% is unlocked using the **same weekly 12,000-token tranche mechanism**, if the remaining balance exceeds 12,000 tokens.
-- This creates a gradual unlock pattern rather than a single, large release.
+Recipients with **12,000 or more tokens available at TGE** are considered **Large Allocation Participants** and are subject to a smoother, linear vesting schedule to promote fair distribution:
+
+- The TGE portion (first 50%) **does not unlock all at once**.  
+- Instead, it unlocks **in weekly tranches of 12,000 tokens** until this portion is fully unlocked.  
+- After the 6-month lock, the remaining 50% is also unlocked using the **same weekly 12,000-token tranche mechanism**, if that remaining balance is greater than 12,000 tokens.
 
 All linear vesting for Large Allocation Participants also **starts counting from TGE**, even if the actual claim happens later or on a different chain. When you eventually claim (on Ethereum or TEN Mainnet), you will be able to claim all tokens that should have unlocked by that date according to the vesting schedule.
 
 :::tip Key idea
-Whether you claim on **Ethereum** at TGE or on **TEN Mainnet** later, the amount you can claim at any point is determined by the **same vesting timeline** that always starts at TGE.
+The **timeline of unlocks is chain-agnostic**.  
+Whether you claim on Ethereum at TGE or later on TEN Mainnet, the amount you can claim at any moment is determined by the **same vesting schedule** that always starts at TGE.
 :::
 
 ---
 
-### Linear Vesting: Examples
+## Linear Vesting: Examples
 
 <Tabs>
 <TabItem value="standard" label="Standard participant">
 
-**Scenario:**  
-A participant receives **4,000 tokens** in total.
+**Scenario:** A participant receives **4,000 TEN** in total.
 
 - At TGE:  
-  - 50% unlocks: `4,000 * 0.5 = 2,000 tokens`  
-  - 2,000 tokens are immediately claimable at TGE.
-- After 6 months (not earlier than 27.05.2025):  
-  - Remaining 2,000 tokens unlock in a **single, one-time** event.
+  - 50% unlocks → 2,000 TEN become claimable.  
+- After 6 months (not earlier than 27 May 2025):  
+  - The remaining 2,000 TEN unlock in a **single, one-time event**.
 
-There is **no weekly tranche logic** here because the TGE-available amount (2,000) is below 12,000 tokens. If this user waits and claims on TEN Mainnet after its launch, they will see:
+There is **no weekly tranche logic** here because the TGE-available amount (2,000 TEN) is below 12,000 TEN.
 
-- At any time between TGE and 6 months: up to 2,000 tokens claimable (minus anything already claimed).  
-- After the 6-month cliff: the full 4,000 tokens claimable (minus anything already claimed).
+If this user waits and claims only once on TEN Mainnet after its launch, they will see:
+
+- At any time between TGE and 6 months: up to 2,000 TEN claimable (minus anything already claimed).  
+- After the 6-month cliff: the full 4,000 TEN claimable (minus anything already claimed).
 
 </TabItem>
 <TabItem value="large" label="Large allocation participant">
 
-**Scenario:**  
-A participant receives **60,000 tokens** in total.
+**Scenario:** A participant receives **60,000 TEN** in total.
 
-1. **First 50% at TGE:**
+**1. First 50% at TGE**
 
-- TGE portion: `60,000 * 0.5 = 30,000 tokens`  
+- TGE portion: 60,000 × 0.5 = 30,000 TEN  
 - Because 30,000 ≥ 12,000, the linear vesting applies.
 
-Weekly unlock amount: `12,000 tokens`  
-Number of weeks required: `ceil(30,000 / 12,000) = 3 weeks`
+Weekly unlock amount: 12,000 TEN  
+Weeks required: 30,000 ÷ 12,000 = 3 weeks
 
-- Week 1 after TGE: 12,000 tokens become claimable  
-- Week 2: another 12,000 tokens become claimable  
-- Week 3: remaining 6,000 tokens become claimable  
+- Week 1 after TGE: 12,000 TEN become claimable  
+- Week 2 after TGE: 12,000 TEN become claimable  
+- Week 3 after TGE: 6,000 TEN become claimable  
 
-2. **Second 50% after 6 months:**
+**2. Second 50% after 6 months**
 
-- Second portion: `60,000 * 0.5 = 30,000 tokens`  
-- Linear vesting resumes after the 6-month cliff, with the same weekly unlock pattern:
+- Second portion: 60,000 × 0.5 = 30,000 TEN  
+- After the 6-month cliff, the same weekly schedule applies:
+  - Week 1 after the cliff: 12,000 TEN  
+  - Week 2 after the cliff: 12,000 TEN  
+  - Week 3 after the cliff: 6,000 TEN  
 
-  - Week 1 after the cliff: 12,000 tokens  
-  - Week 2: 12,000 tokens  
-  - Week 3: 6,000 tokens  
+If this participant waits and claims on TEN Mainnet, for example 10 weeks after TGE, they will be able to claim all tokens that should have unlocked by that date, including both the TGE-portion tranches and (after the 6-month cliff) the second-portion tranches.
 
-</TabItem>
+  </TabItem>
 </Tabs>
 
-#### Simple Vesting Notation
+### Simple Vesting Notation
 
-You can think of the vesting logic with the following shorthand:
+You can think of the large-allocation vesting logic like this (per phase: TGE portion or post-6-month portion):
 
-- `total_allocation` — total tokens allocated to a user  
-- `phase_allocation` — amount unlocked in a given phase (TGE or post-6-month)  
-- `weekly_unlock` — `12,000` tokens for large allocations  
-- `weeks_needed` — `ceil(phase_allocation / weekly_unlock)`  
+- `total_allocation` — total tokens allocated to the user  
+- `phase_allocation` — total tokens in this phase (usually 50% of `total_allocation`)  
+- `weekly_unlock` — 12,000 TEN  
+- `weeks_needed` — `phase_allocation / weekly_unlock`  
 
 Unlocked amount after `t` weeks in a phase:
 
-- `unlocked(t) = min(phase_allocation, t * weekly_unlock)`  
+- `unlocked(t) = min(phase_allocation, t × weekly_unlock)`  
 
 Claimable amount at any time:
 
-- `claimable = unlocked_so_far - already_claimed`
+- `claimable = unlocked(t) − already_claimed`
 
-All phases measure `t` starting from **TGE** (for the first 50%) or **TGE + 6 months** (for the second 50%), regardless of when/where the user actually claims.
+`t` counts from **TGE** for the first 50%, and from **TGE + 6 months** for the second 50%.
 
 ---
 
-### Claim Options
+## Ethereum Claim Fee (Custom Per-Token Fee)
 
-Participants can choose between two claim paths.
+When claiming on **Ethereum Mainnet**, a **custom per-token fee** is applied in addition to regular gas fees:
 
-:::info Chains overview
-- **Ethereum Mainnet** — subject to an additional per-token fee.  
-- **TEN Mainnet** — no extra per-token fee, potential ecosystem bonuses, native onbaording to TEN Mainnet.
-:::
+- **Fee rate:** 0.002 USD denominated in ETH per claimable token (set as of TGE)
 
-#### 1. Ethereum Mainnet Claims
-
-Claims on **Ethereum Mainnet** are subject to an **additional custom fee**:
-
-- The fee is set as (to date of TGE) **$0.002 per claimable token** at the date of TGE.
+This fee is charged based on the number of tokens you are claiming at that moment.
 
 **Example**
 
-If a participant claims **10,000 tokens** on Ethereum:
+If a participant claims 10,000 TEN on Ethereum:
 
-- Fee: `10,000 * 0.002 = $20`
+- Custom fee = 10,000 × 0.002 USD = **20 USD** in ETH
 
-This fee is independent of gas costs and is specifically tied to the number of tokens being claimed.
-
-#### 2. TEN Mainnet Claims
-
-Claims on **TEN Mainnet**:
-
-- **Do not incur** the $0.002 per-token custom fee.  
-- Allow participants to **avoid the additional claim fee** associated with Ethereum.  
-- May make participants eligible for **additional community bonuses and incentives** introduced by the TEN ecosystem over time.
-
-All vesting counters and unlock schedules are identical across chains and **start at TGE**. If you claim on TEN Mainnet after its launch (date available on [roadmap.ten.xyz](http://roadmap.ten.xyz/)), you will be able to claim **all tokens that have already vested by that time**, including those that would have been available if you had claimed on Ethereum earlier.
-
-:::tip Practical takeaway
-Choosing **TEN Mainnet** for claiming:
-- avoids the $0.002 per-token fee applied on Ethereum,
-- preserves your full allocation without transactional deductions,
-- keeps you eligible for future ecosystem incentives and network-based participation benefits.
-
-Claiming on **Ethereum Mainnet** remains technically available but is generally less optimal due to the additional per-token fee and higher on-chain execution costs.
+:::warning
+This **0.002 USD per-token fee applies only to Ethereum Mainnet claims**.  
+TEN Mainnet claims **do not incur this fee**.
 :::
 
 ---
 
-The TEN Community Airdrop, together with its vesting and claim options, is designed to reward meaningful participation, support long-term alignment, and give community members flexibility in how they interact with the TEN ecosystem.
+## Claim Options
+
+Participants can choose between **Ethereum Mainnet** and **TEN Mainnet** when claiming their airdrop.
+
+### Claiming on TEN Mainnet
+
+- **No 0.002 USD per-token fee**  
+- Lower operational cost for claiming  
+- Same vesting schedule (starting at TGE)  
+- Designed as the default path into the broader TEN ecosystem and may be eligible for **future ecosystem incentives**
+
+### Claiming on Ethereum Mainnet
+
+- Subject to the **0.002 USD per-token custom fee**  
+- Also subject to Ethereum gas costs
+- May not included bonuses and additional tokens associated with deferred claim  
+
+:::tip Practical takeaway
+From an economic and ecosystem perspective, **TEN Mainnet is the recommended claim path**:
+- No per-token deduction from your allocation  
+- Lower overall claim cost  
+- Natural entry point into the TEN ecosystem and its future incentives  
+
+Ethereum Mainnet claiming remains possible, but is **generally less attractive** due to the additional 0.002 USD per-token fee and higher network costs.
+:::
+
+---
+
+The TEN Community Airdrop combines recognition of early participants with a vesting design that protects the protocol from short-term pressure, while giving users flexibility in when and where they claim.
