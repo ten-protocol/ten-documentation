@@ -24,6 +24,12 @@ You don't need React to write simple standalone pages.
 
 - [Governance](/docs/category/governance.md)
 
+#### micar-white-papers
+
+MiCAR regulatory whitepapers and documentation
+
+- [MiCAR White Papers](/docs/category/micar-white-papers.md): MiCAR regulatory whitepapers and documentation
+
 #### run-a-ten-node
 
 - [Run a TEN node](/docs/category/run-a-ten-node.md)
@@ -70,6 +76,15 @@ TEN Public RPC Endpoints
 TEN is a next-generation Ethereum Layer 2 rollup protocol that introduces data confidentiality, computational privacy, and resistance to Maximal Extractable Value (MEV) by leveraging hardware-based Trusted Execution Environments (TEEs). TEN represents a major step forward in decentralized system design by reintroducing data access controls — a foundational feature of Web2 that Web3 largely abandoned in favor of radical transparency.
 
 - [What is TEN Protocol?](/docs/introduction/introduction.md): TEN is a next-generation Ethereum Layer 2 rollup protocol that introduces data confidentiality, computational privacy, and resistance to Maximal Extractable Value (MEV) by leveraging hardware-based Trusted Execution Environments (TEEs). TEN represents a major step forward in decentralized system design by reintroducing data access controls — a foundational feature of Web2 that Web3 largely abandoned in favor of radical transparency.
+
+### micar-white-papers
+
+
+#### trading-whitepaper
+
+Download or view the MiCAR Trading Whitepaper below:
+
+- [MiCAR Trading Whitepaper](/docs/micar-white-papers/trading-whitepaper.md): Download or view the MiCAR Trading Whitepaper below:
 
 ### overview
 
