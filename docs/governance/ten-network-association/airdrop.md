@@ -8,6 +8,8 @@ TEN Token Contract Address: [0xEa9Bb54fC76BfD5DD2FF2f6dA641E78C230bB683](https:/
 
 Airdrop Claims Website: <http://airdrop.ten.xyz/>
 
+Ethereum L1 Claims Period
+
 Airdrop at a glance
 
 * **49,340 eligible addresses**
@@ -17,6 +19,16 @@ Airdrop at a glance
 * Vesting starts at **TGE for all recipients**, regardless of claim chain or date
 
 ***
+
+### Claims Period — Ethereum Mainnet[​](#claims-period--ethereum-mainnet "Direct link to Claims Period — Ethereum Mainnet")
+
+The **Ethereum L1 Claims Period** opened on **27 November at 13:26 UTC** and will close on **30 November at 17:00 UTC**.
+
+Within this window, eligible participants must **either claim their tokens on Ethereum** or **actively choose to defer** their claim to the TEN Mainnet.<br /><!-- -->If no action is taken before the deadline, the allocation will be **automatically deferred** to the TEN Mainnet launch.
+
+### Deferred Claims — TEN Mainnet[​](#deferred-claims--ten-mainnet "Direct link to Deferred Claims — TEN Mainnet")
+
+Participants marked as deferred will be able to claim their tokens on **TEN Mainnet**, where the claims window will remain open for **a minimum of two weeks** following the launch.
 
 ## Eligibility Groups[​](#eligibility-groups "Direct link to Eligibility Groups")
 
