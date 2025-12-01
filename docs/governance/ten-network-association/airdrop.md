@@ -22,7 +22,7 @@ Airdrop at a glance
 
 ### Claims Period — Ethereum Mainnet[​](#claims-period--ethereum-mainnet "Direct link to Claims Period — Ethereum Mainnet")
 
-The **Ethereum L1 Claims Period** opened on **27 November at 13:26 UTC** and will close on **30 November at 17:00 UTC**.
+The **Ethereum L1 Claims Period** opened on **27 November at 13:26 UTC** and will close on **2 December at 12:00 UTC**.
 
 Within this window, eligible participants must **either claim their tokens on Ethereum** or **actively choose to defer** their claim to the TEN Mainnet.<br /><!-- -->If no action is taken before the deadline, the allocation will be **automatically deferred** to the TEN Mainnet launch.
 
