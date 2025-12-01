@@ -29,7 +29,7 @@ Ethereum L1 Claims Period
 
 ### Claims Period — Ethereum Mainnet
 
-The **Ethereum L1 Claims Period** opened on **27 November at 13:26 UTC** and will close on **30 November at 17:00 UTC**.
+The **Ethereum L1 Claims Period** opened on **27 November at 13:26 UTC** and will close on **2 December at 12:00 UTC**.
 
 Within this window, eligible participants must **either claim their tokens on Ethereum** or **actively choose to defer** their claim to the TEN Mainnet.  
 If no action is taken before the deadline, the allocation will be **automatically deferred** to the TEN Mainnet launch.
@@ -37,7 +37,6 @@ If no action is taken before the deadline, the allocation will be **automaticall
 ### Deferred Claims — TEN Mainnet
 
 Participants marked as deferred will be able to claim their tokens on **TEN Mainnet**, where the claims window will remain open for **a minimum of two weeks** following the launch.
-
 
 ## Eligibility Groups
 
