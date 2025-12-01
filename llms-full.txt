@@ -34,6 +34,12 @@ MiCAR regulatory whitepapers and documentation
 
 - [Run a TEN node](/docs/category/run-a-ten-node.md)
 
+#### security-audit
+
+Security audit reports for TEN Protocol and ecosystem projects
+
+- [Security Audit](/docs/category/security-audit.md): Security audit reports for TEN Protocol and ecosystem projects
+
 #### smart-contract-features
 
 - [Smart Contract Features](/docs/category/smart-contract-features.md)
@@ -123,6 +129,12 @@ As a node operator, your participation is essential in maintaining a secure, rel
 This guide provides detailed instructions to set up and manage a TEN Validator Node on Azure using Terraform and Ansible. Due to TEN’s use of SGX architecture and cloud-specific security assurances, all current deployments are limited to cloud infrastructure to mitigate risks associated with physical attacks. A proof-of-cloud assertion, provided by TEN, certifies the security and reliability of each validator node running in the cloud.
 
 - [Running a TEN Validator Node on Azure](/docs/run-ten-node/running-a-node.md): This guide provides detailed instructions to set up and manage a TEN Validator Node on Azure using Terraform and Ansible. Due to TEN’s use of SGX architecture and cloud-specific security assurances, all current deployments are limited to cloud infrastructure to mitigate risks associated with physical attacks. A proof-of-cloud assertion, provided by TEN, certifies the security and reliability of each validator node running in the cloud.
+
+### security-audit
+
+Download the security audit report performed by Halborn:
+
+- [Security Audit](/docs/security-audit.md): Download the security audit report performed by Halborn:
 
 ### smart-contract-features
 
@@ -274,6 +286,17 @@ Copyright © 2025 Ten Docs, Inc. Built with Docusaurus.
 ## [📄️<!-- --> <!-- -->Node Overview](/docs/run-ten-node/overview.md)
 
 [Running a node on the TEN network involves participating in the network’s transaction processing, batching, and roll-up mechanisms. As a node operator, you will play a critical role in maintaining the network’s security, scalability, and efficiency. Understanding the flow of transactions and the mechanics of batches and roll-ups is essential for effectively running a node and contributing to the network’s operation.](/docs/run-ten-node/overview.md)
+
+
+---
+
+## Security Audit
+
+> Security audit reports for TEN Protocol and ecosystem projects
+
+## [📄️<!-- --> <!-- -->Security Audit](/docs/security-audit.md)
+
+[Download the security audit report performed by Halborn:](/docs/security-audit.md)
 
 
 ---
@@ -1318,6 +1341,25 @@ terraform apply
 ## Managing the Validator Node[​](#managing-the-validator-node "Direct link to Managing the Validator Node")
 
 Coming soon! (monitoring, backups, tear down, etc.)
+
+
+---
+
+## Security Audit
+
+> Download the security audit report performed by Halborn:
+
+# Security Audit
+
+Download the [security audit report performed by Halborn](https://www.halborn.com/audits/obscuten/ten-protocol-664e70):
+
+## Download PDF[​](#download-pdf "Direct link to Download PDF")
+
+[Download Halborn TEN Protocol Audit Report(PDF)](/assets/files/halborn-audit-ten-1f8b43436c38f5c1152b716986b87580.pdf.md)
+
+## Embedded Viewer[​](#embedded-viewer "Direct link to Embedded Viewer")
+
+If the embedded viewer doesn't work in your browser, please use the download link above.
 
 
 ---

@@ -34,6 +34,12 @@ MiCAR regulatory whitepapers and documentation
 
 - [Run a TEN node](/docs/category/run-a-ten-node.md)
 
+#### security-audit
+
+Security audit reports for TEN Protocol and ecosystem projects
+
+- [Security Audit](/docs/category/security-audit.md): Security audit reports for TEN Protocol and ecosystem projects
+
 #### smart-contract-features
 
 - [Smart Contract Features](/docs/category/smart-contract-features.md)
@@ -123,6 +129,12 @@ As a node operator, your participation is essential in maintaining a secure, rel
 This guide provides detailed instructions to set up and manage a TEN Validator Node on Azure using Terraform and Ansible. Due to TEN’s use of SGX architecture and cloud-specific security assurances, all current deployments are limited to cloud infrastructure to mitigate risks associated with physical attacks. A proof-of-cloud assertion, provided by TEN, certifies the security and reliability of each validator node running in the cloud.
 
 - [Running a TEN Validator Node on Azure](/docs/run-ten-node/running-a-node.md): This guide provides detailed instructions to set up and manage a TEN Validator Node on Azure using Terraform and Ansible. Due to TEN’s use of SGX architecture and cloud-specific security assurances, all current deployments are limited to cloud infrastructure to mitigate risks associated with physical attacks. A proof-of-cloud assertion, provided by TEN, certifies the security and reliability of each validator node running in the cloud.
+
+### security-audit
+
+Download the security audit report performed by Halborn:
+
+- [Security Audit](/docs/security-audit.md): Download the security audit report performed by Halborn:
 
 ### smart-contract-features
 
