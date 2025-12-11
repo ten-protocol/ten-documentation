@@ -5,7 +5,7 @@ sidebar_position: 4
 # Precise transaction timestamp
 
 Real-time games require users to make quick decisions, and the outcomes depend on the precise moment in time when the action was made.
-This doesn't work well on-chain because latencies are not low enough. 
+This doesn't work well on-chain because latencies are not low enough. **The timestamp is provided in milliseconds**.
 
 ### Option 1 - External Timestamp oracle
 
@@ -42,7 +42,7 @@ interface ITimestamp {
 
 ```solidity
 
-// TEN provides a system contract that returns the precise timestamp of the calling transaction
+// TEN provides a system contract that returns the precise timestamp in milliseconds of the calling transaction
 interface ITimestamp {
     function getTransactionTimestamp() external returns (uint256);
 }
