@@ -19,67 +19,45 @@ The following sections should be completed when creating a TIP to make them tran
 1. **Implementation**: Steps to implement the TIP, including assumptions, resources, type of expertise required and costs breakdown. Legal documentation should be included if relevant. 
 1. **Timing**: Start date, milestones, and completion dates.
 
-## Lifecycle of a TIP
+## The "Fast-Track" Lifecycle (Bootstrapping Phase)
 
-A TIP will go through several steps to help make sure as many members of the TEN community as possible can engage with and review the TIP. Progressing past each step represents levelling-up in the process. Timeframes for each step help encourage reviews to be done in a timely manner.
+To support rapid growth and reduce friction, the standard governance lifecycle is currently compressed into a **10-day "Fast-Track" window**. This process is used for all strategic decisions, including token vesting schedules, and ecosystem parameters.
 
-| Level | Description                               | Timeframe | 
-|-------|-------------------------------------------|-----------|
-| 8 (End)     | ⭐ TIP Implementation               | Minutes  |
-| 7     | ⬆️ Ethereum Finalization Period           | 3 days   |
-| 6     | ⬆️ TEN to Ethereum Message                | 0.5 day  |
-| 5     | ⬆️ Reaction Period                        | 3 days   |
-| 4     | ⬆️ Acknowledge and Confirm                | 3 days   |
-| 3     | ⬆️ On-chain Vote                          | 14 days  |
-| 2     | ⬆️ On-chain Voting Preparation            | 3 days   |
-| 🛑    | Gate                                      |          |
-| 1 (Start)     | ⬆️ Interest Gathering, Off-chain Vote     | 14 days   |
+| Level | Stage | Description | Timeframe |
+| :--- | :--- | :--- | :--- |
+| **1** | **Proposal & Delay** | Published on Snapshot; active discussion period. | Days 1–4 |
+| **2** | **Active Voting** | Voting is open to the community on Snapshot. | Days 5–9 |
+| **3** | **Review & Execution** | Implementation by the Board/Core Team. | Day 10 |
 
-### Level 1: Interest Gathering, Off-chain Vote
-This first level is a preliminary filter to remove TIPs with low levels of interest or TIPs which will break the rules of the TEN governance system, e.g. are unlawful. 
-* Submission of TIP on Snapshot with a link to the TEN governance forum. Only holders of TEN tokens can submit a TIP
-* Discussion on the TEN governance forum and the opportunity to vote over 14 days to gauge interest. To vote you must hold at least one TEN token for 30 days or more
-* A simple majority vote (more than 50%) against the proposal at this stage discourages progressing to level 2
+### Level 1: Proposal & Voting Delay (Days 1–4)
+The TIP is officially uploaded to **Snapshot**. During this "Voting Delay" period:
+* **Final Discussion**: The proposal is live for public viewing, and final discussions take place on Discord Channel.
+* **Snapshot Taken**: The "snapshot" of token balances is typically taken before the start of this period to prevent "flash-loan" governance attacks or last-minute token purchases.
+* **No Voting**: Users can review the proposal, but the "Vote" button is not yet active.
 
-### Level 2: On-chain Voting Preparation
-This second level is the first step towards formalizing the TIP and preparing for the more meaningful vote at the next level.
-* Official submission via governance smart contracts on TEN
-* Requires a wallet address representing at least 1 TEN token held for at least 30 days
-* 3-day discussion period before voter snapshot and voting
+### Level 2: Active Voting Window (Days 5–9)
+The voting period officially opens for 5 full days.
+* **Platform**: [Snapshot.org](https://snapshot.org).
+* **Participation**: Eligible community members cast their votes gaslessly by signing a message with their wallet.
+* **Threshold**: A simple majority vote (>50%) is required for the TIP to progress.
 
-### Level 3: On-chain Vote
-At this third level those who are eligible to vote will do so. There is a minimum threshold of engagement so only genuinely relevant TIPs are progressed.
-* On-chain voting by participants of TEN's governance via Tally
-* A simple majority vote in favor (more than 50%) plus meeting a minimum threshold of engagement means the TIP will be moved on to level 4 voting. The minimum threshold of engagement is 5% of all TEN tokens in circulation
-* A majority vote against the TIP brings the lifecycle to an end. The original submitter is welcome to resubmit the TIP at Level 1 taking on board feedback and comments
+### Level 3: Review & Implementation (Day 10)
+Once the vote concludes, the proposal moves to execution.
+* **The "Safety Check"**: The TEN Governance Board/Core Team reviews the outcome. Implementation is automatic unless the proposal is found to contain a critical security vulnerability or legal conflict or critical deviation from Protocols goals.
+* **Manual Trigger**: Code changes or token movements are triggered manually by the team and are tracked publicly on the TEN GitHub repository.
 
-### Level 4: Acknowledge and Confirm
-This fourth level is a safety backstop and is particularly important in the early life of TEN. Consider this level to be the training wheels.
-* The TEN Governance Board are requested to acknowledge the voting outcome for the TIP
-* Confirmation moves the TIP to the next Level
+---
 
-### Level 5: Reaction Period
-The fifth level recognizes not everyone can be satisfied all of the time therefore individuals have an opportunity to change how they engage with TEN.
-* Post-approval 3-day period in which members of the TEN ecosystem can react to the approved TIP by changing how they engage with TEN, for example, withdrawing assets on TEN or deploying changes to smart contracts on TEN.
+## Future Roadmap: Fully Decentralized Governance
 
-### Level 6: TEN to Ethereum Message
-The sixth level is an important step so the voting result can be immutably captured on Ethereum mainnet.
-* Sending an L2-to-L1 message indicating TIP approval, finalizing on Ethereum mainnet
-* A 12 hour period is ample time for the L2-to-L1 message to be finalized by the TEN validators
+As the network reaches maturity, TEN will transition to an **Upgraded Lifecycle**. This will move from "Social Signaling" to "On-chain Execution":
 
-### Level 7: Ethereum Finalization Period
-This level is a safety margin in case there is a transaction in process on Ethereum which would be detrimentally affected by the execution of the TIP.
-* 3-day period to finalize in-progress transactions on Ethereum mainnet before implementation
+* **On-chain Voting**: Transitioning to platforms like **Tally or Snapshot X**.
 
-### Level 8: TIP Implementation
-This is the final level where the TIP is fully executed and implemented. Only a future TIP will change the end result of the TIP.
-* Final execution of the TIP either on the Ethereum mainnet or via L1-to-L2 transactions
-
-## Additional Waiting Periods
-For breaking changes, additional waiting periods mean stakeholders and partners can prepare for the TIP's changes. These waiting periods give time for members of the ecosystem to react to the TIP and make any necessary changes or updates.
+* **Ethereum Finalization**: Reintroducing L2-to-L1 messaging for core protocol upgrades to ensure the highest level of security and finality on Ethereum Mainnet.
 
 ## Conclusion
-The TIP process, spanning 8 levels, typically takes 40.5 days from start to finish. The levels have been designed to allow for thorough consideration, discussion, and thoughtful voting. This process aligns proposed changes with TEN's mission and values, allowing stakeholders to prepare for and adapt to new changes.
+The **Fast-Track 10-day process** ensures that TEN can iterate quickly while we are in active development.
 
 
 
