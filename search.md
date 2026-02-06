@@ -22,4 +22,4 @@ More
 * [Blog](https://medium.com/obscuro-labs)
 * [GitHub](https://github.com/ten-protocol/ten-documentation)
 
-Copyright © 2025 Ten Docs, Inc. Built with Docusaurus.
+Copyright © 2026 Ten Docs, Inc. Built with Docusaurus.

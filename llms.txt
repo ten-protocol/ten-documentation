@@ -184,6 +184,12 @@ Migrating to TEN enables your dApp to leverage “programmable encryption.” Be
 
 - [Network Configuration](/docs/write-ten-dapp/network-setup.md): Migrating to TEN enables your dApp to leverage “programmable encryption.” Below are steps to help you transition smoothly.
 
+#### programmable-gateway-access
+
+Base URL//testnet.ten.xyz
+
+- [Programmable Access to Gateway](/docs/write-ten-dapp/programmable-gateway-access.md): Base URL//testnet.ten.xyz
+
 #### sample-dapps
 
 Below you can view our in-house sample dApps developed to harness the power of TEN.
