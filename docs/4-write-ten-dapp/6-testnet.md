@@ -4,7 +4,7 @@ sidebar_position: 6
 
 # Testnet
 
-TEN Sepolia is our testnet that replicates the capabilities of the TEN Mainnet network. Linked to the Sepolia testnet, you can authenticate with the testnet TEN gateway, use the TEN faucet, and develop and deploy dApps for testing.
+TEN Sepolia is our testnet environment that mirrors the capabilities of the TEN Mainnet. In this environment, you can authenticate with the TEN testnet gateway, use the TEN faucet, and develop and deploy dApps for testing.
 
 ## TEN Gateway
 
@@ -12,7 +12,7 @@ TEN Sepolia is our testnet that replicates the capabilities of the TEN Mainnet n
 
 Visit the TEN testnet gateway [here](https://testnet.ten.xyz/). Follow the on‑screen instructions to authenticate with the hosted gateway that allows you to interact with the testnet.
 
-## Getting funds to the testnet
+## Getting funds on the testnet
 
 ### **Option 1: Requesting Testnet ETH from the TEN Gas Station**
 
@@ -31,6 +31,6 @@ If you already have ETH on the Sepolia testnet, you can bridge it directly to TE
 3. Choose how much Sepolia ETH you want to bridge from L1 to L2 (TEN).
 4. Confirm the transaction in your wallet and wait for it to finalize.
 
-## TEN Scan
+## TENScan
 
 You can use the TEN block explorer to view transaction data occurring on the testnet [here](https://testnet.tenscan.io/).

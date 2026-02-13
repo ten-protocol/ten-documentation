@@ -27,7 +27,7 @@ All HTTP endpoints below are served under the gateway base URL and versioned und
 
 **Endpoint:** `POST /v1/join/`
 
-Creates a new gateway user, generates a fresh viewing key pair, and returns the corresponding **encryption token** (also called “gateway token”) as a hex string. This token is used with both HTTP endpoints and JSON‑RPC.
+Creates a new gateway user, generates a fresh viewing key pair, and returns the corresponding **encryption token** (also called “gateway token”) as a hex string. This is used with HTTP and JSON-RPC endpoints
 
 ```bash
 curl -X POST https://testnet-rpc.ten.xyz/v1/join/
@@ -46,7 +46,7 @@ const encryptionToken = await response.text(); // hex string
 
 **Endpoint:** `POST /v1/getmessage/`
 
-Generates and returns an authentication message for the user to sign based on the provided encryption token. The gateway can return either an EIP‑712 typed message or a `personal_sign` message.
+Generates and returns an authentication message for the user to sign based on the provided encryption token. The gateway can return either an EIP‑712 typed message (default) or a `personal_sign` message in case of compatibility with older wallets.
 
 **Request body:**
 
@@ -234,12 +234,7 @@ When integrating with a browser frontend, the gateway can store the encryption t
   - Reads the gateway token cookie, validates it, ensures the user exists, and returns the token as a hex string.
 
 - **`POST /v1/set-token/`**
-  - Request body:
-    ```json
-    {
-      "token": "<hex user token>"
-    }
-    ```
+  - Request body: `{ "token": "<hex user token>" }`
   - Validates the token, checks that the user exists, and sets a long‑lived `HttpOnly`, `Secure` cookie for use by browser dApps.
 
 Both endpoints are also served under `https://testnet-rpc.ten.xyz/v1/...` and are guarded by CORS based on the configured frontend URL.

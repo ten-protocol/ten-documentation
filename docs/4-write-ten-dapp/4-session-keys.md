@@ -144,16 +144,25 @@ async function sendWithSessionKey(
 }
 ```
 
-The gateway validates that the session key belongs to the user identified by `encryptionToken`, signs the transaction with the session key’s private key, and propagates it to the TEN node.
+The gateway first confirms that the session key belongs to the user identified by `encryptionToken`. It then signs the transaction with the session key’s private key and sends it to the TEN node.
 
 ### 2) Direct `eth_sendTransaction` with a session key
 
-The gateway can also support flows where:
+You can send transactions directly using `eth_sendTransaction` by setting the `from` field to a session key address that belongs to the authenticated user. The gateway signs the transaction with the session key's private key and broadcasts it.
 
-- The **`from` field** is a session key address owned by the user.
-- The gateway signs and sends the transaction if the session key is valid and sufficiently funded.
+**Requirements:**
 
-This path is used in integration tests and may be preferred when your client already expects standard `eth_sendTransaction` semantics. The exact UX and error handling (e.g. non‑session‑key `from`) should follow the gateway implementation.
+- The request must include the user's `encryptionToken` (same authentication as other gateway calls).
+- The `from` address must be a session key owned by that user.
+- The transaction must include all required fields (`gas`, `gasPrice` or `maxFeePerGas`/`maxPriorityFeePerGas`, `nonce`, etc.). The gateway does not auto-fill missing fields.
+
+The gateway verifies that the session key belongs to the user identified by `encryptionToken`, signs the transaction with the session key's private key, and sends it to the TEN node.
+
+**Error handling:**
+
+- If `from` is not a session key for the authenticated user, the call fails with an error indicating the session key address was not found.
+- If the session key lacks sufficient balance, the transaction is rejected by the network (not by the gateway).
+- Standard authentication errors apply if the `encryptionToken` is missing or invalid.
 
 ---
 
