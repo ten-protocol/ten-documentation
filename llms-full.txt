@@ -186,9 +186,9 @@ Migrating to TEN enables your dApp to leverage “programmable encryption.” Be
 
 #### programmable-gateway-access
 
-Base URL//testnet.ten.xyz
+TEN Network Gateway API (testnet)
 
-- [Programmable Access to Gateway](/docs/write-ten-dapp/programmable-gateway-access.md): Base URL//testnet.ten.xyz
+- [Programmable Access to Gateway](/docs/write-ten-dapp/programmable-gateway-access.md): TEN Network Gateway API (testnet)
 
 #### sample-dapps
 
@@ -198,9 +198,9 @@ Below you can view our in-house sample dApps developed to harness the power of T
 
 #### session-keys
 
-The key feature of Account Abstraction (EIP-4337) is “session keys” (SKs) through a proxy smart contract.
+In the classic Account Abstraction model (EIP‑4337) described on ethereum.org, “session keys” (SKs) are typically implemented using proxy smart contracts and a bundler.
 
-- [Account Abstraction](/docs/write-ten-dapp/session-keys.md): The key feature of Account Abstraction (EIP-4337) is “session keys” (SKs) through a proxy smart contract.
+- [Account Abstraction & Session Keys in TEN](/docs/write-ten-dapp/session-keys.md): In the classic Account Abstraction model (EIP‑4337) described on ethereum.org, “session keys” (SKs) are typically implemented using proxy smart contracts and a bundler.
 
 #### setup-dev-env
 
@@ -210,9 +210,9 @@ The key feature of Account Abstraction (EIP-4337) is “session keys” (SKs) th
 
 #### testnet
 
-TEN Sepolia is our testnet that replicates the capabilities of the TEN Mainnet network. Linked to the Sepolia testnet, you can authenticate with the testnet TEN gateway, use the TEN faucet, and develop and deploy dApps for testing.
+TEN Sepolia is our testnet environment that mirrors the capabilities of the TEN Mainnet. In this environment, you can authenticate with the TEN testnet gateway, use the TEN faucet, and develop and deploy dApps for testing.
 
-- [Testnet](/docs/write-ten-dapp/testnet.md): TEN Sepolia is our testnet that replicates the capabilities of the TEN Mainnet network. Linked to the Sepolia testnet, you can authenticate with the testnet TEN gateway, use the TEN faucet, and develop and deploy dApps for testing.
+- [Testnet](/docs/write-ten-dapp/testnet.md): TEN Sepolia is our testnet environment that mirrors the capabilities of the TEN Mainnet. In this environment, you can authenticate with the TEN testnet gateway, use the TEN faucet, and develop and deploy dApps for testing.
 
 #### tutorial
 
@@ -2035,120 +2035,259 @@ Once configured, you can start writing or migrating your smart contracts.
 
 ## Programmable Access to Gateway
 
-> Base URL//testnet.ten.xyz
+> TEN Network Gateway API (testnet)
 
 # Programmable Access to Gateway
 
-# TEN Network Gateway API
+## TEN Network Gateway API (testnet)[​](#ten-network-gateway-api-testnet "Direct link to TEN Network Gateway API (testnet)")
 
-Base URL: `https://testnet.ten.xyz`
+**Base URL (testnet gateway):** `https://testnet-rpc.ten.xyz`
+
+**Testnet frontend (UI):** [`https://testnet.ten.xyz`](https://testnet.ten.xyz) – hosted gateway UI that talks to the same testnet gateway.
+
+All HTTP endpoints below are served under the gateway base URL and versioned under `/v1`.
+
+### High‑level flow[​](#highlevel-flow "Direct link to High‑level flow")
+
+* **1. Create a user & encryption token** via `/v1/join/`.
+* **2. Get a message to sign** via `/v1/getmessage/` using that token.
+* **3. Authenticate** by sending the signed message to `/v1/authenticate/`.
+* **4. (Optional) Query registration state** for specific addresses via `/v1/query/`.
+* **5. (Optional) Revoke** the token via `/v1/revoke/`.
+* **6. Call JSON‑RPC** using the token as a query parameter.
+
+***
 
 ## 1. Get Encryption Token[​](#1-get-encryption-token "Direct link to 1. Get Encryption Token")
 
-**Endpoint:** `GET /v1/join`
+**Endpoint:** `POST /v1/join/`
 
-Generates and returns an EncryptionToken.
-
-```
-curl -X GET https://testnet.ten.xyz/v1/join
-```
+Creates a new gateway user, generates a fresh viewing key pair, and returns the corresponding **encryption token** (also called “gateway token”) as a hex string. This is used with HTTP and JSON-RPC endpoints
 
 ```
-const response = await fetch('https://testnet.ten.xyz/v1/join');
-const token = await response.text();
+curl -X POST https://testnet-rpc.ten.xyz/v1/join/
 ```
+
+```
+const response = await fetch("https://testnet-rpc.ten.xyz/v1/join/", {
+  method: "POST",
+});
+const encryptionToken = await response.text(); // hex string
+```
+
+***
 
 ## 2. Get Message to Sign[​](#2-get-message-to-sign "Direct link to 2. Get Message to Sign")
 
-**Endpoint:** `POST /v1/getmessage`
+**Endpoint:** `POST /v1/getmessage/`
 
-Generates and returns a message (if needed 712 typed message too) for the user to sign based on the provided encryption token.
+Generates and returns an authentication message for the user to sign based on the provided encryption token. The gateway can return either an EIP‑712 typed message (default) or a `personal_sign` message in case of compatibility with older wallets.
+
+**Request body:**
 
 ```
-curl -X POST "https://testnet.ten.xyz/v1/getmessage/" \
+{
+  "encryptionToken": "<hex user token>",
+  "formats": ["EIP712", "personal_sign"] // optional; order is preference
+}
+```
+
+**Example (cURL):**
+
+```
+curl -X POST "https://testnet-rpc.ten.xyz/v1/getmessage/" \
   -H "Content-Type: application/json" \
   -d '{
-    "encryptionToken": "$EncryptionToken",
+    "encryptionToken": "<EncryptionToken>",
     "formats": ["EIP712"]
   }'
 ```
 
+**Example (JavaScript):**
+
 ```
-const msgRes = await fetch('https://testnet.ten.xyz/v1/getmessage/', {
-  method: 'POST',
-  headers: { 'Content-Type': 'application/json' },
+const msgRes = await fetch("https://testnet-rpc.ten.xyz/v1/getmessage/", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
   body: JSON.stringify({
-    encryptionToken: token,
-    formats: ['EIP712'],
+    encryptionToken,
+    formats: ["EIP712"],
   }),
 });
-const data = await msgRes.json();
+
+const { message, type } = await msgRes.json(); // type: "EIP712" | "personal_sign"
 ```
+
+You then pass `message` to the user’s wallet to be signed.
+
+***
 
 ## 3. Authenticate User[​](#3-authenticate-user "Direct link to 3. Authenticate User")
 
-**Endpoint:** `POST /v1/authenticate?token=$EncryptionToken`
+**Endpoint:** `POST /v1/authenticate/?token=<EncryptionToken>`
 
-Submits a signed message in the format address & signature, proving ownership of the private keys for the account, and links that account with the encryption token.
+Submits the signed message and proves wallet ownership. The gateway verifies the signature and binds the wallet address to the user identified by `token`.
+
+**Request body:**
 
 ```
-curl -X POST "https://testnet.ten.xyz/v1/authenticate/?token=$EncryptionToken" \
+{
+  "address": "0x...",
+  "signature": "0x...",
+  "type": "EIP712" // optional, defaults to EIP712
+}
+```
+
+**Example (cURL):**
+
+```
+curl -X POST "https://testnet-rpc.ten.xyz/v1/authenticate/?token=<EncryptionToken>" \
   -H "Content-Type: application/json" \
   -d '{
-    "address": "$Address",
-    "signature": "$Signature"
+    "address": "0xYourAddress",
+    "signature": "0xYourSignature",
+    "type": "EIP712"
   }'
 ```
 
+**Example (JavaScript):**
+
 ```
-await fetch(`https://testnet.ten.xyz/v1/authenticate/?token=${EncryptionToken}`, {
-  method: 'POST',
-  headers: { 'Content-Type': 'application/json' },
-  body: JSON.stringify({
-    address,
-    signature: sig
-  }),
-});
+await fetch(
+  `https://testnet-rpc.ten.xyz/v1/authenticate/?token=${encryptionToken}`,
+  {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      address,
+      signature: sig,
+      type: "EIP712",
+    }),
+  },
+);
 ```
+
+Multiple addresses can be associated with a single encryption token.
+
+***
 
 ## 4. Query Address Registration[​](#4-query-address-registration "Direct link to 4. Query Address Registration")
 
-**Endpoint:** `GET /v1/query/address?token=$EncryptionToken&a=$Address`
+**Endpoint:** `GET /v1/query/?token=<EncryptionToken>&a=<Address>`
 
-Returns a JSON response indicating whether the address "a" is registered for the user.
+Returns whether a given address is already registered (bound) for the user.
 
-```
-curl -X GET "https://testnet.ten.xyz/v1/query/address?token=$EncryptionToken&a=$Address"
-```
+**Example (cURL):**
 
 ```
-const response = await fetch(`https://testnet.ten.xyz/v1/query/address?token=${token}&a=${address}`);
-const data = await response.text();
+curl "https://testnet-rpc.ten.xyz/v1/query/?token=<EncryptionToken>&a=0xYourAddress"
 ```
+
+**Response:**
+
+```
+{
+  "status": true
+}
+```
+
+**Example (JavaScript):**
+
+```
+const res = await fetch(
+  `https://testnet-rpc.ten.xyz/v1/query/?token=${encryptionToken}&a=${address}`,
+);
+const data = await res.json(); // { status: boolean }
+```
+
+***
 
 ## 5. Revoke Access[​](#5-revoke-access "Direct link to 5. Revoke Access")
 
-**Endpoint:** `POST /v1/revoke?token=$EncryptionToken`
+**Endpoint:** `POST /v1/revoke/?token=<EncryptionToken>`
 
-Deletes encryption token associated with the account.
-
-```
-curl -X POST "https://testnet.ten.xyz/v1/revoke?token=abc123"
-```
+Deletes the user identified by `token` along with associated viewing keys and session keys in the gateway.
 
 ```
-await fetch(`https://testnet.ten.xyz/v1/revoke?token=${token}`, {
-  method: 'POST'
+curl -X POST "https://testnet-rpc.ten.xyz/v1/revoke/?token=<EncryptionToken>"
+```
+
+```
+await fetch(`https://testnet-rpc.ten.xyz/v1/revoke/?token=${encryptionToken}`, {
+  method: "POST",
 });
 ```
 
-## RPC Usage[​](#rpc-usage "Direct link to RPC Usage")
+***
 
-After authentication, use the encryption token with RPC calls:
+## 6. JSON‑RPC Usage[​](#6-jsonrpc-usage "Direct link to 6. JSON‑RPC Usage")
+
+After authenticating at least one address for a user, you can send Ethereum‑style JSON‑RPC requests through the gateway by including the encryption token as a query parameter.
+
+**RPC endpoint (HTTP):**
 
 ```
-https://testnet.ten.xyz/v1/?token=<EncryptionToken>
+https://testnet-rpc.ten.xyz/v1/?token=<EncryptionToken>
 ```
+
+Example payload:
+
+```
+curl -X POST "https://testnet-rpc.ten.xyz/v1/?token=<EncryptionToken>" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "jsonrpc": "2.0",
+    "id": 1,
+    "method": "eth_getBalance",
+    "params": ["0xYourAddress", "latest"]
+  }'
+```
+
+The gateway enforces that reads and writes are scoped to accounts that are bound to the encryption token and forwards calls to the TEN node over an encrypted channel.
+
+***
+
+## 7. Health & Network Endpoints[​](#7-health--network-endpoints "Direct link to 7. Health & Network Endpoints")
+
+These endpoints are useful for monitoring and discovering network configuration:
+
+* **`GET /v1/ready/`** – lightweight readiness probe indicating the gateway process is up.
+* **`GET /v1/health/`** – basic health check of the gateway itself (cached briefly).
+* **`GET /v1/network-health/`** – TEN node health wrapped in a JSON‑RPC‑like response.
+* **`GET /v1/network-config/`** – static network configuration (contract addresses, registries, etc.).
+* **`GET /v1/version/`** – current gateway version as a plain string.
+
+All are exposed under `https://testnet-rpc.ten.xyz/v1/...`.
+
+***
+
+## 8. Token Cookie Helper Endpoints (Browser flows)[​](#8-token-cookie-helper-endpoints-browser-flows "Direct link to 8. Token Cookie Helper Endpoints (Browser flows)")
+
+When integrating with a browser frontend, the gateway can store the encryption token in a secure cookie (domain‑wide on `.ten.xyz`):
+
+* **`GET /v1/get-token/`**
+
+  * Reads the gateway token cookie, validates it, ensures the user exists, and returns the token as a hex string.
+
+* **`POST /v1/set-token/`**
+
+  * Request body: `{ "token": "<hex user token>" }`
+  * Validates the token, checks that the user exists, and sets a long‑lived `HttpOnly`, `Secure` cookie for use by browser dApps.
+
+Both endpoints are also served under `https://testnet-rpc.ten.xyz/v1/...` and are guarded by CORS based on the configured frontend URL.
+
+***
+
+## 9. Using the TEN Hardhat plugin[​](#9-using-the-ten-hardhat-plugin "Direct link to 9. Using the TEN Hardhat plugin")
+
+For Hardhat‑based development, you can also integrate with the TEN testnet gateway using the **TEN Hardhat plugin**:
+
+* **Package:** `@tenprotocol/ten-hardhat-plugin`
+* **Docs & usage:** see the plugin README on npm:
+  <br />
+  [`https://www.npmjs.com/package/@tenprotocol/ten-hardhat-plugin`](https://www.npmjs.com/package/@tenprotocol/ten-hardhat-plugin)
+
+The plugin configures a Hardhat network to talk to the same JSON‑RPC gateway at `https://testnet-rpc.ten.xyz` and is the recommended way to interact with TEN from Hardhat projects.
 
 
 ---
@@ -2188,149 +2327,221 @@ View the repository for Trickly [here](https://github.com/ten-protocol/trickly/)
 
 ---
 
-## Account Abstraction
+## Account Abstraction & Session Keys in TEN
 
-> The key feature of Account Abstraction (EIP-4337) is “session keys” (SKs) through a proxy smart contract.
+> In the classic Account Abstraction model (EIP‑4337) described on ethereum.org, “session keys” (SKs) are typically implemented using proxy smart contracts and a bundler.
 
-# Account Abstraction
+# Account Abstraction & Session Keys in TEN
 
-The key feature of [Account Abstraction](https://medium.com/p/2e85bde4c54d) (EIP-4337) is “session keys” (SKs) through a proxy smart contract. SKs allow users to interact with the blockchain without signing every transaction, which is a major UX improvement.
+In the classic Account Abstraction model (EIP‑4337) described on [ethereum.org](https://ethereum.org/roadmap/account-abstraction/), “session keys” (SKs) are typically implemented using proxy smart contracts and a bundler.<br /><!-- -->TEN’s Account Abstraction design, outlined in [this post](https://medium.com/p/2e85bde4c54d), instead provides **native session keys managed by the gateway and TEEs**, eliminating the need for proxy contracts or a bundler.
 
-TEN supports "native" SKs - these are managed by the platform and do not require a proxy contract.
+Session keys in TEN are:
 
-In TEN, SKs are managed by dApp developers through dedicated RPC endpoints.
+* **Ephemeral Ethereum accounts** managed by the gateway on behalf of a user.
+* **Linked to the user’s viewing key / encryption token** ([details](https://docs.ten.xyz/docs/write-ten-dapp/programmable-gateway-access)).
+* **Used to sign and submit transactions** via the gateway, enabling “no‑click” UX for dApps.
 
-## Solution overview[​](#solution-overview "Direct link to Solution overview")
+Each user can have **multiple session keys** (up to 100), and the gateway can automatically expire idle keys and recover funds back to the user’s primary account.
 
-Imagine you're developing an on-chain game, and you want a smooth UX without the distraction of signing every move.
+***
 
-Conceptually, the game will create a session key (SK) for the user, then ask the user to move some funds to that address, and then create “move” transactions signed with the SK.
+## High‑level flow for dApps[​](#highlevel-flow-for-dapps "Direct link to High‑level flow for dApps")
 
-If the game were to create the SK in the browser, there would be a risk of the user losing the SK, and the funds associated with it, in case of an accidental exit. With TEN, the dApp developer doesn't have to worry about this, because the SKs are managed by TEEs.
+Imagine an on‑chain game that wants a smooth UX without prompting the user to sign every move:
 
-## Usage[​](#usage "Direct link to Usage")
+1. **User authenticates to the gateway** and gets an `encryptionToken`.
+2. **Gateway creates a session key** for this user and exposes its address.
+3. **User funds the session key** with a normal, user‑signed transfer.
+4. **Game sends transactions using the session key** (no additional wallet popups).
+5. **Gateway tracks activity and can expire/clean up idle session keys**, sweeping funds back to the account which was first authenticated with the gateway.
 
-The steps below describe the implementation for a game developer—the primary use case for SKs. Note that SKs can be used for any dApp that requires a no‑click UX.
+From the dApp’s point of view, a session key behaves like a normal Ethereum account whose private key is held inside the TEE‑backed gateway.
 
-### When the game starts[​](#when-the-game-starts "Direct link to When the game starts")
+***
 
-Before the user can start playing, the game must create the SK and ask the user to move some funds to that address. The funds will be used to pay for moves.
+## Using session keys via custom queries[​](#using-session-keys-via-custom-queries "Direct link to Using session keys via custom queries")
 
-* Call the RPC `eth_getStorageAt` with address `0x0000000000000000000000000000000000000003` - this will return the hex-encoded address of the SK. The dApp needs to store this address for future use.
-* Create a normal transaction that transfers some ETH to the SK. The amount depends on how many "moves" the user is prepared to prepay for.
-* Ask the user to sign this transaction with their standard wallet, and submit it to the network using the library of your choice.
-* The session key is automatically activated and ready to use.
+On TEN, session key management is exposed as **custom queries** behind standard JSON‑RPC, primarily via `eth_getStorageAt` with special “method addresses”.
 
-### During the game[​](#during-the-game "Direct link to During the game")
+All examples below assume you are calling through the gateway:
 
-After sending funds to the SK, create a transaction for each move, but don't ask the user to sign them. Instead, submit them to the network unsigned using the RPC `eth_getStorageAt` with address `0x0000000000000000000000000000000000000005` and the following parameters:
+```
+https://testnet-rpc.ten.xyz/v1/?token=<EncryptionToken>
+```
+
+### 1. Create a session key[​](#1-create-a-session-key "Direct link to 1. Create a session key")
+
+To create a new session key for the authenticated user:
+
+* Call `eth_getStorageAt` with:
+
+  <!-- -->
+
+  * **address**: `0x0000000000000000000000000000000000000003`
+  * other parameters can be left as in the example below.
+
+The response returns the **hex‑encoded address** of the new session key.
+
+```
+async function createSessionKey(encryptionToken) {
+  const response = await fetch(
+    `https://testnet-rpc.ten.xyz/v1/?token=${encryptionToken}`,
+    {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        jsonrpc: "2.0",
+        method: "eth_getStorageAt",
+        params: [
+          "0x0000000000000000000000000000000000000003", // create SK
+          "0x0",
+          "latest",
+        ],
+        id: 1,
+      }),
+    },
+  );
+
+  const data = await response.json();
+  return data.result; // Session key address (0x...)
+}
+```
+
+### 2. Fund the session key[​](#2-fund-the-session-key "Direct link to 2. Fund the session key")
+
+Once you have the session key address, fund it with a **normal user‑signed transaction** from the user’s main wallet:
+
+* Build a standard `eth_sendTransaction` / wallet transaction from the user’s account to the session key address.
+* Let the wallet sign and submit it.
+
+The gateway observes this and considers the session key funded and ready to use.
+
+***
+
+## Sending transactions with a session key[​](#sending-transactions-with-a-session-key "Direct link to Sending transactions with a session key")
+
+There are two main integration patterns:
+
+1. **Custom‑query based signing** (low‑level; uses `eth_getStorageAt`).
+2. **Direct `eth_sendTransaction` from the session key** (simpler, when your client library supports it).
+
+### 1) Custom‑query signing (low‑level)[​](#1-customquery-signing-lowlevel "Direct link to 1) Custom‑query signing (low‑level)")
+
+You can ask the gateway to sign and submit an unsigned transaction using the session key by calling:
+
+* `eth_getStorageAt` with **address** `0x0000000000000000000000000000000000000005`
+* The second parameter encodes:
 
 ```
 {
-  "sessionKeyAddress": "0x...", // The session key address
-  "tx": "base64_encoded_transaction" // The unsigned transaction encoded as base64
+  "sessionKeyAddress": "0x...", // Session key address
+  "tx": "base64_encoded_transaction" // Unsigned transaction, base64‑encoded
 }
 ```
 
-The platform will sign the transactions on behalf of the user.
+Example:
 
-As a game developer, you are responsible for keeping track of the SK’s balance. You can also query the network for the balance of the SK address. If the SK runs out of balance, you must ask the user to move more funds to the SK.
+```
+async function sendWithSessionKey(
+  encryptionToken,
+  sessionKeyAddress,
+  unsignedTx,
+) {
+  const txBase64 = btoa(JSON.stringify(unsignedTx)); // client‑side encoding
 
-### Managing session keys[​](#managing-session-keys "Direct link to Managing session keys")
+  const response = await fetch(
+    `https://testnet-rpc.ten.xyz/v1/?token=${encryptionToken}`,
+    {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        jsonrpc: "2.0",
+        method: "eth_getStorageAt",
+        params: [
+          "0x0000000000000000000000000000000000000005", // sign+send with SK
+          JSON.stringify({
+            sessionKeyAddress,
+            tx: txBase64,
+          }),
+          "latest",
+        ],
+        id: 1,
+      }),
+    },
+  );
 
-TEN provides additional RPC endpoints for managing session keys:
+  const data = await response.json();
+  return data.result; // tx hash
+}
+```
 
-* `eth_getStorageAt` with address `0x0000000000000000000000000000000000000004` — permanently removes the session key. This requires the following parameters:
+The gateway first confirms that the session key belongs to the user identified by `encryptionToken`. It then signs the transaction with the session key’s private key and sends it to the TEN node.
+
+### 2) Direct `eth_sendTransaction` with a session key[​](#2-direct-eth_sendtransaction-with-a-session-key "Direct link to 2-direct-eth_sendtransaction-with-a-session-key")
+
+You can send transactions directly using `eth_sendTransaction` by setting the `from` field to a session key address that belongs to the authenticated user. The gateway signs the transaction with the session key's private key and broadcasts it.
+
+**Requirements:**
+
+* The request must include the user's `encryptionToken` (same authentication as other gateway calls).
+* The `from` address must be a session key owned by that user.
+* The transaction must include all required fields (`gas`, `gasPrice` or `maxFeePerGas`/`maxPriorityFeePerGas`, `nonce`, etc.). The gateway does not auto-fill missing fields.
+
+The gateway verifies that the session key belongs to the user identified by `encryptionToken`, signs the transaction with the session key's private key, and sends it to the TEN node.
+
+**Error handling:**
+
+* If `from` is not a session key for the authenticated user, the call fails with an error indicating the session key address was not found.
+* If the session key lacks sufficient balance, the transaction is rejected by the network (not by the gateway).
+* Standard authentication errors apply if the `encryptionToken` is missing or invalid.
+
+***
+
+## Deleting and expiring session keys[​](#deleting-and-expiring-session-keys "Direct link to Deleting and expiring session keys")
+
+### Manual deletion via custom query[​](#manual-deletion-via-custom-query "Direct link to Manual deletion via custom query")
+
+To explicitly delete a session key:
+
+* Call `eth_getStorageAt` with **address** `0x0000000000000000000000000000000000000004` and a JSON payload:
 
 ```
 {
-  "sessionKeyAddress": "0x..." // The session key address to delete
+  "sessionKeyAddress": "0x..." // Session key address to delete
 }
 ```
 
-### Finishing the game[​](#finishing-the-game "Direct link to Finishing the game")
+The gateway:
 
-When a game ends, you must move the remaining funds back to the main address.
+* Removes the session key from storage (access to the private key is lost forever).
+* **Sweeps remaining funds** back to the user’s primary account, using its internal `TxSender`.
 
-* Create a transaction (tx) that moves the funds back from the SK to the main address. Submit it unsigned, because the funds are controlled by the SK.
+### Automatic expiration & fund recovery[​](#automatic-expiration--fund-recovery "Direct link to Automatic expiration & fund recovery")
 
-## Example implementation[​](#example-implementation "Direct link to Example implementation")
+In addition, the gateway runs a background **SessionKeyExpirationService**:
 
-Here's a complete example of how to implement session keys in a JavaScript dApp:
+* Tracks last activity for each session key.
 
-```
-// 1. Create a session key
-async function createSessionKey() {
-  const response = await fetch("https://testnet.ten.xyz/v1/", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      jsonrpc: "2.0",
-      method: "eth_getStorageAt",
-      params: ["0x0000000000000000000000000000000000000003", "0x0", "latest"],
-      id: 1,
-    }),
-  });
+* Periodically scans for keys older than `--sessionKeyExpirationThreshold`.
 
-  const data = await response.json();
-  return data.result; // Returns the session key address
-}
+* For each candidate, it:
 
-// 2. Fund the session key (user signs this transaction)
-async function fundSessionKey(sessionKeyAddress, amount) {
-  // This would be a normal transaction signed by the user's wallet
-  // transferring ETH to the session key address
-}
+  <!-- -->
 
-// 3. Send unsigned transactions using the session key
-async function sendUnsignedTransaction(sessionKeyAddress, unsignedTx) {
-  const txBase64 = btoa(JSON.stringify(unsignedTx)); // Convert to base64
+  * Reloads the owning user.
+  * Attempts to move remaining funds back to the user’s primary account.
+  * Removes the key from the activity tracker and persists updated state.
 
-  const response = await fetch("https://testnet.ten.xyz/v1/", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      jsonrpc: "2.0",
-      method: "eth_getStorageAt",
-      params: [
-        "0x0000000000000000000000000000000000000005",
-        JSON.stringify({
-          sessionKeyAddress: sessionKeyAddress,
-          tx: txBase64,
-        }),
-        "latest",
-      ],
-      id: 1,
-    }),
-  });
+***
 
-  const data = await response.json();
-  return data.result; // Returns the transaction hash
-}
+## UX & safety considerations for dApp developers[​](#ux--safety-considerations-for-dapp-developers "Direct link to UX & safety considerations for dApp developers")
 
-// 4. Delete the session key when done
-async function deleteSessionKey(sessionKeyAddress) {
-  const response = await fetch("https://testnet.ten.xyz/v1/", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      jsonrpc: "2.0",
-      method: "eth_getStorageAt",
-      params: [
-        "0x0000000000000000000000000000000000000004",
-        JSON.stringify({
-          sessionKeyAddress: sessionKeyAddress,
-        }),
-        "latest",
-      ],
-      id: 1,
-    }),
-  });
+* **Balance management**: Track the session key’s balance (e.g. via `eth_getBalance`) and top it up when needed.
+* **Per‑dApp keys**: Use separate session keys per dApp / game instance if you want stronger isolation.
+* **Lifecycle**: Delete or let the gateway expire session keys when they are no longer needed to keep the system tidy.
+* **Security**: The session key’s private key never leaves the TEE‑backed gateway, but users should still treat them as scoped spending keys and only fund them with limited amounts.
 
-  const data = await response.json();
-  return data.result; // Returns 0x01 for success, 0x00 for failure
-}
-```
+Combined with **programmable access tokens** (`encryptionToken`) and the TEN gateway, session keys give you EIP‑4337‑style UX without additional contracts or bundler infrastructure.
 
 
 ---
@@ -2380,11 +2591,11 @@ For developers running a node and infrastructure using Docker on a Mac, please b
 
 ## Testnet
 
-> TEN Sepolia is our testnet that replicates the capabilities of the TEN Mainnet network. Linked to the Sepolia testnet, you can authenticate with the testnet TEN gateway, use the TEN faucet, and develop and deploy dApps for testing.
+> TEN Sepolia is our testnet environment that mirrors the capabilities of the TEN Mainnet. In this environment, you can authenticate with the TEN testnet gateway, use the TEN faucet, and develop and deploy dApps for testing.
 
 # Testnet
 
-TEN Sepolia is our testnet that replicates the capabilities of the TEN Mainnet network. Linked to the Sepolia testnet, you can authenticate with the testnet TEN gateway, use the TEN faucet, and develop and deploy dApps for testing.
+TEN Sepolia is our testnet environment that mirrors the capabilities of the TEN Mainnet. In this environment, you can authenticate with the TEN testnet gateway, use the TEN faucet, and develop and deploy dApps for testing.
 
 ## TEN Gateway[​](#ten-gateway "Direct link to TEN Gateway")
 
@@ -2392,21 +2603,26 @@ TEN Sepolia is our testnet that replicates the capabilities of the TEN Mainnet n
 
 Visit the TEN testnet gateway [here](https://testnet.ten.xyz/). Follow the on‑screen instructions to authenticate with the hosted gateway that allows you to interact with the testnet.
 
-## TEN Sepolia Faucet[​](#ten-sepolia-faucet "Direct link to TEN Sepolia Faucet")
+## Getting funds on the testnet[​](#getting-funds-on-the-testnet "Direct link to Getting funds on the testnet")
 
-![TEN Discord Faucet](/assets/images/faucet.ten.xyz-b867b87d2e217d4c67df393bb160c172.jpg)
-
-Using the steps provided, you can request testnet ETH from the faucet available on the TEN Gas Station.
-
-## **Requesting Testnet ETH**[​](#requesting-testnet-eth "Direct link to requesting-testnet-eth")
+### **Option 1: Requesting Testnet ETH from the TEN Gas Station**[​](#option-1-requesting-testnet-eth-from-the-ten-gas-station "Direct link to option-1-requesting-testnet-eth-from-the-ten-gas-station")
 
 1. Make a note of your EVM wallet address or copy it to your clipboard.
-2. Head over to [TEN Gas Station](https://testnet-faucet.ten.xyz/).
+2. Head over to [TEN Gas Station](https://faucet.ten.xyz/).
 3. Paste your EVM wallet address into the wallet address field.
 4. Log in with your Discord and X (Twitter) accounts.
-5. Then, complete the available tasks.
+5. Complete the available tasks to receive testnet ETH.
 
-## TENscan[​](#tenscan "Direct link to TENscan")
+### **Option 2: Bridging Sepolia testnet funds to TEN**[​](#option-2-bridging-sepolia-testnet-funds-to-ten "Direct link to option-2-bridging-sepolia-testnet-funds-to-ten")
+
+If you already have ETH on the Sepolia testnet, you can bridge it directly to TEN Sepolia:
+
+1. Go to the TEN testnet bridge: [`https://testnet-bridge.ten.xyz/`](https://testnet-bridge.ten.xyz/).
+2. Connect your wallet (Sepolia network selected).
+3. Choose how much Sepolia ETH you want to bridge from L1 to L2 (TEN).
+4. Confirm the transaction in your wallet and wait for it to finalize.
+
+## TENScan[​](#tenscan "Direct link to TENScan")
 
 You can use the TEN block explorer to view transaction data occurring on the testnet [here](https://testnet.tenscan.io/).
 

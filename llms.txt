@@ -186,9 +186,9 @@ Migrating to TEN enables your dApp to leverage “programmable encryption.” Be
 
 #### programmable-gateway-access
 
-Base URL//testnet.ten.xyz
+TEN Network Gateway API (testnet)
 
-- [Programmable Access to Gateway](/docs/write-ten-dapp/programmable-gateway-access.md): Base URL//testnet.ten.xyz
+- [Programmable Access to Gateway](/docs/write-ten-dapp/programmable-gateway-access.md): TEN Network Gateway API (testnet)
 
 #### sample-dapps
 
@@ -198,9 +198,9 @@ Below you can view our in-house sample dApps developed to harness the power of T
 
 #### session-keys
 
-The key feature of Account Abstraction (EIP-4337) is “session keys” (SKs) through a proxy smart contract.
+In the classic Account Abstraction model (EIP‑4337) described on ethereum.org, “session keys” (SKs) are typically implemented using proxy smart contracts and a bundler.
 
-- [Account Abstraction](/docs/write-ten-dapp/session-keys.md): The key feature of Account Abstraction (EIP-4337) is “session keys” (SKs) through a proxy smart contract.
+- [Account Abstraction & Session Keys in TEN](/docs/write-ten-dapp/session-keys.md): In the classic Account Abstraction model (EIP‑4337) described on ethereum.org, “session keys” (SKs) are typically implemented using proxy smart contracts and a bundler.
 
 #### setup-dev-env
 
@@ -210,9 +210,9 @@ The key feature of Account Abstraction (EIP-4337) is “session keys” (SKs) th
 
 #### testnet
 
-TEN Sepolia is our testnet that replicates the capabilities of the TEN Mainnet network. Linked to the Sepolia testnet, you can authenticate with the testnet TEN gateway, use the TEN faucet, and develop and deploy dApps for testing.
+TEN Sepolia is our testnet environment that mirrors the capabilities of the TEN Mainnet. In this environment, you can authenticate with the TEN testnet gateway, use the TEN faucet, and develop and deploy dApps for testing.
 
-- [Testnet](/docs/write-ten-dapp/testnet.md): TEN Sepolia is our testnet that replicates the capabilities of the TEN Mainnet network. Linked to the Sepolia testnet, you can authenticate with the testnet TEN gateway, use the TEN faucet, and develop and deploy dApps for testing.
+- [Testnet](/docs/write-ten-dapp/testnet.md): TEN Sepolia is our testnet environment that mirrors the capabilities of the TEN Mainnet. In this environment, you can authenticate with the TEN testnet gateway, use the TEN faucet, and develop and deploy dApps for testing.
 
 #### tutorial
 
