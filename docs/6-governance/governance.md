@@ -17,12 +17,12 @@ The governance framework may result in an approved proposal to make changes to t
 
 ### 3. Validator Node Rules
 
-TEN validator nodes run attested software on verified hardware and are responsible for appending entries to the TEN ledger. Validator nodes can validate the accuracy of an encrypted rollup before it is submitted to Ethereum. Validator nodes cannot run competing software or create forks of the Ethereum ledger. As such, Ethereum maintains a single source of truth.
+TEN validator nodes run attested software on verified hardware and are responsible for appending entries to the TEN chain. Validator nodes can validate the accuracy of an encrypted rollup before it is submitted to Ethereum. Validator nodes cannot run competing software or create forks of the Ethereum chain. As such, Ethereum maintains a single source of truth.
 
-### 4. Ledger Integrity
+### 4. Chain Integrity
 
-The canonical chain in the protocol is determined by the rules implemented in the attested software run by the nodes in the TEN network. An attested and therefore valid TEE will not sign an encrypted rollup built on a non-canonical chain. This ensures the integrity of the ledger remains intact.
+The canonical chain in the protocol is determined by the rules implemented in the attested software run by the nodes in the TEN network. An attested and therefore valid TEE will not sign an encrypted rollup built on a non-canonical chain. This ensures the integrity of the chain remains intact.
 
 ### 5. Slashing The Stake Of Misbehaving Parties
 
-Nodes on the TEN network will face penalties for attempts to compromise the ledger’s integrity, for example through operator actions or the installation of malicious software. Misbehaviors are detected by the protocol and culprits are penalized through the slashing of their node stake.
+Nodes on the TEN network will face penalties for attempts to compromise the chain’s integrity, for example through operator actions or the installation of malicious software. Misbehaviors are detected by the protocol and culprits are penalized through the slashing of their node stake.
