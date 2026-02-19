@@ -10,7 +10,7 @@ Below are the core concepts that make TEN unique while maintaining complete comp
 
 All contract execution runs inside TEEs; inputs, state, and (optionally) logs can be private. See the [Overview](../1-overview.md) for architecture and threat model.
 
-Clients establish HTTPS connections that terminate inside TEEs via the TEN Gateway, preventing plaintext exposure on intermediaries; smart contracts then execute entirely within the enclave boundary, and contract state plus sensitive metadata are stored encrypted at rest, with read access enforced through Viewing Keys and policy logic.
+Clients establish HTTPS connections that terminate inside TEEs via the TEN Gateway, preventing plaintext exposure on intermediaries; smart contracts then execute entirely within the enclave boundary, and contract state plus sensitive metadata are stored encrypted at rest, with read access enforced through viewing keys and policy logic.
 
 ## Smart Contract Execution with Hidden State
 
@@ -23,12 +23,12 @@ Revisit [Data Acess](../3-smart-contract-features/1-data-access.md) for more inf
 TEN introduces **[Smart Transparency](https://medium.com/obscuro-labs/web3-needs-access-control-9a80719eec4a)** — a paradigm where smart contracts enforce rules of data access, not just computation. This provides fine-grained control over who can see what data and when, including programmable disclosure, conditional data access, and event visibility rules.
 
 ## TEN Gateway
-Web service running in TEEs that provides the secure edge for dApps and user wallets:
+The TEN Gateways runs as a service within a TEE, providing the secure edge for dApps and user wallets:
 
-- Routes encrypted transactions between clients and validator/sequencer nodes
-- Manages Viewing Keys on behalf of users for authenticated private view calls
-- Manages Session Keys to enable no-click UX under developer-defined policies
-- Caches encrypted metadata and frequently accessed data for performance and availability
+- Routes encrypted transactions between clients and validator/sequencer nodes.
+- Manages viewing keys on behalf of users for authenticated private view calls.
+- Manages Session Keys to enable no-click UX under developer-defined policies.
+- Caches encrypted metadata and frequently accessed data for performance and availability.
 
 See [TEN Gateway](./6-testnet.md#ten-gateway) for more information.
 
