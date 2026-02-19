@@ -7,7 +7,6 @@ Migrating to TEN enables your dApp to leverage “programmable encryption.” Be
 * Update your Hardhat deployment to support the `--network ten` option.
 * Add data protection logic to your view functions (if applicable).
 * Configure visibility rules for event logs and internal storage.
-* Add the TEN onboarding widget to your JavaScript UI.
 * Add features that make use of secure, verifiable randomness using `block.prevrandao` or precise timestamping
 
 ## 1. Configuring Hardhat[​](#1-configuring-hardhat "Direct link to 1. Configuring Hardhat")
@@ -33,16 +32,20 @@ import { HardhatUserConfig } from "hardhat/config";
 import "@nomiclabs/hardhat-waffle";
 import "ten-hardhat-plugin";
 
+const { PK } = process.env;
+
 module.exports = {
   solidity: "0.8.10",
+  defaultNetwork: "ten",
   networks: {
     hardhat: {
-    // Configuration for the Hardhat Network
+      // Configuration for the Hardhat Network
     },
     ten: {
         url: "https://testnet.ten.xyz/v1/",
         chainId: 8443,
-        accounts: ["your-private-key"],
+        useGateway: true,
+        accounts: [ `0x${PK}` ]
     },
   },
 };
@@ -50,4 +53,4 @@ module.exports = {
 export default config;
 ```
 
-Once configured, you can start writing or migrating your smart contracts.
+Note in the above the private key is taken from an environment variable, rather than being put directly into the configuration file. PKs should never be added directly into any files that might be subsequently made public, e.g. through a public source code control system. Once configured, you can start writing or migrating your smart contracts.

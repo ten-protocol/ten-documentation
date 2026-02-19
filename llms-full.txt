@@ -168,9 +168,9 @@ Real-time games require users to make quick decisions, and the outcomes depend o
 
 #### bridging
 
-The TEN Bridge project aims to facilitate the seamless transfer of assets between the Ethereum blockchain and the TEN blockchain. This documentation provides an overview of the project, its purpose, supported tokens, and usage instructions.
+The TEN Bridge facilitates the seamless transfer of assets between the Ethereum blockchain and the TEN blockchain. This documentation provides an overview of the bridge, its purpose, supported tokens, and usage instructions.
 
-- [Cross-Chain Bridging](/docs/write-ten-dapp/bridging.md): The TEN Bridge project aims to facilitate the seamless transfer of assets between the Ethereum blockchain and the TEN blockchain. This documentation provides an overview of the project, its purpose, supported tokens, and usage instructions.
+- [Cross-Chain Bridging](/docs/write-ten-dapp/bridging.md): The TEN Bridge facilitates the seamless transfer of assets between the Ethereum blockchain and the TEN blockchain. This documentation provides an overview of the bridge, its purpose, supported tokens, and usage instructions.
 
 #### high-level-concepts
 
@@ -200,7 +200,7 @@ Below you can view our in-house sample dApps developed to harness the power of T
 
 In the classic Account Abstraction model (EIP‑4337) described on ethereum.org, “session keys” (SKs) are typically implemented using proxy smart contracts and a bundler.
 
-- [Account Abstraction & Session Keys in TEN](/docs/write-ten-dapp/session-keys.md): In the classic Account Abstraction model (EIP‑4337) described on ethereum.org, “session keys” (SKs) are typically implemented using proxy smart contracts and a bundler.
+- [Account Abstraction & session keys in TEN](/docs/write-ten-dapp/session-keys.md): In the classic Account Abstraction model (EIP‑4337) described on ethereum.org, “session keys” (SKs) are typically implemented using proxy smart contracts and a bundler.
 
 #### setup-dev-env
 
@@ -1817,19 +1817,19 @@ contract CoinFlip {
 
 ## Cross-Chain Bridging
 
-> The TEN Bridge project aims to facilitate the seamless transfer of assets between the Ethereum blockchain and the TEN blockchain. This documentation provides an overview of the project, its purpose, supported tokens, and usage instructions.
+> The TEN Bridge facilitates the seamless transfer of assets between the Ethereum blockchain and the TEN blockchain. This documentation provides an overview of the bridge, its purpose, supported tokens, and usage instructions.
 
 # Cross-Chain Bridging
 
-The TEN Bridge project aims to facilitate the seamless transfer of assets between the Ethereum blockchain and the TEN blockchain. This documentation provides an overview of the project, its purpose, supported tokens, and usage instructions.
+The TEN Bridge facilitates the seamless transfer of assets between the Ethereum blockchain and the TEN blockchain. This documentation provides an overview of the bridge, its purpose, supported tokens, and usage instructions.
 
 ## Purpose[​](#purpose "Direct link to Purpose")
 
-The primary goal of the TEN Bridge is to enable users to move assets between Ethereum and TEN efficiently and securely. This bridge will serve as a vital infrastructure component for users who wish to interact with assets on both blockchains. (Link TBC)
+The primary goal of the TEN Bridge is to enable users to move assets between Ethereum and TEN efficiently and securely. It serves as a vital infrastructure component for users who wish to interact with assets on both blockchains.
 
 ## Supported Tokens[​](#supported-tokens "Direct link to Supported Tokens")
 
-To provide flexibility and utility to users, the TEN Bridge supports the following tokens:
+To provide flexibility and utility to users, the bridge supports the following tokens:
 
 * Ethereum (ETH)
 * TEN token (TEN)
@@ -1843,10 +1843,11 @@ To provide flexibility and utility to users, the TEN Bridge supports the followi
 Before using the TEN Bridge, ensure you have the following:
 
 * MetaMask or any Ethereum-compatible wallet
+* Navigate to the [TEN Bridge UI](https://testnet-bridge.ten.xyz/)
 
 ### Steps to Transfer Assets[​](#steps-to-transfer-assets "Direct link to Steps to Transfer Assets")
 
-1. Connect your Ethereum wallet (e.g., MetaMask) to the TEN Bridge interface.
+1. Connect your Ethereum wallet (e.g. MetaMask) to the TEN Bridge interface.
 2. Select the asset you wish to transfer and specify the destination blockchain (Ethereum or TEN).
 3. Enter the amount of the asset you want to transfer.
 4. Review the transaction details and confirm the transfer.
@@ -1882,7 +1883,7 @@ Below are the core concepts that make TEN unique while maintaining complete comp
 
 All contract execution runs inside TEEs; inputs, state, and (optionally) logs can be private. See the [Overview](/docs/overview.md) for architecture and threat model.
 
-Clients establish HTTPS connections that terminate inside TEEs via the TEN Gateway, preventing plaintext exposure on intermediaries; smart contracts then execute entirely within the enclave boundary, and contract state plus sensitive metadata are stored encrypted at rest, with read access enforced through Viewing Keys and policy logic.
+Clients establish HTTPS connections that terminate inside TEEs via the TEN Gateway, preventing plaintext exposure on intermediaries; smart contracts then execute entirely within the enclave boundary, and contract state plus sensitive metadata are stored encrypted at rest, with read access enforced through viewing keys and policy logic.
 
 ## Smart Contract Execution with Hidden State[​](#smart-contract-execution-with-hidden-state "Direct link to Smart Contract Execution with Hidden State")
 
@@ -1896,12 +1897,12 @@ TEN introduces **[Smart Transparency](https://medium.com/obscuro-labs/web3-needs
 
 ## TEN Gateway[​](#ten-gateway "Direct link to TEN Gateway")
 
-Web service running in TEEs that provides the secure edge for dApps and user wallets:
+The TEN Gateway runs as a service within a TEE, providing the secure edge for dApps and user wallets:
 
-* Routes encrypted transactions between clients and validator/sequencer nodes
-* Manages Viewing Keys on behalf of users for authenticated private view calls
-* Manages Session Keys to enable no-click UX under developer-defined policies
-* Caches encrypted metadata and frequently accessed data for performance and availability
+* Routes encrypted transactions between clients and validator/sequencer nodes.
+* Manages viewing keys on behalf of users for authenticated private view calls.
+* Manages session keys to enable no-click UX under developer-defined policies.
+* Caches encrypted metadata and frequently accessed data for performance and availability.
 
 See [TEN Gateway](/docs/write-ten-dapp/testnet.md#ten-gateway) for more information.
 
@@ -1959,13 +1960,13 @@ The same code on TEN does not expose those attack vectors. It should be noted th
 
 See [Secure Entropy](/docs/smart-contract-features/native-entropy.md) for more information.
 
-## Native Session Keys[​](#native-session-keys "Direct link to Native Session Keys")
+## Native session keys[​](#native-session-keys "Direct link to Native session keys")
 
 TEN provides **native session key** support managed by TEEs, eliminating the need for proxy contracts while enabling seamless user experiences. Users can play games or interact with dApps without signing every transaction, while developers benefit from simple integration through standard RPC endpoints.
 
 The management of these session keys is provided by the [ten-kit](https://github.com/ten-protocol/ten-kit/tree/2c4265bdb2832249af8c9ec21c4b60d02eb8dd3a?tab=readme-ov-file#advanced-example-with-session-keys) library, which provides the React components and hooks needed, as well as wallet connection and privacy‑preserving transactions.
 
-See [Session Keys](/docs/write-ten-dapp/session-keys.md) for more information.
+See [session keys](/docs/write-ten-dapp/session-keys.md) for more information.
 
 ***
 
@@ -1985,7 +1986,6 @@ Migrating to TEN enables your dApp to leverage “programmable encryption.” Be
 * Update your Hardhat deployment to support the `--network ten` option.
 * Add data protection logic to your view functions (if applicable).
 * Configure visibility rules for event logs and internal storage.
-* Add the TEN onboarding widget to your JavaScript UI.
 * Add features that make use of secure, verifiable randomness using `block.prevrandao` or precise timestamping
 
 ## 1. Configuring Hardhat[​](#1-configuring-hardhat "Direct link to 1. Configuring Hardhat")
@@ -2011,16 +2011,20 @@ import { HardhatUserConfig } from "hardhat/config";
 import "@nomiclabs/hardhat-waffle";
 import "ten-hardhat-plugin";
 
+const { PK } = process.env;
+
 module.exports = {
   solidity: "0.8.10",
+  defaultNetwork: "ten",
   networks: {
     hardhat: {
-    // Configuration for the Hardhat Network
+      // Configuration for the Hardhat Network
     },
     ten: {
         url: "https://testnet.ten.xyz/v1/",
         chainId: 8443,
-        accounts: ["your-private-key"],
+        useGateway: true,
+        accounts: [ `0x${PK}` ]
     },
   },
 };
@@ -2028,7 +2032,7 @@ module.exports = {
 export default config;
 ```
 
-Once configured, you can start writing or migrating your smart contracts.
+Note in the above the private key is taken from an environment variable, rather than being put directly into the configuration file. PKs should never be added directly into any files that might be subsequently made public, e.g. through a public source code control system. Once configured, you can start writing or migrating your smart contracts.
 
 
 ---
@@ -2327,11 +2331,11 @@ View the repository for Trickly [here](https://github.com/ten-protocol/trickly/)
 
 ---
 
-## Account Abstraction & Session Keys in TEN
+## Account Abstraction & session keys in TEN
 
 > In the classic Account Abstraction model (EIP‑4337) described on ethereum.org, “session keys” (SKs) are typically implemented using proxy smart contracts and a bundler.
 
-# Account Abstraction & Session Keys in TEN
+# Account Abstraction & session keys in TEN
 
 In the classic Account Abstraction model (EIP‑4337) described on [ethereum.org](https://ethereum.org/roadmap/account-abstraction/), “session keys” (SKs) are typically implemented using proxy smart contracts and a bundler.<br /><!-- -->TEN’s Account Abstraction design, outlined in [this post](https://medium.com/p/2e85bde4c54d), instead provides **native session keys managed by the gateway and TEEs**, eliminating the need for proxy contracts or a bundler.
 

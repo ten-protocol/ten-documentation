@@ -1,14 +1,14 @@
 # Cross-Chain Bridging
 
-The TEN Bridge project aims to facilitate the seamless transfer of assets between the Ethereum blockchain and the TEN blockchain. This documentation provides an overview of the project, its purpose, supported tokens, and usage instructions.
+The TEN Bridge facilitates the seamless transfer of assets between the Ethereum blockchain and the TEN blockchain. This documentation provides an overview of the bridge, its purpose, supported tokens, and usage instructions.
 
 ## Purpose[​](#purpose "Direct link to Purpose")
 
-The primary goal of the TEN Bridge is to enable users to move assets between Ethereum and TEN efficiently and securely. This bridge will serve as a vital infrastructure component for users who wish to interact with assets on both blockchains. (Link TBC)
+The primary goal of the TEN Bridge is to enable users to move assets between Ethereum and TEN efficiently and securely. It serves as a vital infrastructure component for users who wish to interact with assets on both blockchains.
 
 ## Supported Tokens[​](#supported-tokens "Direct link to Supported Tokens")
 
-To provide flexibility and utility to users, the TEN Bridge supports the following tokens:
+To provide flexibility and utility to users, the bridge supports the following tokens:
 
 * Ethereum (ETH)
 * TEN token (TEN)
@@ -22,10 +22,11 @@ To provide flexibility and utility to users, the TEN Bridge supports the followi
 Before using the TEN Bridge, ensure you have the following:
 
 * MetaMask or any Ethereum-compatible wallet
+* Navigate to the [TEN Bridge UI](https://testnet-bridge.ten.xyz/)
 
 ### Steps to Transfer Assets[​](#steps-to-transfer-assets "Direct link to Steps to Transfer Assets")
 
-1. Connect your Ethereum wallet (e.g., MetaMask) to the TEN Bridge interface.
+1. Connect your Ethereum wallet (e.g. MetaMask) to the TEN Bridge interface.
 2. Select the asset you wish to transfer and specify the destination blockchain (Ethereum or TEN).
 3. Enter the amount of the asset you want to transfer.
 4. Review the transaction details and confirm the transfer.

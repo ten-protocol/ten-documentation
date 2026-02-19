@@ -1,4 +1,4 @@
-# Account Abstraction & Session Keys in TEN
+# Account Abstraction & session keys in TEN
 
 In the classic Account Abstraction model (EIP‑4337) described on [ethereum.org](https://ethereum.org/roadmap/account-abstraction/), “session keys” (SKs) are typically implemented using proxy smart contracts and a bundler.<br /><!-- -->TEN’s Account Abstraction design, outlined in [this post](https://medium.com/p/2e85bde4c54d), instead provides **native session keys managed by the gateway and TEEs**, eliminating the need for proxy contracts or a bundler.
 

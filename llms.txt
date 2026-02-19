@@ -168,9 +168,9 @@ Real-time games require users to make quick decisions, and the outcomes depend o
 
 #### bridging
 
-The TEN Bridge project aims to facilitate the seamless transfer of assets between the Ethereum blockchain and the TEN blockchain. This documentation provides an overview of the project, its purpose, supported tokens, and usage instructions.
+The TEN Bridge facilitates the seamless transfer of assets between the Ethereum blockchain and the TEN blockchain. This documentation provides an overview of the bridge, its purpose, supported tokens, and usage instructions.
 
-- [Cross-Chain Bridging](/docs/write-ten-dapp/bridging.md): The TEN Bridge project aims to facilitate the seamless transfer of assets between the Ethereum blockchain and the TEN blockchain. This documentation provides an overview of the project, its purpose, supported tokens, and usage instructions.
+- [Cross-Chain Bridging](/docs/write-ten-dapp/bridging.md): The TEN Bridge facilitates the seamless transfer of assets between the Ethereum blockchain and the TEN blockchain. This documentation provides an overview of the bridge, its purpose, supported tokens, and usage instructions.
 
 #### high-level-concepts
 
@@ -200,7 +200,7 @@ Below you can view our in-house sample dApps developed to harness the power of T
 
 In the classic Account Abstraction model (EIP‑4337) described on ethereum.org, “session keys” (SKs) are typically implemented using proxy smart contracts and a bundler.
 
-- [Account Abstraction & Session Keys in TEN](/docs/write-ten-dapp/session-keys.md): In the classic Account Abstraction model (EIP‑4337) described on ethereum.org, “session keys” (SKs) are typically implemented using proxy smart contracts and a bundler.
+- [Account Abstraction & session keys in TEN](/docs/write-ten-dapp/session-keys.md): In the classic Account Abstraction model (EIP‑4337) described on ethereum.org, “session keys” (SKs) are typically implemented using proxy smart contracts and a bundler.
 
 #### setup-dev-env
 
