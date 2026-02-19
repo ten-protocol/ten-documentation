@@ -23,7 +23,7 @@ Revisit [Data Acess](../3-smart-contract-features/1-data-access.md) for more inf
 TEN introduces **[Smart Transparency](https://medium.com/obscuro-labs/web3-needs-access-control-9a80719eec4a)** — a paradigm where smart contracts enforce rules of data access, not just computation. This provides fine-grained control over who can see what data and when, including programmable disclosure, conditional data access, and event visibility rules.
 
 ## TEN Gateway
-The TEN Gateways runs as a service within a TEE, providing the secure edge for dApps and user wallets:
+The TEN Gateway runs as a service within a TEE, providing the secure edge for dApps and user wallets:
 
 - Routes encrypted transactions between clients and validator/sequencer nodes.
 - Manages viewing keys on behalf of users for authenticated private view calls.
