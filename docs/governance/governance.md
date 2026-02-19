@@ -1,37 +1,25 @@
 # Governance
 
-TEN's governance is explicit, transparent, and draws inspiration from the experiences of Bitcoin and Ethereum. In a decentralized system, control can be:
+TEN's governance framework defines how TEN evolves over time so it can adapt to a changing world while remaining aligned to how TEN is best put to use. It exists to give the TEN community a transparent and accountable way to propose, debate, and decide on changes. While governance is the framework by which changes are proposed and decided upon, how these changes are implemented in practice depends on where control is applied. TEN incorporates a set of technical and economic controls which operate alongside the governance framework. In some cases, these controls may prevent the implementation of approved proposals.
 
-* **Explicit**: Exercised by a group through direct signing or voting.
-* **Implicit Immutable**: Implemented in an unchangeable protocol.
-* **Implicit Mutable**: Implemented in a protocol represented by an open-source, changeable codebase.
-
-## TEN Controls[​](#ten-controls "Direct link to TEN Controls")
+## TEN Protocol Controls[​](#ten-protocol-controls "Direct link to TEN Protocol Controls")
 
 ### 1. TEE Attestation Constraints[​](#1-tee-attestation-constraints "Direct link to 1. TEE Attestation Constraints")
 
-The Attestation Constraints control which software can run inside the Secure Enclave, processing user transactions and creating rollups. Independent security auditors analyze and approve the code. The constraints contain the keys of these auditors, determining which software is permitted.
+Trusted Execution Environments (TEEs) used by TEN feature the concept of attestation, the ability to attest that what you think is running inside the TEE is in fact running. The attestation constraints control which software can run inside the TEE to process transactions and create encrypted rollups. Anyone, including independent security auditors, can analyze the code and check the attestation report to confirm this code is running in the TEE. Attestation prevents malicious software being executed on a TEN network node.
 
-### 2. Administration Of Ethereum Management Contracts[​](#2-administration-of-ethereum-management-contracts "Direct link to 2. Administration Of Ethereum Management Contracts")
+### 2. Administration Of Management Smart Contracts[​](#2-administration-of-management-smart-contracts "Direct link to 2. Administration Of Management Smart Contracts")
 
-Ethereum management contracts in TEN may have upgradeable components to address bugs and introduce new features. Upgradeable components imply administrative control over:
+The governance framework may result in an approved proposal to make changes to the protocol's management smart contracts. As a result, these smart contracts have upgradeable components to address bugs, introduce new features and allow for changes. On that basis, upgradeable components require the means to apply administrative control over bridge, rollup and attestation logic.
 
-* Bridge logic
-* Rollup logic
-* Attestation logic
+### 3. Validator Node Rules[​](#3-validator-node-rules "Direct link to 3. Validator Node Rules")
 
-### 3. Creating Rollups[​](#3-creating-rollups "Direct link to 3. Creating Rollups")
+TEN validator nodes run attested software on verified hardware and are responsible for appending entries to the TEN chain. Validator nodes can validate the accuracy of an encrypted rollup before it is submitted to Ethereum. Validator nodes cannot run competing software or create forks of the Ethereum chain. As such, Ethereum maintains a single source of truth.
 
-TEN Aggregators, running attested software and hardware with a stake, have the power to append to the L2 ledger. However, they cannot choose competing software or create forks.
+### 4. Chain Integrity[​](#4-chain-integrity "Direct link to 4. Chain Integrity")
 
-### 4. Canonical Rollup Chain[​](#4-canonical-rollup-chain "Direct link to 4. Canonical Rollup Chain")
-
-The canonical chain in TEN is determined by the rules implemented in the attested software run by Aggregators. A valid Secure Enclave will not sign a rollup built on a non-canonical chain, ensuring ledger integrity.
+The canonical chain in the protocol is determined by the rules implemented in the attested software run by the nodes in the TEN network. An attested and therefore valid TEE will not sign an encrypted rollup built on a non-canonical chain. This ensures the integrity of the chain remains intact.
 
 ### 5. Slashing The Stake Of Misbehaving Parties[​](#5-slashing-the-stake-of-misbehaving-parties "Direct link to 5. Slashing The Stake Of Misbehaving Parties")
 
-Aggregators attempting to compromise the ledger's integrity face penalties. Misbehaviors are detected by the protocol, and culprits are penalized through stake slashing.
-
-### 6. Expected Monthly Operational Cost For Nodes[​](#6-expected-monthly-operational-cost-for-nodes "Direct link to 6. Expected Monthly Operational Cost For Nodes")
-
-TEN's fee structure aims for predictable income for node operators and fees for users. A set value representing the monthly operational cost for each node is crucial for determining fees and balancing decentralization with user costs.
+Nodes on the TEN network will face penalties for attempts to compromise the chain’s integrity, for example through operator actions or the installation of malicious software. Misbehaviors are detected by the protocol and culprits are penalized through the slashing of their node stake.

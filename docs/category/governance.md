@@ -1,3 +1,3 @@
 ## [📄️<!-- --> <!-- -->Governance](/docs/governance/governance.md)
 
-[TEN's governance is explicit, transparent, and draws inspiration from the experiences of Bitcoin and Ethereum. In a decentralized system, control can be:](/docs/governance/governance.md)
+[TEN's governance framework defines how TEN evolves over time so it can adapt to a changing world while remaining aligned to how TEN is best put to use. It exists to give the TEN community a transparent and accountable way to propose, debate, and decide on changes. While governance is the framework by which changes are proposed and decided upon, how these changes are implemented in practice depends on where control is applied. TEN incorporates a set of technical and economic controls which operate alongside the governance framework. In some cases, these controls may prevent the implementation of approved proposals.](/docs/governance/governance.md)
