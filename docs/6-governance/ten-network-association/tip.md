@@ -1,27 +1,40 @@
 ---
 sidebar_position: 4
 ---
+
 # TEN Improvement Proposals (TIP)
 
-A TEN Improvement Proposal (TIP) is an essential component of the governance of TEN because it is how participants in the TEN community can have an active role in the evolution of TEN.  
+A TEN Improvement Proposal (TIP) is the primary mechanism for the community to shape the evolution of the TEN Network. To balance **security** with **agility**, TEN utilizes a tiered governance model. 
 
-TIPs are submitted by anyone holding TEN tokens and who are therefore members of the TEN Governance, or DAO. TIPs are used to modify procedures, install or modify software, update permission whitelists where they exist. Also TIPs include requests for funds or grants and provide guidelines or information to the community.
+Depending on the impact of the proposal, it will follow either the **Fast-Track** or the **Traditional** lifecycle.
+
+---
 
 ## TIP Structure
-The following sections should be completed when creating a TIP to make them transparent, structured and easy to understand. The structure of a TIP follows the SMARTKIT approach:
+Regardless of the lifecycle chosen, all proposals must follow the **SMARTKIT** approach to ensure quality and technical rigor:
 
-1. **Summary**: A brief summary of the TIP.
-1. **Motivation**: Justification for implementing the TIP.
-1. **Alignment**: Explanation of how the TIP aligns with TEN's mission and values.
-1. **Risks**: description of any risks of proceeding with the TIP.
-1. **Terms**: Definitions of unique, new, or industry-specific terms (optional).
-1. **Key Details**: Detailed breakdown of platforms, technologies, and design decisions. Includes alternate designs and related work.
-1. **Implementation**: Steps to implement the TIP, including assumptions, resources, type of expertise required and costs breakdown. Legal documentation should be included if relevant. 
-1. **Timing**: Start date, milestones, and completion dates.
+1. **Summary**: A brief overview of the proposal.
+2. **Motivation**: Why is this change necessary?
+3. **Alignment**: How does this fit TEN’s mission and values?
+4. **Risks**: Potential downsides or security considerations.
+5. **Terms**: Definitions for specific terminology (optional).
+6. **Key Details**: Technical design, platforms, and alternate options considered.
+7. **Implementation**: Required resources, costs, and technical expertise.
+8. **Timing**: Start date, milestones, and completion dates.
 
-## The "Fast-Track" Lifecycle (Bootstrapping Phase)
+---
 
-To support rapid growth and reduce friction, the standard governance lifecycle is currently compressed into a **10-day "Fast-Track" window**. This process is used for all strategic decisions, including token vesting schedules, and ecosystem parameters.
+## Governance Tiers: Which Lifecycle to Use?
+
+| Tier | Type of Change | Lifecycle | Platform |
+| :--- | :--- | :--- | :--- |
+| **Tier 1: Non-Constitutional** | Grants, parameters, guidelines, social votes. | **Fast-Track** | Snapshot |
+| **Tier 2: Constitutional** | Core software upgrades, logic changes, L1-bridge updates. | **Traditional** | Snapshot + Tally |
+
+---
+
+## 1. The "Fast-Track" Lifecycle (10 Days)
+The Fast-Track is used for high-velocity decisions that do not require deep protocol-level code changes.
 
 | Level | Stage | Description | Timeframe |
 | :--- | :--- | :--- | :--- |
@@ -29,36 +42,34 @@ To support rapid growth and reduce friction, the standard governance lifecycle i
 | **2** | **Active Voting** | Voting is open to the community on Snapshot. | Days 5–9 |
 | **3** | **Review & Execution** | Implementation by the Board/Core Team. | Day 10 |
 
-### Level 1: Proposal & Voting Delay (Days 1–4)
-The TIP is officially uploaded to **Snapshot**. During this "Voting Delay" period:
-* **Final Discussion**: The proposal is live for public viewing, and final discussions take place on Discord Channel.
-* **Snapshot Taken**: The "snapshot" of token balances is typically taken before the start of this period to prevent "flash-loan" governance attacks or last-minute token purchases.
-* **No Voting**: Users can review the proposal, but the "Vote" button is not yet active.
-
-### Level 2: Active Voting Window (Days 5–9)
-The voting period officially opens for 5 full days.
-* **Platform**: [Snapshot.org](https://snapshot.org).
-* **Participation**: Eligible community members cast their votes gaslessly by signing a message with their wallet.
-* **Threshold**: A simple majority vote (>50%) is required for the TIP to progress.
-
-### Level 3: Review & Implementation (Day 10)
-Once the vote concludes, the proposal moves to execution.
-* **The "Safety Check"**: The TEN Governance Board/Core Team reviews the outcome. Implementation is automatic unless the proposal is found to contain a critical security vulnerability or legal conflict or critical deviation from Protocols goals.
-* **Manual Trigger**: Code changes or token movements are triggered manually by the team and are tracked publicly on the TEN GitHub repository.
+* **Execution**: Changes are triggered manually or via multisig.
+* **Safety**: The Governance Board serves as a safety backstop to prevent malicious execution.
 
 ---
 
-## Future Roadmap: Fully Decentralized Governance
+## 2. The "Traditional" Lifecycle (~37 Days)
+The Traditional Cycle is reserved for **Constitutional** proposals. These are changes that modify the core protocol, upgrade smart contracts, or affect the security of the L2-to-L1 bridge. This cycle includes mandatory "cooling-off" periods to ensure maximum security.
 
-As the network reaches maturity, TEN will transition to an **Upgraded Lifecycle**. This will move from "Social Signaling" to "On-chain Execution":
+| Level | Stage | Platform | Timeframe |
+| :--- | :--- | :--- | :--- |
+| **1** | **Temperature Check** | Forum + Snapshot | 7 Days |
+| **2** | **On-chain Voting Prep** | Tally / On-chain | 3 Days |
+| **3** | **On-chain DAO Vote** | Tally | 14 Days |
+| **4** | **Reaction Period** | Cooling-off | 3 Days |
+| **5** | **L2-to-L1 Finalization** | Ethereum Mainnet | 7 Days |
+| **6** | **Implementation** | Automated / TEE | Minutes |
 
-* **On-chain Voting**: Transitioning to platforms like **Tally or Snapshot X**.
+### Detailed Breakdown
+* **Level 1: Temperature Check (7 Days)**: An initial signal vote on Snapshot. A simple majority is required to move to the formal on-chain stage.
+* **Level 2: Voting Prep (3 Days)**: The proposal is uploaded to the on-chain Governor contract. This delay allows delegates to "lock in" their voting power.
+* **Level 3: On-chain Vote (14 Days)**: The formal, binding vote. This requires reaching a **Quorum** (e.g., 5% of total circulating supply).
+* **Level 4: Reaction Period (3 Days)**: A safety window allowing users who disagree with the outcome to exit the system or adjust their positions before the code change takes effect.
+* **Level 5: Ethereum Finalization (7 Days)**: For bridge or logic upgrades, this period ensures the L2 state is finalized on Ethereum Mainnet.
+* **Level 6: Implementation**: The code is executed automatically via the protocol’s scripts or in the future with TEE based solutions.
+---
 
-* **Ethereum Finalization**: Reintroducing L2-to-L1 messaging for core protocol upgrades to ensure the highest level of security and finality on Ethereum Mainnet.
+## Additional Waiting Periods
+For breaking changes or major hard-forks, the Governance Board may mandate additional waiting periods to allow ecosystem partners (exchanges, indexers, dApps) to prepare for the update.
 
 ## Conclusion
-The **Fast-Track 10-day process** ensures that TEN can iterate quickly while we are in active development.
-
-
-
-
+The tiered approach ensures that we remain the fastest-moving L2 for ecosystem growth while maintaining the right standards of security for the protocol's core foundation.
