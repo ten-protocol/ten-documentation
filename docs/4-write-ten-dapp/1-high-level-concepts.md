@@ -27,7 +27,7 @@ The TEN Gateways runs as a service within a TEE, providing the secure edge for d
 
 - Routes encrypted transactions between clients and validator/sequencer nodes.
 - Manages viewing keys on behalf of users for authenticated private view calls.
-- Manages Session Keys to enable no-click UX under developer-defined policies.
+- Manages session keys to enable no-click UX under developer-defined policies.
 - Caches encrypted metadata and frequently accessed data for performance and availability.
 
 See [TEN Gateway](./6-testnet.md#ten-gateway) for more information.
@@ -85,12 +85,12 @@ The same code on TEN does not expose those attack vectors. It should be noted th
 See [Secure Entropy](../3-smart-contract-features/2-native-entropy.md) for more information.
 
 
-## Native Session Keys
+## Native session keys
 
 TEN provides **native session key** support managed by TEEs, eliminating the need for proxy contracts while enabling seamless user experiences. Users can play games or interact with dApps without signing every transaction, while developers benefit from simple integration through standard RPC endpoints.
 
 The management of these session keys is provided by the [ten-kit](https://github.com/ten-protocol/ten-kit/tree/2c4265bdb2832249af8c9ec21c4b60d02eb8dd3a?tab=readme-ov-file#advanced-example-with-session-keys) library, which provides the React components and hooks needed, as well as wallet connection and privacy‑preserving transactions.
 
-See [Session Keys](./4-session-keys.md) for more information.
+See [session keys](./4-session-keys.md) for more information.
 
 ---
