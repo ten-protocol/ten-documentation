@@ -11,7 +11,6 @@ Migrating to TEN enables your dApp to leverage “programmable encryption.” Be
 - Update your Hardhat deployment to support the `--network ten` option.
 - Add data protection logic to your view functions (if applicable).
 - Configure visibility rules for event logs and internal storage.
-- Add the TEN onboarding widget to your JavaScript UI.
 - Add features that make use of secure, verifiable randomness using `block.prevrandao` or precise timestamping
 
 ## 1. Configuring Hardhat
