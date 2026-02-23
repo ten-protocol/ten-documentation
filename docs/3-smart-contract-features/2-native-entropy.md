@@ -9,7 +9,7 @@ This excellent [blog](https://medium.com/obscuro-labs/against-all-odds-securing-
 ## How it works
 
 TEN provides a "System Contract" (a contract deployed and known by the platform.)
-You can get the address of the system contract for our testnet [here](https://sepolia.tenscan.io/resources/verified-data) - "??".
+You can get the address of the system contract for our testnet [here](https://sepolia.tenscan.io/resources/verified-data) - "TEN System Contract".
 
 The interface you must implement is: 
 

@@ -14,9 +14,9 @@ To achieve this, we had to:
 
 1. Run the Ethereum Virtual Machine inside a Trusted Execution Environment (TEE) and store the state in encrypted storage. This prevents the node operator from accessing the data.
 2. Disable the `getStorageAt` method, so now contracts can have secrets (as long as the `private` state variables are not exposed via public view functions). This prevents anyone with RPC access to the node from reading the data.
-3. Authenticate "view function calls" so that the smart contract knows who is calling the view function. Without this feature there is no "Data Access **Control**", because the dApp developer can't write access control logic. 
-4. Event logs are another way to expose data from a contract to the outside world. A practical platform needs a way to configure who can read the various event logs.
-5. Control access to the "Transaction Receipts", which contain the logs and status of the transaction. 
+3. Authenticate "view function calls" so that the smart contract knows who is calling the view function. Without this feature, there is no "Data Access **Control**", because the dApp developer can't write access control logic.
+4. Configure event log visibility, since event logs are another way to expose data from a contract to the outside world. A practical platform needs a way to configure who can read the various event logs.
+5. Control access to the "Transaction Receipts", which contain the logs and status of the transaction.
 
 ## Data Access Control Rules
 
@@ -34,14 +34,13 @@ Here, we'll list the platform rules. The examples below will showcase how exactl
   - everyone, if the transaction called a transparent contract.
 - `eth_getStorageAt` can be called on "transparent" contracts.
 
-
 ## Data Access Control Example
 
 Let's illustrate with a basic storage dApp example where users can store and retrieve a number.
 
 At every step, we'll add a new feature and explain the difference between `TEN` and `Ethereum`.
 
-### Step 1: Basic contract with a Public Variable
+### Step 1: Basic Contract with a Public Variable
 
 #### Code
 
@@ -60,14 +59,13 @@ contract StorageExample {
 
 #### Explanation
 
-In this step, we created a public variable `storedValues` that maps the provided value to the address of the user who called the `storeValue` function.
+In this step, we created a public variable `storedValues` that maps each user's address to their stored value.
 
 Because the variable is public, Solidity will provide a default public getter for it.
 
 Since there are no data access restrictions, on both Ethereum and TEN, everyone will be able to read the values of all users by just calling the default public getter.
 
-
-### Step 2: Converting to a Private Variable with an explicit Getter Function
+### Step 2: Converting to a Private Variable with an Explicit Getter Function
 
 #### Code
 
@@ -78,7 +76,7 @@ contract StorageExample {
     function storeValue(uint256 value) public {
         _storedValues[tx.origin] = value;
     }
-    
+
     function getValue(address account) public view returns (uint256) {
         return _storedValues[account];
     }
@@ -87,10 +85,10 @@ contract StorageExample {
 
 #### Explanation
 
-The `storedValues` variable is now private, and we added a basic `getValue` function for users to retrieve their value.
+The `_storedValues` variable is now private, and we added a basic `getValue` function for users to retrieve their value.
 
-On both Ethereum and TEN, anyone can call `getValue` to retrieve any value.   
-On Ethereum, `_storedValues` can also be accessed directly with `getStorageAt`
+On both Ethereum and TEN, anyone can call `getValue` to retrieve any value.  
+On Ethereum, `_storedValues` can also be accessed directly with `getStorageAt`.
 
 ### Step 3: Data Access Control
 
@@ -115,18 +113,17 @@ contract StorageExample {
 
 #### Explanation
 
-The key line is: ``require(tx.origin == account, "Not authorised!");``, which ensures that the caller of the view function is the owner of the data.
+The key line is: `require(tx.origin == account, "Not authorised!");`, which ensures that the caller of the view function is the owner of the data.
 
 **When deployed on TEN, this code guarantees that all users can only access their own values, and nobody can read the `_storedValues`.**
 
 On Ethereum, the `tx.origin` is not authenticated, so the check above is not effective and `eth_getStorageAt` is available.
 
-
 ### Step 4: Emitting Events - Default Visibility
 
 Event logs notify UIs about state changes in smart contracts.
 
-To improve our smart contract, we’ll emit an event when a user stores a value and milestone events when a specific size threshold is met.
+To improve our smart contract, we’ll emit an event when a user stores a value and a milestone event when a call count threshold is reached.
 
 #### Code
 
@@ -158,17 +155,17 @@ contract StorageExample {
 
 Notice how we defined the two events: `DataChanged` and `MilestoneReached`, and are emitting them in the `storeValue` function.
 
-In Ethereum, everyone can query and subscribe to these events. If this was possible on TEN, it would completely break the functionality because you can see all the secret values.
+In Ethereum, everyone can query and subscribe to these events. If this were possible on TEN, it would completely break the functionality because anyone could see all the secret values.
 
-Notice how in this version, we have no configuration for event log visibility, so we are relying on the default rules:
+Notice how in this version, we have no configuration for event log visibility, so we are relying on the [default rules](#data-access-control-rules):
 
-- Rule 1: Event logs that contain ("Externally owned Account") EOAs as indexed fields (topics) are only visible to those EOAs.
+- Rule 1: Event logs that contain EOAs as topics are only visible to those EOAs.
 - Rule 2: Event logs that don't contain any EOA are visible to everyone.
 
 In our case, the default rules ensure that:
+
 - `DataChanged` is visible only to the address that is storing the value.
 - `MilestoneReached` is publicly visible.
-
 
 ### Step 5: Customising Event Visibility
 
@@ -245,10 +242,11 @@ contract StorageExample is ContractTransparencyConfig {
 The [`ContractTransparencyConfig`](https://github.com/ten-protocol/go-ten/blob/main/contracts/src/system/config/IContractTransparencyConfig.sol) interface is known by the TEN platform.
 When a contract is deployed, the platform will call the `visibilityRules` function, and store the `VisibilityConfig`.
 
-For each event type, you can configure which fields can access it.
+For each event type, you can configure who can view it based on its topics (indexed fields).
 
-Notice how in the `visibilityRules` above, we configure the `DataChanged` event to be visible to the first field and the sender, and the `MilestoneReached` to be visible to everyone.
+Notice how in the `visibilityRules` above, we configure the `DataChanged` event to be visible to the first topic and the sender, and the `MilestoneReached` to be visible to everyone.
 
 The other configuration: `VisibilityConfig.contractCfg` applies to the entire contract:
+
 - `ContractCfg.TRANSPARENT`: The contracts will have public storage and events, behaving exactly like Ethereum.
 - `ContractCfg.PRIVATE`: The default TEN behaviour, where the storage is not accessible and the events are individually configurable.
