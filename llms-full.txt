@@ -1341,8 +1341,8 @@ To achieve this, we had to:
 
 1. Run the Ethereum Virtual Machine inside a Trusted Execution Environment (TEE) and store the state in encrypted storage. This prevents the node operator from accessing the data.
 2. Disable the `getStorageAt` method, so now contracts can have secrets (as long as the `private` state variables are not exposed via public view functions). This prevents anyone with RPC access to the node from reading the data.
-3. Authenticate "view function calls" so that the smart contract knows who is calling the view function. Without this feature there is no "Data Access **Control**", because the dApp developer can't write access control logic.
-4. Event logs are another way to expose data from a contract to the outside world. A practical platform needs a way to configure who can read the various event logs.
+3. Authenticate "view function calls" so that the smart contract knows who is calling the view function. Without this feature, there is no "Data Access **Control**", because the dApp developer can't write access control logic.
+4. Configure event log visibility, since event logs are another way to expose data from a contract to the outside world. A practical platform needs a way to configure who can read the various event logs.
 5. Control access to the "Transaction Receipts", which contain the logs and status of the transaction.
 
 ## Data Access Control Rules[​](#data-access-control-rules "Direct link to Data Access Control Rules")
@@ -1378,7 +1378,7 @@ Let's illustrate with a basic storage dApp example where users can store and ret
 
 At every step, we'll add a new feature and explain the difference between `TEN` and `Ethereum`.
 
-### Step 1: Basic contract with a Public Variable[​](#step-1-basic-contract-with-a-public-variable "Direct link to Step 1: Basic contract with a Public Variable")
+### Step 1: Basic Contract with a Public Variable[​](#step-1-basic-contract-with-a-public-variable "Direct link to Step 1: Basic Contract with a Public Variable")
 
 #### Code[​](#code "Direct link to Code")
 
@@ -1397,13 +1397,13 @@ contract StorageExample {
 
 #### Explanation[​](#explanation "Direct link to Explanation")
 
-In this step, we created a public variable `storedValues` that maps the provided value to the address of the user who called the `storeValue` function.
+In this step, we created a public variable `storedValues` that maps each user's address to their stored value.
 
 Because the variable is public, Solidity will provide a default public getter for it.
 
 Since there are no data access restrictions, on both Ethereum and TEN, everyone will be able to read the values of all users by just calling the default public getter.
 
-### Step 2: Converting to a Private Variable with an explicit Getter Function[​](#step-2-converting-to-a-private-variable-with-an-explicit-getter-function "Direct link to Step 2: Converting to a Private Variable with an explicit Getter Function")
+### Step 2: Converting to a Private Variable with an Explicit Getter Function[​](#step-2-converting-to-a-private-variable-with-an-explicit-getter-function "Direct link to Step 2: Converting to a Private Variable with an Explicit Getter Function")
 
 #### Code[​](#code-1 "Direct link to Code")
 
@@ -1414,7 +1414,7 @@ contract StorageExample {
     function storeValue(uint256 value) public {
         _storedValues[tx.origin] = value;
     }
-    
+
     function getValue(address account) public view returns (uint256) {
         return _storedValues[account];
     }
@@ -1423,9 +1423,9 @@ contract StorageExample {
 
 #### Explanation[​](#explanation-1 "Direct link to Explanation")
 
-The `storedValues` variable is now private, and we added a basic `getValue` function for users to retrieve their value.
+The `_storedValues` variable is now private, and we added a basic `getValue` function for users to retrieve their value.
 
-On both Ethereum and TEN, anyone can call `getValue` to retrieve any value.<br /><!-- -->On Ethereum, `_storedValues` can also be accessed directly with `getStorageAt`
+On both Ethereum and TEN, anyone can call `getValue` to retrieve any value.<br /><!-- -->On Ethereum, `_storedValues` can also be accessed directly with `getStorageAt`.
 
 ### Step 3: Data Access Control[​](#step-3-data-access-control "Direct link to Step 3: Data Access Control")
 
@@ -1460,7 +1460,7 @@ On Ethereum, the `tx.origin` is not authenticated, so the check above is not eff
 
 Event logs notify UIs about state changes in smart contracts.
 
-To improve our smart contract, we’ll emit an event when a user stores a value and milestone events when a specific size threshold is met.
+To improve our smart contract, we’ll emit an event when a user stores a value and a milestone event when a call count threshold is reached.
 
 #### Code[​](#code-3 "Direct link to Code")
 
@@ -1492,11 +1492,11 @@ contract StorageExample {
 
 Notice how we defined the two events: `DataChanged` and `MilestoneReached`, and are emitting them in the `storeValue` function.
 
-In Ethereum, everyone can query and subscribe to these events. If this was possible on TEN, it would completely break the functionality because you can see all the secret values.
+In Ethereum, everyone can query and subscribe to these events. If this were possible on TEN, it would completely break the functionality because anyone could see all the secret values.
 
-Notice how in this version, we have no configuration for event log visibility, so we are relying on the default rules:
+Notice how in this version, we have no configuration for event log visibility, so we are relying on the [default rules](#data-access-control-rules):
 
-* Rule 1: Event logs that contain ("Externally owned Account") EOAs as indexed fields (topics) are only visible to those EOAs.
+* Rule 1: Event logs that contain EOAs as topics are only visible to those EOAs.
 * Rule 2: Event logs that don't contain any EOA are visible to everyone.
 
 In our case, the default rules ensure that:
@@ -1578,9 +1578,9 @@ contract StorageExample is ContractTransparencyConfig {
 
 The [`ContractTransparencyConfig`](https://github.com/ten-protocol/go-ten/blob/main/contracts/src/system/config/IContractTransparencyConfig.sol) interface is known by the TEN platform. When a contract is deployed, the platform will call the `visibilityRules` function, and store the `VisibilityConfig`.
 
-For each event type, you can configure which fields can access it.
+For each event type, you can configure who can view it based on its topics (indexed fields).
 
-Notice how in the `visibilityRules` above, we configure the `DataChanged` event to be visible to the first field and the sender, and the `MilestoneReached` to be visible to everyone.
+Notice how in the `visibilityRules` above, we configure the `DataChanged` event to be visible to the first topic and the sender, and the `MilestoneReached` to be visible to everyone.
 
 The other configuration: `VisibilityConfig.contractCfg` applies to the entire contract:
 
@@ -1598,9 +1598,9 @@ The other configuration: `VisibilityConfig.contractCfg` applies to the entire co
 
 Every on-chain game developer knows that moves that rely on entropy must be executed in two steps.
 
-Imagine you implement an on-chain coin flip game. The player pays 0.1ETH to choose `Heads` or `Tails`. If they win, they receive 0.2ETH, otherwise they lose the 0.1ETH. Even if randomness is unpredictable, this simple game can be exploited in several ways:
+Imagine you implement an on-chain coin flip game. The player pays 0.1 ETH to choose `Heads` or `Tails`. If they win, they receive 0.2 ETH, otherwise they lose the 0.1 ETH. Even if randomness is unpredictable, this simple game can be exploited in several ways:
 
-* The attacker can create a “proxy” smart contract to play on their behalf. Using a similar mechanism to flash loans in DeFi: the proxy is programmed to make multiple actions and only “commit” if it can obtain a profit. In our case, if the coin flip is losing, the proxy can just revert. The only cost will be the gas burned.
+* The attacker can create a “proxy” smart contract to play on their behalf. Using a mechanism similar to flash loans in DeFi: the proxy is programmed to make multiple actions and only “commit” if it can obtain a profit. In our case, if the coin flip is losing, the proxy can just revert. The only cost will be the gas burned.
 * Transactions consume gas, and the gas cost can inadvertently reveal information. For instance, if a winning move is more computationally intensive than a losing one, players could deduce optimal moves by estimating gas costs for various actions.
 
 The typical solution is to use an ad-hoc commit-reveal scheme. The smart contract ensures that the player commits to a move, and only afterwards reveals it to the chain. This way, the player can't change their mind after seeing the result.
@@ -1615,7 +1615,7 @@ The best solution is to decouple the move from the execution without increasing 
 
 ### How it works[​](#how-it-works "Direct link to How it works")
 
-TEN provides a "System Contract" (a contract deployed and known by the platform.) You can get the address of the system contract for our testnet [here](https://sepolia.tenscan.io/resources/verified-data) - "Ten System Contract".
+TEN provides a "System Contract" (a contract deployed and known by the platform). You can get the address of the system contract for our testnet [here](https://sepolia.tenscan.io/resources/verified-data) - "Ten Callbacks".
 
 The interface for registering the callback is: [IPublicCallbacks](https://github.com/ten-protocol/go-ten/blob/main/contracts/src/system/interfaces/IPublicCallbacks.sol).
 
@@ -1636,7 +1636,7 @@ contract CoinFlip {
     // Event to emit the result of the coin flip
     event CoinFlipResult(address indexed player, bool didWin, uint256 randomNumber);
 
-    private IPublicCallbacks tenCallbacks;
+    IPublicCallbacks private tenCallbacks;
     mapping(uint256 callbackId => address player) public callbackToPlayer;
     mapping(address player => uint256 refundAmount) public playerToRefundAmount;
 
@@ -1647,7 +1647,7 @@ contract CoinFlip {
 
     // you have to pass in the address of the system contract
     constructor(address _tenCallbacksAddress) {
-        tenCallbacks = TenCallbacks(_tenCallbacksAddress);
+        tenCallbacks = IPublicCallbacks(_tenCallbacksAddress);
     }
 
     // Function to initiate a coin flip. 
@@ -1656,8 +1656,7 @@ contract CoinFlip {
         // Assume doFlipCoin costs 50_000 gas;
         // We deduct a predetermined amount from the bet to pay for delayed execution.
         uint256 etherGasForCoinFlip = 50_000*block.basefee;
-        require(msg.value > etherGasForCoinFlip, "Insufficent gas");
-
+        require(msg.value > etherGasForCoinFlip, "Insufficient gas");
         // Encode the function we want to be called by the TEN system contract.
         bytes memory callbackTargetInfo = abi.encodeWithSelector(this.doFlipCoin.selector, msg.sender, msg.value - etherGasForCoinFlip, isHeads);
 
@@ -1680,7 +1679,7 @@ contract CoinFlip {
             require(success, "Payment failed.");
         }
         // Emit the result of the coin flip
-        emit CoinFlipResult(msg.sender, isHeads, randomNumber);
+        emit CoinFlipResult(bettor, wantsHeads == isHeads, randomNumber);
     }
 
     function getRandomNumber() internal view returns (uint256) {
@@ -1707,7 +1706,7 @@ This excellent [blog](https://medium.com/obscuro-labs/against-all-odds-securing-
 
 ## How it works[​](#how-it-works "Direct link to How it works")
 
-TEN provides a "System Contract" (a contract deployed and known by the platform.) You can get the address of the system contract for our testnet [here](https://sepolia.tenscan.io/resources/verified-data) - "??".
+TEN provides a "System Contract" (a contract deployed and known by the platform.) You can get the address of the system contract for our testnet [here](https://sepolia.tenscan.io/resources/verified-data) - "TEN System Contract".
 
 The interface you must implement is:
 
@@ -1749,7 +1748,7 @@ contract CoinFlip {
 
 # Precise transaction timestamp
 
-Real-time games require users to make quick decisions, and the outcomes depend on the precise moment in time when the action was made. This doesn't work well on-chain because latencies are not low enough. **The timestamp is provided in milliseconds**.
+Real-time games require users to make quick decisions, and the outcomes depend on the precise moment in time when the action was made. This doesn't work well on-chain because latencies are not low enough. **The TEN timestamp is provided in milliseconds**.
 
 ### Option 1 - External Timestamp oracle[​](#option-1---external-timestamp-oracle "Direct link to Option 1 - External Timestamp oracle")
 
@@ -1767,9 +1766,9 @@ Each transaction is accompanied by the precise timestamp when included in a bloc
 
 ## How it works[​](#how-it-works "Direct link to How it works")
 
-TEN provides a "System Contract" (a contract deployed and known by the platform.) You can get the address of the system contract for our testnet [here](https://sepolia.tenscan.io/resources/verified-data) - under `TenSystemCalls`.
+TEN provides a "System Contract" (a contract deployed and known by the platform). You can get the address of the system contract for our testnet [here](https://sepolia.tenscan.io/resources/verified-data) - "TEN System Contract".
 
-The interface you must implement is:
+The interface for the system contract is:
 
 ```
 interface ITimestamp {
@@ -1786,16 +1785,28 @@ interface ITimestamp {
     function getTransactionTimestamp() external returns (uint256);
 }
 
-contract CoinFlip {
-    private ITimestamp timestamp;
+contract TimedAuction {
+    ITimestamp private timestamp;
 
-    // you have to pass in the address of the system contract
-    constructor(address _timestampSystemAddress) {
+    uint256 public auctionEndMs;
+    address public highestBidder;
+    uint256 public highestBid;
+
+    event BidPlaced(address indexed bidder, uint256 amount, uint256 timestampMs);
+
+    constructor(address _timestampSystemAddress, uint256 _durationMs) {
         timestamp = ITimestamp(_timestampSystemAddress);
+        auctionEndMs = timestamp.getTransactionTimestamp() + _durationMs;
     }
 
-    function getRandomNumber() internal view returns (uint256) {
-        return rnd.getRandomNumber();
+    function bid() external payable {
+        uint256 txTimestamp = timestamp.getTransactionTimestamp();
+        require(txTimestamp < auctionEndMs, "Auction has ended");
+        require(msg.value > highestBid, "Bid too low");
+
+        highestBidder = msg.sender;
+        highestBid = msg.value;
+        emit BidPlaced(msg.sender, msg.value, txTimestamp);
     }
 }
 ```

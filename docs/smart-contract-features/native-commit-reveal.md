@@ -2,9 +2,9 @@
 
 Every on-chain game developer knows that moves that rely on entropy must be executed in two steps.
 
-Imagine you implement an on-chain coin flip game. The player pays 0.1ETH to choose `Heads` or `Tails`. If they win, they receive 0.2ETH, otherwise they lose the 0.1ETH. Even if randomness is unpredictable, this simple game can be exploited in several ways:
+Imagine you implement an on-chain coin flip game. The player pays 0.1 ETH to choose `Heads` or `Tails`. If they win, they receive 0.2 ETH, otherwise they lose the 0.1 ETH. Even if randomness is unpredictable, this simple game can be exploited in several ways:
 
-* The attacker can create a “proxy” smart contract to play on their behalf. Using a similar mechanism to flash loans in DeFi: the proxy is programmed to make multiple actions and only “commit” if it can obtain a profit. In our case, if the coin flip is losing, the proxy can just revert. The only cost will be the gas burned.
+* The attacker can create a “proxy” smart contract to play on their behalf. Using a mechanism similar to flash loans in DeFi: the proxy is programmed to make multiple actions and only “commit” if it can obtain a profit. In our case, if the coin flip is losing, the proxy can just revert. The only cost will be the gas burned.
 * Transactions consume gas, and the gas cost can inadvertently reveal information. For instance, if a winning move is more computationally intensive than a losing one, players could deduce optimal moves by estimating gas costs for various actions.
 
 The typical solution is to use an ad-hoc commit-reveal scheme. The smart contract ensures that the player commits to a move, and only afterwards reveals it to the chain. This way, the player can't change their mind after seeing the result.
@@ -19,7 +19,7 @@ The best solution is to decouple the move from the execution without increasing 
 
 ### How it works[​](#how-it-works "Direct link to How it works")
 
-TEN provides a "System Contract" (a contract deployed and known by the platform.) You can get the address of the system contract for our testnet [here](https://sepolia.tenscan.io/resources/verified-data) - "Ten System Contract".
+TEN provides a "System Contract" (a contract deployed and known by the platform). You can get the address of the system contract for our testnet [here](https://sepolia.tenscan.io/resources/verified-data) - "Ten Callbacks".
 
 The interface for registering the callback is: [IPublicCallbacks](https://github.com/ten-protocol/go-ten/blob/main/contracts/src/system/interfaces/IPublicCallbacks.sol).
 
@@ -40,7 +40,7 @@ contract CoinFlip {
     // Event to emit the result of the coin flip
     event CoinFlipResult(address indexed player, bool didWin, uint256 randomNumber);
 
-    private IPublicCallbacks tenCallbacks;
+    IPublicCallbacks private tenCallbacks;
     mapping(uint256 callbackId => address player) public callbackToPlayer;
     mapping(address player => uint256 refundAmount) public playerToRefundAmount;
 
@@ -51,7 +51,7 @@ contract CoinFlip {
 
     // you have to pass in the address of the system contract
     constructor(address _tenCallbacksAddress) {
-        tenCallbacks = TenCallbacks(_tenCallbacksAddress);
+        tenCallbacks = IPublicCallbacks(_tenCallbacksAddress);
     }
 
     // Function to initiate a coin flip. 
@@ -60,8 +60,7 @@ contract CoinFlip {
         // Assume doFlipCoin costs 50_000 gas;
         // We deduct a predetermined amount from the bet to pay for delayed execution.
         uint256 etherGasForCoinFlip = 50_000*block.basefee;
-        require(msg.value > etherGasForCoinFlip, "Insufficent gas");
-
+        require(msg.value > etherGasForCoinFlip, "Insufficient gas");
         // Encode the function we want to be called by the TEN system contract.
         bytes memory callbackTargetInfo = abi.encodeWithSelector(this.doFlipCoin.selector, msg.sender, msg.value - etherGasForCoinFlip, isHeads);
 
@@ -84,7 +83,7 @@ contract CoinFlip {
             require(success, "Payment failed.");
         }
         // Emit the result of the coin flip
-        emit CoinFlipResult(msg.sender, isHeads, randomNumber);
+        emit CoinFlipResult(bettor, wantsHeads == isHeads, randomNumber);
     }
 
     function getRandomNumber() internal view returns (uint256) {
