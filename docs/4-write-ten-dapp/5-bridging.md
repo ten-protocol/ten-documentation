@@ -48,9 +48,9 @@ This is how the reference bridge ensures that only its counterpart on the other 
 
 ## Reference Bridge
 
-TEN ships a reference bridge that demonstrates `CrossChainEnabledTEN` in practice. It handles ERC-20 transfers, native ETH, and WETH wrapping/unwrapping across L1 and L2.
+TEN includes a reference bridge that demonstrates `CrossChainEnabledTEN` in practice. It handles ERC-20 transfers, native ETH, and WETH wrapping/unwrapping across L1 and L2.
 
-### L1 — TenBridge
+### L1 TenBridge
 
 [`TenBridge.sol`](https://github.com/ten-protocol/go-ten/blob/main/contracts/src/reference_bridge/L1/contracts/TenBridge.sol) sits on Ethereum. It locks assets on L1 and uses `queueMessage` to instruct the L2 bridge to mint or release the equivalent on TEN:
 
@@ -80,7 +80,7 @@ contract TenBridge is CrossChainEnabledTEN, IBridge, ... {
 }
 ```
 
-### L2 — EthereumBridge
+### L2 EthereumBridge
 
 [`EthereumBridge.sol`](https://github.com/ten-protocol/go-ten/blob/main/contracts/src/reference_bridge/L2/contracts/EthereumBridge.sol) sits on TEN. It mints wrapped tokens when assets arrive from L1 and burns them when a user bridges back:
 
